@@ -113,6 +113,8 @@ Confirm that the Pop Network parachain is producing blocks by openning the Polka
 
 Cool. Now that we have Pop Network running we can now deploy our contract.
 
+Make sure your contract is already built e.g. `pop build contract`
+
 Keep the PolkadotJs App window open, specifically to see the recent events. After we deploy the contract, we will see the events displayed there.
 
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
