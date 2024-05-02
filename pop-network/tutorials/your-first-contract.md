@@ -273,7 +273,7 @@ You now have the following running locally on your machine:
 
 > **rococo-local**
 >
-> * this is the "Polkadot" Relay chain
+> * this is the Polkadot "Test" Relay chain
 >   * two validator nodes (alice & bob) to run the rococo-local Relay chain
 >
 > **local\_testnet**
