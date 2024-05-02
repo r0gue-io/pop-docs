@@ -1,7 +1,7 @@
 ---
 description: >-
   In this tutorial developers will learn how to leverage Pop API to write a
-  smart contract to mint an NFT.
+  smart contract to create an NFT collection.
 ---
 
 # Creating an NFT Collection
