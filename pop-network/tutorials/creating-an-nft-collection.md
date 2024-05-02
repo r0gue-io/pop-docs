@@ -6,11 +6,12 @@ description: >-
 
 # Creating an NFT Collection
 
-Audience
+## Audience
 
 Developers who want to learn how to:
 
-* write a smart contract to mint an NFT
+* write a smart contract to create an NFT collection
+* interact with the Pop API
 
 ## Learning Objectives
 
@@ -18,7 +19,7 @@ On completion of this tutorial, developers will:
 
 * have knowledge of how to use Pop API in ink! smart contracts
 * create an NFT collection
-* mint an NFT
+* check that the collection exists
 
 ## Prerequisites
 
