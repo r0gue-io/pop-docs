@@ -4,7 +4,7 @@ description: >-
   Pop Network.
 ---
 
-# Your First Contract
+# Your First Ink! Smart Contract
 
 ## Audience
 

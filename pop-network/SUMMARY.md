@@ -7,5 +7,5 @@
 
 ## Tutorials
 
-* [Your First ink! Smart Contract](tutorials/your-first-ink-smart-contract.md)
+* [Your First Ink! Smart Contract](tutorials/your-first-contract.md)
 * [Creating an NFT Collection](tutorials/creating-an-nft-collection.md)
