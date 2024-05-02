@@ -357,8 +357,6 @@ Save and you should now see your NFTs contract in the UI.
 
 This is useful if you want to use the UI to execute or read messages. However you can also use Pop CLI to do the same.
 
-
-
 ### Calling your NFTs ink! smart contract
 
 Let's call our NFTs smart contract and create an NFT collection.
@@ -415,6 +413,8 @@ Wow! You can see the event trail that the contract left, including Pop Network's
 
 But let's confirm.
 
+> BTW, you can check your logs and you will see the the `debug_println!` macros fired off
+
 Our NFTs contract has a `read_collection` function. Let's test it.
 
 ```
@@ -435,8 +435,6 @@ pop call contract --contract 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h --
 > Stuck? Run `pop call contract --help`
 
 For reading storage we do not need to execute an extrinsic so no need for the `--execute` flag. Instead it will connect with the RPC node and read the storage which is better because it will not cost any gas. Notice the `--args` specifying collection with ID of 0. And the result came back as `Ok(Ok())` meaning an NFT collection with ID of 0 exists.
-
-
 
 ### Conclusion
 
