@@ -112,7 +112,7 @@ Inside `lib.rs` you will find all the contract logic.
 
 Take a moment to get familiar with the ink! programming language:
 
-* https://use.ink/basics/contract-template
+* [https://use.ink/basics/contract-template](https://use.ink/basics/contract-template)
 
 ## Building the ink! smart contract
 
