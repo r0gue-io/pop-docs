@@ -240,6 +240,8 @@ pub fn read_collection(&self, collection_id: u32) -> Result<(), ContractError> {
 }
 ```
 
+This function is more of an assertion returning `Ok(())` if the collection exists.
+
 ### Testing the contract
 
 Notice how there are `debug_println!` macros throughout the code. This will be handy for testing the contract.
