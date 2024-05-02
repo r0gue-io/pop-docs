@@ -4,7 +4,7 @@ description: >-
   smart contract to mint an NFT.
 ---
 
-# Minting an NFT
+# Creating an NFT Collection
 
 Audience
 
@@ -443,5 +443,7 @@ In this tutorial we learned how to create an NFTs ink! smart contract using Pop 
 
 ### Next Steps
 
-Try to implement another function using Pop API. Then re-build the contract (`pop build contract`), deploy the new contract, and test it by calling the contract.
+Try to implement a `mint` function using Pop API. Then re-build the contract (`pop build contract`), deploy the new contract, and test it by calling the contract.
+
+You can find the solution for minting an NFT [here](https://github.com/r0gue-io/pop-node/blob/bc4154028a22be2d8cf9b5a4aab897a184ceb230/pop-api/examples/nfts/lib.rs#L60-L96).
 
