@@ -335,7 +335,7 @@ pop up contract --suri //Alice --url ws://127.0.0.1:57264 --gas 2000000000 --pro
 └  Deployment complete
 ```
 
-Keep the Contract Address handy, you will need it soon.
+Keep the contract address handy, you will need it soon.
 
 You will notice PolkadotJS Apps shows that the contract has been deployed.
 
