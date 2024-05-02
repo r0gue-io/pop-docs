@@ -6,7 +6,7 @@ description: >-
 
 # Minting an NFT
 
-## Audience
+Audience
 
 Developers who want to learn how to:
 
@@ -323,6 +323,125 @@ Open a separate terminal and run the following command.
 > Make sure the replace with your Pop Network port number.
 
 ```
-pop up contract --suri //Alice --url ws://127.0.0.1:57264 --gas 2000000000 --proof-size 1000000 
+pop up contract --suri //Alice --url ws://127.0.0.1:57264 --gas 2000000000 --proof-size 1000000
+
+┌   Pop CLI : Deploy a smart contract
+│
+◇  Contract deployed and instantiated: The Contract Address is "5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h"
+│
+└  Deployment complete
 ```
+
+Keep the Contract Address handy, you will need it soon.
+
+You will notice PolkadotJS Apps shows that the contract has been deployed.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.31.39 PM.png" alt=""><figcaption><p><a href="https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:57264">https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:57264</a></p></figcaption></figure>
+
+Let's now go to the Contracts section in PolkadotJS under the Developer tab.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.29.18 PM.png" alt=""><figcaption><p><a href="https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:57264#/contracts">https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:57264#/contracts</a></p></figcaption></figure>
+
+The contract is already instantiated but let's also make sure it shows up in the UI.
+
+Click "add an existing contract" and type in the contract information.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.38.43 PM.png" alt=""><figcaption><p>add an existing contract</p></figcaption></figure>
+
+Save and you should now see your NFTs contract in the UI.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.40.00 PM.png" alt=""><figcaption><p>NFTs ink! smart contract</p></figcaption></figure>
+
+This is useful if you want to use the UI to execute or read messages. However you can also use Pop CLI to do the same.
+
+
+
+### Calling your NFTs ink! smart contract
+
+Let's call our NFTs smart contract and create an NFT collection.
+
+In order to call our contract we will need to fund the contract address with some tokens so that it has enough to execute the transactions.
+
+Transfer some tokens from `alice` to the contract address.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.54.11 PM.png" alt=""><figcaption><p>PolkadotJS Apps: Transfer</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.55.24 PM.png" alt=""><figcaption></figcaption></figure>
+
+Awesome the contract is now funded!
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-02 at 6.56.21 PM.png" alt=""><figcaption><p>NFTs contract</p></figcaption></figure>
+
+Let's call the contract!
+
+```
+pop call contract --contract 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h --message create_nft_collection --suri //Alice --url ws://127.0.0.1:57264 --gas 200000000000 --proof-size 1000000 --execute
+
+┌   Pop CLI : Calling a contract
+│
+◐  Calling the contract...                                                                                                                                                                ⚙        Events
+│         Event Balances ➜ Withdraw
+│           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+│           amount: 31.604858μUNIT
+│         Event Balances ➜ Reserved
+│           who: 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h
+│           amount: 100mUNIT
+│         Event Nfts ➜ Created
+│           collection: 0
+│           creator: 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h
+│           owner: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+│         Event Nfts ➜ NextCollectionIdIncremented
+│           next_id: Some(1)
+│         Event Contracts ➜ Called
+│           caller: Signed(5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY)
+│           contract: 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h
+│         Event Balances ➜ Deposit
+│           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+│           amount: 15.744445μUNIT
+│         Event TransactionPayment ➜ TransactionFeePaid
+│           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+│           actual_fee: 15.860413μUNIT
+│           tip: 0UNIT
+│         Event System ➜ ExtrinsicSuccess
+│           dispatch_info: DispatchInfo { weight: Weight { ref_time: 3268630749, proof_size: 34072 }, class: Normal, pays_fee: Yes }
+│  
+└  Call completed successfully!
+```
+
+Wow! You can see the event trail that the contract left, including Pop Network's underlying NFTs pallet firing off an event saying that the collection got created.
+
+But let's confirm.
+
+Our NFTs contract has a `read_collection` function. Let's test it.
+
+```
+pop call contract --contract 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h --message read_collection --args 0 --suri //Alice --url ws://127.0.0.1:57264
+
+┌   Pop CLI : Calling a contract
+│
+◐  Calling the contract...
+⚙  Result: Ok(Ok())
+│  
+▲  Your call has not been executed.
+│  
+▲  To submit the transaction and execute the call on chain, add -x/--execute flag to the command.
+│  
+└  Call completed successfully!
+```
+
+> Stuck? Run `pop call contract --help`
+
+For reading storage we do not need to execute an extrinsic so no need for the `--execute` flag. Instead it will connect with the RPC node and read the storage which is better because it will not cost any gas. Notice the `--args` specifying collection with ID of 0. And the result came back as `Ok(Ok())` meaning an NFT collection with ID of 0 exists.
+
+
+
+### Conclusion
+
+In this tutorial we learned how to create an NFTs ink! smart contract using Pop API. We then deployed the contract and called two of its functions.
+
+
+
+### Next Steps
+
+Try to implement another function using Pop API. Then re-build the contract (`pop build contract`), deploy the new contract, and test it by calling the contract.
 
