@@ -17,8 +17,8 @@ Developers who want to learn how to:
 
 On completion of this tutorial, developers will be able to:
 
-* create, build, test, and deploy ink! smart contracts using [Pop CLI](https://github.com/r0gue-io/pop-cli)
-* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo)
+* create, build, test, and deploy ink! smart contracts
+* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
 ## Prerequisites
