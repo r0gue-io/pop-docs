@@ -183,7 +183,7 @@ pop build contract
 
 > Full Code: [https://github.com/r0gue-io/pop-api-examples/tree/main/nfts](https://github.com/r0gue-io/pop-api-examples/tree/main/nfts)
 
-### Using Pop API
+## Using Pop API
 
 So to recap, we are using Pop API, specifically the NFT portion of the API.
 
@@ -242,7 +242,7 @@ pub fn read_collection(&self, collection_id: u32) -> Result<(), ContractError> {
 
 This function is more of an assertion returning `Ok(())` if the collection exists.
 
-### Testing the contract
+## Testing the Contract
 
 Notice how there are `debug_println!` macros throughout the code. This will be handy for testing the contract.
 
@@ -357,7 +357,7 @@ Save and you should now see your NFTs contract in the UI.
 
 This is useful if you want to use the UI to execute or read messages. However you can also use Pop CLI to do the same.
 
-### Calling your NFTs ink! smart contract
+## Calling your NFTs contract
 
 Let's call our NFTs smart contract and create an NFT collection.
 
@@ -436,13 +436,11 @@ pop call contract --contract 5E13Ah9rPZNHAwpwiJLd1EQ6eVsZEmT31Cxx8oDpgTKLR21h --
 
 For reading storage we do not need to execute an extrinsic so no need for the `--execute` flag. Instead it will connect with the RPC node and read the storage which is better because it will not cost any gas. Notice the `--args` specifying collection with ID of 0. And the result came back as `Ok(Ok())` meaning an NFT collection with ID of 0 exists.
 
-### Conclusion
+## Conclusion
 
 In this tutorial we learned how to create an NFTs ink! smart contract using Pop API. We then deployed the contract and called two of its functions.
 
-
-
-### Next Steps
+## Next Steps
 
 Try to implement a `mint` function using Pop API. Then re-build the contract (`pop build contract`), deploy the new contract, and test it by calling the contract.
 
