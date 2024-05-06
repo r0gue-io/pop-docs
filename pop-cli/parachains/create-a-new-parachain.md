@@ -1,6 +1,6 @@
 # Create a new parachain
 
-### Interactive Guidance
+### Interactive Guidance (Recommended)
 
 To create a new Parachain **with** Pop CLI's interactive guidance and follow the screen prompts
 
