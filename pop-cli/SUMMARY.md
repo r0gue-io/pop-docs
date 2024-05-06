@@ -18,3 +18,4 @@
 ## PARACHAINS
 
 * [Create a new parachain](parachains/create-a-new-parachain.md)
+* [Build your parachain](parachains/build-your-parachain.md)

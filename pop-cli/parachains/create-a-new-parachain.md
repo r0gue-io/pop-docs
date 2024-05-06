@@ -9,13 +9,13 @@ pop new parachain
 To create a new Parachain **without** Pop CLI's interactive guidance
 
 ```
-pop new parachain my-chain
+pop new parachain my-parachain
 
-┌   Pop CLI : Generating "my-chain" using Base Parachain Template!
+┌   Pop CLI : Generating "my-parachain" using Base Parachain Template!
 │
 ◇  Generation complete
 │
 ⚙  Version: polkadot-v1.9.0
 │  
-└  cd into "my-chain" and enjoy hacking! 🚀
+└  cd into "my-parachain" and enjoy hacking! 🚀
 ```
