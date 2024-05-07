@@ -14,7 +14,7 @@ With Pop CLI developers can:
 * Build and test an ink! smart contract
 * Deploy the ink! smart contract locally or on a live network
 
-Parachains
+### Parachains
 
 * Spin up a Polkadot Network
 * Spin up a Polkadot Network with various Parachains
