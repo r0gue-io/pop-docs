@@ -6,8 +6,6 @@ description: An all-in-one tool for Polkadot development.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Pop CLI is an all-in-one Polkadot development tool
-
 With Pop CLI developers can:
 
 ### Contracts
