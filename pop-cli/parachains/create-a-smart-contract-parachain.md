@@ -3,7 +3,7 @@
 Using Pop CLI you can easily create a smart contract parachain
 
 ```
-pop new parachain my-chain pop -t contracts
+pop new parachain my-contracts-chain pop -t contracts
 ```
 
 "pop" here is the template provider and `-t` is the template, in this case, the contracts template
