@@ -1,4 +1,4 @@
-# Spinning up Polkadot
+# Spinning up the Polkadot Network
 
 Perhaps the simplest workflow a developer would want is to spin up the Polkadot Relay chain.
 

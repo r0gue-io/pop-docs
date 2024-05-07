@@ -20,4 +20,4 @@
 * [Create a new parachain](parachains/create-a-new-parachain.md)
 * [Build your parachain](parachains/build-your-parachain.md)
 * [Running your parachain](parachains/running-your-parachain.md)
-* [Spinning up Polkadot](parachains/spinning-up-polkadot.md)
+* [Spinning up the Polkadot Network](parachains/spinning-up-the-polkadot-network.md)
