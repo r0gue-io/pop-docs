@@ -1,3 +1,9 @@
+---
+description: >-
+  These instructions will guide you on installing the necessary environment to
+  install and use all the Pop CLI features.
+---
+
 # macOS
 
 First we will need the `brew` - the macOS package manager. Run the following in your Terminal.
