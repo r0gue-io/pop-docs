@@ -3,7 +3,9 @@
 ## WELCOME
 
 * [Pop CLI](README.md)
-* [Installing Pop CLI](welcome/installing-pop-cli.md)
+* [Installing Pop CLI](welcome/installing-pop-cli/README.md)
+  * [macOS](welcome/installing-pop-cli/macos.md)
+  * [Linux](welcome/installing-pop-cli/linux.md)
 
 ## CONTRACTS
 
