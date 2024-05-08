@@ -63,9 +63,42 @@ rustup update nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
-Make sure the Rust toolchain was installled properly
+Make sure the Rust toolchain was installed properly
 
 ```
 rustup show
 rustup +nightly show
 ```
+
+Awesome. We are now ready to install Pop CLI.
+
+### Install Pop CLI
+
+```
+cargo install --locked --git https://github.com/r0gue-io/pop-cli
+```
+
+Test out the `pop` command.
+
+```
+pop --help
+```
+
+You should get output similar to.
+
+<pre><code><strong>An all-in-one tool for Polkadot development.
+</strong>
+Usage: pop &#x3C;COMMAND>
+
+Commands:
+  new    Generate a new parachain, pallet or smart contract
+  build  Build a parachain or smart contract
+  call   Call a smart contract
+  up     Deploy a parachain or smart contract
+  test   Test a smart contract
+  help   Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+</code></pre>
