@@ -1,12 +1,12 @@
 ---
 description: >-
   These instructions will guide you on installing the necessary environment to
-  install and use all the Pop CLI features.
+  install Pop CLI and use all its features.
 ---
 
 # macOS
 
-First we will need the `brew` - the macOS package manager. Run the following in your Terminal.
+First we will need the [`brew`](https://brew.sh/) - the macOS package manager. Run the following in your Terminal.
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
