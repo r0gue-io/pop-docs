@@ -4,8 +4,8 @@
 
 * [Pop CLI](README.md)
 * [Installing Pop CLI](welcome/installing-pop-cli/README.md)
-  * [macOS](welcome/installing-pop-cli/macos.md)
-  * [Linux](welcome/installing-pop-cli/linux.md)
+    * [macOS](welcome/installing-pop-cli/macos.md)
+    * [Linux](welcome/installing-pop-cli/linux.md)
 
 ## CONTRACTS
 
@@ -23,7 +23,6 @@
 * [Build your parachain](parachains/build-your-parachain.md)
 * [Running your parachain](parachains/running-your-parachain.md)
 * [Spinning up the Polkadot Network](parachains/spinning-up-the-polkadot-network.md)
-* [Create an assets parachain](parachains/create-an-assets-parachain.md)
-* [Create an NFT parachain](parachains/create-an-nft-parachain.md)
-* [Create a smart contract parachain](parachains/create-a-smart-contract-parachain.md)
+* [Create an Assets parachain](parachains/create-an-assets-parachain.md)
+* [Create a Contracts parachain](parachains/create-a-smart-contract-parachain.md)
 * [Create an EVM parachain](parachains/create-an-evm-parachain.md)

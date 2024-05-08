@@ -1,8 +1,9 @@
 # Build your contract
 
-To build your ink! smart contract, make sure you are inside your ink! smart contract directory and run the following command:
+To build your ink! smart contract, make sure you are inside your ink! smart contract directory and run the following
+command:
 
-```
+```shell
 pop build contract
 ```
 
@@ -28,7 +29,7 @@ You should get output like the following:
 │  The contract was built in RELEASE mode.
 │  
 │  Your contract artifacts are ready. You can find them in:
-│  /Users/bruno/src/flipper/target/ink
+│  /Users/pop/src/flipper/target/ink
 │  
 │    - flipper.contract (code + metadata)
 │    - flipper.wasm (the contract's code)

@@ -1,12 +1,10 @@
-# Create an assets parachain
+# Create an Assets parachain
 
-With Pop CLI you can create an assets parachain using a template
+With Pop CLI you can easily create a parachain supporting fungible, non-fungible and fractionalized assets:
 
-```
+```shell
 pop new parachain my-assets-chain pop -t assets
 ```
-
-where `pop` is the template provider and `-t` is the template, in this case, the "assets" template from the "pop" set/provider of templates.
 
 Keep in mind there are additional configuration flags you can provide.
 

@@ -1,10 +1,13 @@
 # Run your unit tests
 
-To run your ink! smart contract's unit tests, make sure you're in your the directory of your ink! smart contract and run the following command:
+To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following
+command:
 
-```
+```shell
 pop test contract
 ```
+
+You should get output like the following:
 
 ```
 ┌   Pop CLI : Building a contract
@@ -12,7 +15,7 @@ pop test contract
  [==] Checking clippy linting rules
    Compiling proc-macro2 v1.0.79
    ....
-   Compiling flipper v0.1.0 (/Users/bruno/src/pop-cli/flipper)
+   Compiling flipper v0.1.0 (/Users/pop/src/pop-cli/flipper)
     Finished test [unoptimized + debuginfo] target(s) in 8.06s
      Running unittests lib.rs (target/debug/deps/flipper-ff1505839f6873de)
 
