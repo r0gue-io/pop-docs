@@ -1,12 +1,12 @@
 # Spinning up the Polkadot Network
 
-Perhaps the simplest workflow a developer would want is to spin up the Polkadot Relay chain.
+Perhaps the simplest workflow a developer would want is to spin up a local Polkadot network.
 
 With Pop CLI this can be done.
 
-First, create the following network.toml file in your project's root directory.
+First, create the following `network.toml` file in your project's root directory.
 
-```
+```shell
 touch network.toml
 ```
 
@@ -23,11 +23,12 @@ name = "bob"
 validator = true
 ```
 
-> This is specifying a network configuration for the Rococo Relay chain (which is the test version of the Polkadot Relay chain) along with two validator nodes to run the network: alice and bob
+> This is specifying a network configuration using Rococo (which is the local test version of Polkadot) along with two
+> validator nodes to run the network: `alice` and `bob`.
 
 Let's run it.
 
-```
+```shell
 pop up parachain -f ./network.toml
 ```
 
@@ -48,4 +49,4 @@ Eventually you will get output like so.
 │         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2957639d-9818-43e5-8a1d-db85ad27fea2/bob/bob.log
 ```
 
-Congrats! You now have the Polkadot Relay chain running!
+Congrats! You now have a Polkadot network running locally!

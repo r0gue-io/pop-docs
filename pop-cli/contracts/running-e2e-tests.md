@@ -1,21 +1,22 @@
 # Running E2E tests
 
-Make sure you are in the flipper directory:
+Make sure you are in your contract's directory:
 
-```
+```shell
 cd flipper
 ```
 
-If you look at the [flipper ink! smart contract](create-a-new-contract.md), you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
+If you look at the contract source, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
 
-The ink! e2e tests runs against a [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node).
+The ink! e2e tests are run against [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node).
+You will need to download the latest [release](https://github.com/paritytech/substrate-contracts-node/releases)
+binary for your platform.
 
-Download and save the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node).
+Run the e2e tests, adapting the `CONTRACTS_NODE` environment variable to the location of the `substrate-contracts-node`
+binary:
 
-Run the e2e tests:
-
-```
-export CONTRACTS_NODE="/Users/bruno/src/substrate-contracts-node/target/debug/substrate-contracts-node"
+```bash
+export CONTRACTS_NODE="/Users/pop/bin/substrate-contracts-node" 
 pop test contract --features e2e-tests
 ```
 

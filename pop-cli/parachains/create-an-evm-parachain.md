@@ -1,12 +1,12 @@
 # Create an EVM parachain
 
-To create an EVM parachain with Pop CLI
+Using Pop CLI you can easily create a parachain with the Ethereum Virtual Machine, supporting Solidity smart contracts:
 
-```
+```shell
 pop new parachain my-evm-chain pop -t evm
 ```
 
-Additional configuration flags are available.
+Keep in mind there are additional configuration flags you can provide.
 
 ```
 pop new parachain --help

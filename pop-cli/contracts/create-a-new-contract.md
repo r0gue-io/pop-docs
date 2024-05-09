@@ -1,10 +1,13 @@
 # Create a new contract
 
-To create a new ink! smart contract using Pop CLI, run the following command:
+To create a new ink! smart contract using Pop CLI, run the following command, specifying the name of the contract:
 
-```
+```shell
 pop new contract flipper
 ```
+
+> Note: 'flipper' has been used as the name above as the default template is based on the `flipper` contract example.
+> Additional contract templates will be added in the next release!
 
 You should get output like the following:
 
@@ -18,7 +21,7 @@ You should get output like the following:
 
 You can now `cd` into the folder and start hacking on your contract:
 
-```
+```shell
 cd flipper
 ```
 

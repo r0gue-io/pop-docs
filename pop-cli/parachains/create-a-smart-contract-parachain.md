@@ -1,12 +1,10 @@
-# Create a smart contract parachain
+# Create a Contracts parachain
 
-Using Pop CLI you can easily create a smart contract parachain
+Using Pop CLI you can easily create a parachain supporting WebAssembly smart contracts:
 
-```
+```shell
 pop new parachain my-contracts-chain pop -t contracts
 ```
-
-"pop" here is the template provider and `-t` is the template, in this case, the contracts template
 
 Keep in mind there are additional configuration flags you can provide.
 
