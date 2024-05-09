@@ -2,7 +2,7 @@
 
 Now that your contract is deployed locally, we can start interacting with it.
 
-Grab the contract address that was outputted from the [previous step](deploying-your-contract.md).
+Grab the contract address that was outputted from the [previous step](deploying-your-contract-locally.md).
 
 ```shell
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
