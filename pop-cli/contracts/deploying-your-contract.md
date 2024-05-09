@@ -1,4 +1,4 @@
-# Run your contract
+# Deploying your contract
 
 In order to run your contract, we will need a running Substrate node that has [pallet-contracts](https://paritytech.github.io/polkadot-sdk/master/pallet\_contracts/index.html) running.
 

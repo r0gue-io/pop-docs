@@ -12,7 +12,7 @@
 * [Create a new contract](contracts/create-a-new-contract.md)
 * [Build your contract](contracts/build-your-contract.md)
 * [Run your unit tests](contracts/run-your-unit-tests.md)
-* [Run your contract](contracts/run-your-contract.md)
+* [Deploying your contract](contracts/deploying-your-contract.md)
 * [Deploy your contract locally](contracts/deploy-your-contract-locally.md)
 * [Calling your contract](contracts/calling-your-contract.md)
 * [Running E2E tests](contracts/running-e2e-tests.md)
