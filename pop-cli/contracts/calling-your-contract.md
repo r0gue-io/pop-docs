@@ -2,7 +2,7 @@
 
 Now that your contract is deployed locally, we can start interacting with it.
 
-Grab the contract address that was outputted from the [previous step](deploy-your-contract-locally.md).
+Grab the contract address that was outputted from the [previous step](deploying-your-contract.md).
 
 ```shell
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
@@ -31,8 +31,7 @@ Let's try _flipping_ it. Remember to update the contract address accordingly.
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice -x
 ```
 
-> Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on
-> the network, and it will cost gas.
+> Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on the network, and it will cost gas.
 
 ```
 ┌   Pop CLI : Calling a contract
@@ -58,8 +57,7 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 └  Call completed successfully!
 ```
 
-Did it work? See if the value has been flipped by calling the contract again. Remember to update the contract address
-accordingly.
+Did it work? See if the value has been flipped by calling the contract again. Remember to update the contract address accordingly.
 
 ```shell
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
