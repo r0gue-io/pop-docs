@@ -29,5 +29,4 @@ Do you want to create a tutorial showing off how to do something cool with Pop C
 
 ### Do you want to help but not sure how?
 
-* Drop a comment in the Pop Telegram channel, asking how you can help with the Docs:
-  * [https://t.me/Pop\_Network](https://t.me/Pop\_Network)
+* Drop a comment in the Pop Telegram channel, asking how you can help with the Docs
