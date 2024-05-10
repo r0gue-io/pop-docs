@@ -4,7 +4,7 @@ description: This is a guide on how to contribute to Pop CLI Documentation
 
 # How to contribute
 
-Contribution is key to improving the developer experience for the Pop CLI.
+Contribution is key to improving the developer experience for Pop CLI.
 
 
 
