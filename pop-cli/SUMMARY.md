@@ -6,6 +6,7 @@
 * [Installing Pop CLI](welcome/installing-pop-cli/README.md)
   * [macOS](welcome/installing-pop-cli/macos.md)
   * [Linux](welcome/installing-pop-cli/linux.md)
+* [How to contribute](welcome/how-to-contribute.md)
 
 ## CONTRACTS
 
