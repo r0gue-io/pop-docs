@@ -6,29 +6,28 @@ description: This is a guide on how to contribute to Pop CLI Documentation
 
 Contribution is key to improving the developer experience for Pop CLI.
 
+### See a mistake? A typo? Or something that could be improved?
 
+* Open an issue: [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
+* Submit a PR: [https://github.com/r0gue-io/pop-docs/pulls](https://github.com/r0gue-io/pop-docs/pulls)
 
-Four categories of contribution that are beneficial:
+### Want to add to the documentation?
 
-1. **Tutorials**
+See something that is missing that would help others? Or have an idea of something to add?
 
-* How to do something cool with Pop CLI
-  * Create a feature request discussion to get a "litmus test" from the community on whether this tutorial would be useful or not
-    * Judging from community demand, create a PR with the tutorial
-      * [https://github.com/r0gue-io/pop-docs](https://github.com/r0gue-io/pop-docs)
+* Open an issue: [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
+* Submit a PR: [https://github.com/r0gue-io/pop-docs/pulls](https://github.com/r0gue-io/pop-docs/pulls)
 
-2. **Documentation**
+### Want to create a tutorial?
 
-* See something that is missing that would help others?
-  * Create an issue here:
-    * [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
+You want to create a tutorial showing off how to do something cool with Pop CLI
 
-3. **Refactoring current documentation**
+* Create a feature request discussion to get community feedback on whether this tutorial would be beneficial or not.
+  * [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
+* Judging from community demand, create a PR with the tutorial
+  * [https://github.com/r0gue-io/pop-docs/pulls](https://github.com/r0gue-io/pop-docs/pulls)
 
-* Do you see a typo? You something that could be better with the current documentation?
-  * Submit a PR: [https://github.com/r0gue-io/pop-docs](https://github.com/r0gue-io/pop-docs)
-
-4. **Not sure how to help? But you would like to help?**
+### You want to help but not sure how?
 
 * Drop a comment in the Pop Telegram channel, asking how you can help with the Docs:
   * [https://t.me/Pop\_Network](https://t.me/Pop\_Network)
