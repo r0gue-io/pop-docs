@@ -8,7 +8,7 @@ description: >-
 
 > Help improve this documentation. Check our [contribution guidelines](../how-to-contribute.md).
 
-
+### Install
 
 First we will need [Homebrew](https://brew.sh/) - the macOS package manager. Run the following in your Terminal.
 
