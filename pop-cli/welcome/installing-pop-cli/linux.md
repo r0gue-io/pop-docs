@@ -1,10 +1,12 @@
 ---
 description: >-
-  These instructions will guide you on installing the necessary prerequisites for Linux to
-  install Pop CLI and use all its features.
+  These instructions will guide you on installing the necessary prerequisites
+  for Linux to install Pop CLI and use all its features.
 ---
 
 # Linux
+
+> Help improve this documentation. Check our [contribution guidelines](../how-to-contribute.md).
 
 ### For Ubuntu
 
