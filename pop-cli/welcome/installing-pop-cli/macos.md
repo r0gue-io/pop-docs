@@ -1,10 +1,14 @@
 ---
 description: >-
-  These instructions will guide you on installing the necessary prerequisites for macOS to
-  install Pop CLI and use all its features.
+  These instructions will guide you on installing the necessary prerequisites
+  for macOS to install Pop CLI and use all its features.
 ---
 
 # macOS
+
+> Help improve this documentation. Check our [contribution guidelines](../how-to-contribute.md).
+
+
 
 First we will need [Homebrew](https://brew.sh/) - the macOS package manager. Run the following in your Terminal.
 
