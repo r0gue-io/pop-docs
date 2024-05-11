@@ -26,4 +26,4 @@
   * [Create an EVM parachain](parachains/create-a-new-parachain/create-an-evm-parachain.md)
 * [Build your parachain](parachains/build-your-parachain.md)
 * [Running your parachain](parachains/running-your-parachain.md)
-* [Spinning up the Polkadot Network](parachains/spinning-up-the-polkadot-network.md)
+* [Spinning up a Polkadot Network](parachains/spinning-up-the-polkadot-network.md)
