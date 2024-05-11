@@ -20,10 +20,10 @@
 
 ## PARACHAINS
 
-* [Create a new parachain](parachains/create-a-new-parachain.md)
+* [Create a new parachain](parachains/create-a-new-parachain/README.md)
+  * [Create an Assets parachain](parachains/create-a-new-parachain/create-an-assets-parachain.md)
+  * [Create a Contracts parachain](parachains/create-a-new-parachain/create-a-smart-contract-parachain.md)
+  * [Create an EVM parachain](parachains/create-a-new-parachain/create-an-evm-parachain.md)
 * [Build your parachain](parachains/build-your-parachain.md)
 * [Running your parachain](parachains/running-your-parachain.md)
 * [Spinning up the Polkadot Network](parachains/spinning-up-the-polkadot-network.md)
-* [Create an Assets parachain](parachains/create-an-assets-parachain.md)
-* [Create a Contracts parachain](parachains/create-a-smart-contract-parachain.md)
-* [Create an EVM parachain](parachains/create-an-evm-parachain.md)
