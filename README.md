@@ -8,7 +8,10 @@ An all-in-one tool for Polkadot development.&#x20;
 
 Pop CLI makes it easy to play on Polkadot, providing a simple command line interface for quickly creating, building, testing and deploying a solution - whether smart contract or complete parachain.
 
-Learn more about Pop CLI at [https://learn.onpop.io/v/cli](https://learn.onpop.io/v/cli).
+Learn more about Pop CLI:
+
+* [https://learn.onpop.io/v/pop-cli-for-smart-contracts](https://learn.onpop.io/v/pop-cli-for-smart-contracts)
+* [https://learn.onpop.io/v/pop-cli-for-appchains](https://learn.onpop.io/v/pop-cli-for-appchains)
 
 GitHub repo: [https://github.com/r0gue-io/pop-cli](https://github.com/r0gue-io/pop-cli)
 
