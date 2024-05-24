@@ -8,7 +8,7 @@ description: An all-in-one tool for Polkadot development.
 
 With Pop CLI, developers can build solutions for Polkadot via:
 
-### AppChains
+### Appchains
 
 * Build: start a new parachain project using starter templates to hit-the-ground running
   * Templates include Standard, Assets, Contracts and EVM
