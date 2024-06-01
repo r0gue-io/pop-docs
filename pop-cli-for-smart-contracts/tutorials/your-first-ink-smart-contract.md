@@ -5,7 +5,7 @@
 Developers who want to learn how to:
 
 * use the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool to speed up development
-*
+* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node)
 
 ### Learning Objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
@@ -17,12 +17,13 @@ On completion of this tutorial, developers will be able to:
 
 ### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Developers should have knowledge of the following:
+On completion of this tutorial, developers will be able to:
 
-*
-* a general concept of what smart contracts are
-*
-*
+* create, build, test, and deploy ink! smart contracts
+* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
+* interact with the deployed contract
+
+
 
 ### Installing Pop CLI <a href="#installing-pop-cli" id="installing-pop-cli"></a>
 
