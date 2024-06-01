@@ -4,7 +4,9 @@ description: Overview
 
 # Pop Platform
 
-A developer platform for Web3 solutions on Polkadot.
+The Pop Platform (Pop) is a developer platform for Web3 solutions on Polkadot.
+
+Pop consists of two main products: Pop CLI and Pop Network.
 
 ## Pop CLI
 
