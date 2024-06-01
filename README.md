@@ -26,6 +26,6 @@ GitHub repo: [https://github.com/r0gue-io/pop-cli](https://github.com/r0gue-io/p
 Pop Network focuses specifically on [smart contracts](https://learn.onpop.io/v/smart-contracts), making it easy for developers to use the power of Polkadot. Through curated runtime primitives, smart contract developers can spend less time learning the complexities of Polkadot, and more time buidling awesome things.
 
 Start your smart contract journey today and deploy on Pop Network:\
-\- [https://learn.onpop.io/v/smart-contracts](https://learn.onpop.io/v/smart-contracts)
+\- [https://learn.onpop.io/v/pop-network](https://learn.onpop.io/v/pop-network)
 
 GitHub repo: [https://github.com/r0gue-io/pop-node](https://github.com/r0gue-io/pop-node)
