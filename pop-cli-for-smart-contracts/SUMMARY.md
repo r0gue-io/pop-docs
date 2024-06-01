@@ -2,7 +2,7 @@
 
 ## WELCOME
 
-* [Pop CLI](README.md)
+* [Smart Contracts with Pop CLI](README.md)
 * [Installing Pop CLI](welcome/installing-pop-cli/README.md)
   * [macOS](welcome/installing-pop-cli/macos.md)
   * [Linux](welcome/installing-pop-cli/linux.md)
