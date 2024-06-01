@@ -10,8 +10,8 @@ Pop CLI makes it easy to play on Polkadot, providing a simple command line inter
 
 Learn more about Pop CLI:
 
-* [https://learn.onpop.io/v/pop-cli-for-smart-contracts](https://learn.onpop.io/v/pop-cli-for-smart-contracts)
-* [https://learn.onpop.io/v/pop-cli-for-appchains](https://learn.onpop.io/v/pop-cli-for-appchains)
+* [https://learn.onpop.io/v/smart-contracts](https://learn.onpop.io/v/smart-contracts)
+* [https://learn.onpop.io/v/appchains](https://learn.onpop.io/v/appchains)
 
 GitHub repo: [https://github.com/r0gue-io/pop-cli](https://github.com/r0gue-io/pop-cli)
 
