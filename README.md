@@ -1,4 +1,8 @@
-# Pop
+---
+description: Pop Platform
+---
+
+# Start Here
 
 A developer platform for Web3 solutions on Polkadot.
 
