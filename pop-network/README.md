@@ -1,5 +1,3 @@
-# Pop Network
+# Pop API
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-Pop Network makes it easy for smart contract developers to use the Power of Polkadot. Through curated runtime primitives, smart contract developers can spend less time learning the complexities of Polkadot, and more time buidling awesome things.
+One of the core value propositions of Pop Network is to enable smart contracts to easily access the power of Polkadot. As such, the Pop API was built to enable smart contracts to easily utilize the functionality provided by the Pop Network parachain runtime.

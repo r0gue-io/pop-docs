@@ -26,7 +26,7 @@ On completion of this tutorial, developers will:
 Developers should have:
 
 * completed [your first contract](your-first-contract.md) tutorial
-* [installed Pop CLI](https://app.gitbook.com/s/CzgRNwlfNkPLJDU555lw/welcome/installing-pop-cli)
+* [installed Pop CLI](https://app.gitbook.com/s/CzgRNwlfNkPLJDU555lw/welcome/installing-pop-cli/macos)
 
 ## Getting Started
 

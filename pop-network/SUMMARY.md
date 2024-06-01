@@ -2,8 +2,7 @@
 
 ## WELCOME
 
-* [Pop Network](README.md)
-* [Pop API](welcome/pop-api.md)
+* [Pop API](README.md)
 
 ## Tutorials
 
