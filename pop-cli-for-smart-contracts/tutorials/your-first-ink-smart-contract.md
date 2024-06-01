@@ -279,6 +279,8 @@ Confirm that the Pop Network parachain is producing blocks by openning the Polka
 
 > Replace the port number with the port number for the Pop Network parachain that is outputted in your terminal
 
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FS1yVLETkC.png&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=98122906697109d713872748c589a6e75b94ae378a36fc30c560312101578199" alt=""><figcaption></figcaption></figure>
+
 Cool. Now that we have Pop Network running we can now deploy our contract.
 
 Keep the PolkadotJs App window open, specifically to see the recent events. After we deploy the contract, we will see the events displayed there.
@@ -300,6 +302,10 @@ pop up contract -p ./flipper --constructor new --args "false" --suri //Alice --u
 The contract has been deployed!
 
 > Save the contract address as we will be used in the next step to interact with the contract.
+
+You can also confirm that the contract was deployed in the recent events in Polkadot JS:
+
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FrygPDVpJ0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=a8ac462aa39b37e82c48e1f7203e8f6d1404c323050a90552e672a440830a5e0" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Interacting with our contract <a href="#interacting-with-our-contract" id="interacting-with-our-contract"></a>
 
@@ -439,11 +445,15 @@ Since Pop Network uses the Relay chain's native token as its native token, we wi
 
 We will need to add Alice to our [PolkadotJs Wallet extension](https://polkadot.js.org/extension). We can do that by using Alice's secret seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
 
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHymzV9GeA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=288802bc992dd767f1845dafc9ad7638d834a30050a069531bbff02d3eeb7adb" alt="" width="375"><figcaption></figcaption></figure>
+
 > Remember this is for development purposes. In production you would already have an existing wallet to use.
 
 Now that we have Alice's account in our PolkadotJs Wallet Extension, we can use the following for teleporting PAS tokens to Pop Network:
 
 * https://onboard.popnetwork.xyz
+
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHysR4czxA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=965d85f29cb435d5200c9ec2c2a4cb9db8ae707f0baf4dca99c0ae1e4008927f" alt="" width="375"><figcaption></figcaption></figure>
 
 Cool! Now that you have some PAS tokens on Pop Network, we can deploy.
 
@@ -463,9 +473,19 @@ pop up contract --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81
 
 You can now take the contract address and check the chain state to confirm that the contract exists
 
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FH1j56cMl0.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=3e7a032c8f2ea1daee9c15a2674b6f91de409620130896ed63243768bf6be185" alt=""><figcaption></figcaption></figure>
+
 Let's add the contract to our Contracts UI in PolkadotJS Apps. Click on "add an existing contract".
 
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHJ3h1sGg0.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=5010b0330ae9de8d52ed3abfe3c229d7342ed1e2815949f99dcfe16daa01d019" alt=""><figcaption></figcaption></figure>
+
 Add the contract address along with the `flipper.contract` file found inside `flipper/target/ink/flipper.contract`
+
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBys-lozl0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=65c79e1adb730dacff0c1d23b400d2379e6988a614189f813866de94ba71fcb1" alt="" width="375"><figcaption></figcaption></figure>
+
+Save. You can now see your newly uploaded contract.
+
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBkh3lsfxA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=fef5f925e24822ccbe47434249543e52e1d9e50561e5c26ae3bf7d39c746edf9" alt=""><figcaption></figcaption></figure>
 
 Done!
 
