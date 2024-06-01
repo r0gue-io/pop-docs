@@ -1,10 +1,12 @@
 ---
-description: An all-in-one tool for Polkadot development.
+description: with Pop CLI
 ---
 
-# Pop CLI
+# Appchains
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Pop CLI is an all-in-one tool for Polkadot development.
 
 With Pop CLI, developers can build solutions for Polkadot via:
 
