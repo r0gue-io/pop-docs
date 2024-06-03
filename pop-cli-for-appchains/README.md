@@ -25,4 +25,4 @@ With Pop CLI, developers can develop Polkadot appchain solutions for Polkadot vi
 
 **Get started with your first Polkadot appchain:**
 
-* [Create a new parachain](appchains/create-a-new-parachain/)
+* [Create a new parachain](polkadot-appchains/create-a-new-parachain/)
