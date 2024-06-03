@@ -16,6 +16,6 @@ With Pop CLI, developers can develop smart contract solutions for Polkadot.
 * Test an ink! smart contract, including unit and end-to-end tests
 * Deploy an ink! smart contract locally or to a live Polkadot network
 
-Get started with smart contracts on Polkadot
+**Get started with smart contracts on Polkadot**
 
 * [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
