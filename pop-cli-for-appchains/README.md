@@ -8,7 +8,7 @@ description: with Pop CLI
 
 Pop CLI is an all-in-one tool for Polkadot development.
 
-With Pop CLI, developers can build solutions for Polkadot via:
+With Pop CLI, developers can build Polkadot appchain solutions for Polkadot via:
 
 ### Polkadot Appchains
 
