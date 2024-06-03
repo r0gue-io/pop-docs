@@ -10,11 +10,11 @@ Pop CLI is an all-in-one tool for Polkadot development.
 
 With Pop CLI, developers can develop smart contract solutions for Polkadot.
 
-### Smart contracts features include:
+### Features include:
 
-* Build: start a new ink! smart contract project
-* Test: test an ink! smart contract, including unit and end-to-end tests
-* Deploy: deploy an ink! smart contract locally or to a live network
+* Build a new ink! smart contract project
+* Test an ink! smart contract, including unit and end-to-end tests
+* Deploy an ink! smart contract locally or to a live Polkadot network
 
 Get started with smart contracts on Polkadot
 
