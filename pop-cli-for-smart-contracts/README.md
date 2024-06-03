@@ -8,7 +8,7 @@ description: with Pop CLI
 
 Pop CLI is an all-in-one tool for Polkadot development.
 
-With Pop CLI, developers can build smart contract solutions for Polkadot.
+With Pop CLI, developers can develop smart contract solutions for Polkadot.
 
 ### Smart Contracts
 
