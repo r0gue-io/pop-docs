@@ -13,11 +13,11 @@ With Pop CLI, developers can develop Polkadot appchain solutions for Polkadot vi
 ### Features include:
 
 * Start a new Polkadot appchain (parachain) project using starter templates to hit the ground running.
-  * Templates include:&#x20;
-    * a standard Polkadot appchain template,&#x20;
-    * an assets Polkadot appchain template,&#x20;
-    * a smart contract Polkadot appchain template,&#x20;
-    * and an EVM Polkadot appchain template
+  * Polkadot appchain templates include:&#x20;
+    * a standard parachain template,&#x20;
+    * an assets parachain template,&#x20;
+    * a smart contract parachain template,&#x20;
+    * and an EVM parachain template
 * Build logic into your parachain using the Polkadot SDK&#x20;
 * Deploy your parachain to a local Polkadot network
 * Spin up a Polkadot Network with various parachains
