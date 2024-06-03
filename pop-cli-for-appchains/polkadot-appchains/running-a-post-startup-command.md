@@ -56,7 +56,9 @@ cargo build
 
 Create a simple zombienet network.toml file to spin up the Polkadot Relay chain:
 
-network.toml
+```bash
+touch network.toml
+```
 
 ```toml
 [relaychain]
@@ -75,7 +77,7 @@ validator = true
 Spin up the Polkadot Relay chain with Pop CLI:
 
 ```
-pop up parachain -f network.toml -r v1.8.0 --cmd ../set-balance/target/debug/set-balance
+pop up parachain -f network.toml -r v1.12.0 --cmd ./target/debug/set-balance
 ```
 
 ```bash
