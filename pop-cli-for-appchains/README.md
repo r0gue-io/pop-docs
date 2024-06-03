@@ -13,7 +13,11 @@ With Pop CLI, developers can build solutions for Polkadot via:
 ### Polkadot Appchains
 
 * Build: start a new parachain project using starter templates to hit-the-ground running
-  * Templates include Standard, Assets, Contracts and EVM
+  * Templates include:&#x20;
+    * a standard template,&#x20;
+    * an assets template,&#x20;
+    * a smart contract template,&#x20;
+    * and an EVM template
 * Test: test a parachain by running unit and integration tests
 * Deploy: deploy a parachain to a local network
 
