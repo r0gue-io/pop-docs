@@ -20,5 +20,5 @@ With Pop CLI, developers can develop Polkadot appchain solutions for Polkadot vi
     * and an EVM Polkadot appchain template
 * Build logic into your parachain using the Polkadot SDK&#x20;
 * Deploy your parachain to a local Polkadot network
-
-Pop CLI also enables you to quickly spin up a Polkadot network along with various parachains.
+* Spin up a Polkadot Network with various parachains
+  * Useful for testing cross-chain interoperability
