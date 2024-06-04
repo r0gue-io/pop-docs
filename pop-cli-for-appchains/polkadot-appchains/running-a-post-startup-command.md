@@ -77,7 +77,7 @@ validator = true
 Spin up the Polkadot Relay chain with Pop CLI:
 
 ```
-pop up parachain -f network.toml -r v1.12.0 --cmd ./target/debug/set-balance
+pop up parachain -f network.toml -r v1.8.0 --cmd ./target/debug/set-balance
 ```
 
 ```bash
