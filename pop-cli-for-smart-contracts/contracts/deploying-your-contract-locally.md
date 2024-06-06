@@ -1,22 +1,38 @@
-# Deploying your contract
+# Deploying your contract locally
 
 In order to run your contract, we will need a running Substrate node that has [pallet-contracts](https://paritytech.github.io/polkadot-sdk/master/pallet\_contracts/index.html) running.
 
-We can use [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this.
+We can use [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) - a Substrate blockchain with pallet contracts installed.
 
-```sh
-cargo install contracts-node
+Let's spin up the contracts-node.
+
+```bash
+pop up contracts-node
+
+┌   Pop CLI : Launch a contracts node
+│
+    Updating crates.io index
+  Downloaded contracts-node v0.41.0
+  Downloaded 1 crate (92.9 KB) in 0.15s
+  Installing contracts-node v0.41.0
+  ....
+  Finished `release` profile [optimized] target(s) in 16m 02s
+  Installing /Users/bruno/Library/Caches/pop/bin/substrate-contracts-node
+  Installed package `contracts-node v0.41.0` (executable `substrate-contracts-node`)
+warning: be sure to add `/Users/bruno/Library/Caches/pop/bin` to your PATH to be able to run the installed binaries
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: Substrate Contracts Node    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: ✌️  version 0.41.0-unknown    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: ❤️  by anonymous, 2021-2024    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: 📋 Chain specification: Development    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: 🏷  Node name: comfortable-sort-2315    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: 👤 Role: AUTHORITY    
+2024-06-05 22:36:05.908  INFO main sc_cli::runner: 💾 Database: RocksDb at /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/substratefIj1lH/chains/dev/db/full    
+2024-06-05 22:36:06.715  INFO main sc_rpc_server: Running JSON-RPC server: addr=127.0.0.1:9944, allowed origins=["*"]    
 ```
 
-> The contracts-node is a Substrate blockchain with pallet contracts installed
+The contracts-node is now running on your machine.
 
-Now let's run the node. Type the following in your terminal.
-
-```sh
-substrate-contracts-node
-```
-
-Make sure the contracts-node is running.
+Let's make sure by opening your browser and connecting to the contracts-node.
 
 ```
 https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9944#/explorer
@@ -28,7 +44,7 @@ Make sure your contract builds.
 pop build contract
 ```
 
-Now let's deploy to contract to the contracts-node.
+Now let's deploy the contract to the contracts-node.
 
 ```sh
 pop up contract --constructor new --args "false" --suri //Alice
