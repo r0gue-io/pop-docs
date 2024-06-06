@@ -1,10 +1,12 @@
+---
+description: Build an appchain on Polkadot using Pop - the Web3 development platform
+---
+
 # Polkadot Appchains
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Pop CLI is an all-in-one tool for Polkadot development.
-
-With Pop CLI, developers can develop Polkadot appchain solutions for Polkadot via:
+With Pop, developers can build an appchain on Polkadot.
 
 ### Features include:
 
