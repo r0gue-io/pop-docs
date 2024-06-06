@@ -1,5 +1,5 @@
 ---
-description: Build an appchain on Polkadot using Pop - the Web3 development platform
+description: Build an appchain on Polkadot using Pop - the Web3 development platform.
 ---
 
 # Polkadot Appchains
