@@ -1,17 +1,19 @@
+---
+description: Develop smart contracts on Pop - the Web3 development platform.
+---
+
 # Smart Contracts
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Pop CLI is an all-in-one tool for Polkadot development.
-
-With Pop CLI, developers can develop smart contract solutions for Polkadot.
+With Pop, developers can develop smart contract solutions for Polkadot.
 
 ### Features include:
 
-* Build a new ink! smart contract project
-* Test an ink! smart contract, including unit and end-to-end tests
-* Deploy an ink! smart contract locally or to a live Polkadot network
+* Building a new smart contract
+* Testing your smart contract, including unit and end-to-end tests
+* Deploy your smart contract locally or to production
 
-**Get started with smart contracts on Polkadot**
+**Get started with smart contracts on Pop**
 
 * [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
