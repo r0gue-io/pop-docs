@@ -1,10 +1,10 @@
 ---
-description: This is a guide on how to contribute to Pop CLI Documentation
+description: This is a guide on how to contribute to Pop Documentation
 ---
 
 # How to contribute
 
-Contribution is key to improving the developer experience for Pop CLI.
+Contribution is key to improving the developer experience for Pop.
 
 ### See a mistake? A typo? Or something that could be improved?
 
@@ -16,11 +16,12 @@ Contribution is key to improving the developer experience for Pop CLI.
 Do you see something that is missing that would help others? Or have an idea of something to add?
 
 * Open an issue: [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
-* Contribute directly to our Pop CLI Wiki: [https://github.com/r0gue-io/pop-cli/wiki](https://github.com/r0gue-io/pop-cli/wiki)
+* Contribute directly to our community-driven Pop CLI Wiki:&#x20;
+  * [https://github.com/r0gue-io/pop-cli/wiki](https://github.com/r0gue-io/pop-cli/wiki)
 
 ### Add a tutorial
 
-Do you want to create a tutorial showing off how to do something cool with Pop CLI?
+Do you want to create a tutorial showing off how to do something cool on Pop?
 
 * Create a feature request discussion to get community feedback on whether this tutorial would be beneficial or not on learn.onpop.io
   * [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
