@@ -21,7 +21,7 @@ Do you see something that is missing that would help others? Or have an idea of 
 
 ### Add a tutorial
 
-Do you want to create a tutorial showing off how to do something cool with Pop CLI?
+Do you want to create a tutorial showing off how to do something cool on Pop?
 
 * Create a feature request discussion to get community feedback on whether this tutorial would be beneficial or not.
   * [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
