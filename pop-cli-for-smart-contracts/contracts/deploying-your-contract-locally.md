@@ -11,7 +11,7 @@ pop up contracts-node
 
 ┌   Pop CLI : Launch a contracts node
 │
-    Updating crates.io index
+  Updating crates.io index
   Downloaded contracts-node v0.41.0
   Downloaded 1 crate (92.9 KB) in 0.15s
   Installing contracts-node v0.41.0
