@@ -16,16 +16,16 @@ Contribution is key to improving the developer experience for Pop CLI.
 Do you see something that is missing that would help others? Or have an idea of something to add?
 
 * Open an issue: [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
-* Submit a PR: [https://github.com/r0gue-io/pop-docs/pulls](https://github.com/r0gue-io/pop-docs/pulls)
+* Contribute directly to our Pop CLI Wiki: [https://github.com/r0gue-io/pop-cli/wiki](https://github.com/r0gue-io/pop-cli/wiki)
 
 ### Add a tutorial
 
 Do you want to create a tutorial showing off how to do something cool with Pop CLI?
 
-* Create a feature request discussion to get community feedback on whether this tutorial would be beneficial or not.
+* Create a feature request discussion to get community feedback on whether this tutorial would be beneficial or not on learn.onpop.io
   * [https://github.com/r0gue-io/pop-docs/issues](https://github.com/r0gue-io/pop-docs/issues)
-* Judging from community demand, create a PR with the tutorial
-  * [https://github.com/r0gue-io/pop-docs/pulls](https://github.com/r0gue-io/pop-docs/pulls)
+* Or create the tutorial directly in our community-driven Pop CLI Wiki
+  * [https://github.com/r0gue-io/pop-cli/wiki](https://github.com/r0gue-io/pop-cli/wiki)
 
 ### Do you want to help but not sure how?
 
