@@ -18,7 +18,7 @@ Pop CLI provides an on-ramp for development on Polkadot by providing a simple co
 
 Learn how to develop with Pop CLI:
 
-* [https://learn.onpop.io/v/smart-contracts](https://learn.onpop.io/v/smart-contracts)
+* [https://learn.onpop.io/v/contracts](https://learn.onpop.io/v/contracts)
 * [https://learn.onpop.io/v/appchains](https://learn.onpop.io/v/appchains)
 
 ## Pop Network
@@ -32,5 +32,5 @@ Pop Network is a Polkadot smart contract platform. Developers can write smart co
 Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot appchain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.&#x20;
 
 Start your Polkadot smart contract journey today and go live on Pop Network:\
-\- [https://learn.onpop.io/v/smart-contracts](https://learn.onpop.io/v/smart-contracts)
+\- [https://learn.onpop.io/v/contracts](https://learn.onpop.io/v/contracts)
 
