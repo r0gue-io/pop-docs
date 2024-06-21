@@ -23,4 +23,4 @@ With Pop, developers can build an appchain on Polkadot.
 
 **Get started with your first Polkadot appchain:**
 
-* [Create a new parachain](polkadot-appchains/create-a-new-parachain/)
+* [Create a new parachain](guides/create-a-new-parachain/)
