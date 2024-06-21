@@ -8,16 +8,16 @@
   * [Linux](welcome/installing-pop-cli/linux.md)
 * [How to contribute](welcome/how-to-contribute.md)
 
-## CONTRACTS
+## GUIDES
 
-* [Setting up your development environment](contracts/setting-up-your-development-environment.md)
-* [Create a new contract](contracts/create-a-new-contract.md)
-* [Build your contract](contracts/build-your-contract.md)
-* [Run your unit tests](contracts/run-your-unit-tests.md)
-* [Deploying your contract locally](contracts/deploying-your-contract-locally.md)
-* [Calling your contract](contracts/calling-your-contract.md)
-* [Running E2E tests](contracts/running-e2e-tests.md)
-* [Deploy on Pop Testnet](contracts/deploy-on-pop-testnet.md)
+* [Setting up your development environment](guides/setting-up-your-development-environment.md)
+* [Create a new contract](guides/create-a-new-contract.md)
+* [Build your contract](guides/build-your-contract.md)
+* [Run your unit tests](guides/run-your-unit-tests.md)
+* [Deploying your contract locally](guides/deploying-your-contract-locally.md)
+* [Calling your contract](guides/calling-your-contract.md)
+* [Running E2E tests](guides/running-e2e-tests.md)
+* [Deploy on Pop Testnet](guides/deploy-on-pop-testnet.md)
 
 ## TUTORIALS
 
