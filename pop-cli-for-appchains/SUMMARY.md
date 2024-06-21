@@ -10,6 +10,7 @@
 
 ## POLKADOT APPCHAINS
 
+* [Setting up your development environment](polkadot-appchains/setting-up-your-development-environment.md)
 * [Create a new parachain](polkadot-appchains/create-a-new-parachain/README.md)
   * [Create an Assets parachain](polkadot-appchains/create-a-new-parachain/create-an-assets-parachain.md)
   * [Create a Contracts parachain](polkadot-appchains/create-a-new-parachain/create-a-smart-contract-parachain.md)
