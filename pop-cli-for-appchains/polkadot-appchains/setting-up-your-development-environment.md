@@ -1,6 +1,6 @@
 ---
 description: >-
-  This tutorial will guide on how to use Pop CLI to set up your development
+  This section will guide on how to use Pop CLI to set up your development
   environment for Polkadot appchain development.
 ---
 
