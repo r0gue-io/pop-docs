@@ -10,6 +10,7 @@
 
 ## CONTRACTS
 
+* [Setting up your development environment](contracts/setting-up-your-development-environment.md)
 * [Create a new contract](contracts/create-a-new-contract.md)
 * [Build your contract](contracts/build-your-contract.md)
 * [Run your unit tests](contracts/run-your-unit-tests.md)
