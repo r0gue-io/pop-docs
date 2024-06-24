@@ -5,7 +5,12 @@ description: Build a contract
 # build
 
 ```bash
-# Build an existing Smart Contract
+pop build contract [OPTIONS]
+```
+
+Build an existing smart contract:
+
+```bash
 pop build contract -p ./my_contract
 ```
 
