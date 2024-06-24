@@ -8,7 +8,7 @@ description: Generate a new parachain or pallet.
 pop new <COMMAND>
 ```
 
-Use POP CLI to create a new parachain:
+Use Pop CLI to create a new parachain:
 
 ```bash
 pop new parachain
@@ -62,3 +62,30 @@ There's also the shorter version:
 pop new parachain my-appchain -s DOT -d 6 -i 1_000_000_000
 ```
 
+
+
+### Generate a new pallet
+
+To generate a new pallet:
+
+```bash
+pop new pallet my-pallet
+```
+
+Additional options:
+
+```bash
+pop new pallet --help
+
+Generate a new pallet
+
+Usage: pop new pallet [OPTIONS] [NAME]
+
+Arguments:
+  [NAME]  Name of the pallet [default: pallet-template]
+
+Options:
+  -a, --authors <AUTHORS>          Name of authors [default: Anonymous]
+  -d, --description <DESCRIPTION>  Pallet description [default: "Frame Pallet"]
+  -p, --path <PATH>                Path to the pallet, [default: current directory]
+```
