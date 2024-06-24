@@ -25,6 +25,7 @@
 
 ## POP
 
+* [install](pop/install.md)
 * [new](pop/new.md)
 * [build](pop/build.md)
 * [call](pop/call.md)
