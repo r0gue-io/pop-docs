@@ -29,3 +29,4 @@
 * [build](pop/build.md)
 * [call](pop/call.md)
 * [up](pop/up.md)
+* [test](pop/test.md)
