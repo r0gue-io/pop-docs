@@ -4,6 +4,10 @@ description: Build your parachain
 
 # build
 
+```bash
+pop build <COMMAND>
+```
+
 To build your parachain using Pop CLI:
 
 ```bash
