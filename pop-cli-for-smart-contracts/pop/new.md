@@ -5,7 +5,7 @@ description: Generate a new smart contract
 # new
 
 ```bash
-# Create a minimal Smart Contract
+# Create a minimal smart contract
 pop new contract my_contract
 ```
 
