@@ -19,3 +19,8 @@
 * [Running your parachain](guides/running-your-parachain.md)
 * [Spinning up a Polkadot Network](guides/spinning-up-the-polkadot-network.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
+
+## REFERENCE
+
+* [new](reference/new.md)
+* [build](reference/build.md)
