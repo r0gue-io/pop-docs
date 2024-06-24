@@ -20,7 +20,7 @@
 * [Spinning up a Polkadot Network](guides/spinning-up-the-polkadot-network.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 
-## REFERENCE
+## POP
 
-* [new](reference/new.md)
-* [build](reference/build.md)
+* [new](pop/new.md)
+* [build](pop/build.md)
