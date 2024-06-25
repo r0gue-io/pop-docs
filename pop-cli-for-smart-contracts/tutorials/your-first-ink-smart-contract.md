@@ -35,24 +35,8 @@ cargo install --locked --git https://github.com/r0gue-io/pop-cli
 
 Make sure the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool has been installed correctly by running the `pop` command in your terminal.
 
-```
+```bash
 pop --help
-
-An all-in-one tool for Polkadot development.
-
-Usage: pop <COMMAND>
-
-Commands:
-  new    Generate a new parachain, pallet or smart contract
-  build  Build a parachain or smart contract
-  call   Call a smart contract
-  up     Deploy a parachain or smart contract
-  test   Test a smart contract
-  help   Print this message or the help of the given subcommand(s)
-
-Options:
-  -h, --help     Print help
-  -V, --version  Print version
 ```
 
 ### Getting Started <a href="#getting-started" id="getting-started"></a>
