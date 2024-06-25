@@ -8,12 +8,12 @@ description: This section is a reference section for all the Pop CLI commands.
 
 ### Available Pop CLI commands
 
-* [`install`](install.md)
-* [`new`](new.md)
-* [`build`](build.md)
-* [`call`](call.md)
-* [`up`](up.md)
-* [`test`](test.md)
+* [install](install.md)
+* [new](new.md)
+* [build](build.md)
+* [call](call.md)
+* [up](up.md)
+* [test](test.md)
 
 You can also see all the available commands by running:
 
