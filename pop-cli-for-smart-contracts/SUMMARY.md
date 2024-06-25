@@ -23,11 +23,11 @@
 
 * [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
 
-## POP
+## POP CLI
 
-* [install](pop/install.md)
-* [new](pop/new.md)
-* [build](pop/build.md)
-* [call](pop/call.md)
-* [up](pop/up.md)
-* [test](pop/test.md)
+* [install](pop-cli/install.md)
+* [new](pop-cli/new.md)
+* [build](pop-cli/build.md)
+* [call](pop-cli/call.md)
+* [up](pop-cli/up.md)
+* [test](pop-cli/test.md)
