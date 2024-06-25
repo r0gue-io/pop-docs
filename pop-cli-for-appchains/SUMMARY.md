@@ -27,3 +27,4 @@
 * [new](pop-cli/new.md)
 * [build](pop-cli/build.md)
 * [up](pop-cli/up.md)
+* [clean](pop-cli/clean.md)
