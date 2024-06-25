@@ -22,6 +22,7 @@
 
 ## POP
 
+* [welcome](pop/welcome.md)
 * [install](pop/install.md)
 * [new](pop/new.md)
 * [build](pop/build.md)
