@@ -20,10 +20,10 @@
 * [Spinning up a Polkadot Network](guides/spinning-up-the-polkadot-network.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 
-## POP
+## POP CLI
 
-* [welcome](pop/welcome.md)
-* [install](pop/install.md)
-* [new](pop/new.md)
-* [build](pop/build.md)
-* [up](pop/up.md)
+* [welcome](pop-cli/welcome.md)
+* [install](pop-cli/install.md)
+* [new](pop-cli/new.md)
+* [build](pop-cli/build.md)
+* [up](pop-cli/up.md)
