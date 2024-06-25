@@ -32,3 +32,4 @@
 * [call](pop-cli/call.md)
 * [up](pop-cli/up.md)
 * [test](pop-cli/test.md)
+* [clean](pop-cli/clean.md)
