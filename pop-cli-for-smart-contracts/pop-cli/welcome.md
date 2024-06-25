@@ -16,6 +16,7 @@ description: >-
 * [call](call.md)
 * [up](up.md)
 * [test](test.md)
+* [clean](clean.md)
 
 You can also see all the available commands by running:
 
