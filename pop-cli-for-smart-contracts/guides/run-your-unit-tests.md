@@ -1,9 +1,8 @@
 # Run your unit tests
 
-To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following
-command:
+To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following command:
 
-```shell
+```
 pop test contract
 ```
 
