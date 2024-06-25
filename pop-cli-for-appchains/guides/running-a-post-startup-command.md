@@ -10,7 +10,7 @@ Often there is a use case to run a command (or script) upon network initializati
 
 Say you want to fund accounts on your appchain or run a command to check account balances, Pop CLI allows you to do this via the `--cmd` option that is included in the `pop up parachain` command:
 
-```bash
+```
 pop up parachain --help
 
 Launch a local network
@@ -37,7 +37,7 @@ Options:
 To run a command post-initialization of the network, you can use the following:
 
 ```bash
-pop up parachain -f ./tests/zombienet.toml --cmd path/to/command
+pop up parachain -f ./tests/networks/pop.toml --cmd path/to/command
 ```
 
 Here is a simple script to update account balances on the Polkadot Relay chain:
