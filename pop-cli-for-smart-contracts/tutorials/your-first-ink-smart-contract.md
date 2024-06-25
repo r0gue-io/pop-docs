@@ -194,23 +194,24 @@ default_command = "pop-node"
 
 [[parachains.collators]]
 name = "pop"
+args = ["-lruntime::contracts=debug"]
 ```
 
 We can now use the configuration file to spin up the network.
 
 ```
-pop up parachain -f ./network.toml -p https://github.com/r0gue-io/pop-node
+pop up parachain -f ./network.toml
 
 ┌   Pop CLI : Deploy a parachain
 │
-▲  The following missing binaries are required: polkadot-parachain-v1.9.0
+▲  The following missing binaries are required: polkadot-parachain-v1.14.0
 │  
 ◆  Would you like to source them automatically now?
 │  ● Yes  / ○ No 
 │
 ⚙  They will be cached at /Users/bruno/Library/Caches/pop
 │  
-◐  Sourcing polkadot-parachain-v1.9.0...                                                                                                                      
+◐  Sourcing polkadot-parachain-v1.14.0...                                                                                                                      
 ```
 
 > The first time you run this command it will take some time. Grab some coffee.
@@ -257,7 +258,7 @@ You now have the following running locally on your machine:
 >   * one collator node is running for this system chain
 >   * it is useful to have a second parachain like this one to test cross-chain capabilities
 
-Confirm that the Pop Network parachain is producing blocks by openning the PolkadotJS link in your browser:
+Confirm that the Pop Network parachain is producing blocks by opening the PolkadotJS link in your browser:
 
 * https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56545#/explorer
 
@@ -289,7 +290,7 @@ The contract has been deployed!
 
 You can also confirm that the contract was deployed in the recent events in Polkadot JS:
 
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FrygPDVpJ0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=a8ac462aa39b37e82c48e1f7203e8f6d1404c323050a90552e672a440830a5e0" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FrygPDVpJ0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=a8ac462aa39b37e82c48e1f7203e8f6d1404c323050a90552e672a440830a5e0" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Interacting with our contract <a href="#interacting-with-our-contract" id="interacting-with-our-contract"></a>
 
@@ -465,7 +466,7 @@ Let's add the contract to our Contracts UI in PolkadotJS Apps. Click on "add an 
 
 Add the contract address along with the `flipper.contract` file found inside `flipper/target/ink/flipper.contract`
 
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBys-lozl0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=65c79e1adb730dacff0c1d23b400d2379e6988a614189f813866de94ba71fcb1" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBys-lozl0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=65c79e1adb730dacff0c1d23b400d2379e6988a614189f813866de94ba71fcb1" alt="" width="563"><figcaption></figcaption></figure>
 
 Save. You can now see your newly uploaded contract.
 
