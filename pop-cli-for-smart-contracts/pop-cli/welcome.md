@@ -1,5 +1,7 @@
 ---
-description: This section is a reference section for all the Pop CLI commands.
+description: >-
+  This section is a reference section for all the Pop CLI smart contract
+  commands.
 ---
 
 # welcome
