@@ -1,5 +1,5 @@
 ---
-description: This section is a reference section for all the Pop CLI commands.
+description: This section is a reference section for all the Pop CLI appchain commands.
 ---
 
 # welcome
