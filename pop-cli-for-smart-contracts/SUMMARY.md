@@ -25,7 +25,7 @@
 
 ## POP CLI
 
-* [Welcome](pop-cli/welcome.md)
+* [welcome](pop-cli/welcome.md)
 * [install](pop-cli/install.md)
 * [new](pop-cli/new.md)
 * [build](pop-cli/build.md)
