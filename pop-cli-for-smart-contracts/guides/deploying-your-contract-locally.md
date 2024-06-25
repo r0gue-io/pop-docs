@@ -8,7 +8,7 @@ pop build contract
 
 Now let's deploy the contract locally.
 
-```sh
+```
 pop up contract --constructor new --args "false" --suri //Alice
 
 ◇  The chain "ws://localhost:9944/" is not live. Would you like pop to start a local node in the background for testing?
