@@ -10,7 +10,7 @@
 
 ## GUIDES
 
-* [Setting up your development environment](guides/setting-up-your-development-environment.md)
+* [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new parachain](guides/create-a-new-parachain/README.md)
   * [Create an Assets parachain](guides/create-a-new-parachain/create-an-assets-parachain.md)
   * [Create a Contracts parachain](guides/create-a-new-parachain/create-a-smart-contract-parachain.md)
