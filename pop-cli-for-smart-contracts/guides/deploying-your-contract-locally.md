@@ -6,6 +6,8 @@ Make sure your contract builds.
 pop build contract
 ```
 
+For all available options run: `pop build contract --help`
+
 Now let's deploy the contract locally.
 
 ```
