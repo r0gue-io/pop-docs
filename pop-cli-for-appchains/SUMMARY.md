@@ -18,8 +18,8 @@
 * [Build your parachain](guides/build-your-parachain.md)
 * [Running your parachain](guides/running-your-parachain.md)
 * [Spinning up a Polkadot Network](guides/spinning-up-a-polkadot-network/README.md)
-  * [Spinning up a Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md)
-  * [Page 1](guides/spinning-up-a-polkadot-network/page-1.md)
+  * [Spinning up Paseo](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md)
+  * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 
 ## POP CLI
