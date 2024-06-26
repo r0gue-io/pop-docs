@@ -6,7 +6,7 @@ To create a smart contract with Pop CLI:
 pop new contract
 ```
 
-The above command will guide you to create a new smart contract:
+The above command will guide you through an interactive prompt to create a new smart contract:
 
 ```
 ┌   Pop CLI : Generate a contract
@@ -27,36 +27,49 @@ Notice that there are several templates available.&#x20;
 
 To get a full list of available templates run `pop new contract --help`
 
-```shell
+You can also create a new smart contract manually (without interactivity):
 
-pop new contract flipper
+```shell
+pop new contract my_contract
 ```
 
-> Note: 'flipper' has been used as the name above as the default template is based on the `flipper` contract example. Additional contract templates will be added in the next release!
+> Note: this will create a contract using the default template which is based on the `flipper` contract example.
 
 You should get output like the following:
 
 ```
-┌   Pop CLI : Generating new contract "flipper"!
+┌   Pop CLI : Generating new contract "my_contract"!
 │
-◇  Smart contract created! Located in the following directory "/flipper"
+◇  Smart contract created! Located in the following directory "/my_contract"
 │
-└  cd into "flipper" and enjoy hacking! 🚀
+└  cd into "my_contract" and enjoy hacking! 🚀
 ```
 
 You can now `cd` into the folder and start hacking on your contract:
 
 ```shell
-cd flipper
+cd my_contract
 ```
 
 You should see the directory structure of your ink! smart contract:
 
 ```
-flipper
+my_contract
   └─ lib.rs
   └─ Cargo.toml
   └─ .gitignore
+```
+
+
+
+Several options are available when creating a smart contract manually.
+
+To see all the available options, run `pop new contract --help`
+
+For example:
+
+```
+pop new contract my_contract --contract-type erc --template erc721
 ```
 
 **Further Reading Material**
