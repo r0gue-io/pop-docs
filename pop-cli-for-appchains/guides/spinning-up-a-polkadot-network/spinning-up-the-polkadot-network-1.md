@@ -1,3 +1,7 @@
+---
+description: How to spin up the Polkadot Relay chain locally
+---
+
 # Spinning up Polkadot
 
 Perhaps the simplest workflow a developer would want is to spin up a local Polkadot network.
@@ -12,7 +16,7 @@ touch network.toml
 
 ```toml
 [relaychain]
-chain = "rococo-local"
+chain = "polkadot-local"
 
 [[relaychain.nodes]]
 name = "alice"
@@ -33,13 +37,13 @@ pop up parachain -f ./network.toml
 
 It may take some time if it prompts you to download the binaries. Grab some coffee.
 
-Eventually you will get output like so.
+Eventually, you will get output like so:
 
 ```
 ┌   Pop CLI : Deploy a parachain
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
-│  ⛓️ rococo-local
+│  ⛓️ polkadot-local
 │       alice:
 │         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:62715#/explorer
 │         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2957639d-9818-43e5-8a1d-db85ad27fea2/alice/alice.log
