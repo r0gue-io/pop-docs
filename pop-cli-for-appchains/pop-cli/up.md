@@ -8,13 +8,46 @@ description: Spin up your parachain
 pop up <COMMAND>
 ```
 
-You can spawn a local network using [zombienet](https://github.com/paritytech/zombienet-sdk) as follows:
+You can spawn a local network using [zombienet](https://github.com/paritytech/zombienet-sdk).
 
-```bash
-pop up parachain -f ./tests/networks/pop.toml -p https://github.com/r0gue-io/pop-node
+Here is an example of spinning up Pop Network:
+
+pop.toml
+
+```toml
+[relaychain]
+chain = "rococo-local"
+
+[[relaychain.nodes]]
+name = "alice"
+validator = true
+
+[[relaychain.nodes]]
+name = "bob"
+validator = true
+
+[[parachains]]
+id = 4385
+default_command = "pop-node"
+
+[[parachains.collators]]
+name = "pop"
+args = ["-lruntime::contracts=debug"]
 ```
 
-> ℹ️ Pop CLI will automatically source the necessary `polkadot` binaries.
+```bash
+pop up parachain -f ./pop.toml
+```
+
+> Pop CLI already knows where to source Pop Network binaries from so no need to specify the URL
+>
+> Also worth mentioning that Pop CLI will automatically source the necessary `polkadot` binaries.
+
+If you would like to spin up a custom parachain then you need to edit the network.toml file accordingly and use the `-p` flag:
+
+```
+pop up parachain -f ./tests/networks/my-parachain.toml -p https://github.com/my-username/my-parachain
+```
 
 Various examples of network configuration files are available [here](https://github.com/r0gue-io/pop-cli/blob/main/tests/networks).
 
