@@ -30,7 +30,7 @@ On completion of this tutorial, developers will be able to:
 Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this tutorial.
 
 ```
-cargo install --locked --git https://github.com/r0gue-io/pop-cli
+cargo install --force --locked pop-cli
 ```
 
 Make sure the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool has been installed correctly by running the `pop` command in your terminal.
@@ -69,6 +69,8 @@ pop new contract flipper
 ```
 
 By default, when we generate an ink! smart contract using the command above, we get a template (the "flipper" template). It serves as a good starting point for contract development.
+
+Pop CLI supports several templates. If you would like to know what templates are available you can run the following command to see a list: `pop new contract --help`
 
 Let's look at our first bit of ink! code.
 
