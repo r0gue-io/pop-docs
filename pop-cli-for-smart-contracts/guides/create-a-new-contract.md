@@ -33,7 +33,7 @@ You can also create a new smart contract manually (without interactivity):
 pop new contract my_contract
 ```
 
-> Note: this will create a contract using the default template which is based on the `flipper` contract example.
+> Note: this will create a contract using the default template which is based on the [`flipper`](https://use.ink/basics/contract-template) contract example.
 
 You should get output like the following:
 
