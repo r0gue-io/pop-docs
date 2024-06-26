@@ -191,7 +191,7 @@ chain = "asset-hub-rococo-local"
 name = "asset-hub"
 
 [[parachains]]
-id = 9090
+id = 4385
 default_command = "pop-node"
 
 [[parachains.collators]]
@@ -227,19 +227,20 @@ Once complete, you will get some output:
 ◇  🚀 Network launched successfully - ctrl-c to terminate
 │  ⛓️ rococo-local
 │       alice:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56533#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-48a3549c-5ab9-43de-93f5-9057211f3846/alice/alice.log
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53296#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/alice/alice.log
 │       bob:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56537#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-48a3549c-5ab9-43de-93f5-9057211f3846/bob/bob.log
-│  ⛓️ local_testnet: 9090
-│       pop:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56545#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-48a3549c-5ab9-43de-93f5-9057211f3846/pop/pop.log
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53300#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/bob/bob.log
 │  ⛓️ asset-hub-rococo-local: 1000
 │       asset-hub:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56541#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-48a3549c-5ab9-43de-93f5-9057211f3846/asset-hub/asset-hub.log
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53304#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/asset-hub/asset-hub.log
+│  ⛓️ pop-devnet: 4385
+│       pop:
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53308#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/pop/pop.log
+│
 ```
 
 You now have the following running locally on your machine:
@@ -249,20 +250,20 @@ You now have the following running locally on your machine:
 > * this is the Polkadot "Test" Relay chain
 >   * two validator nodes (alice & bob) to run the rococo-local Relay chain
 >
-> **local\_testnet**
->
-> * this is the Pop Network parachain
->   * one collator node is running for the Pop Network parachain
->
 > **asset-hub-rococo-local**
 >
 > * this is the Asset Hub system parachain that manages assets in Polkadot
 >   * one collator node is running for this system chain
 >   * it is useful to have a second parachain like this one to test cross-chain capabilities
+>
+> **pop-devnet**
+>
+> * this is the Pop Network parachain
+>   * one collator node is running for the Pop Network parachain
 
 Confirm that the Pop Network parachain is producing blocks by opening the PolkadotJS link in your browser:
 
-* https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:56545#/explorer
+* https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:4385#/explorer
 
 > Replace the port number with the port number for the Pop Network parachain that is outputted in your terminal
 
@@ -275,7 +276,7 @@ Keep the PolkadotJs App window open, specifically to see the recent events. Afte
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
 
 ```
-pop up contract -p ./flipper --constructor new --args "false" --suri //Alice --url ws://127.0.0.1:56545
+pop up contract -p ./flipper --constructor new --args "false" --suri //Alice --url ws://127.0.0.1:4385
 
 ┌   Pop CLI : Deploy a smart contract
 │
@@ -303,7 +304,7 @@ Grab the contract address that was outputted from the previous step.
 > If you lost the address, you can always pull up PolkadotJs Apps and check the chain state for the contract address.
 
 ```
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:56545
+pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:4385
 
 ┌   Pop CLI : Calling a contract
 │
@@ -321,13 +322,15 @@ The result here is `false` meaning that `value` in the flipper storage is set to
 Let's try _flipping_ it.
 
 ```
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice --url ws://127.0.0.1:56545 -x
+pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice --url ws://127.0.0.1:4385 -x
 
 ┌   Pop CLI : Calling a contract
 │
-◐  Doing a dry run to estimate the gas...                                                                                                    ⚙  Gas limit Weight { ref_time: 382198493, proof_size: 18636 }
+◐  Doing a dry run to estimate the gas...                                                                                                    
+⚙  Gas limit Weight { ref_time: 382198493, proof_size: 18636 }
 │  
-◓  Calling the contract...                                                                                                                   ⚙        Events
+◓  Calling the contract...                                                                                                                   
+⚙        Events
 │         Event Balances ➜ Withdraw
 │           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
 │           amount: 1.550397502mUNIT
@@ -349,7 +352,7 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 Did it work? Let's see if the value has been flipped.
 
 ```
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:56545
+pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:4385
 
 ┌   Pop CLI : Calling a contract
 │
