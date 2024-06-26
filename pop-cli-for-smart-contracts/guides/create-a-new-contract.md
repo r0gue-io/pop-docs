@@ -1,13 +1,38 @@
 # Create a new contract
 
-To create a new ink! smart contract using Pop CLI, run the following command, specifying the name of the contract:
+To create a smart contract with Pop CLI:
+
+```
+pop new contract
+```
+
+The above command will guide you to create a new smart contract:
+
+```
+┌   Pop CLI : Generate a contract
+│
+◇  Name of your contract?
+│  my_contract
+│
+◇  Where should your project be created?
+│  ./
+│
+◆  Select a contract type: 
+│  ○ Examples 
+│  ● ERC (ERC-based contracts in ink!. 3 available option(s))
+└  
+```
+
+Notice that there are several templates available.&#x20;
+
+To get a full list of available templates run `pop new contract --help`
 
 ```shell
+
 pop new contract flipper
 ```
 
-> Note: 'flipper' has been used as the name above as the default template is based on the `flipper` contract example.
-> Additional contract templates will be added in the next release!
+> Note: 'flipper' has been used as the name above as the default template is based on the `flipper` contract example. Additional contract templates will be added in the next release!
 
 You should get output like the following:
 
