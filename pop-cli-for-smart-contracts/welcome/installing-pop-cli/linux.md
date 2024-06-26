@@ -86,7 +86,7 @@ Awesome. The environment has now been setup. We are now ready to install and use
 To install Pop CLI run the following command
 
 ```shell
-cargo install --locked --git https://github.com/r0gue-io/pop-cli
+cargo install --force --locked pop-cli
 ```
 
 Confirm that Pop CLI is installed by running `pop --help` in your terminal
