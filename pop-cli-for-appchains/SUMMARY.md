@@ -17,7 +17,9 @@
   * [Create an EVM parachain](guides/create-a-new-parachain/create-an-evm-parachain.md)
 * [Build your parachain](guides/build-your-parachain.md)
 * [Running your parachain](guides/running-your-parachain.md)
-* [Spinning up a Polkadot Network](guides/spinning-up-the-polkadot-network.md)
+* [Spinning up a Polkadot Network](guides/spinning-up-a-polkadot-network/README.md)
+  * [Spinning up a Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md)
+  * [Page 1](guides/spinning-up-a-polkadot-network/page-1.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 
 ## POP CLI
