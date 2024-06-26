@@ -10,7 +10,7 @@
 
 ## GUIDES
 
-* [Setting up your development environment](guides/setting-up-your-development-environment.md)
+* [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new contract](guides/create-a-new-contract.md)
 * [Build your contract](guides/build-your-contract.md)
 * [Run your unit tests](guides/run-your-unit-tests.md)
