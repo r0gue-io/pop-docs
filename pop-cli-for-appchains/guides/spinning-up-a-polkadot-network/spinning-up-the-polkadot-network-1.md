@@ -27,7 +27,7 @@ name = "bob"
 validator = true
 ```
 
-> This is specifying a network configuration using Rococo (which is the local test version of Polkadot) along with two validator nodes to run the network: `alice` and `bob`.
+> This is specifying a network configuration using the polkadot-local chain along with two validator nodes to run the network: `alice` and `bob`.
 
 Let's run it.
 
