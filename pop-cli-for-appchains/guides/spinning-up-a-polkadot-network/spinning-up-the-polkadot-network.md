@@ -51,3 +51,13 @@ Eventually you will get output like so.
 ```
 
 Congrats! You now have a Paseo network running locally!
+
+For more examples of network configurations:
+
+* [https://github.com/r0gue-io/pop-cli/tree/main/tests/networks](https://github.com/r0gue-io/pop-cli/tree/main/tests/networks)
+
+For more advanced options, such as specifying the Relay chain version, run the following command:
+
+```
+pop up parachain --help
+```
