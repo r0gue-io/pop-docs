@@ -1,5 +1,5 @@
 ---
-description: How to spin up Paseo locally
+description: How to spin up the Paseo Relay chain locally
 ---
 
 # Spinning up Paseo
