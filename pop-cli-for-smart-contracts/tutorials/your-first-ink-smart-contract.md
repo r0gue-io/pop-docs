@@ -382,8 +382,7 @@ Download and save the [substrate-contracts-node](https://github.com/paritytech/s
 Run the e2e tests:
 
 ```
-export CONTRACTS_NODE="/Users/bruno/src/substrate-contracts-node/target/debug/substrate-contracts-node"
-pop test contract --features e2e-tests
+pop test contract --features e2e-tests --node /Users/bruno/src/substrate-contracts-node/target/debug/substrate-contracts-node
 
 ┌   Pop CLI : Starting end-to-end tests
 │
