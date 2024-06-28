@@ -18,7 +18,7 @@ To find an estimate of how much gas you will need, you can do a "dry-run" of the
 pop up contract --constructor new --args "false" --suri //Alice --dry-run
 ```
 
-This will perform a dry-run via RPC an call to estimate the gas usage. It does not submit a transaction.
+This will perform a dry-run via an RPC call to estimate the gas usage. It does not submit a transaction.
 
 ```
 pop up contract --constructor new --args "false" --suri //Alice --dry-run
