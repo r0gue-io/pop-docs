@@ -3,9 +3,7 @@
 ## WELCOME
 
 * [Smart Contracts](README.md)
-* [Installing Pop CLI](welcome/installing-pop-cli/README.md)
-  * [macOS](welcome/installing-pop-cli/macos.md)
-  * [Linux](welcome/installing-pop-cli/linux.md)
+* [Installing Pop CLI](https://learn.onpop.io/v/cli/installing-pop-cli)
 * [How to contribute](welcome/how-to-contribute.md)
 
 ## GUIDES
