@@ -31,7 +31,17 @@ Let's try _flipping_ it. Remember to update the contract address accordingly.
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice -x
 ```
 
+> **Gas Estimate**
+>
 > Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on the network, and it will cost gas.
+>
+>
+>
+> Typically it is useful for you to estimate how much gas the call will cost. Fortunately you can do this with the `--dry-run` flag:
+>
+> ```
+> pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice -x --dry-run
+> ```
 
 ```
 ┌   Pop CLI : Calling a contract
