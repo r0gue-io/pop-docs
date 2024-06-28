@@ -3,10 +3,8 @@
 ## WELCOME
 
 * [Polkadot Appchains](README.md)
-* [Installing Pop CLI](welcome/installing-pop-cli/README.md)
-  * [macOS](welcome/installing-pop-cli/macos.md)
-  * [Linux](welcome/installing-pop-cli/linux.md)
-* [How to contribute](welcome/how-to-contribute.md)
+* [Installing Pop CLI](https://learn.onpop.io/v/cli/installing-pop-cli)
+* [How to contribute](https://learn.onpop.io/welcome/how-to-contribute)
 
 ## GUIDES
 
