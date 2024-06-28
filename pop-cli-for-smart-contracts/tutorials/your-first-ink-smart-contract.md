@@ -373,6 +373,10 @@ Awesome we now know how to make calls to our smart contract.
 
 Make sure you are in the flipper directory:
 
+```
+cd flipper
+```
+
 If you look at the flipper ink! smart contract, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
 
 The ink! e2e tests run against a Substrate node with `pallet contracts` installed. We can use the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this. You do not need to run it in the background since the node is started for each test independently. To install the latest version:
@@ -415,6 +419,10 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```
 
 Passed!
+
+To read more about ink! end-to-end testing:
+
+* [https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests](https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests)
 
 ### Deploy on the Pop Network TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
 
