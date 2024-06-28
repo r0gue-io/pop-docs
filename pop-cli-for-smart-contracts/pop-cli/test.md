@@ -18,7 +18,7 @@ pop test contract -p ./my_contract
 
 ### E2E Testing
 
-For end-to-end testing, you will need to have a Substrate node with `pallet contracts`. You do not need to run it in the background since the node is started for each test independently. To install the latest version:
+For end-to-end testing, you will need to have a Substrate node with `pallet contracts`. You do not need to run it in the background since the node is started for each test independently. We can use the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this:
 
 ```bash
 cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git
