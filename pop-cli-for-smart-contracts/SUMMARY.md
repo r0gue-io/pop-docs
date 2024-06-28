@@ -4,7 +4,7 @@
 
 * [Smart Contracts](README.md)
 * [Installing Pop CLI](https://learn.onpop.io/v/cli/installing-pop-cli)
-* [How to contribute](welcome/how-to-contribute.md)
+* [How to contribute](https://learn.onpop.io/welcome/how-to-contribute)
 
 ## GUIDES
 
