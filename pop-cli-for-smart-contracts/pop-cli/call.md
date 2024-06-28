@@ -26,7 +26,7 @@ pop call contract -p ./my_contract --contract $INSTANTIATED_CONTRACT_ADDRESS --m
 
 **Additional options:**
 
-```bash
+```
 pop call contract --help
 
 Call a contract
@@ -71,4 +71,7 @@ Options:
 
   -x, --execute
           Submit an extrinsic for on-chain execution
+
+      --dry-run
+          Perform a dry-run via RPC to estimate the gas usage. This does not submit a transaction
 ```
