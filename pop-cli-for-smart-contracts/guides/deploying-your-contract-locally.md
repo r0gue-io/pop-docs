@@ -8,7 +8,51 @@ pop build contract
 
 For all available options run: `pop build contract --help`
 
-Now let's deploy the contract locally.
+When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
+
+* [https://use.ink/basics/gas](https://use.ink/basics/gas)
+
+To find an estimate of how much gas you will need, you can do a "dry-run" of the contract:
+
+```
+pop up contract --constructor new --args "false" --suri //Alice --dry-run
+```
+
+This will perform a dry-run via RPC an call to estimate the gas usage. It does not submit a transaction.
+
+```
+pop up contract --constructor new --args "false" --suri //Alice --dry-run
+
+....
+Compiling flipper v0.1.0 (/private/var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/cargo-contract_Ebtb6E)
+ Finished `release` profile [optimized] target(s) in 8.85s
+ [==] Post processing code
+ [==] Generating metadata
+   Compiling metadata-gen v0.1.0 (/private/var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/cargo-contract_0xpg7p/.ink/metadata_gen)
+    Finished `release` profile [optimized] target(s) in 4.29s
+     Running `target/ink/release/metadata-gen`
+ [==] Generating bundle
+◆  
+│  Original wasm size: 21.4K, Optimized: 1.7K
+│  
+│  The contract was built in RELEASE mode.
+│  
+│  Your contract artifacts are ready. You can find them in:
+│  /Users/bruno/src/flipper/target/ink
+│  
+│    - flipper.contract (code + metadata)
+│    - flipper.wasm (the contract's code)
+│    - flipper.json (the contract's metadata)
+│  
+┌   Pop CLI : Deploy a smart contract
+│
+◐  Doing a dry run to estimate the gas...                                                              
+●  Gas limit: Weight { ref_time: 144914687, proof_size: 16689 }
+```
+
+You can now see the estimate and make sure your account is properly funded with that amount.
+
+We can now deploy the contract locally.
 
 ```
 pop up contract --constructor new --args "false" --suri //Alice
