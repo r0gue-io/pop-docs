@@ -24,16 +24,10 @@ For end-to-end testing, you will need to have a Substrate node with `pallet cont
 cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git
 ```
 
-If you want to run any other node with `pallet-contracts` you need to change `CONTRACTS_NODE` environment variable:
-
-```bash
-export CONTRACTS_NODE="YOUR_CONTRACTS_NODE_PATH"
-```
-
 Run e2e testing on an existing smart contract:
 
 ```bash
-pop test contract  -p ./my_contract --features e2e-tests
+pop test contract  -p ./my_contract --features e2e-tests --node /Users/pop/.cargo/bin/substrate-contracts-node
 ```
 
 For more details on E2E testing please see [here](https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests).
