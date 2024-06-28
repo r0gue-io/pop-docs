@@ -32,7 +32,7 @@ For more information about the options, check [cargo-contract documentation](htt
 
 **Additional options:**
 
-<pre class="language-bash"><code class="lang-bash">pop up contract --help
+<pre><code>pop up contract --help
 
 Deploy a smart contract to a node
 
