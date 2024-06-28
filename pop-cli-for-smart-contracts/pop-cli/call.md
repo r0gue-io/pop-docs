@@ -16,7 +16,7 @@ Read-only Operations: For operations that only require reading from the blockcha
 pop call contract -p ./my_contract --contract $INSTANTIATED_CONTRACT_ADDRESS --message get --suri //Alice
 ```
 
-2. State-modifying Operations: For operations that change a storage value, thus altering the blockchain state. Include the `x / --execute` flag to submit an extrinsic on-chain.
+State-modifying Operations: For operations that change a storage value, thus altering the blockchain state. Include the `x / --execute` flag to submit an extrinsic on-chain.
 
 Example executing the `flip()` message:
 
