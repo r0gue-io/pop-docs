@@ -32,51 +32,53 @@ For more information about the options, check [cargo-contract documentation](htt
 
 **Additional options:**
 
-```bash
-pop up contract --help
+<pre class="language-bash"><code class="lang-bash">pop up contract --help
 
 Deploy a smart contract to a node
 
-Usage: pop up contract [OPTIONS]
-
+<strong>Usage: pop up contract [OPTIONS]
+</strong>
 Options:
-  -p, --path <PATH>
+  -p, --path &#x3C;PATH>
           Path to the contract build folder
 
-      --constructor <constructor>
+      --constructor &#x3C;constructor>
           The name of the contract constructor to call
           
           [default: new]
 
-      --args [<ARGS>...]
+      --args [&#x3C;ARGS>...]
           The constructor arguments, encoded as strings
 
-      --value <value>
+      --value &#x3C;value>
           Transfers an initial balance to the instantiated contract
           
           [default: 0]
 
-      --gas <gas>
+      --gas &#x3C;gas>
           Maximum amount of gas to be used for this command. If not specified it will perform a dry-run to estimate the gas consumed for the instantiation
 
-      --proof-size <PROOF_SIZE>
+      --proof-size &#x3C;PROOF_SIZE>
           Maximum proof size for the instantiation. If not specified it will perform a dry-run to estimate the proof size required
 
-      --salt <SALT>
+      --salt &#x3C;SALT>
           A salt used in the address derivation of the new contract. Use to create multiple instances of the same contract code from the same account
 
-      --url <url>
+      --url &#x3C;url>
           Websocket endpoint of a node
           
           [default: ws://localhost:9944]
 
-  -s, --suri <suri>
+  -s, --suri &#x3C;suri>
           Secret key URI for the account deploying the contract.
           
           e.g. - for a dev account "//Alice" - with a password "//Alice///SECRET_PASSWORD"
           
           [default: //Alice]
 
+      --dry-run
+          Perform a dry-run via RPC to estimate the gas usage. This does not submit a transaction
+
   -y, --skip-confirm
           Before start a local node, do not ask the user for confirmation
-```
+</code></pre>
