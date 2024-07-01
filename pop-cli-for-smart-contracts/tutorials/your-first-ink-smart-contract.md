@@ -12,7 +12,8 @@ Developers who want to learn how to:
 On completion of this tutorial, developers will be able to:
 
 * create, build, test, and deploy ink! smart contracts
-* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
+* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and
+  on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
 ### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -20,20 +21,21 @@ On completion of this tutorial, developers will be able to:
 On completion of this tutorial, developers will be able to:
 
 * create, build, test, and deploy ink! smart contracts
-* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
+* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and
+  on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
-
-
 
 ### Installing Pop CLI <a href="#installing-pop-cli" id="installing-pop-cli"></a>
 
-Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this tutorial.
+Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this
+tutorial.
 
 ```
 cargo install --force --locked pop-cli
 ```
 
-Make sure the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool has been installed correctly by running the `pop` command in your terminal.
+Make sure the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool has been installed correctly by running the `pop`
+command in your terminal.
 
 ```bash
 pop --help
@@ -52,9 +54,12 @@ Take 10 minutes to skim over the [ink! documentation](https://use.ink/) and answ
 
 #### ink! contracts are smart(er) <a href="#ink-contracts-are-smart-er" id="ink-contracts-are-smart-er"></a>
 
-ink! allows you to write smart contracts using Rust. That means you get all the benefits of the Rust programming language:
+ink! allows you to write smart contracts using Rust. That means you get all the benefits of the Rust programming
+language:
 
-The ink! embedded domain-specific language (eDSL) retro-fits your Rust code with powerful features that enhance smart contract development. In doing so, ink! improves the developer ergonomics when it comes to using Rust for writing smart contracts.
+The ink! embedded domain-specific language (eDSL) retro-fits your Rust code with powerful features that enhance smart
+contract development. In doing so, ink! improves the developer ergonomics when it comes to using Rust for writing smart
+contracts.
 
 Let's create a simple ink! smart contract:
 
@@ -68,9 +73,11 @@ pop new contract flipper
 └  cd into "flipper" and enjoy hacking! 🚀
 ```
 
-By default, when we generate an ink! smart contract using the command above, we get a template (the "flipper" template). It serves as a good starting point for contract development.
+By default, when we generate an ink! smart contract using the command above, we get a template (the "flipper" template).
+It serves as a good starting point for contract development.
 
-Pop CLI supports several templates. If you would like to know what templates are available you can run the following command to see a list: `pop new contract --help`
+Pop CLI supports several templates. If you would like to know what templates are available you can run the following
+command to see a list: `pop new contract --help`
 
 Let's look at our first bit of ink! code.
 
@@ -159,11 +166,13 @@ Okay, so you contract builds, your contract passes the tests. We can now deploy 
 
 ### Deploy your contract locally <a href="#deploy-your-contract-locally" id="deploy-your-contract-locally"></a>
 
-In order to deploy an ink! smart contract locally we need to spin up a local instance of [Pop Network](https://github.com/r0gue-io/pop-node).
+In order to deploy an ink! smart contract locally we need to spin up a local instance
+of [Pop Network](https://github.com/r0gue-io/pop-node).
 
 Pop Network is a parachain meaning that it runs on the Polkadot Relay chain.
 
-> To take a deep dive into how Parachains and the Relay chain work, go [here](https://docs.substrate.io/tutorials/build-a-parachain).
+> To take a deep dive into how Parachains and the Relay chain work,
+> go [here](https://docs.substrate.io/tutorials/build-a-parachain).
 
 We will use Pop CLI to spin up a live network locally on our machine.
 
@@ -248,18 +257,21 @@ You now have the following running locally on your machine:
 > **rococo-local**
 >
 > * this is the Polkadot "Test" Relay chain
->   * two validator nodes (alice & bob) to run the rococo-local Relay chain
+    >
+* two validator nodes (alice & bob) to run the rococo-local Relay chain
 >
 > **asset-hub-rococo-local**
 >
 > * this is the Asset Hub system parachain that manages assets in Polkadot
->   * one collator node is running for this system chain
+    >
+* one collator node is running for this system chain
 >   * it is useful to have a second parachain like this one to test cross-chain capabilities
 >
 > **pop-devnet**
 >
 > * this is the Pop Network parachain
->   * one collator node is running for the Pop Network parachain
+    >
+* one collator node is running for the Pop Network parachain
 
 Confirm that the Pop Network parachain is producing blocks by opening the PolkadotJS link in your browser:
 
@@ -271,7 +283,8 @@ Confirm that the Pop Network parachain is producing blocks by opening the Polkad
 
 Cool. Now that we have Pop Network running we can now deploy our contract.
 
-Keep the PolkadotJs App window open, specifically to see the recent events. After we deploy the contract, we will see the events displayed there.
+Keep the PolkadotJs App window open, specifically to see the recent events. After we deploy the contract, we will see
+the events displayed there.
 
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
 
@@ -347,7 +360,8 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 └  Call completed successfully!
 ```
 
-> Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on the network and it will cost gas.
+> Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on
+> the network and it will cost gas.
 
 Did it work? Let's see if the value has been flipped.
 
@@ -377,9 +391,12 @@ Make sure you are in the flipper directory:
 cd flipper
 ```
 
-If you look at the flipper ink! smart contract, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
+If you look at the flipper ink! smart contract, you will notice it has end-to-end tests at the _end_ of the `lib.rs`
+file.
 
-The ink! e2e tests run against a Substrate node with `pallet contracts` installed. We can use the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this. You do not need to run it in the background since the node is started for each test independently. To install the latest version:
+The ink! e2e tests run against a Substrate node with `pallet contracts` installed. We can use
+the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for these tests. You do not need
+to run it in the background since the node is started for each test independently. To install the latest version:
 
 ```
 cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git
@@ -426,29 +443,35 @@ To read more about ink! end-to-end testing:
 
 ### Deploy on the Pop Network TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
 
-Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart contract on a live network: the Pop Network TestNet.
+Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart
+contract on a live network: the Pop Network TestNet.
 
 Let's deploy.
 
 The test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com).
 
-You can find Pop Network running on Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
+You can find Pop Network running on
+Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
 
-Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
+Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens
+are the equivalent of DOT on Polkadot.
 
 Alice's account is: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
 
 Go to the [Paseo faucet](https://faucet.polkadot.io/paseo) and request some PAS tokens for Alice.
 
-Since Pop Network uses the Relay chain's native token as its native token, we will need to get the PAS tokens that is in your account on Paseo into Pop Network so we can deploy the contract.
+Since Pop Network uses the Relay chain's native token as its native token, we will need to get the PAS tokens that is in
+your account on Paseo into Pop Network so we can deploy the contract.
 
-We will need to add Alice to our [PolkadotJs Wallet extension](https://polkadot.js.org/extension). We can do that by using Alice's secret seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
+We will need to add Alice to our [PolkadotJs Wallet extension](https://polkadot.js.org/extension). We can do that by
+using Alice's secret seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
 
 <figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHymzV9GeA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=288802bc992dd767f1845dafc9ad7638d834a30050a069531bbff02d3eeb7adb" alt="" width="375"><figcaption></figcaption></figure>
 
 > Remember this is for development purposes. In production you would already have an existing wallet to use.
 
-Now that we have Alice's account in our PolkadotJs Wallet Extension, we can use the following for teleporting PAS tokens to Pop Network:
+Now that we have Alice's account in our PolkadotJs Wallet Extension, we can use the following for teleporting PAS tokens
+to Pop Network:
 
 * https://onboard.popnetwork.xyz
 
