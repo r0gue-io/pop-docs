@@ -7,7 +7,7 @@ Developers who want to learn how to:
 * use the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool to speed up development
 * deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node)
 
-### Learning Objectives <a href="#learning-objectives" id="learning-objectives"></a>
+### Learning Objectives
 
 On completion of this tutorial, developers will be able to:
 
@@ -16,7 +16,7 @@ On completion of this tutorial, developers will be able to:
   on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
-### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
+### Prerequisites
 
 On completion of this tutorial, developers will be able to:
 
@@ -25,7 +25,7 @@ On completion of this tutorial, developers will be able to:
   on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
-### Installing Pop CLI <a href="#installing-pop-cli" id="installing-pop-cli"></a>
+### Installing Pop CLI
 
 Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this
 tutorial.
@@ -41,7 +41,7 @@ command in your terminal.
 pop --help
 ```
 
-### Getting Started <a href="#getting-started" id="getting-started"></a>
+### Getting Started
 
 Questions:
 
@@ -52,7 +52,7 @@ Questions:
 
 Take 10 minutes to skim over the [ink! documentation](https://use.ink/) and answer the above questions.
 
-#### ink! contracts are smart(er) <a href="#ink-contracts-are-smart-er" id="ink-contracts-are-smart-er"></a>
+#### ink! contracts are smart(er)
 
 ink! allows you to write smart contracts using Rust. That means you get all the benefits of the Rust programming
 language:
@@ -94,7 +94,7 @@ Inside `lib.rs` you will find all the contract logic.
 
 Take a moment to get familiar with the ink! programming language:
 
-### Building the ink! smart contract <a href="#building-the-ink-smart-contract" id="building-the-ink-smart-contract"></a>
+### Building the ink! smart contract
 
 Let's build flipper! Make sure you are inside the flipper directory and run the following command:
 
@@ -133,7 +133,7 @@ Awesome, your contract is built!
 
 With Pop CLI, you can also run your smart contract tests.
 
-### Run your ink! smart contract unit tests <a href="#run-your-ink-smart-contract-unit-tests" id="run-your-ink-smart-contract-unit-tests"></a>
+### Run your ink! smart contract unit tests
 
 ```
 pop test contract
@@ -164,7 +164,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 Okay, so you contract builds, your contract passes the tests. We can now deploy the contract.
 
-### Deploy your contract locally <a href="#deploy-your-contract-locally" id="deploy-your-contract-locally"></a>
+### Deploy your contract locally
 
 In order to deploy an ink! smart contract locally we need to spin up a local instance
 of [Pop Network](https://github.com/r0gue-io/pop-node).
@@ -313,7 +313,7 @@ You can also confirm that the contract was deployed in the recent events in Polk
 
 <figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FrygPDVpJ0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=a8ac462aa39b37e82c48e1f7203e8f6d1404c323050a90552e672a440830a5e0" alt="" width="563"><figcaption></figcaption></figure>
 
-### Interacting with our contract <a href="#interacting-with-our-contract" id="interacting-with-our-contract"></a>
+### Interacting with our contract
 
 Now that the contract is live, we can start interacting with it.
 
@@ -388,7 +388,7 @@ The `value` is now `true`.
 
 Awesome we now know how to make calls to our smart contract.
 
-### Running end-to-end tests of your contract <a href="#running-end-to-end-tests-of-your-contract" id="running-end-to-end-tests-of-your-contract"></a>
+### Running end-to-end tests of your contract
 
 Make sure you are in the flipper directory:
 
@@ -446,7 +446,7 @@ To read more about ink! end-to-end testing:
 
 * [https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests](https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests)
 
-### Deploy on the Pop Network TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
+### Deploy on the Pop Network TestNet
 
 Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart
 contract on a live network: the Pop Network TestNet.
@@ -516,10 +516,10 @@ Save. You can now see your newly uploaded contract.
 
 Done!
 
-### Resources <a href="#resources" id="resources"></a>
+### Resources
 
 * https://use.ink
 
-### Feedback <a href="#feedback" id="feedback"></a>
+### Feedback
 
 > [Take a minute to give us feedback on this tutorial so we can improve it!](https://forms.gle/tABmLwtqYPUHArRQ9)
