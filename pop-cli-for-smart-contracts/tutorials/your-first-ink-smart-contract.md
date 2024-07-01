@@ -1,6 +1,6 @@
 # Your first ink! smart contract
 
-### Audience <a href="#audience" id="audience"></a>
+### Audience
 
 Developers who want to learn how to:
 
@@ -258,19 +258,24 @@ You now have the following running locally on your machine:
 >
 > * this is the Polkadot "Test" Relay chain
     >
+
 * two validator nodes (alice & bob) to run the rococo-local Relay chain
+
 >
 > **asset-hub-rococo-local**
 >
 > * this is the Asset Hub system parachain that manages assets in Polkadot
     >
+
 * one collator node is running for this system chain
->   * it is useful to have a second parachain like this one to test cross-chain capabilities
+
+> * it is useful to have a second parachain like this one to test cross-chain capabilities
 >
 > **pop-devnet**
 >
 > * this is the Pop Network parachain
     >
+
 * one collator node is running for the Pop Network parachain
 
 Confirm that the Pop Network parachain is producing blocks by opening the PolkadotJS link in your browser:
@@ -395,8 +400,8 @@ If you look at the flipper ink! smart contract, you will notice it has end-to-en
 file.
 
 The ink! e2e tests run against a Substrate node with `pallet contracts` installed. We can use
-the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for these tests. You do not need
-to run it in the background since the node is started for each test independently. To install the latest version:
+the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this. You do not need to run
+it in the background since the node is started for each test independently. To install the latest version:
 
 ```
 cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git
