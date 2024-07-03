@@ -4,7 +4,9 @@ description: This section is a reference section for all the Pop CLI appchain co
 
 # welcome
 
-> Need to install Pop CLI? Find instructions [here](broken-reference).
+Also, check out the Guides on the left for more comprehensive documentation.
+
+> Need to install Pop CLI? Find instructions [here](https://app.gitbook.com/s/UqTUVzYjmRwzCWTsfd1O/installing-pop-cli).
 
 ### Available Pop CLI commands
 
