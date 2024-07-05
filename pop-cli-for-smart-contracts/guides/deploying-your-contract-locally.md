@@ -9,6 +9,12 @@ pop build contract
 
 For all available options run: `pop build contract --help`
 
+{% hint style="info" %}
+Pop CLI versions > `0.2.0` will support a simplified command for building contracts.
+
+Simply: `pop build` inside the contract directory to build the contract or specify the project path: `pop build --path ./flipper`
+{% endhint %}
+
 When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
 
 * [https://use.ink/basics/gas](https://use.ink/basics/gas)
