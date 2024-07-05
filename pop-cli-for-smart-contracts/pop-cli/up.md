@@ -32,44 +32,45 @@ For more information about the options, check [cargo-contract documentation](htt
 
 **Additional options:**
 
-<pre><code>pop up contract --help
+```
+pop up contract --help
 
 Deploy a smart contract to a node
 
-<strong>Usage: pop up contract [OPTIONS]
-</strong>
+Usage: pop up contract [OPTIONS]
+
 Options:
-  -p, --path &#x3C;PATH>
+  -p, --path <PATH>
           Path to the contract build folder
 
-      --constructor &#x3C;constructor>
+      --constructor <constructor>
           The name of the contract constructor to call
           
           [default: new]
 
-      --args [&#x3C;ARGS>...]
+      --args [<ARGS>...]
           The constructor arguments, encoded as strings
 
-      --value &#x3C;value>
+      --value <value>
           Transfers an initial balance to the instantiated contract
           
           [default: 0]
 
-      --gas &#x3C;gas>
+      --gas <gas>
           Maximum amount of gas to be used for this command. If not specified it will perform a dry-run to estimate the gas consumed for the instantiation
 
-      --proof-size &#x3C;PROOF_SIZE>
+      --proof-size <PROOF_SIZE>
           Maximum proof size for the instantiation. If not specified it will perform a dry-run to estimate the proof size required
 
-      --salt &#x3C;SALT>
+      --salt <SALT>
           A salt used in the address derivation of the new contract. Use to create multiple instances of the same contract code from the same account
 
-      --url &#x3C;url>
+      --url <url>
           Websocket endpoint of a node
           
           [default: ws://localhost:9944]
 
-  -s, --suri &#x3C;suri>
+  -s, --suri <suri>
           Secret key URI for the account deploying the contract.
           
           e.g. - for a dev account "//Alice" - with a password "//Alice///SECRET_PASSWORD"
@@ -79,6 +80,9 @@ Options:
       --dry-run
           Perform a dry-run via RPC to estimate the gas usage. This does not submit a transaction
 
+  -u, --upload-only
+          Uploads the contract only, without instantiation
+
   -y, --skip-confirm
           Before start a local node, do not ask the user for confirmation
-</code></pre>
+```
