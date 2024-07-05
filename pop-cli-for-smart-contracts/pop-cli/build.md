@@ -24,3 +24,8 @@ For production builds, use the --release flag: `--release`:
 pop build contract -p ./my_contract --release
 ```
 
+{% hint style="info" %}
+Pop CLI versions > `0.2.0` will support a simplified command for building contracts.
+
+Simply: `pop build` inside the contract directory to build the contract or specify the project path: `pop build --path ./flipper`
+{% endhint %}
