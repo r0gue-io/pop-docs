@@ -3,10 +3,11 @@
 Make sure your contract builds.
 
 ```sh
+cd flipper
 pop build contract
 ```
 
-For all available options run: `pop build contract --help`
+For all available options run: `pop build --help`
 
 When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
 
