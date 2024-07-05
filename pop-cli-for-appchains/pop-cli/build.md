@@ -34,3 +34,11 @@ Pop CLI versions > `0.2.0` will support a simplified command for building parach
 
 Simply: `pop build` inside the parachain directory to build the parachain or specify the project path: `pop build --path ./my-appchain`
 {% endhint %}
+
+Build and generate files for onboarding the parachain to the Relay chain (Pop CLI versions >`.0.2.0`):&#x20;
+
+```
+pop build parachain -p ../my-appchain --para_id 2000
+```
+
+This command will build your parachain and generate the chain spec, WebAssembly runtime for the parachain, and generate the parachain genesis state needed for registering and onboarding a parachain onto the Relay chain.
