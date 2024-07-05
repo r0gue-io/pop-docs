@@ -8,26 +8,6 @@ The `pop up parachain` command can help with this.
 pop up parachain --help
 ```
 
-```
-Deploy a parachain to a local network
-
-Usage: pop up parachain [OPTIONS] --file <FILE>
-
-Options:
-  -f, --file <FILE>
-          The Zombienet configuration file to be used
-  -r, --relay-chain <RELAY_CHAIN>
-          The version of Polkadot to be used for the relay chain, as per the release tag (e.g. "v1.7.0")
-  -s, --system-parachain <SYSTEM_PARACHAIN>
-          The version of Polkadot to be used for a system parachain, as per the release tag (e.g. "v1.7.0")
-  -p, --parachain <PARACHAIN>
-          The url of the git repository of a parachain to be used, with branch/release tag specified as #fragment (e.g. 'https://github.com/org/repository#tag'). A specific binary name can also be optionally specified via query string parameter (e.g. 'https://github.com/org/repository?binaryname#tag'), defaulting to the name of the repository when not specified
-  -v, --verbose
-          Whether the output should be verbose
-  -h, --help
-          Print help
-```
-
 Say we want to spin up a local network for your parachain. First we need to define a zombienet network configuration file. You can do this in the root of your project.
 
 ```
