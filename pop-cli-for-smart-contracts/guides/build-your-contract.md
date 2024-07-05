@@ -3,7 +3,8 @@
 To build your ink! smart contract, make sure you are inside your ink! smart contract directory and run the following command:
 
 ```shell
-pop build contract
+cd flipper
+pop build
 ```
 
 When you run `pop build contract` the default is to build in debug mode which is faster for development. It is important to note that when your contract is ready for production you can build the contract using `pop build --release` which will create an optimized build ready for production.
