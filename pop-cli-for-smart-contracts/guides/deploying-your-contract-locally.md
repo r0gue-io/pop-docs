@@ -7,7 +7,7 @@ cd flipper
 pop build contract
 ```
 
-For all available options run: `pop build --help`
+For all available options run: `pop build contract --help`
 
 When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
 
@@ -53,7 +53,9 @@ Compiling flipper v0.1.0 (/private/var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn
 
 You can now see the estimate and make sure your account is properly funded with that amount.
 
-We can now deploy the contract locally.
+We can now deploy the contract locally meaning that we will upload and instantiate the contract.
+
+> It is also possible to only upload the contract and not instantiate by adding `--upload-only`
 
 ```
 pop up contract --constructor new --args "false" --suri //Alice
