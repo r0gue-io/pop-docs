@@ -31,6 +31,35 @@ Pop Network is a Polkadot smart contract platform. Developers can write smart co
 
 Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot appchain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.&#x20;
 
+### Roadmap
+
+**August**&#x20;
+
+* Pop API Assets Pallet&#x20;
+  * Use the Pop API to interact with the assets pallet of Pop Network.
+
+**September**&#x20;
+
+* Asynchronous Contracts&#x20;
+  * Facilitate cross-chain dispatch and read state information back to the contract.
+
+**October**
+
+* Pop API Cross Chain Use Case&#x20;
+  * Use Pop API to interact with other chains.
+
+**November**
+
+* Programmable DAO&#x20;
+  * Implementation of an ink! programmable DAO pallet allowing quick creation of DAOs and custom logic.
+* Audits, finalizing the Pop Network runtime, Bulk Coretime implementation, and improvements to Pop API cross-chain use cases.
+
+**December** 🎄🎅
+
+* Launch Pop Network, integration with subscan.
+
+
+
 Start your Polkadot smart contract journey today and go live on Pop Network:\
 \- [https://learn.onpop.io/v/contracts](https://learn.onpop.io/v/contracts)
 
