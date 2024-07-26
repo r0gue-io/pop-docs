@@ -379,21 +379,24 @@ cd flipper
 
 If you look at the flipper ink! smart contract, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
 
-The ink! e2e tests run against a Substrate node with `pallet contracts` installed. We can use the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) for this. You do not need to run it in the background since the node is started for each test independently. To install the latest version:
+For ink! end-to-end testing, you will need to have a Substrate node with [`pallet contracts`](https://paritytech.github.io/polkadot-sdk/master/pallet\_contracts/index.html) for the ink! e2e tests to run against. Pop CLI will download the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) binary for this purpose.
+
+Run the e2e tests:
 
 ```
-cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git
-```
-
-Run the e2e tests, specifying the location of where the substrate-contracts-node binary is:
-
-```
-pop test contract --features e2e-tests --node /Users/pop/.cargo/bin/substrate-contracts-node/target/debug/substrate-contracts-node
+pop test contract --e2e
 
 ┌   Pop CLI : Starting end-to-end tests
 │
-    Finished test [unoptimized + debuginfo] target(s) in 0.83s
-     Running unittests lib.rs (target/debug/deps/flipper-508d8cf8af185e86)
+▲  ⚠️ The substrate-contracts-node binary is not found.
+│  
+◇  📦 Would you like to source it automatically now?
+│  Yes 
+│
+◇  ✅ substrate-contracts-node successfully sourced. Cached at: /Users/bruno/Library/Caches/pop/substrate-contracts-node-v0.41.0
+│
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.98s
+     Running unittests lib.rs (target/debug/deps/my_contract-3c35b5992ffebf0d)
 
 running 5 tests
 test flipper::e2e_tests::e2e_test_deployed_contract ... ignored
