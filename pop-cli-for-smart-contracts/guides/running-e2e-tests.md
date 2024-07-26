@@ -8,19 +8,26 @@ cd flipper
 
 If you look at the contract source, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
 
-The ink! e2e tests are run against [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node). You will need to download the latest [release](https://github.com/paritytech/substrate-contracts-node/releases) binary for your platform.
+The ink! e2e tests are run against [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node). Pop CLI will download the latest [release](https://github.com/paritytech/substrate-contracts-node/releases) binary for your platform.
 
-Run the e2e tests, adapting the `CONTRACTS_NODE` environment variable to the location of the `substrate-contracts-node` binary:
+Run the e2e tests:
 
 ```bash
- pop test contract --features e2e-tests -n /Users/pop/bin/substrate-contracts-node
+ pop test contract --e2e
 ```
 
 ```
 ┌   Pop CLI : Starting end-to-end tests
 │
-    Finished test [unoptimized + debuginfo] target(s) in 0.83s
-     Running unittests lib.rs (target/debug/deps/flipper-508d8cf8af185e86)
+▲  ⚠️ The substrate-contracts-node binary is not found.
+│  
+◇  📦 Would you like to source it automatically now?
+│  Yes 
+│
+◇  ✅ substrate-contracts-node successfully sourced. Cached at: /Users/bruno/Library/Caches/pop/substrate-contracts-node-v0.41.0
+│
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.98s
+     Running unittests lib.rs (target/debug/deps/my_contract-3c35b5992ffebf0d)
 
 running 5 tests
 test flipper::e2e_tests::e2e_test_deployed_contract ... ignored
