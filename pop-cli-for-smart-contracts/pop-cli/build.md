@@ -5,13 +5,13 @@ description: Build a contract
 # build
 
 ```bash
-pop build contract [OPTIONS]
+pop build [OPTIONS]
 ```
 
 Build an existing smart contract:
 
 ```bash
-pop build contract -p ./my_contract
+pop build -p ./my_contract
 ```
 
 By default, the contract is compiled with `debug` functionality included.
@@ -21,11 +21,9 @@ This enables the contract to output debug messages but increases the contract si
 For production builds, use the --release flag: `--release`:
 
 ```bash
-pop build contract -p ./my_contract --release
+pop build -p ./my_contract --release
 ```
 
 {% hint style="info" %}
-Pop CLI versions > `0.2.0` will support a simplified command for building contracts.
-
-Simply: `pop build` inside the contract directory to build the contract or specify the project path: `pop build --path ./flipper`
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build contract`
 {% endhint %}
