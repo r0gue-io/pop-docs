@@ -27,5 +27,6 @@
 * [install](pop-cli/install.md)
 * [new](pop-cli/new.md)
 * [build](pop-cli/build.md)
+* [build spec](https://app.gitbook.com/o/6WdFs5YoOW9exNKy1hyC/s/DCSXSU1TZFpfTQpgIpaY/pop-cli/build#build-spec)
 * [up](pop-cli/up.md)
 * [clean](pop-cli/clean.md)
