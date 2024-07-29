@@ -45,6 +45,10 @@ This command will build your parachain and generate the chain spec, WebAssembly 
 
 ## build spec
 
+```
+pop build spec [OPTIONS]
+```
+
 To build the chain specification for your appchain along with its genesis artifacts, you can run the following command:
 
 ```
