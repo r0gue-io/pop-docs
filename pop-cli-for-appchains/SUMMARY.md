@@ -27,5 +27,6 @@
 * [install](pop-cli/install.md)
 * [new](pop-cli/new.md)
 * [build](pop-cli/build.md)
+* [build spec](pop-cli/build-spec.md)
 * [up](pop-cli/up.md)
 * [clean](pop-cli/clean.md)
