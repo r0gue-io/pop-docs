@@ -4,15 +4,13 @@ Make sure your contract builds.
 
 ```sh
 cd flipper
-pop build contract
+pop build
 ```
 
-For all available options run: `pop build contract --help`
+For all available options run: `pop build --help`
 
 {% hint style="info" %}
-Pop CLI versions > `0.2.0` will support a simplified command for building contracts.
-
-Simply: `pop build` inside the contract directory to build the contract or specify the project path: `pop build --path ./flipper`
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build contract`
 {% endhint %}
 
 When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
