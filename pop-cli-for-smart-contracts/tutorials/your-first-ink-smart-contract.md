@@ -92,7 +92,7 @@ Take a moment to get familiar with the ink! programming language:
 Let's build flipper! Make sure you are inside the flipper directory and run the following command:
 
 ```
-pop build contract
+pop build
 
 ┌   Pop CLI : Building a contract
 │
@@ -121,6 +121,10 @@ pop build contract
 │  
 └  Build completed successfully!
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build contract`
+{% endhint %}
 
 Awesome, your contract is built!
 
