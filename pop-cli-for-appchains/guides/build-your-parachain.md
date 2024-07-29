@@ -4,8 +4,12 @@ To build your parachain using Pop CLI
 
 ```shell
 cd my-appchain
-pop build parachain
+pop build
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
+{% endhint %}
 
 ```
 ┌   Pop CLI : Building a parachain
@@ -20,19 +24,17 @@ pop build parachain
 If you are outside the project's directory, you can specify the path
 
 ```shell
-pop build parachain -p ./my-appchain
+pop build -p ./my-appchain
 ```
 
 {% hint style="info" %}
-Pop CLI versions > `0.2.0` will support a simplified command for building parachains.
-
-Simply: `pop build` inside the parachain directory to build the parachain or specify the project path: `pop build --path ./my-appchain`
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
 {% endhint %}
 
 If you are building the parachain with the intent to onboard the parachain to a Polkadot Relay chain then you can run the following build command:
 
 ```
-pop build parachain -p ../my-appchain --para_id 2000
+pop build -p ../my-appchain --para_id 2000
 ```
 
 This command will build your parachain and generate the chain spec, WebAssembly runtime for the parachain, and generate the parachain genesis state needed for registering and onboarding a parachain onto the Relay chain.
