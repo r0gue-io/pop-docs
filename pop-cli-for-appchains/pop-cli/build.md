@@ -8,6 +8,10 @@ description: Build your parachain
 pop build <COMMAND>
 ```
 
+{% hint style="info" %}
+For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
+{% endhint %}
+
 To build your parachain using Pop CLI:
 
 ```bash
