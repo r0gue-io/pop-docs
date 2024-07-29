@@ -13,7 +13,7 @@ Also, check out the Guides on the left for more comprehensive documentation.
 * [install](install.md)
 * [new](new.md)
 * [build](build.md)
-* [build spec](build.md#build-spec)
+* [build spec](https://learn.onpop.io/v/appchains/pop-cli/build#build-spec)
 * [up](up.md)
 * [clean](clean.md)
 
