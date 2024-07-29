@@ -22,14 +22,14 @@ pop build -p ./my-appchain
 or
 
 ```bash
-cd my-app
+cd my-appchain
 pop build
 ```
 
 To build your parachain for production:
 
 ```bash
-cd my-app
+cd my-appchain
 pop build --release
 ```
 
@@ -40,3 +40,20 @@ pop build -p ../my-appchain --para_id 2000
 ```
 
 This command will build your parachain and generate the chain spec, WebAssembly runtime for the parachain, and generate the parachain genesis state needed for registering and onboarding a parachain onto the Relay chain.
+
+
+
+## build spec
+
+To build the chain specification for your appchain along with its genesis artifacts, you can run the following command:
+
+```
+cd my-appchain
+pop build spec --id 3000
+```
+
+For additional parameters and customizations run:
+
+```
+pop build spec --help
+```
