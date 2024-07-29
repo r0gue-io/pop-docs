@@ -32,6 +32,10 @@ Options:
           The url of the git repository of a parachain to be used, with branch/release tag/commit specified as #fragment (e.g. 'https://github.com/org/repository#ref'). A specific binary name can also be optionally specified via query string parameter (e.g. 'https://github.com/org/repository?binaryname#ref'), defaulting to the name of the repository when not specified
   -c, --cmd <cmd>
           The command to run after the network has been launched
+  -v, --verbose
+          Whether the output should be verbose
+  -y, --skip-confirm
+          Automatically source all needed binaries required without prompting for confirmation
 
 ```
 
