@@ -1,28 +1,22 @@
 # Deploy on Pop Testnet
 
-Once you have battle-tested your smart contract using unit and e2e tests, you are ready to test your smart contract on a
-live test network: the Pop Network Testnet.
+Once you have battle-tested your smart contract using unit and e2e tests, you are ready to test your smart contract on a live test network: the Pop Network Testnet.
 
 Let's deploy.
 
-### Onboard
+### Onboarding
 
-The community test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com)
-and you can find Pop Network running on
-Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
+The community test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com) and you can find Pop Network running on Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
 
-Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens
-are the equivalent of DOT on Polkadot.
+Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
 
 > Alice's account address is: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
 
 Go to the [Paseo faucet](https://faucet.polkadot.io/paseo) and request some PAS tokens for Alice.
 
-As Pop Network uses the Relay chain's native token as its native token, we will need to transfer some of the PAS
-tokens from Alice's account on Paseo to Pop Network so that we can then deploy the contract.
+As Pop Network uses the Relay chain's native token as its native token, we will need to transfer some of the PAS tokens from Alice's account on Paseo to Pop Network so that we can then deploy the contract.
 
-We will need to import Alice's account to a wallet and we can do so by using Alice's secret
-seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
+We will need to import Alice's account to a wallet and we can do so by using Alice's secret seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
 
 The below examples use the [PolkadotJs Wallet extension](https://polkadot.js.org/extension).
 
@@ -30,8 +24,7 @@ The below examples use the [PolkadotJs Wallet extension](https://polkadot.js.org
 
 > Remember this is for development purposes. In production you would already have an existing wallet to use.
 
-Now that we have Alice's account in our wallet, we can use https://onboard.popnetwork.xyz for transferring PAS tokens to
-Pop Network. Make sure to authorize your wallet to connect to the site.
+Now that we have Alice's account in our wallet, we can use https://onboard.popnetwork.xyz for transferring PAS tokens to Pop Network. Make sure to authorize your wallet to connect to the site.
 
 ![Screenshot 2024-04-09 at 7.13.17 PM](https://hackmd.io/\_uploads/HysR4czxA.png)
 
@@ -55,15 +48,11 @@ pop up contract --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81
 └  Deployment complete
 ```
 
-You can now take the contract address and check
-the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that
-the contract exists. Remember to use the resulting contract address for your deployment.
+You can now take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists. Remember to use the resulting contract address for your deployment.
 
 ![](https://hackmd.io/\_uploads/H1j56cMl0.png)
 
-Let's add the contract to
-the [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/contracts) UI in PolkadotJS
-Apps. Click on "+ Add an existing contract".
+Let's add the contract to the [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/contracts) UI in PolkadotJS Apps. Click on "+ Add an existing contract".
 
 ![](https://hackmd.io/\_uploads/HJ3h1sGg0.png)
 
