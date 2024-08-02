@@ -8,7 +8,7 @@ Grab the contract address that was outputted from the [previous step](deploying-
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
 ```
 
-> If you lost the address, you can always pull up PolkadotJs Apps and check the chain state for the contract address.
+> If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
 
 ```
 ┌   Pop CLI : Calling a contract
