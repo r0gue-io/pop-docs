@@ -8,11 +8,11 @@ Let's deploy.
 
 The community test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com) and you can find Pop Network running on Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
 
-Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
+Use the [Paseo faucet](https://faucet.polkadot.io/) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
 
 > Alice's account address is: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
 
-Go to the [Paseo faucet](https://faucet.polkadot.io/paseo) and request some PAS tokens for Alice.
+Go to the [Paseo faucet](https://faucet.polkadot.io/) and request some PAS tokens for Alice.
 
 As Pop Network uses the Relay chain's native token as its native token, we will need to transfer some of the PAS tokens from Alice's account on Paseo to Pop Network so that we can then deploy the contract.
 
