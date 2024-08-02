@@ -62,6 +62,6 @@ pop up contract --constructor new --args "false" --suri //Alice
 └  Deployment complete
 ```
 
-Your contract is now deployed! You can check in PolkadotJs Apps as well.
+Your contract is now deployed! You can check in [PolkadotJs Apps](https://polkadot.js.org/apps/) as well.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-05-09 at 7.31.17 PM.png" alt=""><figcaption><p>recent events</p></figcaption></figure>
