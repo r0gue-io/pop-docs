@@ -11,15 +11,10 @@ The above command will guide you through an interactive prompt to create a new s
 ```
 ┌   Pop CLI : Generate a contract
 │
-◇  Name of your contract?
-│  my_contract
-│
-◇  Where should your project be created?
-│  ./
-│
-◆  Select a contract type: 
-│  ○ Examples 
-│  ● ERC (ERC-based contracts in ink!. 3 available option(s))
+◆  Select a template type: 
+│  ● Examples (Contract examples for ink!. 4 available option(s))
+│  ○ ERC 
+│  ○ PSP 
 └  
 ```
 
