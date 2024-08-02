@@ -1,18 +1,37 @@
 # Deploy on Pop Testnet
 
-Once you have battle-tested your smart contract using unit and e2e tests, you are ready to test your smart contract on a live test network: the Pop Network Testnet.
+Once you have battle-tested your smart contract using unit and e2e tests, you are ready to test your smart contract on a live test network: the [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
 
 Let's deploy.
 
 ### Onboarding
 
-The community test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com) and you can find Pop Network running on Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
+The community Relay test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com).&#x20;
 
-Use the [Paseo faucet](https://faucet.polkadot.io/) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
+[Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz) is connected to Paseo.
+
+In order to deploy a smart contract on the Pop Testnet, we will need to fund the account with the native tokens. Remember, Pop Network uses DOT as its native token, which is the Relay network's native token: Polkadot Relay network. In this case, we are on Paseo, so the native token for the Paseo Relay network is PAS.&#x20;
+
+We will need to:
+
+1. Fund our dev account on Paseo with some PAS tokens
+2. Transfer those PAS tokens from the Paseo dev account to the Pop Testnet dev account
+
+
+
+**Fund the Paseo dev account**
+
+Use the [Paseo faucet](https://faucet.polkadot.io/) to fund Alice's Paseo account with some PAS tokens.&#x20;
+
+PAS tokens are the equivalent of DOT on Polkadot.
 
 > Alice's account address is: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
 
 Go to the [Paseo faucet](https://faucet.polkadot.io/) and request some PAS tokens for Alice.
+
+
+
+**Transfer from Paseo Relay Network to Pop Testnet**
 
 As Pop Network uses the Relay chain's native token as its native token, we will need to transfer some of the PAS tokens from Alice's account on Paseo to Pop Network so that we can then deploy the contract.
 
@@ -28,7 +47,7 @@ Now that we have Alice's account in our wallet, we can use https://onboard.popne
 
 ![Screenshot 2024-04-09 at 7.13.17 PM](https://hackmd.io/\_uploads/HysR4czxA.png)
 
-Cool! Now that you have some PAS tokens on Pop Network, we can deploy.
+Cool! Now that you have some PAS tokens on the [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz), we can deploy our smart contract.
 
 ### Deploy
 
