@@ -1,9 +1,9 @@
 # Create an Assets parachain
 
-With Pop CLI you can easily create a parachain supporting fungible, non-fungible and fractionalized assets:
+With Pop CLI you can easily create a parachain supporting fungible, non-fungible, and fractionalized assets:
 
 ```shell
-pop new parachain my-assets-chain pop -t assets
+pop new parachain my-assets-appchain pop --template assets
 ```
 
 Keep in mind there are additional configuration flags you can provide.
