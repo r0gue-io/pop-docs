@@ -17,14 +17,14 @@ Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
   [NAME]      Name of the project. If empty assistance in the process will be provided.
-  [PROVIDER]  Template provider. [default: pop] [possible values: pop, parity]
+  [PROVIDER]  Template provider. [default: pop] [possible values: pop, openzeppelin, parity]
 
 Options:
-  -t, --template <TEMPLATE>            Template to use. [possible values: base, assets, cpt, fpt]
+  -t, --template <TEMPLATE>            Template to use. [possible values: standard, assets, contracts, evm, polkadot-generic-runtime-template, cpt, fpt]
+  -r, --release-tag <RELEASE_TAG>      Release tag to use for template. If empty, latest release will be used.
   -s, --symbol <SYMBOL>                Token Symbol [default: UNIT]
   -d, --decimals <DECIMALS>            Token Decimals [default: 12]
   -i, --endowment <INITIAL_ENDOWMENT>  Token Endowment for dev accounts [default: "1u64 << 60"]
-  -p, --path <PATH>                    Path for the parachain project, [default: current directory]
   -h, --help                           Print help
 ```
 
