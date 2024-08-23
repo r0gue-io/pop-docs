@@ -15,11 +15,11 @@ You will be prompted to select a template and depending on the options chosen, b
 Create a new standard parachain **without** Pop CLI's interactive guidance by specifying a name for your parachain:
 
 ```shell
-pop new parachain my-chain
+pop new parachain my-appchain
 ```
 
 ```
-┌   Pop CLI : Generating "my-chain" using Standard from Pop!
+┌   Pop CLI : Generating "my-appchain" using Standard from Pop!
 │
 ◇  Generation complete
 │
@@ -40,11 +40,12 @@ Generate a new parachain
 Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
-  <NAME>      Name of the project
-  [PROVIDER]  Template provider. [default: pop] [possible values: pop, parity]
+  [NAME]      Name of the project. If empty assistance in the process will be provided.
+  [PROVIDER]  Template provider. [default: pop] [possible values: pop, openzeppelin, parity]
 
 Options:
-  -t, --template <TEMPLATE>            Template to use. [possible values: base, assets, cpt, fpt]
+  -t, --template <TEMPLATE>            Template to use. [possible values: standard, assets, contracts, evm, polkadot-generic-runtime-template, cpt, fpt]
+  -r, --release-tag <RELEASE_TAG>      Release tag to use for template. If empty, latest release will be used.
   -s, --symbol <SYMBOL>                Token Symbol [default: UNIT]
   -d, --decimals <DECIMALS>            Token Decimals [default: 12]
   -i, --endowment <INITIAL_ENDOWMENT>  Token Endowment for dev accounts [default: "1u64 << 60"]
