@@ -38,3 +38,9 @@ pop build -p ../my-appchain --para_id 2000
 ```
 
 This command will build your parachain and generate the chain spec, WebAssembly runtime for the parachain, and generate the parachain genesis state needed for registering and onboarding a parachain onto the Relay chain.
+
+#### Learning Resources
+
+* 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
+  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+* 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
