@@ -47,9 +47,7 @@ pop up parachain -f ./tests/networks/pop.toml --cmd path/to/command
 
 Here is an example of a simple script to update account balances on the Polkadot Relay chain:
 
-{% embed url="https://github.com/brunopgalvao/set-balance" %}
-set-balance
-{% endembed %}
+[https://github.com/brunopgalvao/set-balance](https://github.com/brunopgalvao/set-balance/blob/main/src/main.rs)
 
 Clone and compile the script:
 
