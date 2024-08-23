@@ -10,6 +10,8 @@ pop new parachain
 
 You will be prompted to select a template and depending on the options chosen, be prompted with additional customization options.
 
+<figure><img src="../../.gitbook/assets/001.gif" alt="pop new parachain"><figcaption><p>pop new parachain</p></figcaption></figure>
+
 ### Manual (non-interactive)
 
 Create a new standard parachain **without** Pop CLI's interactive guidance by specifying a name for your parachain:
