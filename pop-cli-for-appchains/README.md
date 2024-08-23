@@ -6,7 +6,7 @@ description: Build an appchain on Polkadot using Pop - the Web3 development plat
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-With Pop, developers can build an appchain on Polkadot.
+With Pop CLI, developers can build an appchain on Polkadot.
 
 ### Features include:
 
