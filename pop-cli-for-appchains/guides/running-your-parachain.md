@@ -11,7 +11,7 @@ pop up parachain --help
 Say we want to spin up a local network for your parachain. First we need to define a zombienet network configuration file. You can do this in the root of your project.
 
 ```
-cd my-parachain
+cd my-appchain
 touch network.toml
 ```
 
@@ -68,3 +68,9 @@ Once all the binaries are sourced, you should have output similar to this.
 ```
 
 Congrats! You have now spun up a network with your parachain running!
+
+#### Learning Resources
+
+* 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
+  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+* 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
