@@ -85,7 +85,7 @@ Spin up the Polkadot Relay chain with Pop CLI:
 pop up parachain -f network.toml -r v1.8.0 --cmd ./target/debug/set-balance
 ```
 
-```bash
+```
 ┌   Pop CLI : Launch a local network
 │
 ◓  Spinning up network & running command: ../set-balance/target/debug/set-balance                                                                                                             Connecting to the Relay chain...
