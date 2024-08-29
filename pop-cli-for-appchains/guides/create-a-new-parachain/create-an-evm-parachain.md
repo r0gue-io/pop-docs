@@ -12,7 +12,6 @@ Keep in mind there are additional configuration flags you can provide.
 pop new parachain --help
 
 Generate a new parachain
-
 Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
@@ -25,6 +24,7 @@ Options:
   -s, --symbol <SYMBOL>                Token Symbol [default: UNIT]
   -d, --decimals <DECIMALS>            Token Decimals [default: 12]
   -i, --endowment <INITIAL_ENDOWMENT>  Token Endowment for dev accounts [default: "1u64 << 60"]
+  -v, --verify                         Fetches the latest license, release, and commit SHA data from GitHub.
   -h, --help                           Print help
 ```
 
