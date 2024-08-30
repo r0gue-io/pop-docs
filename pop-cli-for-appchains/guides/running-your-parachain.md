@@ -8,7 +8,7 @@ The `pop up parachain` command can help with this.
 pop up parachain --help
 ```
 
-Say we want to spin up a local network for your parachain. First we need to define a zombienet network configuration file. You can do this in the root of your project.
+Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
 ```
 cd my-appchain
@@ -68,6 +68,9 @@ Once all the binaries are sourced, you should have output similar to this.
 ```
 
 Congrats! You have now spun up a network with your parachain running!
+
+> Under-the-hood, Pop CLI uses zombienet to spin up the network.\
+> For more advanced network configurations and options consult the [zombienet repo](https://github.com/paritytech/zombienet)
 
 #### Learning Resources
 
