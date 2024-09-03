@@ -62,6 +62,12 @@ pop up contract --constructor new --args "false" --suri //Alice
 └  Deployment complete
 ```
 
+> Note: The contracts node will be running in the background of your machine. If at anytime you need to kill the proccess you can do the following:
+>
+> 1. Find the process ID by running the following command: `lsof -i :9944`
+> 2. Kill the process by running the `kill` command and passing in the ID of the process:
+>    * [`kill -9 3537`](#user-content-fn-1)[^1]
+
 Your contract is now deployed! You can check in [PolkadotJs Apps](https://polkadot.js.org/apps/) as well.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-05-09 at 7.31.17 PM.png" alt=""><figcaption><p>recent events</p></figcaption></figure>
@@ -71,3 +77,5 @@ Your contract is now deployed! You can check in [PolkadotJs Apps](https://polkad
 * [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
   * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
   * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+
+[^1]: 
