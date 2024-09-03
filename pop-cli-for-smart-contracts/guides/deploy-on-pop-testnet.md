@@ -85,6 +85,14 @@ You can now see your newly uploaded contract:
 
 Done!
 
-### Resources
 
-* https://use.ink
+
+#### Resources
+
+* [https://use.ink](https://use.ink)
+
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
