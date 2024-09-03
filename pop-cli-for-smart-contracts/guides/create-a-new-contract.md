@@ -70,3 +70,9 @@ pop new contract my_contract --contract-type erc --template erc721
 **Further Reading Material**
 
 * [https://use.ink/basics/contract-template](https://use.ink/basics/contract-template)
+
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
