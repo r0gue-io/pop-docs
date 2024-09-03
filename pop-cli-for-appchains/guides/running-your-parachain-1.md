@@ -1,16 +1,21 @@
 ---
-description: The guide is for running your parachain on a local Paseo TestNet
+description: The guide is for running a parachain on a local Paseo TestNet
 ---
 
 # Running on Paseo locally
 
 [Paseo](https://x.com/PaseoNetwork) is the community-run Polkadot Relay chain TestNet.
 
-> Note: Rococo is the [Parity](https://parity.io)-run Polkadot Relay chain TestNet which [will be deprecating](https://forum.polkadot.network/t/a-new-test-network-for-polkadot/4325) in favour of the [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+> Note: For contrast, Rococo is the [Parity](https://parity.io)-run Polkadot Relay chain TestNet which [will be deprecating](https://forum.polkadot.network/t/a-new-test-network-for-polkadot/4325) in favour of the [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
 
-A good development workflow is to run your parachain **locally** on Paseo TestNet for development purposes then, when ready, prep for deployment on the **live** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+A good development workflow:&#x20;
 
-To run your parachain, you will need to spin up a local network with your parachain configuration.
+1. Run your parachain **locally** on Paseo TestNet for development purposes&#x20;
+2. When ready to test in a live environment with other parachains, deploy on the **live** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+
+Let's get started.
+
+To run your parachain on Paseo locally, you will need to spin up a local network with your parachain configuration.
 
 The `pop up parachain` command can help with this.
 
