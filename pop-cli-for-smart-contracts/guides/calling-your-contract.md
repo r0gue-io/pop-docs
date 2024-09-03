@@ -89,3 +89,10 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 The `value` is now `true`.
 
 Awesome, you now know how to make calls to your smart contract.
+
+\
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
