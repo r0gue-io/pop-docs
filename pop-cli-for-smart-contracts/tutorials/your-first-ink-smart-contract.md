@@ -495,10 +495,18 @@ Save. You can now see your newly uploaded contract.
 
 Done!
 
-### Resources <a href="#resources" id="resources"></a>
+
+
+#### Resources
 
 * https://use.ink
 
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+
 ### Feedback <a href="#feedback" id="feedback"></a>
 
-> [Take a minute to give us feedback on this tutorial so we can improve it!](https://forms.gle/tABmLwtqYPUHArRQ9)
+> [Take a minute to give us feedback on this tutorial so we can improve it!](https://github.com/r0gue-io/pop-cli/discussions/categories/general)
