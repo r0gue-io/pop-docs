@@ -57,3 +57,9 @@ Passed!
 **Further Reading Material**
 
 * [https://use.ink/basics/contract-testing/end-to-end-e2e-testing](https://use.ink/basics/contract-testing/end-to-end-e2e-testing)
+
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
