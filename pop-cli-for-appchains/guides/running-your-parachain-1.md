@@ -23,7 +23,7 @@ The `pop up parachain` command can help with this.
 pop up parachain --help
 ```
 
-Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
+First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
 ```
 cd my-appchain
