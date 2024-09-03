@@ -99,5 +99,4 @@ Congrats! You have now spun up a network with your parachain running!
 
 * [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
   * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our Pop Support Telegram channel
-* [Pop Support Telegram channel](https://t.me/pop\_support)
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
