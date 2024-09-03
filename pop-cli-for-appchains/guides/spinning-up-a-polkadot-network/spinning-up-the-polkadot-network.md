@@ -67,3 +67,9 @@ pop up parachain --help
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
   * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
+
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
