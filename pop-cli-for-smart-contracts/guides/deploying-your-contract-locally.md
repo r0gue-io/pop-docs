@@ -65,3 +65,9 @@ pop up contract --constructor new --args "false" --suri //Alice
 Your contract is now deployed! You can check in [PolkadotJs Apps](https://polkadot.js.org/apps/) as well.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-05-09 at 7.31.17 PM.png" alt=""><figcaption><p>recent events</p></figcaption></figure>
+
+**Technical Support**
+
+* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
+  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
