@@ -62,7 +62,7 @@ pop up contract --constructor new --args "false" --suri //Alice
 └  Deployment complete
 ```
 
-> Note: The contracts node will be running in the background of your machine. If at anytime you need to kill the proccess you can do the following:
+> Note: The contracts node will be running in the background of your machine. If at anytime you need to kill the process you can do the following:
 >
 > 1. Find the process ID by running the following command: `lsof -i :9944`
 > 2. Kill the process by running the `kill` command and passing in the ID of the process:
