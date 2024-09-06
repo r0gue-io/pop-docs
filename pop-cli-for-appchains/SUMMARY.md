@@ -16,6 +16,7 @@
 * [Build your parachain](guides/build-your-parachain.md)
 * [Running your parachain](guides/running-your-parachain.md)
 * [Running on Paseo locally](guides/running-on-paseo.md)
+* [Running on Paseo](guides/running-on-paseo-1.md)
 * [Spinning up a Polkadot Network](guides/spinning-up-a-polkadot-network/README.md)
   * [Spinning up Paseo](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md)
   * [Spinning up Kusama](<guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1 (1).md>)
