@@ -126,16 +126,25 @@ cd my-parachain
 ```
 
 ```
-pop build spec --release --id 4024 --type live --relay paseo --protocol-id my-parachain
+pop build spec --release --id 4024 --type live --relay paseo --protocol-id my_parachain
 ```
 
-This will output our chain spec.
+This will output the following:
+
+* Your parachain's chain specification file
+  * The plain text and the raw version e.g. `chain-spec.json` and `chain-spec-raw.json`
+* Your parachain's initial genesis state e.g. `para-4024-genesis-state`
+* Your parachain's Wasm runtime e.g. `para-4024.wasm`
 
 > For more advanced customization `pop build spec --help`
 
 Open the `chain-spec.json` file in your editor.&#x20;
 
-Make sure to edit your chain spec and add your account and session keys:
+Make sure to edit your chain spec and:&#x20;
+
+* add your account and session keys
+* specify the starting balance of specific accounts
+* add the account that will be the sudo account for your parachain
 
 ```json
 {
@@ -144,7 +153,7 @@ Make sure to edit your chain spec and add your account and session keys:
   "chainType": "Live",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": "awesome-network",
+  "protocolId": "awesome_network",
   "properties": {
     "ss58Format": 42,
     "tokenDecimals": 12,
@@ -160,11 +169,11 @@ Make sure to edit your chain spec and add your account and session keys:
         "balances": {
           "balances": [
             [
-              "INSERT_ACCOUNT_KEY_COLLATOR_1",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
               1152921504606846976
             ],
             [
-              "INSERT_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
               1152921504606846976
             ],
           ]
@@ -172,8 +181,8 @@ Make sure to edit your chain spec and add your account and session keys:
         "collatorSelection": {
           "candidacyBond": 16000000000,
           "invulnerables": [
-            "INSERT_ACCOUNT_ID_COLLATOR_1",
-            "INSERT_ACCOUNT_ID_COLLATOR_2_OPTIONAL"
+            "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
+            "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL"
           ]
         },
         "parachainInfo": {
@@ -185,29 +194,38 @@ Make sure to edit your chain spec and add your account and session keys:
         "session": {
           "keys": [
             [
-              "INSERT_SESSION_KEY_COLLATOR_1",
-              "INSERT_SESSION_KEY_COLLATOR_1",
+              "INSERT_SS58_SESSION_KEY_COLLATOR_1",
+              "INSERT_SS58_SESSION_KEY_COLLATOR_1",
               {
-                "aura": "INSERT_SESSION_KEY_COLLATOR_1"
+                "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_1"
               }
             ],
             [
-              "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL",
-              "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL",
               {
-                "aura": "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL"
+                "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL"
               }
             ]
           ]
         },
         "sudo": {
-          "key": "INSERT_SUDO_ACCOUNT_FOR_PARACHAIN"
+          "key": "INSERT_SS58_SUDO_ACCOUNT_KEY"
         }
       }
     }
   }
 }
 ```
+
+Since we have modified our chain spec, we will need to re-generate the raw chain spec:
+
+```bash
+./target/release/parachain-template-node build-spec --chain chain-spec.json
+--disable-default-bootnode --raw > chain-spec-raw.json
+```
+
+
 
 We are now ready to create an issue on Paseo's Github requesting to onboard our parachain:
 
