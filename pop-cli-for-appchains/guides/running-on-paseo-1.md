@@ -1,9 +1,11 @@
 ---
-description: The guide is for running a parachain on the Polkadot "Paseo" TestNet
+description: This guide is for running a parachain on the Polkadot "Paseo" TestNet
 hidden: true
 ---
 
 # Running on Paseo
+
+## Introduction
 
 [Paseo](https://x.com/PaseoNetwork) is the community-run Polkadot Relay chain TestNet.
 
@@ -12,11 +14,16 @@ hidden: true
 A good development workflow:&#x20;
 
 1. Run your parachain **locally** on Paseo TestNet for development purposes&#x20;
-2. When ready to test in a live environment with other parachains, deploy on the **live** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+2. When ready to test in a live environment with other parachains:
+   1. Use this guide to onboard your parachain onto the **live** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
 
 Let's get started.
 
-First, we will need to set up an account to do transactions on Paseo on behalf of your collator.
+## Setting Up Polkadot Accounts
+
+First, we will need to set up an account to do transactions on Paseo on behalf of our collator.
+
+> A collator is the parachain node that will be running your parachain.
 
 There are multiple ways to generate keys (accounts) on Polkadot, such as:
 
@@ -32,7 +39,9 @@ For the sake of this guide, we will use subkey:
 docker pull parity/subkey:latest
 ```
 
-> `subkey` does not need an internet connection to work.
+> Once downloaded, `subkey` does not need an internet connection to work.&#x20;
+
+### Create an Account Key
 
 Let's create the account key:
 
@@ -52,27 +61,25 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
   SS58 Address:      5H9eVCvHfNMqNhMTL2FVJfy7fPgquCpvCktkMd98Dz9goRBy
 ```
 
-> Save the secret phrase in a vault securely
+> This your key (Polkadot account). Save the secret phrase in a vault securely and never share it.
 
-Now that we have an account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator.
+Now that we have an account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to onboarding your parachain.
 
 Go to the [Polkadot Faucet](https://faucet.polkadot.io/) and fund your account:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-06 at 4.04.37 PM.png" alt="" width="563"><figcaption><p>Polkadot / Paseo Faucet</p></figcaption></figure>
 
-Cool. Make sure to add your account to a [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
+Cool. Make sure to add your account to the [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
 
 > Alternatively, you can check the Paseo chain state under [system.account()](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) to see your account balance.
 
-You may have have to wait a couple minutes to see the funds appear in [your account on Paseo.](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts)
+You may have to wait a few minutes to see the funds appear in [your Paseo account.](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts)
 
-We now have an account to manage funds for transactions related to managing our collator.
+### Create a Session Key
 
-We will need to create one more account. In order for collators to produce blocks, they need to sign the block with an (account) key. We call this account key the session key.
+We now need to create one more account. In order for collators to produce blocks, they need to sign the block with an (account) key. We call this account key the session key. It is the account that is specifically created for block production.
 
-Let's go ahead and create the session key:
-
-
+Let's go ahead and create the session key.
 
 We can use `subkey` to generate the keys for us.
 
@@ -98,15 +105,21 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 > Save the secret phrase in a secure manner.
 
-With the account and session keys created we can now ready our parachain for onboarding.
+## Parachain Onboarding
 
-To do this we need to grab the next available parachain ID. We can use [PolkaotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) and check the chain state for the next available parachain ID:
+With the account and session keys created, we can now ready our parachain for onboarding.
+
+### Obtain the Parachain ID
+
+To onboard our parachain we need to grab the next available parachain ID on Paseo. We can use [PolkaotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) and check the chain state for the next available parachain ID:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-05 at 5.03.46 PM.png" alt=""><figcaption><p>ParaId</p></figcaption></figure>
 
-> Make sure to note down the ParaId, we will be using this in our next step
+> Make sure to note down the `paraId`. We will be using this in our next step
 
-Now that we have our paraId we can create our parachain's specification:
+### Create the Parachain's Chain Spec
+
+Now that we have our `paraId` we can create our parachain's specification:
 
 ```bash
 cd my-parachain
@@ -118,38 +131,53 @@ pop build spec --release --id 4024 --type live --relay paseo --protocol-id my-pa
 
 This will output our chain spec.
 
+> For more advanced customization `pop build spec --help`
+
+Open the `chain-spec.json` file in your editor.&#x20;
+
 Make sure to edit your chain spec and add your account and session keys:
 
 ```json
 {
-  "name": "INSERT_NAME",
-  "id": "INSERT_ID",
-  "chainType": "Local",
+  "name": "Awesome Network",
+  "id": "awesome_network",
+  "chainType": "Live",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": "INSERT_PROTOCOL_ID",
+  "protocolId": "awesome-network",
   "properties": {
     "ss58Format": 42,
     "tokenDecimals": 12,
-    "tokenSymbol": "UNIT"
+    "tokenSymbol": "AWE"
   },
   "relay_chain": "paseo",
-  "para_id": 1,
+  "para_id": 4024,
   "codeSubstitutes": {},
   "genesis": {
     "runtimeGenesis": {
       "code": "...",
       "patch": {
-        "balances": {},
+        "balances": {
+          "balances": [
+            [
+              "INSERT_ACCOUNT_KEY_COLLATOR_1",
+              1152921504606846976
+            ],
+            [
+              "INSERT_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              1152921504606846976
+            ],
+          ]
+        },
         "collatorSelection": {
           "candidacyBond": 16000000000,
           "invulnerables": [
             "INSERT_ACCOUNT_ID_COLLATOR_1",
-            "INSERT_ACCOUNT_ID_COLLATOR_2"
+            "INSERT_ACCOUNT_ID_COLLATOR_2_OPTIONAL"
           ]
         },
         "parachainInfo": {
-          "parachainId": 1
+          "parachainId": 4024
         },
         "polkadotXcm": {
           "safeXcmVersion": 4
@@ -157,23 +185,23 @@ Make sure to edit your chain spec and add your account and session keys:
         "session": {
           "keys": [
             [
-              "INSERT_ACCOUNT_ID_COLLATOR_1",
-              "INSERT_ACCOUNT_ID_COLLATOR_1",
+              "INSERT_SESSION_KEY_COLLATOR_1",
+              "INSERT_SESSION_KEY_COLLATOR_1",
               {
                 "aura": "INSERT_SESSION_KEY_COLLATOR_1"
               }
             ],
             [
-              "INSERT_ACCOUNT_ID_COLLATOR_2",
-              "INSERT_ACCOUNT_ID_COLLATOR_2",
+              "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL",
               {
-                "aura": "INSERT_SESSION_KEY_COLLATOR_2"
+                "aura": "INSERT_SESSION_KEY_COLLATOR_2_OPTIONAL"
               }
             ]
           ]
         },
         "sudo": {
-          "key": "INSERT_SUDO_ACCOUNT"
+          "key": "INSERT_SUDO_ACCOUNT_FOR_PARACHAIN"
         }
       }
     }

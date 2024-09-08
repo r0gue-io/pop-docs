@@ -1,5 +1,5 @@
 ---
-description: The guide is for running a parachain on a local Paseo TestNet
+description: This guide is for running a parachain on a local Paseo TestNet
 ---
 
 # Running on Paseo locally
