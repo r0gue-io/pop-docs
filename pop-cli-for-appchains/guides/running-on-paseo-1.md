@@ -233,9 +233,11 @@ We are now ready to create an issue on Paseo's Github requesting to onboard our 
 
 Once you have been confirmed and given a slot, you can start running your collators.
 
+### Running the Collator
 
+In order to run your collator you will need the latest version of the Paseo chain spec.&#x20;
 
-In order to run your collator you will need the latest version of the Paseo chain spec. You can download that here:&#x20;
+You can download that here:&#x20;
 
 * [https://github.com/paseo-network/runtimes/tags](https://github.com/paseo-network/runtimes/tags)
 
@@ -247,7 +249,7 @@ Run the collator with the following command:
 ./target/release/parachain-template-node \
 --collator \
 --force-authoring \
---chain raw-parachain-chainspec.json \
+--chain chain-spec-raw.json \
 --base-path ./data \
 --port 40333 \
 --rpc-port 8845 \
@@ -268,13 +270,24 @@ curl -H "Content-Type: application/json" \
   "method":"author_insertKey",
   "params":[
     "aura",
-    "INSERT_SECRET_PHRASE",
-    "INSERT_PUBLIC_KEY_HEX_FORMAT"
+    "INSERT_SECRET_SESSION_SEED_PHRASE",
+    "INSERT_PUBLIC_SESSION_KEY_HEX_FORMAT"
   ],
   "id":1
 }' \
 http://localhost:8845
 ```
+
+It will take time for your collator to sync with the Paseo Relay chain. Once it is synced your parachain will start producing blocks.
+
+Congrats!&#x20;
+
+### Next Steps
+
+For next steps, you could try the following:
+
+* add a second collator
+* designating one collator as the bootnode for the parachain's network
 
 #### Learning Resources
 
