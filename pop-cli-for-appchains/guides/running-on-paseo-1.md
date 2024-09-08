@@ -282,14 +282,12 @@ It will take time for your collator to sync with the Paseo Relay chain. Once it 
 
 Congrats!&#x20;
 
-### Next Steps
+## Next Steps
 
-For next steps, you could try the following:
+For next steps, you can try the following:
 
-* add a second collator
-* designating one collator as the bootnode for the parachain's network
-
-
+* Designate one collator as the bootnode for the parachain's network
+  * Add a second collator
 
 ## Resources
 
