@@ -233,9 +233,9 @@ We are now ready to create an issue on Paseo's Github requesting to onboard our 
 
 Once you have been confirmed and given a slot, you can start running your collators.
 
-### Running the Collator
+## Run the Collator
 
-In order to run your collator you will need the latest version of the Paseo chain spec.&#x20;
+In order to run your parachain's collator node you will need the latest version of the Paseo chain spec.&#x20;
 
 You can download that here:&#x20;
 
@@ -288,6 +288,10 @@ For next steps, you could try the following:
 
 * add a second collator
 * designating one collator as the bootnode for the parachain's network
+
+
+
+## Resources
 
 #### Learning Resources
 
