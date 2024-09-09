@@ -73,8 +73,6 @@ Cool. Make sure to add your account to the [Polkadot Signer extension](https://p
 
 > Alternatively, you can check the Paseo chain state under [system.account()](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) to see your account balance.
 
-You may have to wait a few minutes to see the funds appear in [your Paseo account.](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts)
-
 ### Create a Session Key
 
 We now need to create one more account. In order for collators to produce blocks, they need to sign the block with an (account) key. We call this account key the session key. It is the account that is specifically created for block production.
@@ -221,8 +219,7 @@ Make sure to edit your chain spec and:&#x20;
 Since we have modified our chain spec, we will need to re-generate the raw chain spec:
 
 ```bash
-./target/release/parachain-template-node build-spec --chain chain-spec.json
---disable-default-bootnode --raw > chain-spec-raw.json
+./target/release/parachain-template-node build-spec --chain chain-spec.json --disable-default-bootnode --raw > chain-spec-raw.json
 ```
 
 
