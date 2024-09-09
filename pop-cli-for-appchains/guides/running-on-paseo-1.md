@@ -238,7 +238,15 @@ You can download that here:&#x20;
 
 * [https://github.com/paseo-network/runtimes/tags](https://github.com/paseo-network/runtimes/tags)
 
-Make sure to select the latest tag version, download the zip, and you will find the `paseo.raw.json` file inside the zip folder.
+Make sure to select the tag version that Paseo is running, download the zip, and you will find the `paseo.raw.json` file inside the zip folder.
+
+We will also need to create a node-key for your collator:
+
+```bash
+mdkir data/chains/awesome_network/network
+cd data/chains/awesome_network/network
+docker run -it parity/subkey:latest generate-node-key --file=secret_ed25519 --chain=./chain-spec-raw.json
+```
 
 Run the collator with the following command:
 
