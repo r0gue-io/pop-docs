@@ -21,7 +21,7 @@ Let's get started.
 
 ## Setting Up Polkadot Accounts
 
-First, we will need to set up an account to do transactions on Paseo on behalf of our collator.
+First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator.
 
 > A collator is the parachain node that will be running your parachain.
 
@@ -33,6 +33,8 @@ There are multiple ways to generate keys (accounts) on Polkadot, such as:
 
 > Account creation should be done securely, such as using an air-gapped computer.
 
+### Create a Stash Account Key
+
 For the sake of this guide, we will use subkey:
 
 ```bash
@@ -41,12 +43,19 @@ docker pull parity/subkey:latest
 
 > Once downloaded, `subkey` does not need an internet connection to work.&#x20;
 
-### Create an Account Key
-
-Let's create the account key:
+Let's create the stash account key:
 
 ```bash
 docker run -it parity/subkey:latest generate --scheme sr25519
+```
+
+> If you do not have docker installed, you can download the [polkadot-sdk](https://github.com/paritytech/polkadot-sdk) and run the following command instead:
+
+```bash
+git clone --depth 1 https://github.com/paritytech/polkadot-sdk
+cd polkadot-sdk
+pop build
+./target/debug/polkadot key generate --scheme sr25519
 ```
 
 You should get an output similar to:
@@ -63,7 +72,7 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 > This your key (Polkadot account). Save the secret phrase in a vault securely and never share it.
 
-Now that we have an account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to onboarding your parachain.
+Now that we have a stash account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to onboarding your parachain.
 
 Go to the [Polkadot Faucet](https://faucet.polkadot.io/) and fund your account:
 
@@ -73,11 +82,11 @@ Cool. Make sure to add your account to the [Polkadot Signer extension](https://p
 
 > Alternatively, you can check the Paseo chain state under [system.account()](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) to see your account balance.
 
-### Create a Session Key
+### Create a Session Account Key
 
-We now need to create one more account. In order for collators to produce blocks, they need to sign the block with an (account) key. We call this account key the session key. It is the account that is specifically created for block production.
+We now need to create one more account. In order for collators to produce blocks, they need to sign the block with a (session) key. We call this key the session key. This account is specifically created for block production.
 
-Let's go ahead and create the session key.
+Let's go ahead and create the session account key.
 
 We can use `subkey` to generate the keys for us.
 
