@@ -1,6 +1,5 @@
 ---
 description: This guide is for running a parachain on the Polkadot "Paseo" TestNet
-hidden: true
 ---
 
 # Running on Paseo
