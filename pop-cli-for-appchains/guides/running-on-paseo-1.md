@@ -191,15 +191,15 @@ Make sure to edit your chain spec and:&#x20;
         "session": {
           "keys": [
             [
-              "INSERT_SS58_SESSION_KEY_COLLATOR_1",
-              "INSERT_SS58_SESSION_KEY_COLLATOR_1",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
               {
                 "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_1"
               }
             ],
             [
-              "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL",
-              "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
               {
                 "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL"
               }
