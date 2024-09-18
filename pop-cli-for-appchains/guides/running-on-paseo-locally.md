@@ -1,5 +1,5 @@
 ---
-description: This guide is for running a parachain on the Polkadot "Paseo" TestNet
+description: This guide is for running a parachain on the Polkadot "Paseo" TestNet Locally
 hidden: true
 ---
 
@@ -19,7 +19,85 @@ A good development workflow:&#x20;
 
 Let's get started.
 
-## Setting Up Polkadot Accounts
+## Spin up Paseo locally
+
+```bash
+touch paseo-local.toml
+```
+
+paseo-local.toml
+
+```toml
+[relaychain]
+chain = "paseo-local"
+
+[[relaychain.nodes]]
+name = "alice"
+validator = true
+
+[[relaychain.nodes]]
+name = "bob"
+validator = true
+
+[[relaychain.nodes]]
+name = "charlie"
+validator = true
+```
+
+Run the network:
+
+```
+pop up parachain -f paseo-local --verbose
+```
+
+> The `--verbose` flag will allow us to see extra information such as the location of the chain spec for the local Paseo network that we are running.
+
+Paseo should now be running on your machine and producing blocks. We can now move towards setting up our parachain.
+
+## Setting up our parachain
+
+For the sake of this exercise, let's create a new parachain:
+
+```
+pop new parachain
+```
+
+```
+┌   Pop CLI : Generate a parachain
+│
+◇  Select a template provider: 
+│  Pop 
+│
+◇  Select the type of parachain:
+│  Standard 
+│
+⚙  Template License: Unlicense
+│  
+◇  Select a specific release:
+│  Polkadot v1.14 
+│
+◇  Where should your project be created?
+│  ./awesome-network
+│
+◇  What is the symbol of your parachain token?
+│  AWE
+│
+◇  How many token decimals?
+│  10
+│
+◆  And the initial endowment for dev accounts?
+│  1u64 << 60
+└  
+```
+
+```
+cd awesome-network
+pop build
+```
+
+It will take some time for the parachain to build. In the meantime, we can start setting up our accounts.
+
+## Setting Up Accounts
 
 First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator.
 
@@ -112,36 +190,21 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 > Save the secret phrase in a secure manner.
 
-## Parachain Onboarding
+## Creating the chain spec for the parachain
 
-With the account and session keys created, we can now ready our parachain for onboarding.
+Let's create a chain spec for our parachain:
 
-### Obtain the Parachain ID
-
-To onboard our parachain we need to grab the next available parachain ID on Paseo. We can use [PolkaotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) and check the chain state for the next available parachain ID:
-
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-05 at 5.03.46 PM.png" alt=""><figcaption><p>ParaId</p></figcaption></figure>
-
-> Make sure to note down the `paraId`. We will be using this in our next step
-
-### Create the Parachain's Chain Spec
-
-Now that we have our `paraId` we can create our parachain's specification:
-
-```bash
+```
 cd my-parachain
-```
-
-```
-pop build spec --release --id 4024 --type live --relay paseo --protocol-id my_parachain
+pop build spec --release --id 2000 --type local --relay paseo-local --protocol-id awesome_network
 ```
 
 This will output the following:
 
 * Your parachain's chain specification file
   * The plain text and the raw version e.g. `chain-spec.json` and `chain-spec-raw.json`
-* Your parachain's initial genesis state e.g. `para-4024-genesis-state`
-* Your parachain's Wasm runtime e.g. `para-4024.wasm`
+* Your parachain's initial genesis state e.g. `para-2000-genesis-state`
+* Your parachain's Wasm runtime e.g. `para-2000.wasm`
 
 > For more advanced customization `pop build spec --help`
 
@@ -153,21 +216,23 @@ Make sure to edit your chain spec and:&#x20;
 * specify the starting balance of specific accounts
 * add the account that will be the sudo account for your parachain
 
+It should look similar to the below:
+
 ```json
 {
   "name": "Awesome Network",
   "id": "awesome_network",
-  "chainType": "Live",
+  "chainType": "Local",
   "bootNodes": [],
   "telemetryEndpoints": null,
   "protocolId": "awesome_network",
   "properties": {
     "ss58Format": 42,
-    "tokenDecimals": 12,
+    "tokenDecimals": 10,
     "tokenSymbol": "AWE"
   },
   "relay_chain": "paseo",
-  "para_id": 4024,
+  "para_id": 2000,
   "codeSubstitutes": {},
   "genesis": {
     "runtimeGenesis": {
@@ -176,11 +241,11 @@ Make sure to edit your chain spec and:&#x20;
         "balances": {
           "balances": [
             [
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_1",
               1152921504606846976
             ],
             [
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
               1152921504606846976
             ],
           ]
@@ -188,12 +253,12 @@ Make sure to edit your chain spec and:&#x20;
         "collatorSelection": {
           "candidacyBond": 16000000000,
           "invulnerables": [
-            "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
-            "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL"
+            "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_1",
+            "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_2_OPTIONAL"
           ]
         },
         "parachainInfo": {
-          "parachainId": 4024
+          "parachainId": 2000
         },
         "polkadotXcm": {
           "safeXcmVersion": 4
@@ -201,15 +266,15 @@ Make sure to edit your chain spec and:&#x20;
         "session": {
           "keys": [
             [
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_1",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_1",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_1",
               {
                 "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_1"
               }
             ],
             [
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
-              "INSERT_SS58_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
+              "INSERT_SS58_STASH_ACCOUNT_KEY_COLLATOR_2_OPTIONAL",
               {
                 "aura": "INSERT_SS58_SESSION_KEY_COLLATOR_2_OPTIONAL"
               }
@@ -231,30 +296,27 @@ Since we have modified our chain spec, we will need to re-generate the raw chain
 ./target/release/parachain-template-node build-spec --chain chain-spec.json --disable-default-bootnode --raw > chain-spec-raw.json
 ```
 
-
-
-We are now ready to create an issue on Paseo's Github requesting to onboard our parachain:
-
-* [https://github.com/paseo-network/support/issues](https://github.com/paseo-network/support/issues)
-
-Once you have been confirmed and given a slot, you can start running your collators.
+We are now ready to run our parachain's collator node to sync with Paseo and start producing blocks.
 
 ## Run the Collator
 
-In order to run your parachain's collator node you will need the latest version of the Paseo chain spec.&#x20;
+In order to run your parachain's collator node you will need the raw chain spec that our local Paseo network is using. This can be found in the output of when you ran the `pop up parachain -f paseo-local --verbose` command.&#x20;
 
-You can download that here:&#x20;
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-18 at 3.56.34 PM.png" alt=""><figcaption><p><code>pop up parachain paseo-local.toml</code></p></figcaption></figure>
 
-* [https://github.com/paseo-network/runtimes/tags](https://github.com/paseo-network/runtimes/tags)
+Copy this chain spec into our `awesome-network` directory:
 
-Make sure to select the tag version that Paseo is running, download the zip, and you will find the `paseo.raw.json` file inside the zip folder.
+```bash
+cd awesome-network
+cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local.json
+```
 
 We will also need to create a node-key for your collator:
 
 ```bash
-mdkir data/chains/awesome_network/network
-cd data/chains/awesome_network/network
-docker run -it parity/subkey:latest generate-node-key --file=secret_ed25519 --chain=./chain-spec-raw.json
+cd awesome-network
+mkdir -p data/chains/awesome_network/network
+docker run -it parity/subkey:latest generate-node-key --file=data/chains/awesome_network/network/secret_ed25519 --chain=path/to/awesome-network/chain-spec-raw.json
 ```
 
 Run the collator with the following command:
@@ -269,7 +331,6 @@ Run the collator with the following command:
 --rpc-port 8845 \
 -- \
 --sync warp \
---execution wasm \
 --chain paseo.raw.json \
 --port 30343 \
 --rpc-port 9977
@@ -292,7 +353,7 @@ curl -H "Content-Type: application/json" \
 http://localhost:8845
 ```
 
-It will take time for your collator to sync with the Paseo Relay chain. Once it is synced your parachain will start producing blocks.
+It will take time for your collator to sync with the local Paseo Relay chain. Once it is synced your parachain will start producing blocks.
 
 Congrats!&#x20;
 
