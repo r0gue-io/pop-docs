@@ -197,6 +197,17 @@ Let's create a chain spec for our parachain:
 
 ```
 cd my-parachain
+```
+
+Build your parachain:
+
+```
+pop build
+```
+
+Create the chain spec:
+
+```
 pop build spec --release --id 2000 --type local --relay paseo-local --protocol-id awesome_network
 ```
 
@@ -213,9 +224,9 @@ Open the `chain-spec.json` file in your editor.&#x20;
 
 Make sure to edit your chain spec and:&#x20;
 
-* add your account and session keys
-* specify the starting balance of specific accounts
-* add the account that will be the sudo account for your parachain
+* **add your account and session keys**
+* **specify the starting balance of specific accounts**
+* **add the account that will be the sudo account for your parachain**
 
 It should look similar to the below:
 
