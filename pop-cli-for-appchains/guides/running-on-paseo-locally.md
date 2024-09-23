@@ -308,6 +308,16 @@ Since we have modified our chain spec, we will need to re-generate the raw chain
 ./target/release/parachain-template-node build-spec --chain chain-spec.json --disable-default-bootnode --raw > chain-spec-raw.json
 ```
 
+And re-generate the genesis state and wasm:
+
+```
+./target/release/parachain-template-node export-genesis-head --chain chain-spec-raw.json > para-2000-gensis-state
+```
+
+```
+./target/release/parachain-template-node export-genesis-wasm --chain chain-spec-raw.json > para-2000-genesis.wasm
+```
+
 We are now ready to run our parachain's collator node to sync with Paseo and start producing blocks.
 
 ## Run the Collator
@@ -353,10 +363,12 @@ Run the collator with the following command:
 --rpc-port 8845 \
 -- \
 --sync warp \
---chain paseo.raw.json \
---port 30343 \
---rpc-port 9977
+--chain paseo-local-raw.json \
+--port 30343 \ # Paseo Validator Node Port
+--rpc-port 9977 # Paseo Validator Node RPC Port
 ```
+
+> Find the above Paseo validator ports in the output from the `pop up parachain -f network.toml --verbose` command.
 
 We now need to insert the session key into our running collator:
 
