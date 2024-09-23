@@ -15,7 +15,8 @@ A good development workflow:&#x20;
 
 1. Run your parachain **locally** on Paseo TestNet for development purposes&#x20;
 2. When ready to test in a live environment with other parachains:
-   1. Use this guide to onboard your parachain onto the **live** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+   * [ ] Use this guide to onboard your parachain to a **local** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+   * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo-1.md)
 
 Let's get started.
 
@@ -25,7 +26,7 @@ Let's get started.
 touch paseo-local.toml
 ```
 
-paseo-local.toml
+network.toml
 
 ```toml
 [relaychain]
@@ -47,7 +48,7 @@ validator = true
 Run the network:
 
 ```
-pop up parachain -f paseo-local --verbose
+pop up parachain -f network.toml --verbose
 ```
 
 > The `--verbose` flag will allow us to see extra information such as the location of the chain spec for the local Paseo network that we are running.
