@@ -338,7 +338,7 @@ mkdir -p data/chains/awesome_network/network
 ```
 
 ```
-docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_parachain/network/secret_ed25519
+docker run -it parity/subkey:latest generate-node-key > ./data/chains/awesomet_network/network/secret_ed25519
 ```
 
 Run the collator with the following command:
