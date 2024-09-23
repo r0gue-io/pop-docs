@@ -312,9 +312,11 @@ We are now ready to run our parachain's collator node to sync with Paseo and sta
 
 ## Run the Collator
 
-In order to run your parachain's collator node you will need the raw chain spec that our local Paseo network is using. This can be found in the output of when you ran the `pop up parachain -f paseo-local --verbose` command.&#x20;
+In order to run your parachain's collator node you will need the raw chain spec that our local Paseo network is using.&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-18 at 3.56.34 PM.png" alt=""><figcaption><p><code>pop up parachain paseo-local.toml</code></p></figcaption></figure>
+This can be found in the output of when you ran the `pop up parachain -f network --verbose` command.:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-18 at 3.56.34 PM.png" alt=""><figcaption><p><code>pop up parachain network.toml</code></p></figcaption></figure>
 
 Copy this chain spec into our `awesome-network` directory:
 
@@ -323,12 +325,20 @@ cd awesome-network
 cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local.json
 ```
 
+> Note: Your Paseo chain spec path will be different from the above.
+
 We will also need to create a node-key for your collator:
 
 ```bash
 cd awesome-network
+```
+
+```
 mkdir -p data/chains/awesome_network/network
-docker run -it parity/subkey:latest generate-node-key --file=data/chains/awesome_network/network/secret_ed25519 --chain=path/to/awesome-network/chain-spec-raw.json
+```
+
+```
+docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_parachain/network/secret_ed25519
 ```
 
 Run the collator with the following command:
