@@ -365,7 +365,8 @@ Run the collator with the following command:
 --sync warp \
 --chain paseo-local-raw.json \
 --port 30343 \ # Paseo Validator Node Port
---rpc-port 9977 # Paseo Validator Node RPC Port
+--rpc-port 9977 \ # Paseo Validator Node RPC Port
+--bootnodes /ip4/127.0.0.1/tcp/51752/p2p/12D3KooWQCkBm1BYtkHpocxCwMgR8yjitEeHGx8spzcDLGt2gkBm
 ```
 
 > Find the above Paseo validator ports in the output from the `pop up parachain -f network.toml --verbose` command.
