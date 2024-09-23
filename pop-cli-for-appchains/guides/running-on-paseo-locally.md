@@ -322,7 +322,7 @@ Copy this chain spec into our `awesome-network` directory:
 
 ```bash
 cd awesome-network
-cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local.json
+cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local-raw.json
 ```
 
 > Note: Your Paseo chain spec path will be different from the above.
