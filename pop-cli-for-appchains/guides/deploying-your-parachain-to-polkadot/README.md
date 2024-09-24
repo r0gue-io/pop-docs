@@ -1,6 +1,5 @@
 ---
 description: The following are guides on how to launch your parachain on Polkadot.
-hidden: true
 ---
 
 # Launching your Parachain on Polkadot
@@ -14,5 +13,5 @@ A typical development workflow for launching your parachain on Polkadot:&#x20;
   * Use [this guide](../running-on-paseo-locally.md) to mimic the manual onboarding process for Paseo TestNet locally.&#x20;
   * When comfortable with manually onboarding locally, then use the next guide to onboard to Paseo Live TestNet.
     * [Launching your parachain on Paseo TestNet](../launching-your-parachain-on-polkadot/running-on-paseo-locally-1.md)
-* Launch on Polkadot
+* Finally, when thoroughly tested on Paseo, launch on Polkadot
   * The process here is similar to launching on Paseo.

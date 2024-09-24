@@ -2,10 +2,9 @@
 description: >-
   This guide is for manually onboarding a parachain to the Polkadot "Paseo"
   TestNet Locally
-hidden: true
 ---
 
-# Copy of Launching your parachain manually
+# Launching your parachain on Paseo TestNet
 
 Let's start by creating the accounts needed for launching the parachain.
 

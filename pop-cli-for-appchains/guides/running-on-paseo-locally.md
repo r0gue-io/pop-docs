@@ -2,7 +2,6 @@
 description: >-
   This guide is for manually onboarding a parachain to the Polkadot "Paseo"
   TestNet Locally
-hidden: true
 ---
 
 # Launching your parachain manually
