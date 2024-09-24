@@ -407,7 +407,43 @@ curl -H "Content-Type: application/json" \
 http://localhost:8845
 ```
 
-It will take time for your collator to sync with the local Paseo Relay chain. Once it is synced your parachain will start producing blocks.
+It will take time for your collator to sync with the local Paseo Relay chain.
+
+We now need to onboard the parachain to Paseo.
+
+Go to the Parachains tab.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.37.32 AM.png" alt=""><figcaption><p>Parachains Tab</p></figcaption></figure>
+
+Select "+ ParaId" and make sure to use the stash account:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.38.09 AM.png" alt=""><figcaption><p>Reserve ParaId</p></figcaption></figure>
+
+Next, select "+ ParaThread". Make sure to use the stash account, upload your wasm and genesis state:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.38.50 AM.png" alt=""><figcaption><p>Register ParaThread</p></figcaption></figure>
+
+It will take a moment for the ParaThread to onboard:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.39.09 AM.png" alt=""><figcaption><p>ParaThread Onboarding</p></figcaption></figure>
+
+Once onboarded, we now need to use sudo privileges (Alice account) on the Paseo Relay chain to "force" a lease for our parachain so that it can begin to use produce blocks.
+
+Go to the "sudo" tab:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.45.44 AM.png" alt=""><figcaption><p>Sudo tab</p></figcaption></figure>
+
+Use sudo privileges on the Relay chain to force a lease for our parachain:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.46.09 AM.png" alt=""><figcaption><p>Force a lease</p></figcaption></figure>
+
+> In production, leases are assigned via the result of an on-chain auction.
+
+Wait for the lease to take effect:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.46.30 AM.png" alt=""><figcaption><p>Upgrading Parathread</p></figcaption></figure>
+
+
 
 Congrats!&#x20;
 
