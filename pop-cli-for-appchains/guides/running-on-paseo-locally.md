@@ -212,10 +212,10 @@ Let's create a chain spec for our parachain:
 cd my-parachain
 ```
 
-Build your parachain:
+Build your parachain for release:
 
 ```
-pop build
+pop build --release
 ```
 
 Create the chain spec:
@@ -452,7 +452,7 @@ You will then see the parathread upgraded to a parachain:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
 
-After a few moments you should see the parachain producing blocks.
+After a few moments, you should see the parachain producing blocks.
 
 
 
