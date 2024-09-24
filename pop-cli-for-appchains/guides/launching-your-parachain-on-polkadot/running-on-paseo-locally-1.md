@@ -7,7 +7,7 @@ hidden: true
 
 # Copy of Launching your parachain manually
 
-
+Let's start by creating the accounts needed for launching the parachain.
 
 ## Setting Up Accounts
 
@@ -62,7 +62,7 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 > This your key (Polkadot account). Save the secret phrase in a vault securely and never share it.
 
-Now that we have a stash account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to onboarding your parachain.
+Now that we have a stash account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to connecting your parachain to the Paseo network.
 
 Add the stash account to the [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
 
@@ -140,8 +140,8 @@ This will output the following:
 
 * Your parachain's chain specification file
   * The plain text and the raw version e.g. `chain-spec.json` and `chain-spec-raw.json`
-* Your parachain's initial genesis state e.g. `para-2000-genesis-state`
-* Your parachain's Wasm runtime e.g. `para-2000.wasm`
+* Your parachain's initial genesis state e.g. `para-4024-genesis-state`
+* Your parachain's Wasm runtime e.g. `para-4024.wasm`
 
 > For more advanced customization `pop build spec --help`
 
@@ -169,7 +169,7 @@ It should look similar to the below:
     "tokenSymbol": "UNIT"
   },
   "relay_chain": "paseo",
-  "para_id": 2000,
+  "para_id": 4024,
   "codeSubstitutes": {},
   "genesis": {
     "runtimeGenesis": {
@@ -245,6 +245,14 @@ And re-generate the genesis state and wasm:
 
 We are now ready to run our parachain's collator node to sync with Paseo and start producing blocks.
 
+## Requesting a Slot on Paseo
+
+We are now ready to create an issue on Paseo's Github requesting to onboard our parachain:
+
+* [https://github.com/paseo-network/support/issues](https://github.com/paseo-network/support/issues)
+
+Once you have been confirmed and given a slot, you can start running your collators.
+
 ## Running the Collator
 
 In order to run your parachain's collator node you will need the raw chain spec that our local Paseo network is using.&#x20;
@@ -292,13 +300,12 @@ Run the collator with the following command:
 --rpc-port 8845 \
 -- \
 --sync warp \
---chain paseo-local-raw.json \
+--chain paseo.raw.json \
 --port 57733 \
---rpc-port 57731 \
---bootnodes /ip4/127.0.0.1/tcp/57733/p2p/12D3KooWQCkBm1BYtkHpocxCwMgR8yjitEeHGx8spzcDLGt2gkBm
+--rpc-port 57731
 ```
 
-> The second half of this command specifies the Relay chain node to connect to. In this case, Alice is the validator node that we want to connect to. Alice is the bootnode for the Paseo network that we are running locally. Alice's ports can be found in the output from the `pop up parachain -f network.toml --verbose` command that we previously ran.
+> Choose ports that are not in use.&#x20;
 
 We now need to insert the session key into our running collator:
 
@@ -319,49 +326,9 @@ http://localhost:8845
 
 It will take time for your collator to sync with the local Paseo Relay chain.
 
-We now need to onboard the parachain to Paseo.
+Once it is fully synced, block production will start.
 
-Go to the Parachains tab.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.37.32 AM.png" alt=""><figcaption><p>Parachains Tab</p></figcaption></figure>
-
-Select "+ ParaId" and make sure to use the stash account:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.38.09 AM.png" alt=""><figcaption><p>Reserve ParaId</p></figcaption></figure>
-
-Next, select "+ ParaThread". Make sure to use the stash account, upload your wasm and genesis state:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.38.50 AM.png" alt=""><figcaption><p>Register ParaThread</p></figcaption></figure>
-
-It will take a moment for the ParaThread to onboard:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.39.09 AM.png" alt=""><figcaption><p>ParaThread Onboarding</p></figcaption></figure>
-
-Once onboarded, we now need to use sudo privileges (Alice account) on the Paseo Relay chain to "force" a lease for our parachain so that it can begin to use produce blocks.
-
-Go to the "sudo" tab:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.45.44 AM.png" alt=""><figcaption><p>Sudo tab</p></figcaption></figure>
-
-Use sudo privileges on the Relay chain to force a lease for our parachain:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.46.09 AM.png" alt=""><figcaption><p>Force a lease</p></figcaption></figure>
-
-> In production, leases are assigned via the result of an on-chain auction.
-
-Wait for the lease to take effect:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.46.30 AM.png" alt=""><figcaption><p>Upgrading Parathread</p></figcaption></figure>
-
-You will then see the parathread upgraded to a parachain:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
-
-After a few moments, you should see the parachain producing blocks. The included / backed will update with the Relay chain's block number in which your parachain's block was included and backed. You can also check your collator logs to confirm.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 2.21.37 PM.png" alt=""><figcaption><p>Notice the included / backed</p></figcaption></figure>
-
-Congrats! Your chain is now producing blocks!
+Congrats!
 
 ## Next Steps
 
