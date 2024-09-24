@@ -35,11 +35,6 @@ network.toml
 [relaychain]
 chain = "paseo-local"
 
-[relaychain.runtime_genesis_patch.balances]
-balances = [
-    ["5EAGYXoTkZs4rMefBnf1SbruKr3FN19yzZ24LUhiE2ah3kz2", 1152921504606846976],
-]
-
 [[relaychain.nodes]]
 name = "alice"
 validator = true
@@ -176,6 +171,8 @@ Make sure it appears in the PolkadotJs Apps UI:
 Notice that the balance is zero. Let's transfer some tokens from Alice's account to the stash account so that the stash account has funds to do transactions:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.23.53 AM.png" alt=""><figcaption><p>Send Funds</p></figcaption></figure>
+
+> Optionally, if you knew your account beforehand, you could have pre-funded it when you spun up the Paseo network. More info [here](https://substrate.stackexchange.com/a/11930/29).
 
 Cool. Our stash account is now funded on the Paseo Relay chain.
 
