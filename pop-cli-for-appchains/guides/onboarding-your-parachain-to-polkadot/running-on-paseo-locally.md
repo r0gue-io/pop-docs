@@ -5,7 +5,7 @@ description: >-
 hidden: true
 ---
 
-# Onboarding Locally
+# Onboarding your parachain locally
 
 ## Introduction
 
@@ -16,10 +16,10 @@ hidden: true
 A good development workflow:&#x20;
 
 1. Run your parachain **locally** using Pop CLI to onboard your parachain to Paseo TestNet automatically for development purposes:
-   * [ ] [Run your parachain on Paseo](running-your-parachain.md)
+   * [ ] [Run your parachain on Paseo](../running-your-parachain.md)
 2. When ready to test your parachain in a live environment with other parachains:
    * [ ] Use this guide to mimic the onboarding process for Paseo TestNet. When comfortable with this process locally, then use the next guide to onboard to Paseo Live TestNet.
-   * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo-1.md)
+   * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo.md)
 
 Let's get started.
 
@@ -60,7 +60,7 @@ pop up parachain -f network.toml --verbose
 
 Paseo should now be running on your machine and producing blocks. We can now move towards setting up our parachain.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up parachain -f network.toml --verbose</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up parachain -f network.toml --verbose</p></figcaption></figure>
 
 ## Setting up our parachain
 
@@ -162,15 +162,15 @@ Now that we have a stash account, we need to fund this account with some tokens 
 
 Add the stash account to the [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.14.37 AM.png" alt="" width="375"><figcaption><p>Polkadot Signer Extension</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.14.37 AM.png" alt="" width="375"><figcaption><p>Polkadot Signer Extension</p></figcaption></figure>
 
 Make sure it appears in the PolkadotJs Apps UI:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.17.59 AM.png" alt=""><figcaption><p>PolkadotJs Apps UI</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.17.59 AM.png" alt=""><figcaption><p>PolkadotJs Apps UI</p></figcaption></figure>
 
 Notice that the balance is zero. Let's transfer some tokens from Alice's account to the stash account so that the stash account has funds to do transactions:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.23.53 AM.png" alt=""><figcaption><p>Send Funds</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.23.53 AM.png" alt=""><figcaption><p>Send Funds</p></figcaption></figure>
 
 > Optionally, if you knew your account beforehand, you could have pre-funded it when you spun up the Paseo network. More info [here](https://substrate.stackexchange.com/a/11930/29).
 
@@ -341,7 +341,7 @@ In order to run your parachain's collator node you will need the raw chain spec 
 
 This can be found in the output of when you ran the `pop up parachain -f network --verbose` command.:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy this chain spec into our `my-parachain` directory:
 
@@ -420,43 +420,43 @@ We now need to onboard the parachain to Paseo.
 
 Go to the Parachains tab.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.37.32 AM.png" alt=""><figcaption><p>Parachains Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.37.32 AM.png" alt=""><figcaption><p>Parachains Tab</p></figcaption></figure>
 
 Select "+ ParaId" and make sure to use the stash account:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.38.09 AM.png" alt=""><figcaption><p>Reserve ParaId</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.38.09 AM.png" alt=""><figcaption><p>Reserve ParaId</p></figcaption></figure>
 
 Next, select "+ ParaThread". Make sure to use the stash account, upload your wasm and genesis state:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.38.50 AM.png" alt=""><figcaption><p>Register ParaThread</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.38.50 AM.png" alt=""><figcaption><p>Register ParaThread</p></figcaption></figure>
 
 It will take a moment for the ParaThread to onboard:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.39.09 AM.png" alt=""><figcaption><p>ParaThread Onboarding</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.39.09 AM.png" alt=""><figcaption><p>ParaThread Onboarding</p></figcaption></figure>
 
 Once onboarded, we now need to use sudo privileges (Alice account) on the Paseo Relay chain to "force" a lease for our parachain so that it can begin to use produce blocks.
 
 Go to the "sudo" tab:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.45.44 AM.png" alt=""><figcaption><p>Sudo tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.45.44 AM.png" alt=""><figcaption><p>Sudo tab</p></figcaption></figure>
 
 Use sudo privileges on the Relay chain to force a lease for our parachain:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.46.09 AM.png" alt=""><figcaption><p>Force a lease</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.46.09 AM.png" alt=""><figcaption><p>Force a lease</p></figcaption></figure>
 
 > In production, leases are assigned via the result of an on-chain auction.
 
 Wait for the lease to take effect:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.46.30 AM.png" alt=""><figcaption><p>Upgrading Parathread</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.46.30 AM.png" alt=""><figcaption><p>Upgrading Parathread</p></figcaption></figure>
 
 You will then see the parathread upgraded to a parachain:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
 
 After a few moments, you should see the parachain producing blocks. The included / backed will update with the Relay chain's block number in which your parachain's block was included and backed. You can also check your collator logs to confirm.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 2.21.37 PM.png" alt=""><figcaption><p>Notice the included / backed</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 2.21.37 PM.png" alt=""><figcaption><p>Notice the included / backed</p></figcaption></figure>
 
 Congrats! Your chain is now producing blocks!
 
