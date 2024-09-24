@@ -17,6 +17,8 @@ touch network.toml
 
 Add the following configuration, adapting as necessary.
 
+> You can use `rococo-local` or `paseo-local` for your Relay chain. Both are test networks for Polkadot. Rococo is the Parity maintained Polkadot Test Relay chain. Paseo is the community-led Polkadot Test Relay chain. In the future, Rococo will be deprecated in favour of Paseo.
+
 ```toml
 [relaychain]
 chain = "rococo-local"
