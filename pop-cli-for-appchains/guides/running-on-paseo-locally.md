@@ -23,7 +23,7 @@ Let's get started.
 ## Spin up Paseo locally
 
 ```bash
-touch paseo-local.toml
+touch network.toml
 ```
 
 network.toml
