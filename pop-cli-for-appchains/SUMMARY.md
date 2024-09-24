@@ -21,8 +21,8 @@
   * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Deploying your Parachain to Polkadot](guides/deploying-your-parachain-to-polkadot/README.md)
-  * [Onboarding Locally](guides/deploying-your-parachain-to-polkadot/running-on-paseo-locally.md)
-  * [Onboarding on Paseo](guides/deploying-your-parachain-to-polkadot/running-on-paseo.md)
+  * [Onboarding Locally](guides/running-on-paseo-locally.md)
+  * [Onboarding on Paseo](guides/running-on-paseo-1.md)
 
 ## POP CLI
 
