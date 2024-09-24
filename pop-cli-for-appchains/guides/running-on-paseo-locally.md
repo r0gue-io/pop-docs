@@ -331,7 +331,7 @@ This can be found in the output of when you ran the `pop up parachain -f network
 Copy this chain spec into our `awesome-network` directory:
 
 ```bash
-cd awesome-network
+cd my-parachain
 cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local-raw.json
 ```
 
@@ -340,7 +340,7 @@ cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af
 We will also need to create a node-key for your collator:
 
 ```bash
-cd awesome-network
+cd my-parachain
 ```
 
 ```
