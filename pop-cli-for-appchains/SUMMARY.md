@@ -20,9 +20,9 @@
   * [Spinning up Kusama](<guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1 (1).md>)
   * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
-* [Onboarding your Parachain to Polkadot](guides/onboarding-your-parachain-to-polkadot/README.md)
-  * [Onboarding your parachain locally](guides/onboarding-your-parachain-to-polkadot/running-on-paseo-locally.md)
-  * [Onboarding your parachain on Paseo](guides/onboarding-your-parachain-to-polkadot/running-on-paseo.md)
+* [Launching your Parachain on Polkadot](guides/launching-your-parachain-on-polkadot/README.md)
+  * [Onboarding your parachain locally](guides/launching-your-parachain-on-polkadot/running-on-paseo-locally.md)
+  * [Onboarding your parachain on Paseo](guides/launching-your-parachain-on-polkadot/running-on-paseo.md)
 
 ## POP CLI
 
