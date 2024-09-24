@@ -454,9 +454,9 @@ You will then see the parathread upgraded to a parachain:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
 
-After a few moments, you should see the parachain producing blocks.
+After a few moments, you should see the parachain producing blocks. The included / backed will update with the Relay chain's block number in which your parachain's block was included and backed. You can also check your collator logs to confirm.
 
-
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 2.21.37 PM.png" alt=""><figcaption><p>Notice the included / backed</p></figcaption></figure>
 
 Congrats! Your chain is now producing blocks!
 
