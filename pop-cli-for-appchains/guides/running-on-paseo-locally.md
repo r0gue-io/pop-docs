@@ -319,7 +319,7 @@ Since we have modified our chain spec, we will need to re-generate the raw chain
 And re-generate the genesis state and wasm:
 
 ```
-./target/release/parachain-template-node export-genesis-head --chain chain-spec-raw.json > para-2000-gensis-state
+./target/release/parachain-template-node export-genesis-head --chain chain-spec-raw.json > para-2000-genesis-state
 ```
 
 ```
