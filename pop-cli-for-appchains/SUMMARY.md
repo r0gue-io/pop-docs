@@ -22,6 +22,7 @@
   * [Spinning up Kusama](<guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1 (1).md>)
   * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
+* [Deploying your Parachain to Polkadot](guides/deploying-your-parachain-to-polkadot.md)
 
 ## POP CLI
 
