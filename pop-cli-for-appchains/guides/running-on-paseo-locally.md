@@ -15,7 +15,8 @@ hidden: true
 
 A good development workflow:&#x20;
 
-1. Run your parachain **locally** using Pop CLI to onboard your parachain to Paseo TestNet automatically for development purposes&#x20;
+1. Run your parachain **locally** using Pop CLI to onboard your parachain to Paseo TestNet automatically for development purposes:
+   * [ ] [Run your parachain on Paseo](running-your-parachain.md)
 2. When ready to test your parachain in a live environment with other parachains:
    * [ ] Use this guide to mimic the onboarding process for Paseo TestNet. When comfortable with this process locally, then use the next guide to onboard to Paseo Live TestNet.
    * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo-1.md)
@@ -58,6 +59,8 @@ pop up parachain -f network.toml --verbose
 > The `--verbose` flag will allow us to see extra information such as the location of the chain spec for the local Paseo network that we are running.
 
 Paseo should now be running on your machine and producing blocks. We can now move towards setting up our parachain.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up parachain -f network.toml --verbose</p></figcaption></figure>
 
 ## Setting up our parachain
 
@@ -330,15 +333,15 @@ And re-generate the genesis state and wasm:
 
 We are now ready to run our parachain's collator node to sync with Paseo and start producing blocks.
 
-## Run the Collator
+## Running the Collator
 
 In order to run your parachain's collator node you will need the raw chain spec that our local Paseo network is using.&#x20;
 
 This can be found in the output of when you ran the `pop up parachain -f network --verbose` command.:
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-18 at 3.56.34 PM.png" alt=""><figcaption><p><code>pop up parachain network.toml</code></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-Copy this chain spec into our `awesome-network` directory:
+Copy this chain spec into our `my-parachain` directory:
 
 ```bash
 cd my-parachain
@@ -374,7 +377,7 @@ docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_paracha
 
 Run the collator with the following command:
 
-```purebasic
+```
 ./target/release/parachain-template-node \
 --collator \
 --force-authoring \
@@ -385,12 +388,12 @@ Run the collator with the following command:
 -- \
 --sync warp \
 --chain paseo-local-raw.json \
---port 30343 \ # Paseo Validator Node Port
---rpc-port 9977 \ # Paseo Validator Node RPC Port
---bootnodes /ip4/127.0.0.1/tcp/51752/p2p/12D3KooWQCkBm1BYtkHpocxCwMgR8yjitEeHGx8spzcDLGt2gkBm
+--port 57733 \
+--rpc-port 57731 \
+--bootnodes /ip4/127.0.0.1/tcp/57733/p2p/12D3KooWQCkBm1BYtkHpocxCwMgR8yjitEeHGx8spzcDLGt2gkBm
 ```
 
-> Find the above Paseo validator ports in the output from the `pop up parachain -f network.toml --verbose` command.
+> The second half of this command specifies the Relay chain node to connect to. In this case, Alice is the validator node that we want to connect to. Alice is the bootnode for the Paseo network that we are running locally. Alice's ports can be found in the output from the `pop up parachain -f network.toml --verbose` command that we previously ran.
 
 We now need to insert the session key into our running collator:
 
