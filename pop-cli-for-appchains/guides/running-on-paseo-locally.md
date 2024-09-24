@@ -45,6 +45,8 @@ name = "charlie"
 validator = true
 ```
 
+> Interesting Fact: We have three validator nodes so that we can use Polkadot's Warp Sync to quickly sync with the network. The minimum requirement for Warp Sync are three validator nodes.
+
 Run the network:
 
 ```
@@ -153,13 +155,19 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 Now that we have a stash account, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator such as transactions related to onboarding your parachain.
 
-Go to the [Polkadot Faucet](https://faucet.polkadot.io/) and fund your account:
+Add the stash account to the [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-06 at 4.04.37 PM.png" alt="" width="563"><figcaption><p>Polkadot / Paseo Faucet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.14.37 AM.png" alt="" width="375"><figcaption><p>Polkadot Signer Extension</p></figcaption></figure>
 
-Cool. Make sure to add your account to the [Polkadot Signer extension](https://polkadot.js.org/) so that you can see your account appear in the [PolkadotJs Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/accounts) UI.
+Make sure it appears in the PolkadotJs Apps UI:
 
-> Alternatively, you can check the Paseo chain state under [system.account()](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/chainstate) to see your account balance.
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.17.59 AM.png" alt=""><figcaption><p>PolkadotJs Apps UI</p></figcaption></figure>
+
+Notice that the balance is zero. Let's transfer some tokens from Alice's account to the stash account so that the stash account has funds to do transactions:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.23.53 AM.png" alt=""><figcaption><p>Send Funds</p></figcaption></figure>
+
+Cool. Our stash account is now funded on the Paseo Relay chain.
 
 ### Create a Session Account Key
 
