@@ -22,6 +22,7 @@
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Launching your Parachain on Polkadot](guides/deploying-your-parachain-to-polkadot/README.md)
   * [Launching your parachain manually](guides/running-on-paseo-locally.md)
+  * [Copy of Launching your parachain manually](guides/launching-your-parachain-on-polkadot/running-on-paseo-locally-1.md)
   * [Onboarding your parachain on Paseo](guides/running-on-paseo-1.md)
 
 ## POP CLI
