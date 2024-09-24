@@ -285,6 +285,10 @@ docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_paracha
 
 Run the collator with the following command:
 
+> A note on hardware requirements:&#x20;
+>
+> * [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html#hardware](https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html#hardware)
+
 ```
 ./target/release/parachain-template-node \
 --collator \
