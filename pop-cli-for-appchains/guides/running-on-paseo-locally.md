@@ -78,13 +78,13 @@ pop new parachain
 │  Polkadot v1.14 
 │
 ◇  Where should your project be created?
-│  ./awesome-network
+│  ./my-parachain
 │
 ◇  What is the symbol of your parachain token?
-│  AWE
+│  UNIT
 │
 ◇  How many token decimals?
-│  10
+│  12
 │
 ◆  And the initial endowment for dev accounts?
 │  1u64 << 60
@@ -92,7 +92,7 @@ pop new parachain
 ```
 
 ```
-cd awesome-network
+cd my-parachain
 pop build
 ```
 
@@ -208,7 +208,7 @@ pop build
 Create the chain spec:
 
 ```
-pop build spec --release --id 2000 --type local --relay paseo-local --protocol-id awesome_network
+pop build spec --release --id 2000 --type local --relay paseo-local --protocol-id my_parachain
 ```
 
 This will output the following:
@@ -232,16 +232,16 @@ It should look similar to the below:
 
 ```json
 {
-  "name": "Awesome Network",
-  "id": "awesome_network",
+  "name": "My Parachain",
+  "id": "my_parachain",
   "chainType": "Local",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": "awesome_network",
+  "protocolId": "my_parachain",
   "properties": {
     "ss58Format": 42,
-    "tokenDecimals": 10,
-    "tokenSymbol": "AWE"
+    "tokenDecimals": 12,
+    "tokenSymbol": "UNIT"
   },
   "relay_chain": "paseo",
   "para_id": 2000,
@@ -315,7 +315,7 @@ And re-generate the genesis state and wasm:
 ```
 
 ```
-./target/release/parachain-template-node export-genesis-wasm --chain chain-spec-raw.json > para-2000-genesis.wasm
+./target/release/parachain-template-node export-genesis-wasm --chain chain-spec-raw.json > para-2000.wasm
 ```
 
 We are now ready to run our parachain's collator node to sync with Paseo and start producing blocks.
@@ -344,11 +344,11 @@ cd awesome-network
 ```
 
 ```
-mkdir -p data/chains/awesome_network/network
+mkdir -p data/chains/my_parachain/network
 ```
 
 ```
-docker run -it parity/subkey:latest generate-node-key > ./data/chains/awesomet_network/network/secret_ed25519
+docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_parachain/network/secret_ed25519
 ```
 
 Run the collator with the following command:
