@@ -19,7 +19,7 @@ A good development workflow:&#x20;
    * [ ] [Run your parachain on Paseo](running-your-parachain.md)
 2. When ready to test your parachain in a live environment with other parachains:
    * [ ] Use this guide to mimic the onboarding process for Paseo TestNet. When comfortable with this process locally, then use the next guide to onboard to Paseo Live TestNet.
-   * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo-1.md)
+   * [ ] [Onboard your parachain to Paseo Live TestNet](broken-reference)
 
 Let's get started.
 
