@@ -8,9 +8,7 @@ Let's start by creating the accounts needed for launching the parachain.
 
 ## Setting Up Accounts
 
-First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator.
-
-> A collator is the parachain node that will be running your parachain.
+First, we will need to set up a stash account to do transactions on Paseo to onboard our parachain.
 
 There are multiple ways to generate keys (accounts) on Polkadot, such as:
 
