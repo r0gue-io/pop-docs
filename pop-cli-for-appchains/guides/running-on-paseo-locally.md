@@ -13,13 +13,19 @@ hidden: true
 
 > Note: For contrast, Rococo is the [Parity](https://parity.io)-run Polkadot Relay chain TestNet which [will be deprecating](https://forum.polkadot.network/t/a-new-test-network-for-polkadot/4325) in favour of the [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
 
-A good development workflow:&#x20;
+A typical development workflow for launching your parachain on Polkadot:&#x20;
 
-1. Run your parachain **locally** using Pop CLI to onboard your parachain to Paseo TestNet automatically for development purposes:
-   * [ ] [Run your parachain on Paseo](running-your-parachain.md)
-2. When ready to test your parachain in a live environment with other parachains:
-   * [ ] Use this guide to mimic the onboarding process for Paseo TestNet. When comfortable with this process locally, then use the next guide to onboard to Paseo Live TestNet.
-   * [ ] [Onboard your parachain to Paseo Live TestNet](broken-reference)
+* Run your parachain **locally** using Pop CLI.&#x20;
+  * Under the hood, Pop CLI launches your parachain to Paseo Local TestNet automatically for development purposes:
+    * [Run your parachain on Paseo](running-your-parachain.md)
+* When ready to test your parachain in a live environment with other parachains:
+  * Use this guide to mimic the manual onboarding process for Paseo TestNet locally.&#x20;
+  * When comfortable with manually onboarding locally, then use the next guide to onboard to Paseo Live TestNet.
+    * [Launching your parachain on Paseo TestNet](launching-your-parachain-on-polkadot/running-on-paseo-locally-1.md)
+* Finally, when thoroughly tested on Paseo, launch on Polkadot
+  * The process here is similar to launching on Paseo.
+
+***
 
 Let's get started.
 
