@@ -443,9 +443,15 @@ Wait for the lease to take effect:
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.46.30 AM.png" alt=""><figcaption><p>Upgrading Parathread</p></figcaption></figure>
 
+You will then see the parathread upgraded to a parachain:
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.50.18 AM.png" alt=""><figcaption><p>Parachain Tab</p></figcaption></figure>
+
+After a few moments you should see the parachain producing blocks.
 
 
-Congrats!&#x20;
+
+Congrats! Your chain is now producing blocks!
 
 ## Next Steps
 
