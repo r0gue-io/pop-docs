@@ -359,6 +359,17 @@ mkdir -p data/chains/my_parachain/network
 docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_parachain/network/secret_ed25519
 ```
 
+> Alternatively you can use Polkadot SDK binary instead of a Docker image:
+>
+> ```
+> path/to/polkadot-sdk/target/debug/substrate-node key generate-node-key --file=secret_ed25519 --chain=./chain-spec-raw.json
+> ```
+>
+> <pre><code><strong>mv secret_ed25519 data/chains/my_parachain/network
+> </strong></code></pre>
+>
+>
+
 Run the collator with the following command:
 
 ```purebasic
