@@ -1,9 +1,11 @@
 ---
-description: This guide is for running a parachain on the Polkadot "Paseo" TestNet Locally
+description: >-
+  This guide is for manually onboarding a parachain to the Polkadot "Paseo"
+  TestNet Locally
 hidden: true
 ---
 
-# Running on Paseo Locally
+# Manually Onboarding a Parachain to the Paseo Relay chain Locally
 
 ## Introduction
 
@@ -13,9 +15,9 @@ hidden: true
 
 A good development workflow:&#x20;
 
-1. Run your parachain **locally** on Paseo TestNet for development purposes&#x20;
-2. When ready to test in a live environment with other parachains:
-   * [ ] Use this guide to onboard your parachain to a **local** [Paseo TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/explorer).
+1. Run your parachain **locally** using Pop CLI to onboard your parachain to Paseo TestNet automatically for development purposes&#x20;
+2. When ready to test your parachain in a live environment with other parachains:
+   * [ ] Use this guide to mimic the onboarding process for Paseo TestNet. When comfortable with this process locally, then use the next guide to onboard to Paseo Live TestNet.
    * [ ] [Onboard your parachain to Paseo Live TestNet](running-on-paseo-1.md)
 
 Let's get started.
