@@ -35,6 +35,11 @@ network.toml
 [relaychain]
 chain = "paseo-local"
 
+[relaychain.runtime_genesis_patch.balances]
+balances = [
+    ["5EAGYXoTkZs4rMefBnf1SbruKr3FN19yzZ24LUhiE2ah3kz2", 1152921504606846976],
+]
+
 [[relaychain.nodes]]
 name = "alice"
 validator = true
