@@ -8,7 +8,6 @@
 
 ## GUIDES
 
-* [Bridging Tokens to Pop Network](guides/bridging-tokens-to-pop-network.md)
 * [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new parachain](guides/create-a-new-parachain/README.md)
   * [Create an Assets parachain](guides/create-a-new-parachain/create-an-assets-parachain.md)
