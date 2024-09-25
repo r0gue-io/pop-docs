@@ -16,6 +16,7 @@
 * [Calling your contract](guides/calling-your-contract.md)
 * [Running E2E tests](guides/running-e2e-tests.md)
 * [Deploy on Pop Testnet](guides/deploy-on-pop-testnet.md)
+* [Bridging Tokens to Pop Network](guides/bridging-tokens-to-pop-network.md)
 
 ## TUTORIALS
 
