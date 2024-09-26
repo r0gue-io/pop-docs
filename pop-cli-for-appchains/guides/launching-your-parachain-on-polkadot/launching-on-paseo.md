@@ -3,8 +3,8 @@ description: This guide is for onboarding a parachain to the Polkadot "Paseo" Te
 coverY: 0
 layout:
   cover:
-    visible: true
-    size: full
+    visible: false
+    size: hero
   title:
     visible: true
   description:
