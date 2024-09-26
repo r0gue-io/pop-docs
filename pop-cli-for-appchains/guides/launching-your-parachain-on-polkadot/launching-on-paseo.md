@@ -1,8 +1,23 @@
 ---
-description: This guide is for onboarding a parachain to the Polkadot "Paseo" TestNet
+description: This guide is for onboarding a parachain to the Polkadot "Paseo" Testnet
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Launching your parachain on Paseo TestNet
+# Launching your parachain on Paseo Testnet
 
 Let's start by creating the accounts needed for launching the parachain.
 
