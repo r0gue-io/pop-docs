@@ -4,7 +4,7 @@ description: >-
   chain to Pop Network
 ---
 
-# Bridging Tokens to Pop Network
+# Get tokens on Pop Network
 
 Paseo is the Test Network for Polkadot so what is covered in this guide is also relevant for the Polkadot Network as well.
 
