@@ -1,12 +1,16 @@
 ---
 description: >-
-  This guide will teach how to bridge tokens from the Polkadot (Paseo) Relay
-  chain to Pop Network
+  This guide will teach how to bridge tokens from the Polkadot Relay chain to
+  Pop Network
 ---
 
 # Get tokens on Pop Network
 
-Paseo is the Test Network for Polkadot so what is covered in this guide is also relevant for the Polkadot Network as well.
+Pop Network uses the Polkadot Relay chain's native token: **DOT**.&#x20;
+
+Paseo is Polkadot's Testnet and uses **PAS** as its Relay chain native token.
+
+This guide will teach you how to bridge **PAS** tokens from the Paseo Relay chain to Pop Network. What is covered in this guide is also relevant for the Polkadot Relay chain.
 
 ### Setup Polkadot Account <a href="#setup-polkadot-account" id="setup-polkadot-account"></a>
 
