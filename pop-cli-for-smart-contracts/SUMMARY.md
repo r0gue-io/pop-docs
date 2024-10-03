@@ -8,7 +8,7 @@
 
 ## GUIDES
 
-* [Bridge Tokens to Pop Network](guides/bridge-tokens-to-pop-network.md)
+* [Get Tokens on Pop Network](guides/get-tokens-on-pop-network.md)
 * [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new contract](guides/create-a-new-contract.md)
 * [Build your contract](guides/build-your-contract.md)
