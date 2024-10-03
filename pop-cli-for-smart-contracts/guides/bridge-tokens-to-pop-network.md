@@ -8,7 +8,7 @@ description: >-
 
 Pop Network uses the Polkadot Relay chain's native token: **DOT**.&#x20;
 
-Paseo is Polkadot's Testnet and uses **PAS** as its Relay chain native token.
+Paseo is Polkadot's Testnet. Its Relay chain native token is **PAS**.
 
 This guide will teach you how to bridge **PAS** tokens from the Paseo Relay chain to Pop Network. What is covered in this guide is also relevant for the Polkadot Relay chain.
 
