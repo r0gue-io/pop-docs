@@ -48,7 +48,7 @@ In the next command, we will deploy and create a PSP22 token with the following 
 
 **`Decimals`**`: 10`
 
-**`Supply`**`: 10000000`
+**`Supply`**`: 10_000_000`
 
 \
 The following command will spin up a local blockchain, deploy the PSP22 smart contract to the blockchain, and instantiate it with the above parameters.
