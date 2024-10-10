@@ -28,7 +28,18 @@ cd my_psp_token
 pop build
 ```
 
-Create a PSP22 token:
+In the next command, we will deploy and create a PSP22 token with the following params:
+
+**Name**: AWESOME
+
+**Symbol**: AWE
+
+**Decimals**: 10
+
+**Supply**: 10000000
+
+\
+The following command will spin up a local blockchain, deploy the PSP22 smart contract to the blockchain, and instantiate it with the above parameters.
 
 ```
 pop up contract --constructor new --args 10000000, 'Some("AWESOME")', 'Some("AWE")', 10
