@@ -42,13 +42,13 @@ pop build
 
 In the next command, we will deploy and create a PSP22 token with the following params:
 
-**Name**: AWESOME
+**`Name`**`: AWESOME`
 
-**Symbol**: AWE
+**`Symbol`**`: AWE`
 
-**Decimals**: 10
+**`Decimals`**`: 10`
 
-**Supply**: 10000000
+**`Supply`**`: 10000000`
 
 \
 The following command will spin up a local blockchain, deploy the PSP22 smart contract to the blockchain, and instantiate it with the above parameters.
