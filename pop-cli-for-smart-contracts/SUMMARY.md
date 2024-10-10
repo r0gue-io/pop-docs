@@ -21,6 +21,7 @@
 ## TUTORIALS
 
 * [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
+* [Mint a PSP22 token on Pop Network](tutorials/mint-a-psp22-token-on-pop-network.md)
 
 ## POP CLI
 
