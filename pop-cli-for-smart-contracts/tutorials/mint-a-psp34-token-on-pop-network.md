@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Mint a PSP34 token on Pop Network
 
 ## Introduction
