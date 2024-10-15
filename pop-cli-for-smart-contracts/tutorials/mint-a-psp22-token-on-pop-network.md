@@ -29,12 +29,12 @@ pop new contract
 │  Psp22 
 │
 ◆  Where should your project be created?
-│  ./my_psp_token 
+│  ./my_psp22_token 
 └  
 ```
 
 ```
-cd my_psp_token
+cd my_psp22_token
 pop build
 ```
 
