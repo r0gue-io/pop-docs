@@ -99,8 +99,12 @@ Let's transfer 1\_000 AWE tokens from the owner (Alice) to Bob:
 pop call contract --contract 5EmcjhRR4MznE9quijW4vvNZXzhgYNWVE4BiT2M5jTxjcfdt --message PSP22::transfer --args 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty 1000 '[]' --execute
 ```
 
-Let's confirm that that Bob now has 1\_000 AWE tokens:
+Let's confirm that Bob now has 1\_000 AWE tokens:
 
 ```
 pop call contract --contract 5EmcjhRR4MznE9quijW4vvNZXzhgYNWVE4BiT2M5jTxjcfdt --message PSP22::balance_of --args 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 ```
+
+
+
+Congrats! You have successfully used a PSP22 contract to mint a token and call its transfer message.
