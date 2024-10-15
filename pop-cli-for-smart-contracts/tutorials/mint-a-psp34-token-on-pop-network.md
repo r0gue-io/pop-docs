@@ -1,4 +1,5 @@
 ---
+description: This tutorial will teach you how to mint a PSP34 token on Pop Network
 hidden: true
 ---
 
