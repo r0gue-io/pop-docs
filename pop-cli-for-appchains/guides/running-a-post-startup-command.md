@@ -40,7 +40,7 @@ touch network.toml
 
 ```toml
 [relaychain]
-chain = "rococo-local"
+chain = "paseo-local"
 
 [[relaychain.nodes]]
 name = "alice"
@@ -68,7 +68,7 @@ Creating SUDO call to set Alice's balance...
 Submitting the transaction to set Alice's balance...
 ◓  Spinning up network & running command: ../set-balance/target/debug/set-balance                                                                                                             Alice's balance has been successfully set to: 3000000000000000000000
 ◇  🚀 Network launched successfully - ctrl-c to terminate
-│  ⛓️ rococo-local
+│  ⛓️ paseo-local
 │       alice:
 │         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:8833#/explorer
 │         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-4299a032-01d0-4704-9c80-64f09b387aec/alice/alice.log
