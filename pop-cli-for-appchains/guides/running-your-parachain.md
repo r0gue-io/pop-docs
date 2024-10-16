@@ -17,11 +17,11 @@ touch network.toml
 
 Add the following configuration, adapting as necessary.
 
-> You can use `rococo-local` or `paseo-local` for your Relay chain. Both are test networks for Polkadot. Rococo is the Parity maintained Polkadot Test Relay chain. Paseo is the community-led Polkadot Test Relay chain. In the future, Rococo will be deprecated in favour of Paseo.
+> You can use `paseo-local` for your Relay chain. Paseo is the community-led Polkadot Test Relay chain.
 
 ```toml
 [relaychain]
-chain = "rococo-local"
+chain = "paseo-local"
 
 [[relaychain.nodes]]
 name = "alice"
@@ -39,7 +39,7 @@ default_command = "./target/release/parachain-template-node"
 name = "collator-01"
 ```
 
-> This network configuration will launch a relay chain using a `rococo-local` instance of Polkadot with two validator nodes to run the network: `alice` and `bob`. It will also run `parachain-template-node` with one collator node named `collator-01`.
+> This network configuration will launch a relay chain using a `paseo-local` instance of Polkadot with two validator nodes to run the network: `alice` and `bob`. It will also run `parachain-template-node` with one collator node named `collator-01`.
 
 Cool. Let's spin this up, ensuring that your parachain binary has been built using `pop build parachain`.
 
