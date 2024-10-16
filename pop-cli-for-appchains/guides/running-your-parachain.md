@@ -55,7 +55,7 @@ Once all the binaries are sourced, you should have output similar to this.
 ┌   Pop CLI : Deploy a parachain
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
-│  ⛓️ rococo-local
+│  ⛓️ paseo-local
 │       alice:
 │         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:62551#/explorer
 │         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-c0eb16fc-5d11-4792-aced-493ef972d056/alice/alice.log
