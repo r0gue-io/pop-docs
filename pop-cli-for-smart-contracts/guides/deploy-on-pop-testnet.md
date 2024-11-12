@@ -23,13 +23,13 @@ We will need to:
 
 
 
-**Fund the Paseo dev account**
+**Fund your Paseo account**
 
 Use the [Paseo faucet](https://faucet.polkadot.io/) to fund your Paseo account with some PAS tokens.&#x20;
 
 PAS tokens are the equivalent of DOT on Polkadot.
 
-Go to the [Paseo faucet](https://faucet.polkadot.io/) and request some PAS tokens for your account.
+**Go to the** [**Paseo faucet**](https://faucet.polkadot.io/) **and request some PAS tokens for your account.**
 
 
 
