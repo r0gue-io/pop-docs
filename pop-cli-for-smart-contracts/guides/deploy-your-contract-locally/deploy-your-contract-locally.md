@@ -1,4 +1,10 @@
-# Deploying your contract locally
+---
+description: >-
+  This guide will teach how to deploy your contract to a generic ink! compatible
+  solochain
+---
+
+# Deploy your contract locally
 
 Make sure your contract builds.
 
@@ -9,10 +15,6 @@ pop build
 
 For all available options run: `pop build --help`
 
-{% hint style="info" %}
-For Pop CLI versions <`0.3.0` the `pop build` command is `pop build contract`
-{% endhint %}
-
 When deploying a smart contract you need to know how much gas is needed so you can pay accordingly. More info on this topic can be found here:
 
 * [https://use.ink/basics/gas](https://use.ink/basics/gas)
@@ -20,7 +22,7 @@ When deploying a smart contract you need to know how much gas is needed so you c
 To find an estimate of how much gas you will need, you can do a "dry-run" of the contract:
 
 ```
-pop up contract --constructor new --args "false" --suri //Alice --dry-run
+pop up contract --constructor new --args false --suri //Alice --dry-run
 ```
 
 This will perform a dry-run via an RPC call to estimate the gas usage. It does not submit a transaction.
@@ -38,7 +40,7 @@ We can now deploy the contract locally, meaning that we will upload and instanti
 > It is also possible to **only** upload the contract and **not** instantiate by adding `--upload-only`
 
 ```
-pop up contract --constructor new --args "false" --suri //Alice
+pop up contract --constructor new --args false --suri //Alice
 
 ◇  The chain "ws://localhost:9944/" is not live. Would you like pop to start a local node in the background for testing?
 │  Yes 
@@ -70,7 +72,7 @@ pop up contract --constructor new --args "false" --suri //Alice
 
 Your contract is now deployed! You can check in [PolkadotJs Apps](https://polkadot.js.org/apps/) as well.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-05-09 at 7.31.17 PM.png" alt=""><figcaption><p>recent events</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 7.31.17 PM.png" alt=""><figcaption><p>recent events</p></figcaption></figure>
 
 **Technical Support**
 

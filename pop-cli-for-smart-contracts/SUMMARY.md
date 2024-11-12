@@ -13,10 +13,12 @@
 * [Create a new contract](guides/create-a-new-contract.md)
 * [Build your contract](guides/build-your-contract.md)
 * [Run your unit tests](guides/run-your-unit-tests.md)
-* [Deploying your contract locally](guides/deploying-your-contract-locally.md)
 * [Calling your contract](guides/calling-your-contract.md)
 * [Running E2E tests](guides/running-e2e-tests.md)
 * [Deploy on Pop](guides/deploy-on-pop-testnet.md)
+* [Deploy your contract locally](guides/deploy-your-contract-locally/README.md)
+  * [Deploy your contract locally](guides/deploy-your-contract-locally/deploy-your-contract-locally.md)
+  * [Deploy your contract on Pop locally](guides/deploy-your-contract-locally/deploy-your-contract-on-pop-locally.md)
 
 ## TUTORIALS
 
