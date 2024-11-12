@@ -7,4 +7,4 @@ There are two paths to deploy your contract locally:
 
 Both options are fine for local ink! smart contract development.
 
-For cross-chain messaging features and to use Pop API, you will need option 2: Pop.
+To develop cross-chain messaging features (which are inherent to Polkadot) and to use Pop API, you will need option 2: Deploy locally on Pop.
