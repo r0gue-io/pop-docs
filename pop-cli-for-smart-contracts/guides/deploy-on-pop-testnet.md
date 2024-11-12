@@ -1,4 +1,8 @@
-# Deploy on Pop Testnet
+---
+description: Learn how to deploy and ink! smart contract to Pop
+---
+
+# Deploy on Pop
 
 Once you have battle-tested your smart contract using unit and e2e tests, you are ready to test your smart contract on a live test network: the [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
 

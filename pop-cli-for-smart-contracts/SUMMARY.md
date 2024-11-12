@@ -16,7 +16,7 @@
 * [Deploying your contract locally](guides/deploying-your-contract-locally.md)
 * [Calling your contract](guides/calling-your-contract.md)
 * [Running E2E tests](guides/running-e2e-tests.md)
-* [Deploy on Pop Testnet](guides/deploy-on-pop-testnet.md)
+* [Deploy on Pop](guides/deploy-on-pop-testnet.md)
 
 ## TUTORIALS
 
