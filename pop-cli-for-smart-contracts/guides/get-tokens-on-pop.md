@@ -1,18 +1,18 @@
 ---
 description: >-
   This guide will teach how to bridge tokens from the Polkadot Relay chain to
-  Pop Network
+  Pop
 ---
 
-# Get tokens on Pop Network
+# Get tokens on Pop
 
 ### Introduction
 
-Pop Network uses the Polkadot Relay chain's native token: **DOT**.&#x20;
+Pop uses the Polkadot Relay chain's native token: **DOT**.&#x20;
 
 Paseo is Polkadot's Testnet. Its Relay chain native token is **PAS**.
 
-This guide will teach you how to bridge **PAS** tokens from the Paseo Relay chain to Pop Network.&#x20;
+This guide will teach you how to bridge **PAS** tokens from the Paseo Relay chain to Pop.&#x20;
 
 > What is covered in this guide is also relevant for the Polkadot Relay chain.
 
@@ -49,16 +49,16 @@ You should now see 100 PAS tokens in your account on Paseo:
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Paseo Account Funded</p></figcaption></figure>
 
-### Bridging from Paseo to Pop Network <a href="#bridging-from-paseo-to-pop-network" id="bridging-from-paseo-to-pop-network"></a>
+### Bridging from Paseo to Pop <a href="#bridging-from-paseo-to-pop-network" id="bridging-from-paseo-to-pop-network"></a>
 
-You can now use the Pop Network Onboarding UI to bridge tokens from Paseo to Pop Network:
+You can now use the Pop Onboarding UI to bridge tokens from Paseo to Pop:
 
 * [https://onboard.popnetwork.xyz](https://onboard.popnetwork.xyz)
 
 <figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Bridge tokens from Paseo to Pop Network</p></figcaption></figure>
 
-The token amount (minus the tx fee) will appear on Pop Network:
+The token amount (minus the tx fee) will appear on Pop:
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Pop Network</p></figcaption></figure>
 
-Congrats! You have successfully bridged tokens from Paseo to Pop Network!
+Congrats! You have successfully bridged tokens from Paseo to Pop!

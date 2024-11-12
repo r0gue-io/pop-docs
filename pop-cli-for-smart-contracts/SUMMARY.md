@@ -8,7 +8,7 @@
 
 ## GUIDES
 
-* [Get tokens on Pop Network](guides/bridge-tokens-to-pop-network.md)
+* [Get tokens on Pop](guides/get-tokens-on-pop.md)
 * [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new contract](guides/create-a-new-contract.md)
 * [Build your contract](guides/build-your-contract.md)
@@ -16,7 +16,7 @@
 * [Deploying your contract locally](guides/deploying-your-contract-locally.md)
 * [Calling your contract](guides/calling-your-contract.md)
 * [Running E2E tests](guides/running-e2e-tests.md)
-* [Deploy on Pop](guides/deploy-on-pop-testnet.md)
+* [Deploy on Pop](guides/deploy-on-pop.md)
 
 ## TUTORIALS
 
