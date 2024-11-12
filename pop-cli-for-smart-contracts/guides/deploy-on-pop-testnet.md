@@ -1,5 +1,5 @@
 ---
-description: Learn how to deploy an ink! smart contract to Pop
+description: Learn how to deploy an ink! smart contract on Pop
 ---
 
 # Deploy on Pop
@@ -28,7 +28,7 @@ You can now interact with your contract.
 
 Another UI option to interact with your ink! smart contract is to use PolkadotJS Apps.
 
-Take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists.&#x20;
+Once your contract is deployed, copy the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists.&#x20;
 
 ![](https://hackmd.io/\_uploads/H1j56cMl0.png)
 
