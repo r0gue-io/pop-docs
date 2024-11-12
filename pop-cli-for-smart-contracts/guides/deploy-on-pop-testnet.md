@@ -67,6 +67,8 @@ pop up contract --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81
 └  Deployment complete
 ```
 
+> Note: If you want to use your own account (not Alice) and you can deploy using [contracts.onpop.io](https://contracts.onpop.io)
+
 You can now take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists. Remember to use the resulting contract address for your deployment.
 
 ![](https://hackmd.io/\_uploads/H1j56cMl0.png)
