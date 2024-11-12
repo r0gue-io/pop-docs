@@ -19,7 +19,7 @@ In order to deploy a smart contract on the Pop Testnet, we will need to fund you
 We will need to:
 
 1. Fund our account on Paseo with some PAS tokens
-2. Transfer those PAS tokens from the Paseo account to the Pop Testnet account
+2. Teleport those PAS tokens from the Paseo account to the Pop Testnet account
 
 
 
@@ -33,11 +33,11 @@ PAS tokens are the equivalent of DOT on Polkadot.
 
 
 
-**Transfer from Paseo Relay Network to Pop Testnet**
+**Teleport from Paseo Relay Network to Pop Testnet**
 
-As Pop Network uses the Relay chain's native token as its native token, we will need to transfer some of the PAS tokens from your account on Paseo to Pop Network so that we can then deploy the contract.
+As Pop Network uses the Relay chain's native token as its native token, we will need to teleport some of the PAS tokens from your account on Paseo to Pop Network so that we can then deploy the contract.
 
-We can use [onboard.popnetwork.xyz](https://onboard.popnetwork.xyz) for transferring PAS tokens to Pop Network. Make sure to authorize your wallet to connect to the site.
+We can use [onboard.popnetwork.xyz](https://onboard.popnetwork.xyz) for teleporting PAS tokens to Pop Network. Make sure to authorize your wallet to connect to the site.
 
 ![Screenshot 2024-04-09 at 7.13.17 PM](https://hackmd.io/\_uploads/HysR4czxA.png)
 
