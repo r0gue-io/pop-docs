@@ -51,7 +51,7 @@ Go to [contracts.onpop.io](https://contracts.onpop.io) and deploy your contract.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-11-12 at 11.21.58 AM.png" alt=""><figcaption></figcaption></figure>
 
-You can now take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists. Remember to use the resulting contract address for your deployment.
+You can now take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists.&#x20;
 
 ![](https://hackmd.io/\_uploads/H1j56cMl0.png)
 
