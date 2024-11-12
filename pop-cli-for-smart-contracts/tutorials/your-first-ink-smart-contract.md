@@ -5,14 +5,14 @@
 Developers who want to learn how to:
 
 * use the [Pop CLI](https://github.com/r0gue-io/pop-cli) tool to speed up development
-* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node)
+* deploy smart contracts to [Pop](https://github.com/r0gue-io/pop-node)
 
 ### Learning Objectives <a href="#learning-objectives" id="learning-objectives"></a>
 
 On completion of this tutorial, developers will be able to:
 
 * create, build, test, and deploy ink! smart contracts
-* deploy smart contracts to [Pop Network](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
+* deploy smart contracts to [Pop](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
 ### Installing Pop CLI <a href="#installing-pop-cli" id="installing-pop-cli"></a>
@@ -112,10 +112,6 @@ pop build
 └  Build completed successfully!
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.3.0` the `pop build` command is `pop build contract`
-{% endhint %}
-
 Awesome, your contract is built!
 
 With Pop CLI, you can also run your smart contract tests.
@@ -153,7 +149,7 @@ Okay, so you contract builds, your contract passes the tests. We can now deploy 
 
 ### Deploy your contract locally <a href="#deploy-your-contract-locally" id="deploy-your-contract-locally"></a>
 
-In order to deploy an ink! smart contract locally we need to spin up a local instance of [Pop Network](https://github.com/r0gue-io/pop-node).
+In order to deploy an ink! smart contract locally we need to spin up a local instance of [Pop](https://github.com/r0gue-io/pop-node).
 
 Pop Network is a parachain meaning that it runs on the Polkadot Relay chain.
 
@@ -167,10 +163,11 @@ In a separate directory, let's create the configuration file for our local test 
 
 ```
 [relaychain]
-chain = "rococo-local"
+chain = "paseo-local"
 
 [[relaychain.nodes]]
 name = "alice"
+rpc_port = 8833
 validator = true
 
 [[relaychain.nodes]]
@@ -178,19 +175,33 @@ name = "bob"
 validator = true
 
 [[parachains]]
+id = 4001
+default_command = "pop-node"
+
+[parachains.genesis_overrides.balances]
+balances = [
+    # Dev accounts
+    ["5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY", 10000000000000000],
+    ["5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty", 10000000000000000],
+    ["5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y", 10000000000000000],
+    ["5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy", 10000000000000000],
+    ["5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw", 10000000000000000],
+    ["5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL", 10000000000000000],
+]
+
+[[parachains.collators]]
+name = "pop"
+rpc_port = 9944
+args = ["-lruntime::contracts=debug", "-lpopapi::extension=debug", "--enable-offchain-indexing=true"]
+
+[[parachains]]
 id = 1000
 chain = "asset-hub-rococo-local"
 
 [[parachains.collators]]
 name = "asset-hub"
-
-[[parachains]]
-id = 4385
-default_command = "pop-node"
-
-[[parachains.collators]]
-name = "pop"
-args = ["-lruntime::contracts=debug"]
+args = ["-lxcm=trace"]
+rpc_port = 9977
 ```
 
 We can now use the configuration file to spin up the network.
@@ -198,16 +209,27 @@ We can now use the configuration file to spin up the network.
 ```
 pop up parachain -f ./network.toml
 
-┌   Pop CLI : Deploy a parachain
+┌   Pop CLI : Launch a local network
 │
-▲  The following missing binaries are required: polkadot-parachain-v1.14.0
+▲  ⚠️ The following binaries required to launch the network cannot be found locally:
+│     > pop-node
 │  
-◆  Would you like to source them automatically now?
-│  ● Yes  / ○ No 
+◇  📦 Would you like to source them automatically now? It may take some time...
+│     > pop-node testnet-v0.4.2
+│  Yes 
 │
-⚙  They will be cached at /Users/bruno/Library/Caches/pop
+▲  ℹ️ The following binaries have newer versions available:
+│     > polkadot v1.14.0 -> stable2409, polkadot-parachain v1.14.0 -> stable2409
 │  
-◐  Sourcing polkadot-parachain-v1.14.0...                                                                                                                      
+◇  📦 Would you like to source them automatically now? It may take some time...
+│  Yes 
+│
+⚙  ℹ️ Binaries will be cached at /Users/bruno/Library/Caches/pop
+│  
+◇  📦 Sourcing binaries...
+│  ✅  polkadot
+│  ✅  pop-node
+│  ✅  polkadot-parachain                                                                                                                
 ```
 
 > The first time you run this command it will take some time. Grab some coffee.
@@ -219,30 +241,29 @@ Once complete, you will get some output:
 ◇  Sourcing complete.
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
-│  ⛓️ rococo-local
+│  ⛓️ paseo-local
 │       alice:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53296#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/alice/alice.log
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:8833#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2e522b81-b430-4897-b647-058fde52bbaa/alice/alice.log
 │       bob:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53300#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/bob/bob.log
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:62339#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2e522b81-b430-4897-b647-058fde52bbaa/bob/bob.log
+│  ⛓️ pop-devnet: 4001
+│       pop:
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9944#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2e522b81-b430-4897-b647-058fde52bbaa/pop/pop.log
 │  ⛓️ asset-hub-rococo-local: 1000
 │       asset-hub:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53304#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/asset-hub/asset-hub.log
-│  ⛓️ pop-devnet: 4385
-│       pop:
-│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:53308#/explorer
-│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-77a4cb5d-1214-4365-958e-6b32b35265a3/pop/pop.log
-│
+│         portal: https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9977#/explorer
+│         logs: tail -f /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-2e522b81-b430-4897-b647-058fde52bbaa/asset-hub/asset-hub.log
 ```
 
 You now have the following running locally on your machine:
 
-> **rococo-local**
+> **paseo-local**
 >
 > * this is the Polkadot "Test" Relay chain
->   * two validator nodes (alice & bob) to run the rococo-local Relay chain
+>   * two validator nodes (alice & bob) to run the paseo-local Relay chain
 >
 > **asset-hub-rococo-local**
 >
@@ -252,29 +273,30 @@ You now have the following running locally on your machine:
 >
 > **pop-devnet**
 >
-> * this is the Pop Network parachain
+> * this is the Pop parachain
 >   * one collator node is running for the Pop Network parachain
 
-Confirm that the Pop Network parachain is producing blocks by opening the PolkadotJS link in your browser:
+Confirm that the Pop parachain is producing blocks by opening the PolkadotJS link in your browser:
 
-* https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:4385#/explorer
+* https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:9944#/explorer
 
 > Replace the port number with the port number for the Pop Network parachain that is outputted in your terminal
 
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FS1yVLETkC.png&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=98122906697109d713872748c589a6e75b94ae378a36fc30c560312101578199" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-11-12 at 1.11.26 PM.png" alt=""><figcaption></figcaption></figure>
 
-Cool. Now that we have Pop Network running we can now deploy our contract.
+Cool. Now that we have Pop running we can now deploy our contract.
 
 Keep the PolkadotJs App window open, specifically to see the recent events. After we deploy the contract, we will see the events displayed there.
 
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
 
 ```
-pop up contract -p ./flipper --constructor new --args "false" --suri //Alice --url ws://127.0.0.1:4385
+pop up contract -p ./flipper --constructor new --args false --suri //Alice --url ws://127.0.0.1:9944
 
 ┌   Pop CLI : Deploy a smart contract
 │
-◐  Doing a dry run to estimate the gas...                                                                                                    ●  Gas limit Weight { ref_time: 264725731, proof_size: 16689 }
+◐  Doing a dry run to estimate the gas...                                                                                                    
+●  Gas limit Weight { ref_time: 264725731, proof_size: 16689 }
 │  
 ◇  Contract deployed and instantiated: The Contract Address is "5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A"
 │
@@ -302,7 +324,8 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 
 ┌   Pop CLI : Calling a contract
 │
-◐  Calling the contract...                                                                                                                   ⚙  Result: Ok(false)
+◐  Calling the contract...                                                                                                                   
+⚙  Result: Ok(false)
 │  
 ▲  Your call has not been executed.
 │  
@@ -316,7 +339,7 @@ The result here is `false` meaning that `value` in the flipper storage is set to
 Let's try _flipping_ it.
 
 ```
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice --url ws://127.0.0.1:4385 -x
+pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice --url ws://127.0.0.1:9944 -x
 
 ┌   Pop CLI : Calling a contract
 │
@@ -346,11 +369,12 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 Did it work? Let's see if the value has been flipped.
 
 ```
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:4385
+pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice --url ws://127.0.0.1:9944
 
 ┌   Pop CLI : Calling a contract
 │
-◐  Calling the contract...                                                                                                                   ⚙  Result: Ok(true)
+◐  Calling the contract...                                                                                                                   
+⚙  Result: Ok(true)
 │  
 ▲  Your call has not been executed.
 │  
@@ -421,75 +445,17 @@ To read more about ink! end-to-end testing:
 
 * [https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests](https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests)
 
-### Deploy on the Pop Network TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
+### Deploy on the Pop TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
 
-Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart contract on a live network: the Pop Network TestNet.
+Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart contract on a live network: the [Pop TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc3.paseo.popnetwork.xyz#/explorer).
 
-Let's deploy.
+To learn how to deploy to the [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc3.paseo.popnetwork.xyz#/explorer), go here:
 
-The test network for Polkadot is [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.rpc.amforc.com).
-
-You can find Pop Network running on Paseo [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz).
-
-Use the [Paseo faucet](https://faucet.polkadot.io/paseo) to fund Alice's Paseo account with some PAS tokens. PAS tokens are the equivalent of DOT on Polkadot.
-
-Alice's account is: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
-
-Go to the [Paseo faucet](https://faucet.polkadot.io/paseo) and request some PAS tokens for Alice.
-
-Since Pop Network uses the Relay chain's native token as its native token, we will need to get the PAS tokens that is in your account on Paseo into Pop Network so we can deploy the contract.
-
-We will need to add Alice to our [PolkadotJs Wallet extension](https://polkadot.js.org/extension). We can do that by using Alice's secret seed: `0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a`
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHymzV9GeA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=288802bc992dd767f1845dafc9ad7638d834a30050a069531bbff02d3eeb7adb" alt="" width="375"><figcaption></figcaption></figure>
-
-> Remember this is for development purposes. In production you would already have an existing wallet to use.
-
-Now that we have Alice's account in our PolkadotJs Wallet Extension, we can use the following for teleporting PAS tokens to Pop Network:
-
-* https://onboard.popnetwork.xyz
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHysR4czxA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=965d85f29cb435d5200c9ec2c2a4cb9db8ae707f0baf4dca99c0ae1e4008927f" alt="" width="375"><figcaption></figcaption></figure>
-
-Cool! Now that you have some PAS tokens on Pop Network, we can deploy.
-
-```
-pop up contract --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --url wss://rpc1.paseo.popnetwork.xyz
-```
-
-```
-┌   Pop CLI : Deploy a smart contract
-│
-◐  Doing a dry run to estimate the gas...                                                                                                    ●  Gas limit Weight { ref_time: 266641786, proof_size: 16689 }
-│  
-◇  Contract deployed and instantiated: The Contract Address is "5GE1BaqUsbh4ty1c6Ko1kkAp2AEZQCDhpvtKpJJ1Q3ex1xzC"
-│
-└  Deployment complete
-```
-
-You can now take the contract address and check the chain state to confirm that the contract exists
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FH1j56cMl0.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=3e7a032c8f2ea1daee9c15a2674b6f91de409620130896ed63243768bf6be185" alt=""><figcaption></figcaption></figure>
-
-Let's add the contract to our Contracts UI in PolkadotJS Apps. Click on "add an existing contract".
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FHJ3h1sGg0.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=5010b0330ae9de8d52ed3abfe3c229d7342ed1e2815949f99dcfe16daa01d019" alt=""><figcaption></figcaption></figure>
-
-Add the contract address along with the `flipper.contract` file found inside `flipper/target/ink/flipper.contract`
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBys-lozl0.png&#x26;width=300&#x26;dpr=2&#x26;quality=100&#x26;sign=65c79e1adb730dacff0c1d23b400d2379e6988a614189f813866de94ba71fcb1" alt="" width="563"><figcaption></figcaption></figure>
-
-Save. You can now see your newly uploaded contract.
-
-<figure><img src="https://pop-platform.gitbook.io/~gitbook/image?url=https%3A%2F%2Fhackmd.io%2F_uploads%2FBkh3lsfxA.png&#x26;width=768&#x26;dpr=2&#x26;quality=100&#x26;sign=fef5f925e24822ccbe47434249543e52e1d9e50561e5c26ae3bf7d39c746edf9" alt=""><figcaption></figcaption></figure>
-
-Done!
-
-
+* [https://learn.onpop.io/contracts/guides/deploy-on-pop](https://learn.onpop.io/contracts/guides/deploy-on-pop-testnet)
 
 #### Resources
 
-* https://use.ink
+* [https://use.ink](https://use.ink)
 
 **Technical Support**
 
