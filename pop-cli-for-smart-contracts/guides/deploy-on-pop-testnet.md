@@ -1,5 +1,5 @@
 ---
-description: Learn how to deploy and ink! smart contract to Pop
+description: Learn how to deploy an ink! smart contract to Pop
 ---
 
 # Deploy on Pop
@@ -14,7 +14,7 @@ The community Relay test network for Polkadot is [Paseo](https://polkadot.js.org
 
 [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz) is connected to Paseo.
 
-In order to deploy a smart contract on the Pop Testnet, we will need to fund the account with the native tokens. Remember, Pop Network uses DOT as its native token, which is the Relay network's native token: Polkadot Relay network. In this case, we are on Paseo, so the native token for the Paseo Relay network is PAS.&#x20;
+In order to deploy a smart contract on the Pop Testnet, we will need to fund your account with some native tokens. Remember, Pop Network uses DOT as its native token, which is the Relay network's native token. In this case, we are on Paseo, so the native token for the Paseo Relay network is PAS.&#x20;
 
 We will need to:
 
