@@ -51,11 +51,21 @@ Go to [contracts.onpop.io](https://contracts.onpop.io) and deploy your contract.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-11-12 at 11.21.58 AM.png" alt=""><figcaption></figcaption></figure>
 
-You can now take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists.&#x20;
+You can now interact with your contract.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-11-12 at 11.47.56 AM.png" alt=""><figcaption></figcaption></figure>
+
+
+
+## Use PolkadotJs Apps (Optional)
+
+Another UI option to interact with your ink! smart contract is to use PolkadotJS Apps.
+
+Take the contract address and check the [chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/chainstate) to confirm that the contract exists.&#x20;
 
 ![](https://hackmd.io/\_uploads/H1j56cMl0.png)
 
-Let's add the contract to the [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/contracts) UI in PolkadotJS Apps. Click on "+ Add an existing contract".
+You can add the contract to the [Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.paseo.popnetwork.xyz#/contracts) UI in PolkadotJS Apps. Click on "+ Add an existing contract".
 
 ![](https://hackmd.io/\_uploads/HJ3h1sGg0.png)
 
