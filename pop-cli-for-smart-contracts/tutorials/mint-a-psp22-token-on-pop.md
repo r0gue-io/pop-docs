@@ -1,8 +1,8 @@
 ---
-description: This tutorial will teach you how to mint a PSP22 token on Pop Network
+description: This tutorial will teach you how to mint a PSP22 token on Pop
 ---
 
-# Mint a PSP22 token on Pop Network
+# Mint a PSP22 token on Pop
 
 ## Introduction
 
