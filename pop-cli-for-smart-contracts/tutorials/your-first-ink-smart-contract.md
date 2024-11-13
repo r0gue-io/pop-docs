@@ -37,6 +37,10 @@ pop --help
 
 ### Getting Started <a href="#getting-started" id="getting-started"></a>
 
+TL;DR;
+
+* [Why ink!? talk](https://www.youtube.com/live/js2SpZf72t4?si=dKwbYtO0CyH18zbt\&t=153) by @brunopgalvao
+
 Questions:
 
 1. What are ink! smart contracts?
