@@ -56,21 +56,27 @@ ink! allows you to write smart contracts using Rust. That means you get all the 
 
 The ink! embedded domain-specific language (eDSL) retro-fits your Rust code with powerful features that enhance smart contract development. In doing so, ink! improves the developer ergonomics when it comes to using Rust for writing smart contracts.
 
-Let's create a simple ink! smart contract:
+Let's create a simple ink! smart contract using the "flipper" template:
 
 ```
-pop new contract flipper
-
-┌   Pop CLI : Generating new contract "flipper"!
-│
-◇  Smart contract created! Located in the following directory "/flipper"
-│
-└  cd into "flipper" and enjoy hacking! 🚀
+pop new contract
 ```
 
-By default, when we generate an ink! smart contract using the command above, we get a template (the "flipper" template). It serves as a good starting point for contract development.
+```
+┌   Pop CLI : Generate a contract
+│
+◇  Select a template type: 
+│  Examples 
+│
+◇  Select the contract:
+│  Standard 
+│
+◆  Where should your project be created?
+│  ./flipper 
+└  
+```
 
-Pop CLI supports several templates. If you would like to know what templates are available you can run the following command to see a list: `pop new contract --help`
+Flipper is a good starting point for those new to ink! smart contract development.
 
 Let's look at our first bit of ink! code.
 
@@ -155,7 +161,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 └  Unit testing complete
 ```
 
-Okay, so you contract builds, your contract passes the tests. We can now deploy the contract.
+Okay, so you contract builds and passes the tests. We can now deploy the contract to Pop.
 
 ### Deploy your contract <a href="#deploy-your-contract-locally" id="deploy-your-contract-locally"></a>
 
