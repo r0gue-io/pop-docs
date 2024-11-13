@@ -4,6 +4,8 @@ description: Learn how to create and deploy your first ink! smart contract
 
 # Your first ink! smart contract
 
+<figure><img src="../.gitbook/assets/ink!-logo.png" alt=""><figcaption></figcaption></figure>
+
 ### Audience <a href="#audience" id="audience"></a>
 
 Developers who want to learn how to:
