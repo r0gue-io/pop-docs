@@ -4,7 +4,7 @@ description: >-
   locally
 ---
 
-# Deploy your contract on Pop locally
+# Deploy locally on Pop
 
 ### Deploy your contract locally <a href="#deploy-your-contract-locally" id="deploy-your-contract-locally"></a>
 
@@ -20,7 +20,7 @@ In a separate directory, let's create the configuration file for our local test 
 
 ./network.toml
 
-```
+```toml
 [relaychain]
 chain = "paseo-local"
 
