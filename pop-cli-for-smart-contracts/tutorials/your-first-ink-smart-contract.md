@@ -39,7 +39,7 @@ pop --help
 
 TL;DR;
 
-* [Why ink!? talk](https://www.youtube.com/live/js2SpZf72t4?si=dKwbYtO0CyH18zbt\&t=153) by @brunopgalvao
+* [Why ink!? talk](https://www.youtube.com/live/js2SpZf72t4?si=dKwbYtO0CyH18zbt\&t=153) by [@brunopgalvao](https://x.com/brunopgalvao)
 
 Questions:
 
