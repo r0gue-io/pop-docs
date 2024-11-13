@@ -52,7 +52,7 @@ Take 10 minutes to skim over the [ink! documentation](https://use.ink/) and answ
 
 #### ink! contracts are smart(er) <a href="#ink-contracts-are-smart-er" id="ink-contracts-are-smart-er"></a>
 
-ink! allows you to write smart contracts using Rust. That means you get all the benefits of the Rust programming language:
+ink! allows you to write smart contracts using Rust. That means you get all the benefits of the Rust programming language.
 
 The ink! embedded domain-specific language (eDSL) retro-fits your Rust code with powerful features that enhance smart contract development. In doing so, ink! improves the developer ergonomics when it comes to using Rust for writing smart contracts.
 
