@@ -1,3 +1,7 @@
+---
+description: Learn how to create and deploy your first ink! smart contract
+---
+
 # Your first ink! smart contract
 
 ### Audience <a href="#audience" id="audience"></a>
@@ -12,7 +16,7 @@ Developers who want to learn how to:
 On completion of this tutorial, developers will be able to:
 
 * create, build, test, and deploy ink! smart contracts
-* deploy smart contracts to [Pop](https://github.com/r0gue-io/pop-node) locally and on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
+* deploy smart contracts to [Pop](https://github.com/r0gue-io/pop-node) on [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpaseo) (Polkadot's Test Network)
 * interact with the deployed contract
 
 ### Installing Pop CLI <a href="#installing-pop-cli" id="installing-pop-cli"></a>
@@ -174,72 +178,6 @@ You can now interact with your contract!
 <figure><img src="../.gitbook/assets/Screenshot 2024-11-13 at 6.24.00 PM.png" alt=""><figcaption></figcaption></figure>
 
 Congrats! Your contract is deployed!
-
-### Running end-to-end tests of your contract <a href="#running-end-to-end-tests-of-your-contract" id="running-end-to-end-tests-of-your-contract"></a>
-
-Make sure you are in the flipper directory:
-
-```
-cd flipper
-```
-
-If you look at the flipper ink! smart contract, you will notice it has end-to-end tests at the _end_ of the `lib.rs` file.
-
-For ink! end-to-end testing, you will need to have a Substrate node with [`pallet contracts`](https://paritytech.github.io/polkadot-sdk/master/pallet\_contracts/index.html) for the ink! e2e tests to run against. Pop CLI will download the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) binary for this purpose.
-
-Run the e2e tests:
-
-```
-pop test contract --e2e
-
-┌   Pop CLI : Starting end-to-end tests
-│
-▲  ⚠️ The substrate-contracts-node binary is not found.
-│  
-◇  📦 Would you like to source it automatically now?
-│  Yes 
-│
-◇  ✅ substrate-contracts-node successfully sourced. Cached at: /Users/bruno/Library/Caches/pop/substrate-contracts-node-v0.41.0
-│
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.98s
-     Running unittests lib.rs (target/debug/deps/my_contract-3c35b5992ffebf0d)
-
-running 5 tests
-test flipper::e2e_tests::e2e_test_deployed_contract ... ignored
-test flipper::tests::it_works ... ok
-test flipper::tests::default_works ... ok
-   Compiling toml_datetime v0.6.5
-   Compiling toml_edit v0.20.2
-   ....
-   Finished release [optimized] target(s) in 9.03s
-   Running `target/ink/release/metadata-gen`
-test flipper::e2e_tests::default_works ... ok
-test flipper::e2e_tests::it_works ... ok
-
-test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 47.56s
-
-   Doc-tests flipper
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-└  End-to-end testing complete
-```
-
-Passed!
-
-To read more about ink! end-to-end testing:
-
-* [https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests](https://use.ink/4.x/basics/contract-testing#end-to-end-e2e-tests)
-
-### Deploy on the Pop TestNet <a href="#deploy-on-the-pop-network-testnet" id="deploy-on-the-pop-network-testnet"></a>
-
-Once you have battle-tested your smart contract using the armor of unit and e2e tests, you are ready to test your smart contract on a live network: the [Pop TestNet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc3.paseo.popnetwork.xyz#/explorer).
-
-To learn how to deploy to the [Pop Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc3.paseo.popnetwork.xyz#/explorer), go here:
-
-* [https://learn.onpop.io/contracts/guides/deploy-on-pop](https://learn.onpop.io/contracts/guides/deploy-on-pop-testnet)
 
 #### Resources
 
