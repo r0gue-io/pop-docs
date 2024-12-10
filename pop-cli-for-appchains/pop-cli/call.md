@@ -22,13 +22,13 @@ If interactive guidance is not desired, you can proceed manually as follows:
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice
 ```
 
-If you have sudo rights and need to dispatch a function as Root origin, add the `--sudo` flag.
+If you have sudo privileges and need to dispatch a function as Root origin, include the `--sudo` flag in your command.
 
 ```bash
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --sudo
 ```
 
-If you already have the SCALE-encoded call data, and want to directly submits the extrinsic:
+If you already have the `SCALE`-encoded call data and want to submit the extrinsic directly, use `--chain` as shown below:
 
 ```shell
 pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
