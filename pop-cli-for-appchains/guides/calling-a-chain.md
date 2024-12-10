@@ -10,7 +10,7 @@ pop call chain
 
 You will be prompted to select a pallet, choose a dispatchable function, specify any required arguments, then provide connection details and the information of the account that will sign the extrinsic.
 
-<figure><img src="../../.gitbook/assets/callchain.gif" alt="pop call chain"><figcaption><p>pop call chain</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/callchain.gif" alt="pop call chain"><figcaption><p>pop call chain</p></figcaption></figure>
 
 ### Manual (non-interactive)
 
