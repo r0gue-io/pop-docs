@@ -2,7 +2,7 @@
 
 ### Interactive Guidance (Recommended)
 
-Interact with the chain **with** Pop CLI's interactive guidance by simply entering:
+Interact with a chain **using** Pop CLI's interactive guidance by simply entering:
 
 ```shell
 pop call chain
@@ -40,7 +40,7 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 
 #### Additional Options
 
-* If you have sudo rights and need to dispatch a function as Root origin you can specify it using the flag `--sudo`:
+* To dispatch a call with the Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:
 
 ```shell
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --sudo
