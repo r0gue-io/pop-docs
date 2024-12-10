@@ -6,16 +6,14 @@ description: >-
 
 # Launch your parachain on a Local Test Network.
 
-This guide will show you how you can onboard your parachain to a live network. We will spin up our own local network using
-Paseo local. 
+This guide will show you how you can onboard your parachain manually to a local test network using Paseo local. 
 
-## Spin up Paseo locally
+## Launch Paseo Local
 
-Lets create a configuration file for Paseo first.
+Lets create a configuration file for Paseo first:
 ```bash
 touch network.toml
 ```
-
 ```toml
 [relaychain]
 chain = "paseo-local"
@@ -38,19 +36,19 @@ validator = true
 ```
 
 As you can see, the sudo account (admin of the chain) is overridden with `Alice` account. This allows us to make changes
-to Paseo local if needed.
+to Paseo if needed.
 
 Run the network:
-
 ```
 pop up parachain -f network.toml --verbose
 ```
 
 > The `--verbose` flag provides us with extra information such as the location of the Paseo chain spec file. This will become important later so keep this terminal tab as is.
 
-Paseo should now be running on your machine and producing blocks. We can now move towards setting up our parachain.
-
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up parachain -f network.toml --verbose</p></figcaption></figure>
+
+Paseo should now be running on your machine and producing blocks.
+
 
 ### Configure Paseo
 
@@ -62,7 +60,7 @@ First, configure Paseo to set coretime cores to `1`:
 pop call parachain --pallet Configuration --function set_coretime_cores --args "1" --url ws://localhost:57731/ --suri //Alice --sudo --skip-confirm
 ```
 
-> Note: we are calling the specified rpc port `577313` which is specified in the created `network.toml` file to interact with the chain.
+> Note: we are calling the specified rpc port `577313` which is specified in the created `network.toml` file to interact the validator `alice`.
 
 Second, assign the core to the on demand pool:
 ```bash
@@ -71,7 +69,7 @@ pop call parachain --url ws://localhost:57731 --call 0xff004a0400000a00000004010
 
 ## Setting Up Accounts
 
-First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator that we will launch in a second.
+First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator that we will launch later in this guide.
 
 > A collator is the parachain node that will be running for your parachain.
 
@@ -131,7 +129,7 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 Now that we have a stash account, using docker or on your local machine, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator.
 
 ```bash
-pop call parachain --pallet Balances --function transfer_allow_death --args "Id(15muJJBDbC5WX8hPMXS5Ea6ZmTF7r9L2QiJd7n1Wiin8Dtyz)" "1000000000000000" --url ws://localhost:57731/ --suri //Alice
+pop call parachain --pallet Balances --function transfer_allow_death --url ws://localhost:57731/ --suri //Alice
 ```
 ```bash
 ┌   Pop CLI : Call a parachain
@@ -148,14 +146,9 @@ pop call parachain --pallet Balances --function transfer_allow_death --args "Id(
 ◇  Would you like to dispatch this function call with `Root` origin?
 │  No 
 │
-◇  Signer of the extrinsic:
-│  //Alice
-│
 ◇  Do you want to submit the extrinsic?
 │  Yes 
 ```
-
-> Optionally, if you knew your account beforehand, you could have pre-funded it when you spun up the Paseo network. More info [here](https://substrate.stackexchange.com/a/11930/29).
 
 Cool. Our stash account is now funded on the Paseo Relay chain.
 
@@ -198,7 +191,9 @@ pop new parachain my-parachain
 > The folder includes a `network.toml` file which can be ignored. This is to launch a network with the parachain included.
 
 
-### Creating the chain spec for the parachain
+### Creating the chain spec
+
+The chain specification holds all the information the node requires to start or sync with the parachain network.
 
 Let's create a chain spec for our parachain:
 
