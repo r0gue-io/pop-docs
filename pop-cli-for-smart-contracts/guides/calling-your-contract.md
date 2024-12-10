@@ -2,13 +2,29 @@
 
 Now that your contract is deployed locally, we can start interacting with it.
 
+### Interactive Guidance (Recommended)
+
+Interact with your deployed contract **with** Pop CLI's interactive guidance by simply entering:
+
+```shell
+pop call contract
+```
+
 Grab the contract address that was outputted from the [previous step](deploy-your-contract-locally/deploy-locally-on-a-solochain.md).
+
+> If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
+
+You will be prompted to select a contract, choose messages, and configure additional options interactively.
+
+<figure><img src="../../.gitbook/assets/call-contract.gif" alt="pop call contract"><figcaption><p>pop call contract</p></figcaption></figure>
+
+### Manual (non-interactive)
+
+If you prefer not to use the interactive prompts, you can call your contract by specifying all the required arguments directly.
 
 ```shell
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
 ```
-
-> If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
 
 ```
 ┌   Pop CLI : Calling a contract
