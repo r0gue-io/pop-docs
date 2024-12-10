@@ -16,7 +16,7 @@ Grab the contract address that was outputted from the [previous step](deploy-you
 
 You will be prompted to select a contract, choose messages, and configure additional options interactively.
 
-<figure><img src="../../.gitbook/assets/call-contract.gif" alt="pop call contract"><figcaption><p>pop call contract</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/callcontract.gif" alt="pop call contract"><figcaption><p>pop call contract</p></figcaption></figure>
 
 ### Manual (non-interactive)
 
