@@ -22,7 +22,7 @@ If interactive guidance is not desired, you can proceed manually as follows:
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice
 ```
 
-To dispatch a call with the Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:
+To dispatch a call with Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:
 
 ```bash
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --sudo

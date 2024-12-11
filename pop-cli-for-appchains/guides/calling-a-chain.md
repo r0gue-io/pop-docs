@@ -40,7 +40,7 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 
 #### Additional Options
 
-* To dispatch a call with the Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:
+* To dispatch a call with Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:
 
 ```shell
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --sudo
