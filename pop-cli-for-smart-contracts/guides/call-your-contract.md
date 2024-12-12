@@ -1,6 +1,6 @@
-# Calling your contract
+# Call your contract
 
-Now that your contract is deployed locally, we can start interacting with it.
+Now that your contract is deployed, we can interact with it.
 
 ### Interactive Guidance (Recommended)
 
@@ -14,7 +14,7 @@ Grab the contract address that was outputted from the [previous step](deploy-you
 
 > If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
 
-You will be prompted to select a contract, choose messages, and configure additional options interactively.
+You will be prompted to select the path to your contract, choose which contract message to call, and provide the arguments for the message.
 
 <figure><img src="../.gitbook/assets/callcontract.gif" alt="pop call contract"><figcaption><p>pop call contract</p></figcaption></figure>
 

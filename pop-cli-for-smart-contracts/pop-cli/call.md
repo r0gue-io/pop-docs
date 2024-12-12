@@ -8,14 +8,13 @@ description: Call a contract
 pop call <COMMAND>
 ```
 
-**Interacting with the smart contract**
 
 ```bash
 pop call contract
 ```
 The above will provide interactive guidance to interact with the smart contract.
 
-If interactive guidance is not required, you can proceed as follows:
+If interactive guidance is not required, you have to provide all the required arguments.
 
 Read-only Operations: For operations that only require reading from the blockchain state. This approach does not require to submit an extrinsic. Example using the get() message:
 
