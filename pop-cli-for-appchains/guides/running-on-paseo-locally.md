@@ -4,9 +4,27 @@ description: >-
   Testnet Locally
 ---
 
-# Launch your parachain on a Local Test Network.
+# Launch a Chain on a Local Test Network
 
-This guide will show you how you can onboard your parachain manually to a local test network using Paseo local. 
+## Introduction
+
+[Paseo](https://x.com/PaseoNetwork) is the community-run Polkadot Relay chain Testnet.
+
+A typical development workflow for launching your chain on Polkadot:&#x20;
+
+* Run your chain **locally** using Pop CLI.&#x20;
+  * Under the hood, Pop CLI launches your chain to Paseo Local Testnet automatically for development purposes:
+    * [Run your parachain on Paseo](running-your-parachain.md)
+* When ready to test your chain in a live environment with other chains:
+  * Use this guide to mimic the manual onboarding process for Paseo Testnet locally.&#x20;
+  * When comfortable with manually onboarding locally, then use the next guide to onboard to Paseo Live Testnet.
+    * [Launching your parachain on Paseo Testnet](launching-your-parachain-on-polkadot/launching-on-paseo.md)
+* Finally, when thoroughly tested on Paseo, launch on Polkadot
+  * The process here is similar to launching on Paseo.
+
+***
+
+Let's get started.
 
 ## Launch Paseo Local
 
@@ -57,14 +75,14 @@ using `Alice` as admin account.
 
 First, configure Paseo to set coretime cores to `1`:
 ```bash
-pop call parachain --pallet Configuration --function set_coretime_cores --args "1" --url ws://localhost:57731/ --suri //Alice --sudo --skip-confirm
+pop call chain --pallet Configuration --function set_coretime_cores --args "1" --url ws://localhost:57731/ --suri //Alice --sudo --skip-confirm
 ```
 
-> Note: we are calling the specified rpc port `577313` which is specified in the created `network.toml` file to interact the validator `alice`.
+> Note: the specified rpc port `57731` is specified in the created `network.toml` file and is to interact with the validator `alice`.
 
 Second, assign the core to the on demand pool:
 ```bash
-pop call parachain --url ws://localhost:57731 --call 0xff004a0400000a000000040100e100 --suri //Alice --skip-confirm
+pop call chain --url ws://localhost:57731 --call 0xff004a0400000a000000040100e100 --suri //Alice --skip-confirm
 ```
 
 ## Setting Up Accounts
@@ -129,10 +147,10 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 Now that we have a stash account, using docker or on your local machine, we need to fund this account with some tokens so that it has funds to perform transactions on behalf of the collator.
 
 ```bash
-pop call parachain --pallet Balances --function transfer_allow_death --url ws://localhost:57731/ --suri //Alice
+pop call chain --pallet Balances --function transfer_allow_death --url ws://localhost:57731/ --suri //Alice
 ```
 ```bash
-┌   Pop CLI : Call a parachain
+┌   Pop CLI : Call a chain
 │
 ◇  Select the value for the parameter: dest
 │  Id 
@@ -143,11 +161,7 @@ pop call parachain --pallet Balances --function transfer_allow_death --url ws://
 ◇  Enter the value for the parameter: value
 │  1000000000000000
 │
-◇  Would you like to dispatch this function call with `Root` origin?
-│  No 
-│
-◇  Do you want to submit the extrinsic?
-│  Yes 
+...
 ```
 
 Cool. Our stash account is now funded on the Paseo Relay chain.
@@ -182,26 +196,26 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 
 We now have all the accounts we need and we can start prepare our chain!
 
-## Setting up the Parachain
+## Setting up the Chain
 
-For the sake of this exercise, let's create a new parachain:
+For the sake of this exercise, let's create a new chain project:
 ```
-pop new parachain my-parachain
+pop new parachain my-chain
 ```
-> The folder includes a `network.toml` file which can be ignored. This is to launch a network with the parachain included.
+> The folder includes a `network.toml` file which can be ignored. This is to launch a network with the chain already onboarded.
 
 
 ### Creating the chain spec
 
-The chain specification holds all the information the node requires to start or sync with the parachain network.
+The chain specification holds all the information the node requires to start or sync with the chain's network.
 
-Let's create a chain spec for our parachain:
+Let's generate a chain spec:
 
 <figure><img src="../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption><p>pop build spec</p></figcaption></figure>
 
 ```
-cd my-parachain
-pop build spec --profile release --id 2000 --type local --relay paseo-local --protocol-id my_parachain --chain local --genesis-state --genesis-code
+cd my-chain
+pop build spec --profile release --id 2000 --type local --relay paseo-local --protocol-id my_chain --chain local --genesis-state --genesis-code
 ```
 ```bash
 ┌   Pop CLI : Generate your chain spec
@@ -233,18 +247,18 @@ Make sure to edit your chain spec and:&#x20;
 
 * **add your account and session keys**
 * **specify the starting balance of specific accounts**
-* **add the account that will be the sudo account for your parachain**
+* **add the account that will be the sudo account for your chain**
 
 It should look similar to the below:
 
 ```json
 {
-  "name": "My Parachain",
-  "id": "my_parachain",
+  "name": "My Chain",
+  "id": "my_chain",
   "chainType": "Local",
   "bootNodes": [],
   "telemetryEndpoints": null,
-  "protocolId": "my_parachain",
+  "protocolId": "my_chain",
   "properties": {
     "ss58Format": 42,
     "tokenDecimals": 12,
@@ -323,9 +337,9 @@ pop build spec --chain chain-spec.json --disable-default-bootnode --genesis-stat
 
 > Pop CLI allows you to provide the path to an existing chain spec file to edit or regenerate the artifacts.
 
-We are now ready to run our parachain's collator to sync with Paseo and start producing blocks.
+We are now ready to run to sync with Paseo and start producing blocks!
 
-## Launch the Parachain
+## Launch the Chain
 
 In order to run your parachain's collator you will need the raw chain spec that our local Paseo network is using.&#x20;
 
@@ -333,10 +347,10 @@ This can be found in the output when you ran the `pop up parachain -f network --
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-Copy this chain spec into our `my-parachain` directory:
+Copy this chain spec into our `my-chain` directory:
 
 ```bash
-cd my-parachain
+cd my-chain
 cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local-raw.json
 ```
 
@@ -347,9 +361,9 @@ cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af
 We will also need to create a node-key for your collator:
 
 ```bash
-cd my-parachain
-mkdir -p data/chains/my_parachain/network
-docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_parachain/network/secret_ed25519
+cd my-chain
+mkdir -p data/chains/my_chain/network
+docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_chain/network/secret_ed25519
 ```
 
 > Alternatively you can use Polkadot SDK binary instead of a Docker image:
@@ -357,7 +371,7 @@ docker run -it parity/subkey:latest generate-node-key > ./data/chains/my_paracha
 > path/to/polkadot-sdk/target/debug/substrate-node key generate-node-key --file=secret_ed25519 --chain=./chain-spec-raw.json
 > ```
 >
-> <pre><code><strong>mv secret_ed25519 data/chains/my_parachain/network
+> <pre><code><strong>mv secret_ed25519 data/chains/my_chain/network
 > </strong></code></pre>
 
 ### Run Collator
@@ -413,26 +427,27 @@ We now need to onboard the chain to Paseo.
 We can reserve a para ID for the chain using pop cli:
 
 ```bash
-pop call parachain --url ws://localhost:57731
+pop call chain --url ws://localhost:57731
 ```
 
  
 ```bash
-┌   Pop CLI : Call a parachain
+┌   Pop CLI : Call a chain
 │
 ◇  What would you like to do?
 │  Reserve a parachain ID 
 │
 ◇  Signer of the extrinsic:
-│  <PUBLIC KEY STASH ACCOUNT>
+│  <STASH ACCOUNT>
 │  
-◇  Do you want to submit the extrinsic?
-│  Yes 
-│
-
-Event(s):
-
-Registrar::Reserved: { para_id: (2000), who: ((212, 53, 147, 199, 21, 253, 211, 28, 97, 20, 26, 189, 4, 169, 159, 214, 130, 44, 133, 88, 133, 76, 205, 227, 154, 86, 132, 231, 165, 109, 162, 125)) }
+...
+       Event Balances ➜ Reserved
+         who: <STASH ACCOUNT>
+         amount: 100UNIT
+       Event Registrar ➜ Reserved
+         para_id: Id(2000)
+         who: <STASH ACCOUNT>
+...         
 ```
 
 In the events we can see the `para_id` that is assigned to the chain. Make sure this is the para ID specified in the chain spec file (and thus the chain artifacts).
@@ -459,15 +474,22 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 │  para-2000.wasm
 │
 ◇  Signer of the extrinsic:
-│  <PUBLIC KEY STASH ACCOUNT>
-...
+│  <STASH ACCOUNT>
 │
-◇  Do you want to submit the extrinsic?
-│  Yes
 ...
-Event(s):
-
-Registrar::Registered: { para_id: (2000), manager: ((212, 53, 147, 199, 21, 253, 211, 28, 97, 20, 26, 189, 4, 169, 159, 214, 130, 44, 133, 88, 133, 76, 205, 227, 154, 86, 132, 231, 165, 109, 162, 125)) }
+       Event Balances ➜ Withdraw
+         who: <STASH ACCOUNT>
+         amount: 90.71989507390UNIT
+       Event Balances ➜ Reserved
+         who: <STASH ACCOUNT>
+         amount: 3.145826kUNIT
+       Event Paras ➜ PvfCheckStarted
+         0: ValidationCodeHash(0x1821617486094e18595084b580fe9324a084adedbf80ec61c9d7b75736ab5f5b)
+         1: Id(2000)
+       Event Registrar ➜ Registered
+         para_id: Id(2000)
+         manager: <STASH ACCOUNT>
+...
 ```
 
 Your chain is now registered on Paseo!
@@ -491,18 +513,15 @@ Now we need to buy a core to have Paseo validate a block.
 │  2000
 │
 ◇  Signer of the extrinsic:
-│  <PUBLIC KEY STASH ACCOUNT>
+│  <STASH ACCOUNT>
 ...
-│  
-◇  Do you want to submit the extrinsic?
-│  Yes 
+       Event OnDemand ➜ OnDemandOrderPlaced
+         para_id: Id(2000)
+         spot_price: 1mUNIT
+         ordered_by: <STASH ACCOUNT>
 ...
-
-Event(s):
-
-OnDemand::OnDemandOrderPlaced: { para_id: (2000), spot_price: 10000000, ordered_by: ((212, 53, 147, 199, 21, 253, 211, 28, 97, 20, 26, 189, 4, 169, 159, 214, 130, 44, 133, 88, 133, 76, 205, 227, 154, 86, 132, 231, 165, 109, 162, 125)) }
 ```
-
+         
 Congrats! If your parachain produced another block it means that your first block is now validated by Paseo!
 
 ## Next Steps
