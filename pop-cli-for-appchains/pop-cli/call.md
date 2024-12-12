@@ -14,12 +14,12 @@ pop call <COMMAND>
 pop call chain
 ```
 
-You will be prompted to select a pallet, choose a dispatchable function, specify any required arguments, then provide connection details and the information of the account that will sign the extrinsic.
+You will be prompted to select a pallet, the dispatchable function and its required arguments, connection details for the chain, and the account to sign the transaction.
 
 If interactive guidance is not desired, you can proceed manually as follows:
 
 ```bash
-pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice
+pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --skip-confirm
 ```
 
 To dispatch a call with Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a `sudo.sudo()` call by using the `--sudo` flag:

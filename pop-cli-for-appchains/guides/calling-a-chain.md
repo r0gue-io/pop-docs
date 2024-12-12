@@ -8,16 +8,16 @@ Interact with a chain **using** Pop CLI's interactive guidance by simply enterin
 pop call chain
 ```
 
-You will be prompted to select a pallet, choose a dispatchable function, specify any required arguments, then provide connection details and the information of the account that will sign the extrinsic.
+You will be prompted to select a pallet, the dispatchable function and its required arguments, connection details for the chain, and the account to sign the transaction.
 
 <figure><img src="../.gitbook/assets/callchain.gif" alt="pop call chain"><figcaption><p>pop call chain</p></figcaption></figure>
 
 ### Manual (non-interactive)
 
-If you prefer not to use interactive prompts, you can call the chain by specifying all the required arguments directly. For example, to call a dispatchable function on a specific pallet:
+If you prefer not to use interactive prompts, you can call the chain by specifying all the required arguments directly:
 
 ```shell
-pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice
+pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --skip-confirm
 ```
 
 ```
@@ -46,7 +46,7 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice --sudo
 ```
 
-* If you already have the SCALE-encoded call data, and want to directly submits the extrinsic:
+* If you already have the SCALE-encoded call data, and want to directly submit the extrinsic:
 
 ```shell
 pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
