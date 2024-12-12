@@ -197,6 +197,8 @@ The chain specification holds all the information the node requires to start or 
 
 Let's create a chain spec for our parachain:
 
+<figure><img src="../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption><p>pop build spec</p></figcaption></figure>
+
 ```
 cd my-parachain
 pop build spec --profile release --id 2000 --type local --relay paseo-local --protocol-id my_parachain --chain local --genesis-state --genesis-code
