@@ -16,7 +16,7 @@
 * [Deploy your contract locally](guides/deploy-your-contract-locally/README.md)
   * [Deploy locally on a Solochain](guides/deploy-your-contract-locally/deploy-locally-on-a-solochain.md)
   * [Deploy locally on Pop](guides/deploy-your-contract-locally/deploy-locally-on-pop.md)
-* [Calling your contract](guides/calling-your-contract.md)
+* [Call your contract](guides/call-your-contract.md)
 * [Running E2E tests](guides/running-e2e-tests.md)
 * [Deploy on Pop](guides/deploy-on-pop-testnet.md)
 

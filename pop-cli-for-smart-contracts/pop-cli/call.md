@@ -8,7 +8,13 @@ description: Call a contract
 pop call <COMMAND>
 ```
 
-**Interacting with the smart contract**
+
+```bash
+pop call contract
+```
+The above will provide interactive guidance to interact with the smart contract.
+
+If interactive guidance is not required, you have to provide all the required arguments.
 
 Read-only Operations: For operations that only require reading from the blockchain state. This approach does not require to submit an extrinsic. Example using the get() message:
 
@@ -69,9 +75,14 @@ Options:
           
           e.g. - for a dev account "//Alice" - with a password "//Alice///SECRET_PASSWORD"
 
+           [default: //Alice]
+
   -x, --execute
           Submit an extrinsic for on-chain execution
 
       --dry-run
           Perform a dry-run via RPC to estimate the gas usage. This does not submit a transaction
+
+  -d, --dev
+          Enables developer mode, bypassing certain user prompts for faster testing. Recommended for testing and local development only
 ```
