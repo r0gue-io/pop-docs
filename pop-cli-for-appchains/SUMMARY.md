@@ -14,6 +14,7 @@
   * [Create a Contracts parachain](guides/create-a-new-parachain/create-a-smart-contract-parachain.md)
   * [Create an EVM parachain](guides/create-a-new-parachain/create-an-evm-parachain.md)
 * [Build your parachain](guides/build-your-parachain.md)
+* [Call a chain](guides/call-a-chain.md)
 * [Launch a Chain](guides/launch-a-chain/README.md)
   * [Launch a Chain in Development](guides/launch-a-chain/running-your-parachain.md)
   * [Launch a Chain to Paseo](guides/launch-a-chain/launch-a-chain-to-paseo.md)
