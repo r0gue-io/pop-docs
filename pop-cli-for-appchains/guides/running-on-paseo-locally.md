@@ -1,26 +1,20 @@
 ---
 description: >-
-  This guide is for manually onboarding a parachain to the Polkadot "Paseo"
-  Testnet Locally
+  This guide shows how to manually onboard a chain to Paseo Local
 ---
 
-# Launch a Chain on a Local Test Network
+# Onboard a Chain to Paseo Local
 
-## Introduction
+[Paseo](https://x.com/PaseoNetwork) is the community-run Polkadot Relay chain Testnet. Paseo Local is for running Paseo on a local machine.
 
-[Paseo](https://x.com/PaseoNetwork) is the community-run Polkadot Relay chain Testnet.
+A typical development workflow for launching a chain on Polkadot:&#x20;
 
-A typical development workflow for launching your chain on Polkadot:&#x20;
+1. [Launch a Paseo Local with preconfigured chains](running-your-parachain.md) for instant deployment.
+2. Launch a chain on Paseo Local.
+3. [Launch a chain on Paseo](launching-your-parachain-on-polkadot/launching-on-paseo.md)
+4. Lauch a chain on Polkadot (same as Paseo).
 
-* Run your chain **locally** using Pop CLI.&#x20;
-  * Under the hood, Pop CLI launches your chain to Paseo Local Testnet automatically for development purposes:
-    * [Run your parachain on Paseo](running-your-parachain.md)
-* When ready to test your chain in a live environment with other chains:
-  * Use this guide to mimic the manual onboarding process for Paseo Testnet locally.&#x20;
-  * When comfortable with manually onboarding locally, then use the next guide to onboard to Paseo Live Testnet.
-    * [Launching your parachain on Paseo Testnet](launching-your-parachain-on-polkadot/launching-on-paseo.md)
-* Finally, when thoroughly tested on Paseo, launch on Polkadot
-  * The process here is similar to launching on Paseo.
+This guide will show how to launch a chain on Paseo Local (`2.`). This can help prepare and test to launch a chain on Paseo (or Polkadot).
 
 ***
 
@@ -28,7 +22,7 @@ Let's get started.
 
 ## Launch Paseo Local
 
-Lets create a configuration file for Paseo first:
+Lets create a configuration file to launch Paseo Local:
 ```bash
 touch network.toml
 ```
@@ -54,26 +48,26 @@ validator = true
 ```
 
 As you can see, the sudo account (admin of the chain) is overridden with `Alice` account. This allows us to make changes
-to Paseo if needed.
+to Paseo Local if needed.
 
 Run the network:
 ```
 pop up parachain -f network.toml --verbose
 ```
 
-> The `--verbose` flag provides us with extra information such as the location of the Paseo chain spec file. This will become important later so keep this terminal tab as is.
+> The `--verbose` flag provides us with extra information such as the location of the Paseo Local chain spec file. This will become important later so keep this terminal tab as is.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up parachain -f network.toml --verbose</p></figcaption></figure>
 
-Paseo should now be running on your machine and producing blocks.
+Paseo Local should now be running on your machine and producing blocks.
 
 
-### Configure Paseo
+### Configure Paseo Local
 
-As of now, Paseo local doesn't provide cores to validate parachain blocks on demand. We will have to make 2 calls to Paseo
+As of now, Paseo Local doesn't provide cores to validate parachain blocks on demand. We will have to make 2 calls to Paseo Local
 using `Alice` as admin account.
 
-First, configure Paseo to set coretime cores to `1`:
+First, configure Paseo Local to set coretime cores to `1`:
 ```bash
 pop call chain --pallet Configuration --function set_coretime_cores --args "1" --url ws://localhost:57731/ --suri //Alice --sudo --skip-confirm
 ```
@@ -87,7 +81,7 @@ pop call chain --url ws://localhost:57731 --call 0xff004a0400000a000000040100e10
 
 ## Setting Up Accounts
 
-First, we will need to set up a stash account to do transactions on Paseo on behalf of our collator that we will launch later in this guide.
+First, we will need to set up a stash account to do transactions on Paseo Local on behalf of our [collator](https://wiki.polkadot.network/docs/learn-collator) that we will launch later in this guide.
 
 > A collator is the parachain node that will be running for your parachain.
 
@@ -164,7 +158,7 @@ pop call chain --pallet Balances --function transfer_allow_death --url ws://loca
 ...
 ```
 
-Cool. Our stash account is now funded on the Paseo Relay chain.
+Cool. Our stash account is now funded on the Paseo Local.
 
 ### Create a Session Account
 
@@ -337,11 +331,11 @@ pop build spec --chain chain-spec.json --disable-default-bootnode --genesis-stat
 
 > Pop CLI allows you to provide the path to an existing chain spec file to edit or regenerate the artifacts.
 
-We are now ready to run to sync with Paseo and start producing blocks!
+We are now ready to run to sync with Paseo Local and start producing blocks!
 
 ## Launch the Chain
 
-In order to run your parachain's collator you will need the raw chain spec that our local Paseo network is using.&#x20;
+In order to run your parachain's collator you will need the raw chain spec that Paseo Local is using.
 
 This can be found in the output when you ran the `pop up parachain -f network --verbose` command:
 
@@ -354,7 +348,7 @@ cd my-chain
 cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local-raw.json
 ```
 
-> Note: Your Paseo chain spec path will be different from the above.
+> Note: Your Paseo Local chain spec path will be different from the above.
 
 ### Generate Node Key
 
@@ -412,7 +406,7 @@ curl -H "Content-Type: application/json" \
 http://localhost:8845
 ```
 
-Ensure the chain is synced with Paseo:
+Ensure the chain is synced with Paseo Local:
 ```bash
 2024-12-10 09:06:05 [Relaychain] Warp sync is complete, continuing with state sync.    
 2024-12-10 09:06:06 [Relaychain] State sync is complete, continuing with block sync.    
@@ -420,7 +414,7 @@ Ensure the chain is synced with Paseo:
 2024-12-10 09:06:06 [Relaychain] 🏆 Imported #48 (0x6adf…6582 → 0xd036…e502) 
 ```
 
-We now need to onboard the chain to Paseo.
+We now need to onboard the chain to Paseo Local.
 
 ### Reserve Para ID
 
@@ -492,11 +486,11 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 ...
 ```
 
-Your chain is now registered on Paseo!
+Your chain is now registered on Paseo Local!
 
 ### Buy an On Demand Core
 
-Now we need to buy a core to have Paseo validate a block.
+Now we will buy a [core](https://wiki.polkadot.network/docs/learn-agile-coretime) of Paseo Local so that a block of the chain can get validated and finalised.
 
 ```bash
 │
@@ -522,7 +516,7 @@ Now we need to buy a core to have Paseo validate a block.
 ...
 ```
          
-Congrats! If your parachain produced another block it means that your first block is now validated by Paseo!
+Congrats! If your parachain produced another block it means that your first block is now validated by Paseo Local!
 
 ## Next Steps
 
