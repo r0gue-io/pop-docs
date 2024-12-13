@@ -1,3 +1,7 @@
+---
+description: The following guide shows how to acquire coretime.
+---
+
 # Coretime
 
 In order to get a chain's block validated and finalised by the Relay chain it needs to acquire a [core](https://wiki.polkadot.network/docs/learn-agile-coretime).

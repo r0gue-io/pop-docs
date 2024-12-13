@@ -1,3 +1,7 @@
+---
+description: The following guide shows how to generate keys.
+---
+
 # Keys
 
 There are multiple ways to generate [keys](https://wiki.polkadot.network/docs/learn-accounts) (accounts) on Polkadot, such as:
