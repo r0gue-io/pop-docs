@@ -19,6 +19,10 @@ Otherwise you will onboard to [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2
 
 ## Generate Operational Keys
 
+See here how to [generate keys](./keys).
+
+### Collator Keys
+
 When running a parachain collator, you typically need **two** distinct key pairs:
 
 1. **Stash Account** – A “long-term savings” or bonded account used for staking or holding tokens on behalf of the collator. This account holds the majority of your funds but is kept protected from routine usage.
@@ -27,14 +31,12 @@ When running a parachain collator, you typically need **two** distinct key pairs
 
 > **Collator:** A collator is the parachain node responsible for producing blocks and maintaining the parachain’s state.
 
-See here how to [generate keys](./keys).
-will need to set up a stash account to do transactions on Paseo on behalf of our  that we will launch later in this guide.
+### Chain Manager Key
+This account pays for actions like para ID reservation, parachain registration, and acquiring coretime.
 
-> A [collator](https://wiki.polkadot.network/docs/learn-collator) is the parachain node that will be running for your parachain.
+### Fund Chain Manager
 
-### Fund Stash Account
-
-Now that we have a stash account we need to fund this account with some tokens to perform transactions on behalf of the collator.
+Now that we have a Chain Manager account we need to fund this account with tokens to perform transactions on behalf of the collator.
 
 #### Paseo Local
 
@@ -48,7 +50,7 @@ pop call chain --pallet Balances --function transfer_allow_death --url ws://loca
 │  Id 
 │
 ◇  Enter the value for the parameter: Id
-│  <STASH ACCOUNT SS58 ADDRESS>
+│  <CHAIN MANAGER ACCOUNT SS58 ADDRESS>
 │
 ◇  Enter the value for the parameter: value
 │  1000000000000000
@@ -282,15 +284,15 @@ pop call chain --url ws://localhost:57731
 │  Reserve a parachain ID 
 │
 ◇  Signer of the extrinsic:
-│  <STASH ACCOUNT>
+│  <CHAIN MANAGER ACCOUNT>
 │  
 ...
        Event Balances ➜ Reserved
-         who: <STASH ACCOUNT>
+         who: <CHAIN MANAGER ACCOUNT>
          amount: 100UNIT
        Event Registrar ➜ Reserved
          para_id: Id(2000)
-         who: <STASH ACCOUNT>
+         who: <CHAIN MANAGER ACCOUNT>
 ...         
 ```
 
@@ -318,21 +320,21 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 │  para-2000.wasm
 │
 ◇  Signer of the extrinsic:
-│  <STASH ACCOUNT>
+│  <CHAIN MANAGER ACCOUNT>
 │
 ...
        Event Balances ➜ Withdraw
-         who: <STASH ACCOUNT>
+         who: <CHAIN MANAGER ACCOUNT>
          amount: 90.71989507390UNIT
        Event Balances ➜ Reserved
-         who: <STASH ACCOUNT>
+         who: <CHAIN MANAGER ACCOUNT>
          amount: 3.145826kUNIT
        Event Paras ➜ PvfCheckStarted
          0: ValidationCodeHash(0x1821617486094e18595084b580fe9324a084adedbf80ec61c9d7b75736ab5f5b)
          1: Id(2000)
        Event Registrar ➜ Registered
          para_id: Id(2000)
-         manager: <STASH ACCOUNT>
+         manager: <CHAIN MANAGER ACCOUNT>
 ...
 ```
 

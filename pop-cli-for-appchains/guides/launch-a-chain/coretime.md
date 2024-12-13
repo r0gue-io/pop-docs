@@ -22,12 +22,12 @@ pop call chain --url <relay_endpoint>
 │  2000
 │
 ◇  Signer of the extrinsic:
-│  <STASH ACCOUNT>
+│  <CHAIN MANAGER ACCOUNT>
 ...
        Event OnDemand ➜ OnDemandOrderPlaced
          para_id: Id(2000)
          spot_price: 1mUNIT
-         ordered_by: <STASH ACCOUNT>
+         ordered_by: <CHAIN MANAGER ACCOUNT>
 ...
 ```
 
