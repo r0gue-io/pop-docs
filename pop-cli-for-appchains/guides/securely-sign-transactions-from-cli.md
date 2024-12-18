@@ -5,7 +5,7 @@ to sign the transactions using your browser extension wallet.
 ## Example Usage
 For a full guide on calling a chain from Pop CLI, see the [Call a Chain](./call-a-chain.md) guide.
 
-Normally, you would provide `--suri=<private-key>` to interact with the chain. However, this should only be used for development accounts.
+Normally, you would provide `--suri=<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts.
 For production accounts and more secure signing, Pop CLI provides the `--use-wallet` option that you can use.
 
 Here is an example of calling a chain using `--use-wallet`:
@@ -16,11 +16,11 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 This will open a signing portal in your browser. Pop CLI will display the following:
 ```bash
 ◇  Wallet signing portal started at http://127.0.0.1:9090.
-│  
-◒  Waiting for signature... Press Ctrl+C to terminate early.   
+│
+◒  Waiting for signature... Press Ctrl+C to terminate early.
 ```
 
-Your browser will open a new tab with the following screen at http://127.0.0.1:9090 (or similar if the port is already in use);  
+Your browser will open a new tab with the following screen at http://127.0.0.1:9090 (or similar if the port is already in use);
 <figure><img src="../../pop-cli-for-smart-contracts/.gitbook/assets/use-wallet/unconnected-wallet.png" alt="" width="450"><figcaption><p>Signing Portal Initial Open</p></figcaption></figure>
 
 Click on the `Connect Wallet` button to connect your browser extension wallet.
@@ -29,7 +29,7 @@ Click on the `Connect Wallet` button to connect your browser extension wallet.
 After connecting your wallet, you will have the option to choose your account and sign the transaction, and finally see the transaction details for signing.
 <figure><img src="../.gitbook/assets/use-wallet/connected-wallet.png" alt="" width="450"><figcaption><p>Transaction Details</p></figcaption></figure>
 
-Once ready to sign, pressing the `Sign` button will open your wallet for signature. 
+Once ready to sign, pressing the `Sign` button will open your wallet for signature.
 > ⚠️ **It is important to verify transaction details in your wallet before signing.**
 
 <figure><img src="../.gitbook/assets/use-wallet/talisman-signing.png" alt="" width="450"><figcaption><p>Opened Wallet for Signing</p></figcaption></figure>
@@ -40,11 +40,10 @@ After the signed transaction is received, the portal will send the transaction p
 
 ```bash
 ◆  Signed payload received.
-│  
+│
 ◇  Extrinsic submitted with hash: "0x039076e2760eb1a4d41bf4daf009a0376ba128bd8c51cf365e4a5c5dee07a414"
 │
 ◆  Do you want to perform another call?
-│  ○ Yes  / ● No 
-└  
+│  ○ Yes  / ● No
+└
 ```
-
