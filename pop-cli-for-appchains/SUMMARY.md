@@ -25,7 +25,7 @@
     * [Spinning up Kusama](<guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1 (1).md>)
     * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
-  * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
+* [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 
 ## POP CLI
 
