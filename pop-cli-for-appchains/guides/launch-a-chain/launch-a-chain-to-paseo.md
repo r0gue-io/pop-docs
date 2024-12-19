@@ -283,6 +283,9 @@ pop call chain --url ws://localhost:57731
 ◇  What would you like to do?
 │  Reserve a parachain ID 
 │
+◇  Do you want to use your browser wallet to sign the extrinsic? (Selecting 'No' will prompt you to manually enter the secret key URI for signing, e.g., '//Alice')
+│  No
+│
 ◇  Signer of the extrinsic:
 │  <CHAIN MANAGER ACCOUNT>
 │  
@@ -319,6 +322,9 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 ◇  The value for `validation_code` might be too large to enter. You may enter the path to a file instead.
 │  para-2000.wasm
 │
+◇  Do you want to use your browser wallet to sign the extrinsic? (Selecting 'No' will prompt you to manually enter the secret key URI for signing, e.g., '//Alice')
+│  No
+│
 ◇  Signer of the extrinsic:
 │  <CHAIN MANAGER ACCOUNT>
 │
@@ -341,6 +347,10 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 Your chain is now registered on Paseo and should produce a block!
 
 In order to validate and get your block finalised by the Relay chain, see [here](./coretime.md) how to acquire core time.
+
+> Note:
+In the examples above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts.
+For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
 
 ## Resources
 

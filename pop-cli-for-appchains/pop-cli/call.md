@@ -34,10 +34,20 @@ If you already have the `SCALE`-encoded call data and want to submit the extrins
 pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
 ```
 
-**Additional options:**
+**Wallet Signing Portal for Browser Extension Signing**  
+Pop CLI includes a `--use-wallet` option that opens a signing portal, allowing you to sign transactions using a browser extension wallet.
+This eliminates the need to provide your account's private key directly in the command line. `--suri` can not be used with `--use-wallet`.
 
+Example usage of `--use-wallet`:
+```bash
+pop call chain --call 0x00000411 --url ws://localhost:9944/ --use-wallet
 ```
+
+### Additional options:
+
+``` bash
 pop call chain --help                                                     
+
 Call a chain
 
 Usage: pop call chain [OPTIONS]
@@ -60,6 +70,9 @@ Options:
           
           e.g. - for a dev account "//Alice" - with a password "//Alice///SECRET_PASSWORD"
 
+  -w, --use-wallet
+          Use a browser extension wallet to sign the extrinsic
+
   -c, --call <call>
           SCALE encoded bytes representing the call data of the extrinsic
 
@@ -71,4 +84,5 @@ Options:
 
   -h, --help
           Print help (see a summary with '-h')
+
 ```

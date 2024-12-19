@@ -23,6 +23,9 @@ pop call chain --url <relay_endpoint>
 ◇  Enter the value for the parameter: para_id
 │  2000
 │
+◇  Do you want to use your browser wallet to sign the extrinsic? (Selecting 'No' will prompt you to manually enter the secret key URI for signing, e.g., '//Alice')
+│  No
+│
 ◇  Signer of the extrinsic:
 │  <CHAIN MANAGER ACCOUNT>
 ...
@@ -36,6 +39,11 @@ pop call chain --url <relay_endpoint>
 > Note: the `max_amount` (spot price willing to pay for a core) will vary depending on the Relay Network.
 
 If the event `OnDemandOrderPlaced` is returned it means that your block will be validated and finalised!
+
+> Note:
+In the example above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts.
+For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
+
 
 ## Resources
 
