@@ -29,7 +29,7 @@ Click on the `Connect Wallet` button to connect your browser extension wallet.
 After connecting your wallet, you will have the option to choose your account and sign the transaction, and finally see the transaction details for signing.
 <figure><img src="../.gitbook/assets/use-wallet/connected-wallet.png" alt="" width="450"><figcaption><p>Transaction Details</p></figcaption></figure>
 
-Once ready to sign, pressing the `Sign` button will open your wallet for signature.
+Once ready to sign, pressing the `Submit` button will open your wallet for signature.
 > ⚠️ **It is important to verify transaction details in your wallet before signing.**
 
 <figure><img src="../.gitbook/assets/use-wallet/talisman-signing.png" alt="" width="450"><figcaption><p>Opened Wallet for Signing</p></figcaption></figure>

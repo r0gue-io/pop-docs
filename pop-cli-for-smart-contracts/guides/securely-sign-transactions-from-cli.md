@@ -27,7 +27,7 @@ Click on the `Connect Wallet` button to connect your browser extension wallet.
 <figure><img src="../.gitbook/assets/use-wallet/connect-wallet.png" alt="" width="450"><figcaption><p>Connect Wallet</p></figcaption></figure>
 
 After connecting your wallet, you will have the option to choose your account and sign the transaction, and finally see the transaction details for signing.
-Note that for contract calls, the portal will perform a dry-run to alert if the transaction will succeed, and also estimate the gas costs.
+Note that for contract calls, the portal will perform a dry-run to alert you if the transaction will succeed, and also estimate the gas costs.
 <figure><img src="../.gitbook/assets/use-wallet/connected-wallet.png" alt="" width="450"><figcaption><p>Transaction Details</p></figcaption></figure>
 
 If the transaction will fail, the dry-run alert will change:
@@ -36,7 +36,7 @@ If the transaction will fail, the dry-run alert will change:
 In this case, you can expand the dry-run alert to see the error details. This example shows an error of the account not having enough funds:
 <figure><img src="../.gitbook/assets/use-wallet/expanded-dry-run-fail.png" alt="" width="450"><figcaption><p>Expanded Failing Dry Run</p></figcaption></figure>
 
-Once ready to sign, pressing the `Sign` button will open your wallet for signature.
+Once ready to sign, pressing the `Submit` button will open your wallet for signature.
 > ⚠️ **It is important to verify transaction details in your wallet before signing.**
 
 <figure><img src="../.gitbook/assets/use-wallet/talisman-signing.png" alt="" width="450"><figcaption><p>Opened Wallet for Signing</p></figcaption></figure>
