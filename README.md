@@ -33,30 +33,12 @@ Furthermore, Pop Network has a bright roadmap full of features to take what were
 
 ### Roadmap
 
-**August**&#x20;
+2025 is the Year of Interoperability.
 
-* Pop API Assets Pallet&#x20;
-  * Use the Pop API to interact with the assets pallet of Pop Network.
+If you want to discover our plans for enhancing Pop Network and empowering developers in the Polkadot ecosystem check out our roadmap:
 
-**September**&#x20;
-
-* Asynchronous Contracts&#x20;
-  * Facilitate cross-chain dispatch and read state information back to the contract.
-
-**October**
-
-* Pop API Cross Chain Use Case&#x20;
-  * Use Pop API to interact with other chains.
-
-**November**
-
-* Programmable DAO&#x20;
-  * Implementation of an ink! programmable DAO pallet allowing quick creation of DAOs and custom logic.
-* Audits, finalizing the Pop Network runtime, Bulk Coretime implementation, and improvements to Pop API cross-chain use cases.
-
-**December** 🎄🎅
-
-* Launch Pop Network, integration with subscan.
+* Roadmap website: [https://onpop.io/network/roadmap/](https://onpop.io/network/roadmap/)
+* Or read the blog post for more details: [https://r0gue.io/blog/2025-pop-roadmap/](https://r0gue.io/blog/2025-pop-roadmap/)
 
 
 
