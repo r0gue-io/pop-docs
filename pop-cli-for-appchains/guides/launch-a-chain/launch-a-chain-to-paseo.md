@@ -271,6 +271,18 @@ Last step is to onboard the chain to Paseo.
 
 ### Onboard Chain to Paseo
 
+`pop up` simplifies the process of onboarding a chain to Paseo by automating both the reservation of an ID and its registration. Take the generated genesis state (`para-2000-genesis-state`) and genesis code (`para-2000.wasm`) and run: 
+ 
+```bash
+pop up --genesis-state ./para-2000-genesis-state --genesis-code para-2000.wasm 
+```
+
+<figure><img src="../.gitbook/assets/register.gif" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
+
+
+#### Manual registration
+If you prefer, you can still execute the steps separately using `pop call chain`.
+
 We can reserve a para ID for the chain using pop cli:
 
 ```bash
@@ -300,8 +312,6 @@ pop call chain --url ws://localhost:57731
 ```
 
 In the events we can see the `para_id` that is assigned to the chain. Make sure this is the para ID specified in the chain spec file (and thus the chain artifacts).
-
-### Register Para ID with Genesis State & Code
 
 Now we register the para ID with the generated genesis state (`para-2000-genesis-state`) and genesis code (`para-2000.wasm`).
 
