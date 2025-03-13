@@ -10,7 +10,7 @@ For production accounts and more secure signing, Pop CLI provides the `--use-wal
 
 Here is an example of deploying a contract using `--use-wallet`:
 ```bash
-pop up contract --constructor new --args false --use-wallet
+pop up --constructor new --args false --use-wallet
 ```
 
 This will open a signing portal in your browser. Pop CLI will display the following:

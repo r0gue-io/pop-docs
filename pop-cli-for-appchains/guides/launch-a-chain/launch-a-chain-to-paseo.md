@@ -186,7 +186,7 @@ In order to run your parachain's collator, you will need the raw chain spec of P
 
 #### Paseo Local
 
-The chain spec file can be found in the output of `pop up parachain -f network --verbose`. Copy the chain spec file into the `my-chain` directory:
+The chain spec file can be found in the output of `pop up network -f network --verbose`. Copy the chain spec file into the `my-chain` directory:
 
 ```bash
 cd my-chain

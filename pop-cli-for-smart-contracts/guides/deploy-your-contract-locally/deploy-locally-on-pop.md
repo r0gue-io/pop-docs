@@ -66,7 +66,7 @@ rpc_port = 9977
 We can now use the configuration file to spin up the network.
 
 ```
-pop up parachain -f ./network.toml
+pop up network -f ./network.toml
 
 ┌   Pop CLI : Launch a local network
 │
@@ -150,7 +150,7 @@ Keep the PolkadotJs App window open, specifically to see the recent events. Afte
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
 
 ```
-pop up contract -p ./flipper --constructor new --args false --suri //Alice --url ws://127.0.0.1:9944
+pop up -p ./flipper --constructor new --args false --suri //Alice --url ws://127.0.0.1:9944
 
 ┌   Pop CLI : Deploy a smart contract
 │
