@@ -8,10 +8,10 @@ description: Call a contract
 pop call <COMMAND>
 ```
 
-
 ```bash
 pop call contract
 ```
+
 The above will provide interactive guidance to interact with the smart contract.
 
 If interactive guidance is not required, you have to provide all the required arguments.
@@ -30,17 +30,18 @@ Example executing the `flip()` message:
 pop call contract -p ./my_contract --contract $INSTANTIATED_CONTRACT_ADDRESS --message flip --suri //Alice -x
 ```
 
-**Wallet Signing Portal for Browser Extension Signing**  
-Pop CLI includes a `--use-wallet` option that opens a signing portal, allowing you to sign transactions using a browser extension wallet. 
-This eliminates the need to provide your account's private key directly in the command line. `--suri` can not be used with `--use-wallet`
+**Wallet Signing Portal for Browser Extension Signing**\
+Pop CLI includes a `--use-wallet` option that opens a signing portal, allowing you to sign transactions using a browser extension wallet. This eliminates the need to provide your account's private key directly in the command line. `--suri` can not be used with `--use-wallet`
 
 Example usage of `--use-wallet`:
+
 ```bash
 pop call contract -p ./my_contract --use-wallet --contract $INSTANTIATED_CONTRACT_ADDRESS --message flip
 ```
 
 ### Additional options:
-```bash
+
+````bash
 
 ``` bash
 pop call contract --help
@@ -99,4 +100,4 @@ Options:
 
   -h, --help
           Print help (see a summary with '-h')
-```
+````
