@@ -51,7 +51,7 @@ You should now see 100 PAS tokens in your account on Paseo:
 
 ### Bridging from Paseo to Pop <a href="#bridging-from-paseo-to-pop-network" id="bridging-from-paseo-to-pop-network"></a>
 
-You can use the Pop Onboarding UI to bridge tokens from Paseo to Pop:
+You can use the Pop Onboarding UI to bridge tokens from Paseo to Pop: [https://onpop.io/network/onboard](https://onpop.io/network/onboard)
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-03-14 at 9.11.06 AM.png" alt="" width="563"><figcaption><p>Bridge tokens from Paseo to Pop Network</p></figcaption></figure>
 
