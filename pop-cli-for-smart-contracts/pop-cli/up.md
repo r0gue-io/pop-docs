@@ -5,18 +5,22 @@ description: Upload and instantiate a smart contract
 # up
 
 ```bash
-pop up contract [OPTIONS]
+pop up [OPTIONS]
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.7.0` the `pop up` command is `pop up contract`
+{% endhint %}
 
 To deploy (upload and instantiate) a smart contract:
 
 ```bash
-pop up contract -p ./my_contract --constructor new --args "false" --suri //Alice
+pop up -p ./my_contract --constructor new --args "false" --suri //Alice
 ```
 
 Alternatively, you can use the `--use-wallet` option for a more secure signing method:
 ```bash
-pop up contract -p ./my_contract --constructor new --args "false" --use-wallet
+pop up -p ./my_contract --constructor new --args "false" --use-wallet
 ```
 > ℹ️ If you don't specify a live chain, `pop` will automatically spawn a local node for testing purposes.
 
@@ -36,9 +40,9 @@ For more information about the options, check [cargo-contract documentation](htt
 ### Additional options:
 
 ``` bash
-pop up contract --help
+pop up --help
 
-Usage: pop up contract [OPTIONS]
+Usage: pop up [OPTIONS]
 
 Options:
   -p, --path <PATH>

@@ -30,8 +30,13 @@ validator = true
 Let's run it.
 
 ```shell
-pop up parachain -f ./network.toml
+pop up network -f ./network.toml
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
+{% endhint %}
+
 
 It may take some time if it prompts you to download the binaries. Grab some coffee.
 
@@ -59,7 +64,7 @@ Several other network configurations are available:
 For more advanced options, such as specifying the Relay chain version, run the following command:
 
 ```
-pop up parachain --help
+pop up network --help
 ```
 
 #### Learning Resources

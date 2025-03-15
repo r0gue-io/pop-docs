@@ -2,11 +2,15 @@
 
 To run your parachain, you will need to spin up a local network with your parachain configuration.
 
-The `pop up parachain` command can help with this.
+The `pop up` command can help with this.
 
 ```shell
-pop up parachain --help
+pop up network --help
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
+{% endhint %}
 
 Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
@@ -44,7 +48,7 @@ name = "collator-01"
 Cool. Let's spin this up, ensuring that your parachain binary has been built using `pop build parachain`.
 
 ```shell
-pop up parachain -f ./network.toml
+pop up network -f ./network.toml
 ```
 
 If this is the first time you are running the `pop up` command, it will prompt you to source the required Polkadot binaries. This will take some time, grab some coffee.
