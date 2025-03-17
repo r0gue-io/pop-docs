@@ -66,7 +66,7 @@ Once the pure proxy is created, retrieve the generated address from the event `P
 By default, the Rust compiler generates optimized Wasm binaries, but they aren't always deterministically reproducible. If the Wasm runtime isn't deterministic, each build might produce slightly different bytecode, This can be a problem for blockchain networks where every node must run the exact same runtime.
 
 To ensure deterministic Substrate runtime builds, Pop CLI integrates [SRTool (Substrate Runtime Toolbox)](https://github.com/paritytech/srtool). `SRTool` guarantees that every runtime build produces identical Wasm bytecode, making it reliable for production use.
-This build requires Docker or Podman to be installed and running. Pop CLI automatically invokes the `SRTool` image to generate a reproducible and verifiable runtime.
+This build requires [Docker](https://www.docker.com/) or [Podman](https://podman.io/) to be installed and running. Pop CLI automatically invokes the `SRTool` image to generate a reproducible and verifiable runtime.
 
 ## Resources
 
