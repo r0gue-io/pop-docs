@@ -15,11 +15,11 @@ pop up
 ```
 And follow the interactive guide 
 
-<figure><img src="../.gitbook/assets/pdpflow.png" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pdpflow.png" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
 
 At the end of the process, Pop CLI will display the URL to the external provider's portal, where you can monitor the status of your deployment.
 
-<figure><img src="../.gitbook/assets/pdpui.png" alt="polkadot development portal"><figcaption><p>Polkadot Development Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pdpui.png" alt="polkadot development portal"><figcaption><p>Polkadot Development Portal</p></figcaption></figure>
 
 During the process, Pop CLI will prompt you for two important choices:
 
@@ -60,7 +60,7 @@ pop call
 
 Once the pure proxy is created, retrieve the generated address from the event `PureCreated` and fund it using the [Paseo Faucet](https://faucet.polkadot.io/) to enable transaction execution.
 
-<figure><img src="../.gitbook/assets/eventspureproxy.png" alt="pop up"><figcaption><p>events pop call chain</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eventspureproxy.png" alt="pop up"><figcaption><p>events pop call chain</p></figcaption></figure>
 
 #### What is a Deterministic Runtime Build?
 By default, the Rust compiler generates optimized Wasm binaries, but they aren't always deterministically reproducible. If the Wasm runtime isn't deterministic, each build might produce slightly different bytecode, This can be a problem for blockchain networks where every node must run the exact same runtime.
