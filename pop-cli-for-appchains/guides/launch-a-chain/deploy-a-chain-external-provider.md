@@ -17,7 +17,7 @@ And follow the interactive guide
 
 <figure><img src="../../.gitbook/assets/pdpflow.png" alt="pop up"><figcaption><p></p></figcaption></figure>
 
-At the end of the process, Pop CLI will display the URL to the external provider's portal, where you can monitor the status of your deployment.
+At the end of the process, Pop CLI will display the URL to the external provider's portal, where you can monitor the status of your deployment. For example, after a successful deployment, the [Polkadot Development Portal](https://www.deploypolkadot.xyz/), as shown in the image below.
 
 <figure><img src="../../.gitbook/assets/pdpui.png" alt="polkadot development portal"><figcaption><p></p></figcaption></figure>
 
