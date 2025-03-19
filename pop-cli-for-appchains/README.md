@@ -20,6 +20,7 @@ With Pop CLI, developers can build an appchain on Polkadot.
 * Deploy your parachain to a local Polkadot network
 * Spin up a Polkadot network with various parachains
   * Useful for testing cross-chain interoperability
+* Benchmark a parachain's node and runtime&#x20;
 
 **Get started with your first Polkadot appchain:**
 
