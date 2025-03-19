@@ -8,4 +8,5 @@ A typical development workflow for launching a chain on Polkadot:&#x20;
 
 1. [Launch a Development Network](running-your-parachain.md) with predefined chains.
 2. [Launch a Chain on Paseo](launch-a-chain-to-paseo.md).
+3. [Deploy a Chain Using an External Provider](deploy-a-chain-external-provider.md).
 4. Launch a Chain on Polkadot (same as Paseo).

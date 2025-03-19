@@ -36,8 +36,13 @@ args = ["-lruntime::contracts=debug"]
 ```
 
 ```bash
-pop up parachain -f ./pop.toml
+pop up network -f ./pop.toml
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
+{% endhint %}
+
 
 > Pop CLI already knows where to source Pop Network binaries from so no need to specify the URL
 >
@@ -46,17 +51,17 @@ pop up parachain -f ./pop.toml
 If you would like to spin up a custom parachain then you need to edit the network.toml file accordingly and use the `-p` flag:
 
 ```
-pop up parachain -f ./tests/networks/my-parachain.toml -p https://github.com/my-username/my-parachain
+pop up network -f ./tests/networks/my-parachain.toml -p https://github.com/my-username/my-parachain
 ```
 
 Various examples of network configuration files are available [here](https://github.com/r0gue-io/pop-cli/blob/main/tests/networks).
 
 ```bash
-pop up parachain --help
+pop up network --help
 
 Launch a local network
 
-Usage: pop up parachain [OPTIONS] --file <FILE>
+Usage: pop up network [OPTIONS] --file <FILE>
 
 Options:
   -f, --file <FILE>
@@ -82,6 +87,6 @@ Options:
 The following will spin up the network locally according the the zombienet file and once the network is up, it will run the command specified in `--cmd`:
 
 ```bash
-pop up parachain -f ./tests/networks/pop.toml --cmd ./path/to/my/script
+pop up network -f ./tests/networks/pop.toml --cmd ./path/to/my/script
 ```
 
