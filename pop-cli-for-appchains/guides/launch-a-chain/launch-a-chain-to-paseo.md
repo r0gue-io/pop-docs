@@ -9,7 +9,7 @@ description: >-
 
 #### Paseo Local
 
-If you want to test onboarding a chain on your local machine you need to [launch Paseo](spinning-up-the-polkadot-network).
+If you want to test onboarding a chain on your local machine you need to [launch Paseo](spinning-up-the-polkadot-network.md).
 
 #### Paseo Live
 
@@ -19,7 +19,7 @@ Otherwise you will onboard to [Paseo](https://polkadot.js.org/apps/?rpc=wss%3A%2
 
 ## Generate Operational Keys
 
-See here how to [generate keys](./keys).
+See here how to [generate keys](keys.md).
 
 ### Collator Keys
 
