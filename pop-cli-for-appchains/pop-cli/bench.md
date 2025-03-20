@@ -26,7 +26,9 @@ pop bench block --from <FROM> --to <TO>
 
 The command requires arguments `FROM` and `TO` where `FROM` is the number of the first block and `TO` is the last block number.
 
-***Note***: Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+***Note***:
+
+- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
 
 > Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
 
@@ -38,7 +40,9 @@ To benchmark the machine performance:
 pop bench machine
 ```
 
-***Note***: Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+***Note***:
+
+- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain runtime.
 
@@ -50,11 +54,12 @@ To benchmark the execution overhead per-block and per-extrinsic:
 pop bench overhead
 ```
 
-***Note***: Parachain runtime needs to be built with `runtime-benchmarks` feature enabled.
+***Note***:
+- Parachain runtime needs to be built with `runtime-benchmarks` feature enabled.
 
 > Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
 
-The command requires the `frame-omni-bencher` binary to be installed on your local machine.
+- Requires the `frame-omni-bencher` binary to be installed on your local machine.
 
 > Pop CLI will automatically source the `frame-omni-bencher` binary if no binary found on your local machine.
 
@@ -72,9 +77,13 @@ To benchmark pallets and extrinsics of the runtime, you will be prompted to prov
 Pop CLI only supports benchmarking pallets and extrinsics with runtime binary. There is no option to benchmark with chain specs. This feature is similar to the approach of [`frame-omni-bencher`](https://crates.io/crates/frame-omni-bencher) with interactive interface.
 {% endhint %}
 
+Note that the command requires the `frame-omni-bencher` binary to be installed on your local machine.
+
+> Pop CLI will automatically source the `frame-omni-bencher` binary if no binary found on your local machine.
+
 After the binary path is located, you will be prompted to select a pallet, the dispatchable functions and the supported arguments. All arguments can be managed via parameter menu:
 
-```json
+```bash
 ◆  Select the parameter to update:
 │  ● (0) - Pallets: pallet_timestamp
 │  ○ (1) - Extrinsics: All selected
@@ -91,7 +100,7 @@ After the binary path is located, you will be prompted to select a pallet, the d
 │  ○ (12) - No median slope: false
 │  ○ (13) - No min square: false
 │  ○ (14) - No storage info: false
-│  ○ (15) - Weight file template:
+│  ○ (15) - Weight file template: None
 │  ○ > Save all parameter changes and continue
 ```
 
@@ -326,6 +335,8 @@ The command requires a state version to be specified. Substrate `--dev` should u
 pop bench storage --state-version 1
 ```
 
-***Note***: Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+***Note***:
+
+- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
 
 > Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
