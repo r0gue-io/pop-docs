@@ -340,3 +340,8 @@ pop bench storage --state-version 1
 - Parachain node needs to be built with `runtime-benchmarks` feature enabled.
 
 > Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
+
+#### Learning resources
+
+* To learn about benchmarking, [Polkadot Docs - Benchmarking](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) provides all the fundamentals.
+* More advanced breakdown of benchmarking is covered in [Polkadot SDK Docs - Frame Benchmarking Weight](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/frame_benchmarking_weight/index.html).

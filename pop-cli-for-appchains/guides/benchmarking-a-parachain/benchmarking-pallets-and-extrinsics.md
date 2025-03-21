@@ -170,12 +170,15 @@ And you will see the value is updated in the menu:
 
 **Save weight output and parameters to file**
 
+After the parameter menu, you will be prompted to save the weight output and parameters to a file. If not provided, no weight output will be saved.
+
 ```bash
 ◆  Provide the output file path for benchmark results (optional).
 │  ./weight.rs
 └
 ```
-If not provided, no weight output will be saved.
+
+To save parameters, the file path is default to `pop-bench.toml`.
 
 ```bash
 ◆  Provide the output path for benchmark parameters
@@ -183,7 +186,40 @@ If not provided, no weight output will be saved.
 └
 ```
 
-To save parameters, the file path is default to `pop-bench.toml`. With the saved parameter file, you can load parameters from the file by using the `-f` or `--bench-file` flag.
+Below is the example of the parameter file:
+
+```toml
+version = "1"
+pallet = "pallet_timestamp"
+extrinsic = "*"
+exclude_pallets = []
+all = false
+steps = 50
+lowest_range_values = []
+highest_range_values = []
+repeat = 20
+external_repeat = 1
+json_output = false
+no_median_slopes = false
+no_min_squares = false
+output_pov_analysis = "median-slopes"
+no_verify = false
+extra = false
+runtime = "runtimes/base_parachain_benchmark.wasm"
+allow_missing_host_functions = false
+genesis_builder = "Runtime"
+genesis_builder_preset = "development"
+database_cache_size = 1024
+list = false
+no_storage_info = false
+worst_case_map_values = 1000000
+additional_trie_layers = 2
+disable_proof_recording = false
+skip_menu = false
+skip_confirm = false
+```
+
+With the saved parameter file, you can load parameters from the file by using the `-f` or `--bench-file` flag.
 
 ```bash
 pop bench -f pop-bench.toml
@@ -200,6 +236,9 @@ pop bench --help
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
   * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
+
+* To learn about benchmarking, [Polkadot Docs - Benchmarking](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) provides all the fundamentals.
+* More advanced breakdown of benchmarking is covered in [Polkadot SDK Docs - Frame Benchmarking Weight](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/frame_benchmarking_weight/index.html).
 
 **Technical Support**
 
