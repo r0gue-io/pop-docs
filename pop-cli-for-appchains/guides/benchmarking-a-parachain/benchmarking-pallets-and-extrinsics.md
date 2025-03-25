@@ -16,6 +16,7 @@ Note that the command requires the `frame-omni-bencher` binary to be installed o
 
 The command requires a runtime built with the `runtime-benchmarks` feature. Pop CLI detects available runtimes in your project, allowing you to choose one if multiple exist.
 
+
 ```bash
 ◇  Choose the build profile of the binary that should be used:
 │  Release
@@ -33,6 +34,12 @@ If the binary is missing, Pop CLI builds it with the appropriate `profile` and f
 pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm
 ```
 
+By default, whenever benchmarking starts, runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
+
+```bash
+pop bench pallet --no-build
+```
+
 **Configure the genesis builder policy and preset**
 
 ```bash
@@ -42,13 +49,18 @@ pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm
 └
 ```
 
+Genesis builder policy defines the way to construct the [initial genesis state](https://docs.polkadot.com/develop/parachains/deployment/generate-chain-specs/). There are two options:
+
+- `none`: Do not provide any genesis state.
+- `runtime`: Use the runtime's genesis preset.
+
 To configure the genesis builder manually, you can use the `--genesis-builder` flag. For example:
 
 ```bash
 pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm --genesis-builder=runtime
 ```
 
-If the policy is `runtime`, means that Pop CLI will benchmark your runtime with a genesis preset on the runtime.
+The genesis preset is configured on the runtime via [`sp_genesis_builder`](https://docs.rs/sp-genesis-builder/latest/sp_genesis_builder/) crates which contains a runtime-api to be implemented by runtimes, in order to express their genesis state.
 
 ```bash
 ◇  Select the genesis builder policy:

@@ -57,7 +57,7 @@ pop bench overhead
 ***Note***:
 - Parachain runtime needs to be built with `runtime-benchmarks` feature enabled.
 
-> Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
+> Pop CLI will automatically locate the runtime binary based on the provided `--profile`. By default, whenever benchmarking starts, a runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
 
 - Requires the `frame-omni-bencher` binary to be installed on your local machine.
 
@@ -70,8 +70,9 @@ pop bench overhead
 pop bench pallet
 ```
 
-
 To benchmark pallets and extrinsics of the runtime, you will be prompted to provide a valid runtime's binary path, make sure the binary is built with `--runtime-benchmarks` feature.
+
+By default, whenever benchmarking starts, runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
 
 {% hint style="info" %}
 Pop CLI only supports benchmarking pallets and extrinsics with runtime binary. There is no option to benchmark with chain specs. This feature is similar to the approach of [`frame-omni-bencher`](https://crates.io/crates/frame-omni-bencher) with interactive interface.
@@ -313,6 +314,9 @@ Options:
   -y, --skip-confirm
           Automatically source the needed binary required without prompting for
           confirmation
+
+  -n, --no-build
+          Avoid rebuilding the runtime if there is an existing runtime binary
 
   -f, --bench-file <BENCH_FILE>
           Output file of the benchmark parameters
