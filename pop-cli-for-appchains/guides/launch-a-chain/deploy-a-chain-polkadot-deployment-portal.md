@@ -1,25 +1,36 @@
 ---
 description:
-  This guide explains how to deploy a chain using an external provider.
+  This guide explains how to deploy a chain using the Polkadot Deployment Portal.
 ---
 
-# Deploy a Chain Using an External Provider
+# Deploy a chain with Polkadot Deployment Portal
 
 Pop CLI integrates an external provider for chain deployment, streamlining the process with seamless automation. It handles registration, as detailed in [Launch a Chain to Paseo](./launch-a-chain-to-paseo.md), and once the chain is registered, Pop CLI completes the deployment by integrating with the provider. The provider manages collators and offers a portal UI for monitoring your chain’s status.
 
-Currently, the only supported deployment provider is the [Polkadot Development Portal](https://www.deploypolkadot.xyz/), which supports a limited set of templates.
+
+### Accessing the Polkadot Deployment Portal (PDP) 
+Start by [signing up to be a beta tester](https://docs.google.com/forms/d/1th3GKJCSjzrmqwzDs62yA1hGUZnQUCPqmaUYLwSiHo4/viewform?edit_requested=true) to request access to the [Polkadot Deployment Portal](https://www.deploypolkadot.xyz/). 
+
+Once accepted, you’ll receive an API key required to deploy through Pop CLI. Keep this key safe, you’ll need it during setup.
+
+> **Note:** Currently, the only supported deployment provider is the [Polkadot Deployment Portal](https://www.deploypolkadot.xyz/), which supports a limited set of templates, built-in collator management, and deployment tracking via its UI.
+
+> **Important:** For now, use the [**staging portal**](https://staging.deploypolkadot.xyz/), this is the version integrated with Pop CLI during the beta phase.
+
+### Starting the Deployment Process 
+Once you have your API key and access to the Polkadot Deployment Portal, you're ready to deploy your chain.
 
 Execute the following command to start the interactive deployment process:
 ```shell
 pop up
 ```
-And follow the interactive guide 
+Follow the interactive guide:
 
-<figure><img src="../../.gitbook/assets/pdpflow.png" alt="pop up"><figcaption><p></p></figcaption></figure>
+<figure style="text-align: center; margin: 1em 0;"><img src="../../.gitbook/assets/pdpflow.png" alt="pop up" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"><figcaption style="margin-top: 0.5em; font-style: italic; color: #666; text-align: center;">pop up flow</figcaption></figure>
 
-At the end of the process, Pop CLI will display the URL to the external provider's portal, where you can monitor the status of your deployment. For example, after a successful deployment, the [Polkadot Development Portal](https://www.deploypolkadot.xyz/), as shown in the image below.
+At the end of the process, Pop CLI will display the URL to the external provider's portal, where you can monitor the status of your deployment. For example, after a successful deployment, the [Polkadot Development Portal](https://www.deploypolkadot.xyz/) provides a UI like the one shown below:
 
-<figure><img src="../../.gitbook/assets/pdpui.png" alt="polkadot development portal"><figcaption><p></p></figcaption></figure>
+<figure style="text-align: center; margin: 1em 0;"><img src="../../.gitbook/assets/pdpui.png" alt="Polkadot Development Portal UI" max-width: 100%; height: auto; display: block; margin: 0 auto;><figcaption style="margin-top: 0.5em; font-style: italic; color: #666;">Polkadot Development Portal UI</figcaption></figure>
 
 During the process, Pop CLI will prompt you for two important choices:
 
@@ -27,7 +38,13 @@ During the process, Pop CLI will prompt you for two important choices:
 2. Whether to build the runtime deterministically.
 
 #### What is a Pure Proxy?
-A pure proxy is an account without private keys, controlled entirely by a designated any proxy.
+A pure proxy is an account without private keys, controlled entirely by a designated proxy.
+
+The proxy defines what kind of actions the controller account is allowed to perform on behalf of the pure proxy. There are different [proxy type](https://wiki.polkadot.network/learn/learn-proxies/#proxy-types), each with a specific scope of permissions.
+
+The `ParaRegistration` proxy is designed to limit permissions strictly to paraID reservation and rollup registration, and is recommended for this use case.
+
+> **Note**: `ParaRegistration` is a newly introduced proxy type. Before its availability, the common approach was to use the `Any` proxy as a more general alternative.
 
 *Why Use a Pure Proxy?*
 
