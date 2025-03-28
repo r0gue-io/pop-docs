@@ -6,6 +6,8 @@ description: >-
 
 # Deploy your contract locally
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](../migrating-to-inkv6.md).
+
 Make sure your contract builds.
 
 ```sh
@@ -63,6 +65,7 @@ pop up contract --constructor new --args false --suri //Alice
 │
 └  Deployment complete
 ```
+> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will be an `H160`.
 
 > Note: The contracts node will be running in the background of your machine. If at anytime you need to kill the process you can do the following:
 >
