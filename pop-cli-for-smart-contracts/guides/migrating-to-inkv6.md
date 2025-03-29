@@ -10,6 +10,8 @@ Pop CLI version `v0.7.0` introduces experimental support for ink! v6 smart contr
 - **ink! v5**: Compiled smart contracts to WebAssembly (Wasm) binaries executed by Substrate's `pallet-contracts`.
 - **ink! v6**: Compiles smart contracts to RISC-V binaries executed by `pallet-revive` using PolkaVM.
 
+For more information about the benefits of RISC-V and `pallet-revive`, see [RISC-V + pallet-revive](https://use.ink/6.x/current-state#-risc-v--pallet-revive-2025).
+
 ### Installing Pop CLI for ink! v6 support
 
 Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag. Install it with:
@@ -47,6 +49,8 @@ Pop CLI will prompt you automatically:
 
 Alternatively, you can Polkadot JS UI:
 <figure><img src=".gitbook/assets/map_account_polkadot_ui.png" alt="Map Account Polkadot UI"><figcaption></figcaption></figure>
+
+For further information about account mapping, including native EVM contract integration with Asset Hub, see [Native EVM Contracts](https://docs.polkadot.com/develop/smart-contracts/evm/native-evm-contracts/).
 
 ## Resources
 
