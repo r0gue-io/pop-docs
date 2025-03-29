@@ -1,5 +1,8 @@
 # Create a new contract
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+
+
 To create a smart contract with Pop CLI:
 
 ```

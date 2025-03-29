@@ -1,5 +1,7 @@
 # Running E2E tests
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+
 Make sure you are in your contract's directory:
 
 ```shell

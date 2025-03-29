@@ -1,5 +1,7 @@
 # Run your unit tests
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+
 To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following command:
 
 ```
