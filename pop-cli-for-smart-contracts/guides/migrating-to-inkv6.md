@@ -45,7 +45,7 @@ For a complete example, check the [ink! flipper example](https://github.com/use-
 #### Account Mapping
 `pallet_revive` enables the deployment and execution of PolkaVM smart contracts. It introduces support for 20-byte accounts (like `EVM`), while most Polkadot-based chains use 32-byte accounts (`AccountId32`). To ensure compatibility, `pallet_revive` provides a mapping feature that lets 32-byte accounts seamlessly interact with the VM.
 
-When interacting with `pallet_revive` for the first time, you’ll need to map your account, this registers your Polkadot account-ID (32-byte address) to a corresponding Ethereum compatible account id (20-byte address), enabling it to interact with contracts.
+When first interacting with `pallet_revive`, you must map your Polkadot account ID (32 bytes) to an Ethereum-compatible 20-byte address. This registration enables your account to interact with contracts.
 
 Pop CLI will prompt you automatically:
 
