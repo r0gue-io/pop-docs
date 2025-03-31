@@ -32,7 +32,7 @@ The workflow for developing smart contracts remains similar to ink! v5. To get s
 If you already have an ink! smart contract, update your dependencies as follows:
 Update your `Cargo.toml`
 
-```
+```toml
 [dependencies]
 ink = { version = "6.0.0-alpha", default-features = false }
 
@@ -43,8 +43,9 @@ ink_e2e = { version = "6.0.0-alpha" }
 For a complete example, check the [ink! flipper example](https://github.com/use-ink/ink-examples/tree/v6.x/flipper).
 
 #### Account Mapping
-PolkaVM uses 20-byte accounts (like `EVM`), while many chains in the Polkadot ecosystem use 32-byte accounts (`AccountId32`). To ensure compatibility, `pallet_revive` provides a mapping feature that lets 32-byte accounts seamlessly interact with the VM.
-When interacting with `pallet_revive` for the first time, you’ll need to map your account, this registers your 32-byte account to a corresponding 20-byte address, enabling it to interact with contracts.
+`pallet_revive` enables the deployment and execution of PolkaVM smart contracts. It introduces support for 20-byte accounts (like `EVM`), while most Polkadot-based chains use 32-byte accounts (`AccountId32`). To ensure compatibility, `pallet_revive` provides a mapping feature that lets 32-byte accounts seamlessly interact with the VM.
+
+When interacting with `pallet_revive` for the first time, you’ll need to map your account, this registers your Polkadot account-ID (32-byte address) to a corresponding Ethereum compatible account id (20-byte address), enabling it to interact with contracts.
 
 Pop CLI will prompt you automatically:
 
