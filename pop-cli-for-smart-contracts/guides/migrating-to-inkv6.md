@@ -2,13 +2,13 @@
 description: This guide will show you how to start building with ink! v6
 ---
 
-# Migrating from ink! v5 (Wasm) to ink! v6 (PolkaVM / RISC-V)
+# Getting Started with ink! v6
 
 Pop CLI version `v0.7.0` introduces experimental support for ink! v6 smart contracts running on PolkaVM (RISC-V) via `pallet-revive`. This guide helps you transition from ink! v5 (WebAssembly) and start experimenting with ink! v6.
 
 ### What's new in ink! v6?
-- **ink! v5**: Compiled smart contracts to WebAssembly (Wasm) binaries executed by Substrate's `pallet-contracts`.
-- **ink! v6**: Compiles smart contracts to RISC-V binaries executed by `pallet-revive` using PolkaVM.
+- **ink! v5**: Version of the ink! that can be compiled into WebAssembly byte code and can be executed on [`pallet-contracts`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts) virtual machine.
+- **ink! v6**: Version of ink! that can be compiled into RISC-V byte code and can be executed on PolkaVM ([`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive)).
 
 For more information about the benefits of RISC-V and `pallet-revive`, see [RISC-V + pallet-revive](https://use.ink/6.x/current-state#-risc-v--pallet-revive-2025).
 
