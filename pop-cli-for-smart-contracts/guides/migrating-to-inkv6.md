@@ -1,10 +1,10 @@
 ---
-description: This guide will show you how to start building with ink! v6
+description: This guide will walk you through getting started with ink! v6.
 ---
 
 # Getting Started with ink! v6
 
-Pop CLI version `v0.7.0` introduces experimental support for ink! v6 smart contracts running on PolkaVM (RISC-V) via `pallet-revive`. This guide helps you transition from ink! v5 (WebAssembly) and start experimenting with ink! v6.
+Pop CLI version `v0.7.0` introduces experimental support for ink! v6 smart contracts running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`. This guide helps you transition from ink! v5 (WebAssembly) and start experimenting with ink! v6.
 
 ### What's new in ink! v6?
 - **ink! v5**: Version of the ink! that can be compiled into WebAssembly byte code and can be executed on [`pallet-contracts`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts) virtual machine.
@@ -19,6 +19,8 @@ Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag. Install i
 ```
 cargo install --force --locked pop-cli --no-default-features -F polkavm-contracts,parachain
 ```
+
+> **⚠️ Note:** Make sure you're using `Rust 1.85` or higher, older versions will fail to compile. You can check your version with rustc `--version`.
 
 ### Getting started with ink! v6
 
@@ -48,7 +50,7 @@ Pop CLI will prompt you automatically:
 
 <figure><img src=".gitbook/assets/map_account_prompt.png" alt="Map Account Pop CLI"><figcaption></figcaption></figure>
 
-Alternatively, you can Polkadot JS UI:
+Alternatively, you can interact on [Polkadot JS Apps](https://polkadot.js.org/apps/#/explorer):
 <figure><img src=".gitbook/assets/map_account_polkadot_ui.png" alt="Map Account Polkadot UI"><figcaption></figcaption></figure>
 
 For further information about account mapping, including native EVM contract integration with Asset Hub, see [Native EVM Contracts](https://docs.polkadot.com/develop/smart-contracts/evm/native-evm-contracts/).

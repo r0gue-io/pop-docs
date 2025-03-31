@@ -14,7 +14,7 @@ With Pop, developers can develop smart contract solutions for Polkadot.
 * Testing your smart contract, including unit and end-to-end tests
 * Deploy your smart contract locally or to production
 
-> **🚀 New:** `Pop CLI v0.7.0` introduces experimental support for ink! v6 on PolkaVM. See the [migration guide](./guides/migrating-to-inkv6.md) to get started.
+> **🚀 New:** `Pop CLI v0.7.0` introduces experimental support for ink! v6 on [PolkaVM](https://github.com/paritytech/polkavm). See the [migration guide](./guides/migrating-to-inkv6.md) to get started.
 
 
 **Get started with smart contracts on Pop**
