@@ -28,7 +28,7 @@ If you prefer not to use the interactive prompts, you can call your contract by 
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
 ```
 
-> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will be an `H160`.
+> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will appear as a 20-byte hash.
 
 ```
 ┌   Pop CLI : Calling a contract

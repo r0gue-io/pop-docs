@@ -65,7 +65,7 @@ pop up contract --constructor new --args false --suri //Alice
 │
 └  Deployment complete
 ```
-> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will be an `H160`.
+> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will appear as a 20-byte hash.
 
 > Note: The contracts node will be running in the background of your machine. If at anytime you need to kill the process you can do the following:
 >
