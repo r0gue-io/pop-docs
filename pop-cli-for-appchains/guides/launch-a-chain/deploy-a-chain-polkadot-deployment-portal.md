@@ -40,7 +40,7 @@ During the process, Pop CLI will prompt you for two important choices:
 #### What is a Pure Proxy?
 A pure proxy is an account without private keys, controlled entirely by a designated proxy.
 
-The proxy defines what kind of actions the controller account is allowed to perform on behalf of the pure proxy. There are different [proxy type](https://wiki.polkadot.network/learn/learn-proxies/#proxy-types), each with a specific scope of permissions.
+The proxy defines what kind of actions the controller account is allowed to perform on behalf of the pure proxy. There are different [proxy types](https://wiki.polkadot.network/learn/learn-proxies/#proxy-types), each with a specific scope of permissions.
 
 The `ParaRegistration` proxy is designed to limit permissions strictly to paraID reservation and rollup registration, and is recommended for this use case.
 
