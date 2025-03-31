@@ -49,10 +49,10 @@ When interacting with `pallet_revive` for the first time, you’ll need to map y
 
 Pop CLI will prompt you automatically:
 
-<figure><img src=".gitbook/assets/map_account_prompt.png" alt="Map Account Pop CLI"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/map_account_prompt.png" alt="Map Account Pop CLI"><figcaption></figcaption></figure>
 
 Alternatively, you can interact on [Polkadot JS Apps](https://polkadot.js.org/apps/#/explorer):
-<figure><img src=".gitbook/assets/map_account_polkadot_ui.png" alt="Map Account Polkadot UI"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/map_account_polkadot_ui.png" alt="Map Account Polkadot UI"><figcaption></figcaption></figure>
 
 For further information about account mapping, including native EVM contract integration with Asset Hub, see [Native EVM Contracts](https://docs.polkadot.com/develop/smart-contracts/evm/native-evm-contracts/).
 
