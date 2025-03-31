@@ -21,7 +21,7 @@
 * [Launch a Chain](guides/launch-a-chain/README.md)
   * [Launch a Chain in Development](guides/launch-a-chain/running-your-parachain.md)
   * [Launch a Chain to Paseo](guides/launch-a-chain/launch-a-chain-to-paseo.md)
-    * [Spinning up Paseo](guides/spinning-up-paseo.md)
+    * [Launch Paseo](guides/launch-paseo.md)
     * [Set up keys](guides/launch-a-chain/keys.md)
     * [Acquire Coretime](guides/launch-a-chain/coretime.md)
   * [Deploy a chain with Polkadot Deployment Portal](guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
