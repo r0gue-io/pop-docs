@@ -25,6 +25,7 @@
     * [Spinning up Paseo](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md)
     * [Spinning up Kusama](<guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1 (1).md>)
     * [Spinning up Polkadot](guides/spinning-up-a-polkadot-network/spinning-up-the-polkadot-network-1.md)
+  * [Deploy a chain with Polkadot Deployment Portal](guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 
