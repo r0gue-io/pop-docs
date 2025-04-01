@@ -2,6 +2,8 @@
 
 [Benchmarking in the Polkadot SDK/Substrate](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) measures execution time and resource usage for pallets and extrinsics, ensuring accurate weight calculations and optimal performance.
 
+<figure><img src="../../.gitbook/assets/popbench.gif" alt="pop bench pallet"><figcaption><p></p></figcaption></figure>
+
 With Pop CLI, you can benchmark pallets and extrinsics interactively by managing parameters efficiently. Run the following command to start benchmarking:
 
 ``` bash
