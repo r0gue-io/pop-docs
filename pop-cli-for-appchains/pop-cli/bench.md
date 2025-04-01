@@ -28,13 +28,13 @@ The command requires arguments `FROM` and `TO` where `FROM` is the number of the
 
 ***Note***:
 
-- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+- Node needs to be [built with `runtime-benchmarks` feature enabled](./build.md).
 
-> Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
+> Pop CLI will automatically locate the node binary based on the provided `--profile`. Pop CLI will automatically build the node if not found.
 
 ## bench machine
 
-To benchmark the machine performance:
+To benchmark the machine performance. Note that this refers to [the hardware that node is running on](https://wiki.polkadot.network/maintain/maintain-guides-how-to-validate-polkadot/#reference-hardware):
 
 ```bash
 pop bench machine
@@ -42,9 +42,9 @@ pop bench machine
 
 ***Note***:
 
-- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+- Node needs to be [built with `runtime-benchmarks` feature enabled](./build.md).
 
-> Pop CLI will automatically locate the runtime binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain runtime.
+> Pop CLI will automatically locate the runtime binary based on the provided `--profile`. Pop CLI will automatically build the runtime if not found.
 
 ## bench overhead
 
@@ -55,13 +55,13 @@ pop bench overhead
 ```
 
 ***Note***:
-- Parachain runtime needs to be built with `runtime-benchmarks` feature enabled.
+- Runtime needs to be [built with `runtime-benchmarks` feature enabled](./build.md).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. By default, whenever benchmarking starts, a runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
 
 - Requires the `frame-omni-bencher` binary to be installed on your local machine.
 
-> Pop CLI will automatically source the `frame-omni-bencher` binary if no binary found on your local machine.
+> Pop CLI will automatically source the `frame-omni-bencher` binary if not found on your local machine.
 
 ## bench pallet
 **Benchmark pallets and extrinsics**
@@ -70,19 +70,19 @@ pop bench overhead
 pop bench pallet
 ```
 
-To benchmark pallets and extrinsics of the runtime, you will be prompted to provide a valid runtime's binary path, make sure the binary is built with `--runtime-benchmarks` feature.
+To benchmark pallets and extrinsics of the runtime, you will be prompted to provide a valid runtime's binary path, [make sure the binary is built with `runtime-benchmarks` feature](./build.md).
 
-By default, whenever benchmarking starts, runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
+By default, whenever benchmarking starts, the runtime binary will be automatically built to ensure that it is current. You can provide a flag `--no-build` or `-n` manually to skip the build process if there is an existing runtime binary.
 
 {% hint style="info" %}
-Pop CLI only supports benchmarking pallets and extrinsics with runtime binary. There is no option to benchmark with chain specs. This feature is similar to the approach of [`frame-omni-bencher`](https://crates.io/crates/frame-omni-bencher) with interactive interface.
+Pop CLI only supports benchmarking pallets and extrinsics using a runtime binary. There is no option to benchmark with chain specs. This feature is similar to the approach of [`frame-omni-bencher`](https://crates.io/crates/frame-omni-bencher) but with an interactive interface.
 {% endhint %}
 
 Note that the command requires the `frame-omni-bencher` binary to be installed on your local machine.
 
-> Pop CLI will automatically source the `frame-omni-bencher` binary if no binary found on your local machine.
+> Pop CLI will automatically source the `frame-omni-bencher` binary if not found on your local machine.
 
-After the binary path is located, you will be prompted to select a pallet, the dispatchable functions and the supported arguments. All arguments can be managed via parameter menu:
+After the binary path is located, you will be prompted to select a pallet, the dispatchable functions and the supported arguments. All arguments can be managed via an interactive interface:
 
 ```bash
 ◆  Select the parameter to update:
@@ -112,14 +112,14 @@ If interactive guidance is not desired, you can proceed manually as follows:
 pop bench pallet --pallet=pallet_timestamp --extrinsic= --steps=50 --runtime=./target/release/runtime.wasm --genesis-builder=runtime --output=./weights.rs
 ```
 
-If you want to skip the parameter menu, use the `--skip-menu` flag:
+If you want to skip parameter configuration, use the `--skip-parameters` flag:
 
 
 ```bash
-pop bench pallet --pallet=pallet_timestamp --extrinsic= --steps=50 --runtime=./target/release/runtime.wasm --genesis-builder=runtime --output=./weights.rs --skip-menu
+pop bench pallet --pallet=pallet_timestamp --extrinsic= --steps=50 --runtime=./target/release/runtime.wasm --genesis-builder=runtime --output=./weights.rs --skip-parameters
 ```
 
-Parameters can be reused later by saving it to the `pop-bench.toml`, learn more [here](../guides/benchmarking-a-parachain/benchmarking-pallets-and-extrinsics.md). To reuse the saved parameters, use the `-f` or `--bench-file` flag:
+The provided parameter values can be reused later by saving them to the `pop-bench.toml`, learn more [here](../guides/benchmarking-a-parachain/benchmarking-pallets-and-extrinsics.md). To reuse the saved parameter values, use the `-f` or `--bench-file` flag:
 
 ```bash
 pop bench pallet -f pop-bench.toml
@@ -308,8 +308,8 @@ Options:
           ignore the proof size dimension of weight (e.g. relay chain,
           solo-chains) can disable proof recording to get more accurate results.
 
-      --skip
-          If this is set to true, no parameter menu pops up
+      --skip-parameters
+          If enabled, no prompt will be shown for updating additional parameters.
 
   -y, --skip-confirm
           Automatically source the needed binary required without prompting for
@@ -327,13 +327,13 @@ Options:
 
 ## bench storage
 
-To benchmark the storage speed of a chain snapshot:
+Used to benchmark the storage speed of a chain snapshot:
 
 ```bash
 pop bench storage --state-version <STATE_VERSION>
 ```
 
-The command requires a state version to be specified. Substrate `--dev` should use `V1` and Polkadot `V0`. Selecting the wrong version can corrupt the DB. For example, to specify the state version for a Substrate `--dev` chain:
+The command requires a state version to be specified. It is the state encoding version for the snapshot. Use `V1` for a local Substrate development chain running with `--dev` and `V0` for Polkadot and similar networks. An incorrect version may corrupt the snapshot. For example, to specify the state version for a Substrate `--dev` chain:
 
 ```bash
 pop bench storage --state-version 1
@@ -341,9 +341,9 @@ pop bench storage --state-version 1
 
 ***Note***:
 
-- Parachain node needs to be built with `runtime-benchmarks` feature enabled.
+- Node needs to be [built with `runtime-benchmarks` feature enabled](./build.md).
 
-> Pop CLI will automatically locate the node binary based on the provided `--profile`. If no binary found, Pop CLI will automatically build the parachain node.
+> Pop CLI will automatically locate the node binary based on the provided `--profile`. Pop CLI will automatically build the node if not found.
 
 #### Learning resources
 

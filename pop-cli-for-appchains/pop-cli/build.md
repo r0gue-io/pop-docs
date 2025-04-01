@@ -33,7 +33,7 @@ cd my-appchain
 pop build --release
 ```
 
-To build your parachain for benchmarking, run the below command will build your parachain with the `runtime-benchmarks` feature enabled:
+To build your chain for benchmarking, run the below command which will build your binary with the `runtime-benchmarks` feature enabled:
 
 ```bash
 cd my-appchain

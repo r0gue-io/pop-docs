@@ -1,6 +1,6 @@
 # Benchmarking Pallets and Extrinsics
 
-Benchmarking in Substrate measures execution time and resource usage for pallets and extrinsics, ensuring accurate weight calculations and optimal performance.
+[Benchmarking in the Polkadot SDK/Substrate](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) measures execution time and resource usage for pallets and extrinsics, ensuring accurate weight calculations and optimal performance.
 
 With Pop CLI, you can benchmark pallets and extrinsics interactively by managing parameters efficiently. Run the following command to start benchmarking:
 
@@ -10,7 +10,7 @@ pop bench pallet
 
 Note that the command requires the `frame-omni-bencher` binary to be installed on your local machine.
 
-> Pop CLI will automatically source the `frame-omni-bencher` binary if no binary found on your local machine.
+> Pop CLI will automatically source the `frame-omni-bencher` binary if not found on your local machine.
 
 **Provide a runtime to benchmark**
 
@@ -28,13 +28,13 @@ The command requires a runtime built with the `runtime-benchmarks` feature. Pop 
 └
 ```
 
-If the binary is missing, Pop CLI builds it with the appropriate `profile` and features. You can manually specify the runtime binary path using:
+If the binary is missing, Pop CLI builds it with the appropriate build `profile` and features. You can manually specify the runtime binary path using:
 
 ```bash
 pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm
 ```
 
-By default, whenever benchmarking starts, runtime binary will be automatically built. You can provide a flag `--no-build` or `-n` to skip the build process if there is an existing runtime binary.
+By default, whenever benchmarking starts, the runtime binary will be automatically built to ensure that it is current. You can provide a flag `--no-build` or `-n` manually to skip the build process if there is an existing runtime binary.
 
 ```bash
 pop bench pallet --no-build
@@ -49,8 +49,9 @@ pop bench pallet --no-build
 └
 ```
 
-Genesis builder policy defines the way to construct the [initial genesis state](https://docs.polkadot.com/develop/parachains/deployment/generate-chain-specs/). There are two options:
+> Genesis builder policy defines the way to construct the [initial genesis state](https://docs.polkadot.com/develop/parachains/deployment/generate-chain-specs/).
 
+There are two options for the genesis builder policy:
 - `none`: Do not provide any genesis state.
 - `runtime`: Use the runtime's genesis preset.
 
@@ -74,7 +75,7 @@ The genesis preset is configured on the runtime via [`sp_genesis_builder`](https
 └
 ```
 
-To configure the genesis builder preset, you can use the `--genesis-builder-preset` flag:
+To configure the genesis builder preset manually, you can use the `--genesis-builder-preset` flag:
 
 ```bash
 pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm --genesis-builder=runtime --genesis-builder-preset=development
@@ -82,7 +83,7 @@ pop bench pallet --runtime=target/release/pop-runtime-devnet.wasm --genesis-buil
 
 **Select pallets and extrinsics**
 
-You'll be prompted to benchmark all pallets or select a specific one. Pop CLI lists available pallets, allowing you to search by name and choose from the list.
+You'll be prompted to benchmark all pallets or select a specific one. Pop CLI lists all available pallets within the runtime, allowing you to search by name and choose from the list.
 
 ```bash
 ◆  🔎 Search for a pallet to benchmark
@@ -133,11 +134,11 @@ If a pallet is specified, the CLI will prompt you to select the extrinsics you w
 
 If `--extrinsic=` and `--pallet=` are provided, the CLI will skip the search and directly benchmark with the specified arguments.
 
-**Manage parameters using the menu**
+**Manage parameters**
 
-Pop CLI displays all editable parameters in a menu, allowing you to preview and modify them as needed. Simply select a parameter to update.
+Pop CLI displays all editable parameters, allowing you to preview and modify them as needed. Simply select a parameter to provide a new value.
 
-> To skip the parameter menu, you can use the `--skip-menu` flag.
+> To skip parameter configuration, you can use the `--skip-parameters` flag.
 
 ```bash
 ◆  Select the parameter to update:
@@ -172,7 +173,7 @@ For example, to update the `High` parameter:
 └
 ```
 
-And you will see the value is updated in the menu:
+And you will see the value is updated:
 
 ```bash
 │  ○ (6) - Repeats: 20
@@ -180,9 +181,9 @@ And you will see the value is updated in the menu:
 │  ○ (8) - Low: None
 ```
 
-**Save weight output and parameters to file**
+**Save weight output and parameter values to file**
 
-After the parameter menu, you will be prompted to save the weight output and parameters to a file. If not provided, no weight output will be saved.
+After the providing parameter values, you will be prompted to save the weight output and provided parameter values to a file. If not provided, no weight output will be saved.
 
 ```bash
 ◆  Provide the output file path for benchmark results (optional).
@@ -190,10 +191,10 @@ After the parameter menu, you will be prompted to save the weight output and par
 └
 ```
 
-To save parameters, the file path is default to `pop-bench.toml`.
+To save parameter values, the file path is default to `pop-bench.toml`.
 
 ```bash
-◆  Provide the output path for benchmark parameters
+◆  Provide the output path for benchmark parameter values
 │  pop-bench.toml
 └
 ```
@@ -227,17 +228,17 @@ no_storage_info = false
 worst_case_map_values = 1000000
 additional_trie_layers = 2
 disable_proof_recording = false
-skip_menu = false
+skip_parameters = false
 skip_confirm = false
 ```
 
-With the saved parameter file, you can load parameters from the file by using the `-f` or `--bench-file` flag.
+With the saved parameter file, you can load parameter values from the file by using the `-f` or `--bench-file` flag.
 
 ```bash
 pop bench -f pop-bench.toml
 ```
 
-For more advanced parameters configuration, you can run the following command to learn more:
+For more advanced parameter configuration, you can run the following command to learn more:
 
 ```bash
 pop bench --help
@@ -246,7 +247,6 @@ pop bench --help
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 * To learn about benchmarking, [Polkadot Docs - Benchmarking](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) provides all the fundamentals.
