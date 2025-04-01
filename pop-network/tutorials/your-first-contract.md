@@ -228,7 +228,7 @@ name = "pop"
 We can now use the configuration file to spin up the network.
 
 ```
-pop up parachain -f ./network.toml -p https://github.com/r0gue-io/pop-node
+pop up network -f ./network.toml -p https://github.com/r0gue-io/pop-node
 
 ┌   Pop CLI : Deploy a parachain
 │
@@ -302,7 +302,7 @@ Keep the PolkadotJs App window open, specifically to see the recent events. Afte
 You will need to know the RPC URL for Pop Network which was outputted in the terminal when you ran the `pop up` command.
 
 ```
-pop up contract -p ./flipper --constructor new --args "false" --suri //Alice --url ws://127.0.0.1:56545
+pop up -p ./flipper --constructor new --args "false" --suri //Alice --url ws://127.0.0.1:56545
 
 ┌   Pop CLI : Deploy a smart contract
 │
@@ -474,7 +474,7 @@ Now that we have Alice's account in our PolkadotJs Wallet Extension, we can use 
 Cool! Now that you have some PAS tokens on Pop Network, we can deploy.
 
 ```
-pop up contract --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --url wss://rpc1.paseo.popnetwork.xyz
+pop up --constructor new --args "false" --suri 0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a --url wss://rpc1.paseo.popnetwork.xyz
 ```
 
 ```

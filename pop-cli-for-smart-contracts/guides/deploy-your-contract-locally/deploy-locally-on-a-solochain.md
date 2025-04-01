@@ -22,8 +22,12 @@ When deploying a smart contract you need to know how much gas is needed so you c
 To find an estimate of how much gas you will need, you can do a "dry-run" of the contract:
 
 ```
-pop up contract --constructor new --args false --suri //Alice --dry-run
+pop up --constructor new --args false --suri //Alice --dry-run
 ```
+
+{% hint style="info" %}
+For Pop CLI versions <`0.7.0` the `pop up` command is `pop up contract`
+{% endhint %}
 
 This will perform a dry-run via an RPC call to estimate the gas usage. It does not submit a transaction.
 
@@ -40,7 +44,7 @@ We can now deploy the contract locally, meaning that we will upload and instanti
 > It is also possible to **only** upload the contract and **not** instantiate by adding `--upload-only`
 
 ```
-pop up contract --constructor new --args false --suri //Alice
+pop up --constructor new --args false --suri //Alice
 
 ◇  The chain "ws://localhost:9944/" is not live. Would you like pop to start a local node in the background for testing?
 │  Yes 

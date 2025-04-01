@@ -32,7 +32,7 @@ validator = true
 Let's run it.
 
 ```shell
-pop up parachain -f ./network.toml
+pop up network -f ./network.toml
 ```
 
 It may take some time if it prompts you to download the binaries. Grab some coffee.
@@ -61,7 +61,7 @@ For more network configurations:
 For more advanced options, such as specifying the Relay chain version, run the following command:
 
 ```
-pop up parachain --help
+pop up network --help
 ```
 
 #### Learning Resources

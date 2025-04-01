@@ -8,16 +8,16 @@ description: >-
 
 Often there is a use case to run a command (or script) upon network initialization.
 
-Say you want to fund accounts on your appchain or run a command to check account balances, Pop CLI allows you to do this via the `--cmd` option that is included in the `pop up parachain` command:
+Say you want to fund accounts on your appchain or run a command to check account balances, Pop CLI allows you to do this via the `--cmd` option that is included in the `pop up network` command:
 
 ```
-pop up parachain --help
+pop up network --help
 ```
 
 To run a command post-initialization of the network, you can use the `--cmd` flag:
 
 ```bash
-pop up parachain -f ./tests/networks/pop.toml --cmd path/to/command
+pop up network -f ./tests/networks/pop.toml --cmd path/to/command
 ```
 
 Here is an example of a simple script to update account balances on the Polkadot Relay chain:
@@ -55,7 +55,7 @@ validator = true
 Spin up the Polkadot Relay chain with Pop CLI:
 
 ```
-pop up parachain -f network.toml -r v1.8.0 --cmd ./target/debug/set-balance
+pop up network -f network.toml -r v1.8.0 --cmd ./target/debug/set-balance
 ```
 
 ```

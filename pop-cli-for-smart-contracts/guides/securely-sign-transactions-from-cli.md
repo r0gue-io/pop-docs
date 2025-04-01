@@ -11,7 +11,7 @@ Normally, you would provide `--suri=<private-key>` to interact with the chain. H
 Here is an example of deploying a contract using `--use-wallet`:
 
 ```bash
-pop up contract --constructor new --args false --use-wallet
+pop up --constructor new --args false --use-wallet
 ```
 
 This will open a signing portal in your browser. Pop CLI will display the following:

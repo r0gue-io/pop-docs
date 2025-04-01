@@ -276,7 +276,7 @@ This `network.toml` file will spin up a Relay chain (`rococo-local`) with two va
 So now let's use the `network.toml` configuration.
 
 ```
-pop up parachain -f network.toml -p https://github.com/r0gue-io/pop-node
+pop up network -f network.toml -p https://github.com/r0gue-io/pop-node
 ```
 
 > This command may take some time if it requires you to download the Polkadot binaries
@@ -326,7 +326,7 @@ Open a separate terminal and run the following command.
 > Make sure the replace with your Pop Network port number.
 
 ```
-pop up contract --suri //Alice --url ws://127.0.0.1:57264 --gas 2000000000 --proof-size 1000000
+pop up --suri //Alice --url ws://127.0.0.1:57264 --gas 2000000000 --proof-size 1000000
 
 ┌   Pop CLI : Deploy a smart contract
 │
