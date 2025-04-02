@@ -33,6 +33,13 @@ cd my-appchain
 pop build --release
 ```
 
+To build your chain for benchmarking, run the below command which will build your binary with the `runtime-benchmarks` feature enabled:
+
+```bash
+cd my-appchain
+pop build --benchmark
+```
+
 Build and generate files for onboarding the parachain to the Relay chain (Pop CLI versions >`.0.2.0`):&#x20;
 
 ```
