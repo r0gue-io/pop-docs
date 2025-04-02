@@ -32,7 +32,7 @@ By running the command `pop test on-runtime-upgrade`, you can test the [Runtime 
 └
 ```
 
-Before the migration running, you will be prompted to confirm if you want to specify which runtime to run the migration on:
+Before running the migration, you will be prompted to confirm if you want to specify which runtime to run the migration on:
 
 - If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](../pop-cli/build.md).
 
@@ -82,7 +82,7 @@ pop test on-runtime-upgrade \
     --at=0x1234567890abcdef1234567890abcdef
 ```
 
-After that, you can select select the upgrade checks to perform:
+After that, you can select the upgrade checks to perform:
 
 ```bash
 ◆  Select upgrade checks to perform:
@@ -146,7 +146,7 @@ pop test on-runtime-upgrade \
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-* 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
+* 🧑‍🔧 For technical introduction of the `try-runtime`, [here](https://paritytech.github.io/try-runtime-cli/try_runtime/).
 
 * Learn more about [Runtime Upgrades](https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/) and [Storage Migrations](https://docs.polkadot.com/develop/parachains/maintenance/storage-migrations).
 
