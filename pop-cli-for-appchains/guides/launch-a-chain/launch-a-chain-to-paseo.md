@@ -9,7 +9,7 @@ description: >-
 
 #### Paseo Local
 
-If you want to test onboarding a chain on your local machine you need to [launch Paseo](spinning-up-the-polkadot-network.md).
+If you want to test onboarding a chain on your local machine you need to [launch Paseo](./launch-paseo.md).
 
 #### Paseo Live
 
@@ -58,7 +58,7 @@ pop call chain --pallet Balances --function transfer_allow_death --url ws://loca
 ...
 ```
 
-> Note: the `--url ws://localhost:57731` parameter should point to a [Paseo Local node](spinning-up-a-polkadot-network/spinning-up-the-polkadot-network.md#network-endpoints).
+> Note: the `--url ws://localhost:57731` parameter should point to a [Paseo Local node](./launch-paseo.md#network-endpoints).
 
 #### Paseo Live
 
