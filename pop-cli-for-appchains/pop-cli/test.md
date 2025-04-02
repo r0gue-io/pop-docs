@@ -1,5 +1,5 @@
 ---
-description: Test a runtime
+description: Test runtime upgrades
 ---
 
 # test
@@ -19,9 +19,7 @@ To test [runtime upgrades](https://docs.polkadot.com/develop/parachains/maintena
 pop test on-runtime-upgrade live
 ```
 
-**Note:**
-
-If you choose to run migrations on a local runtime binary, you will be prompted to provide a valid runtime binary path. [Ensure the binary is built with the `try-runtime` feature](./build.md).
+> **Note:** If you choose to run migrations on a local runtime binary, you will be prompted to provide a valid runtime binary path. [Ensure the binary is built with the `try-runtime` feature](./build.md).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. If the binary is not found, Pop CLI will build it automatically.
 
@@ -76,7 +74,7 @@ pop test create-snapshot \
     --path=./example.snap
 ```
 
-**Note:** A live blockchain node must be [built with the `--try-runtime` feature](./build.md).
+> **Note:** A live blockchain node must be [built with the `--try-runtime` feature](./build.md).
 
 ## test execute-block
 
@@ -160,9 +158,7 @@ pop test fast-forward \
     --uri=wss://rpc1.paseo.popnetwork.xyz
 ```
 
-**Note:**
-
-If you run migrations on a local runtime binary, you will be prompted to provide a valid runtime binary path. [Ensure the binary is built with the `try-runtime` feature](./build.md).
+> **Note:** If you run migrations on a local runtime binary, you will be prompted to provide a valid runtime binary path. [Ensure the binary is built with the `try-runtime` feature](./build.md).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. If the binary is not found, it will be built automatically.
 
