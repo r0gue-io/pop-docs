@@ -30,6 +30,7 @@
   * [Deploy a chain with Polkadot Deployment Portal](guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
+* [Test runtime upgrades](guides/test-runtime-upgrades.md)
 
 ## POP CLI
 
@@ -42,3 +43,4 @@
 * [call](pop-cli/call.md)
 * [up](pop-cli/up.md)
 * [clean](pop-cli/clean.md)
+* [test](pop-cli/test.md)

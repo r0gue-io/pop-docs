@@ -40,6 +40,20 @@ cd my-appchain
 pop build --benchmark
 ```
 
+To build your chain for runtime testing, run the below command which will build your binary with the `try-runtime` feature enabled:
+
+```bash
+cd my-appchain
+pop build --try-runtime
+```
+
+On the other hand, you can also provide a list of features with the `--features` flag:
+
+```bash
+cd my-appchain
+pop build --features runtime-benchmarks,try-runtime
+```
+
 Build and generate files for onboarding the parachain to the Relay chain (Pop CLI versions >`.0.2.0`):&#x20;
 
 ```
