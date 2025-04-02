@@ -4,7 +4,7 @@ description: This guide will walk you through getting started with ink! v6.
 
 # Getting Started with ink! v6
 
-Pop CLI version `v0.7.0` introduces experimental support for ink! v6 smart contracts running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`. This guide helps you transition from ink! v5 (WebAssembly) and start experimenting with ink! v6.
+Pop CLI introduces experimental support for ink! v6 smart contracts running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`. This guide helps you transition from ink! v5 (WebAssembly) and start experimenting with ink! v6.
 
 ### What's new in ink! v6?
 - **ink! v5**: Version of the ink! that can be compiled into WebAssembly byte code and can be executed on [`pallet-contracts`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts) virtual machine.
@@ -14,10 +14,11 @@ For more information about the benefits of RISC-V and `pallet-revive`, see [RISC
 
 ### Installing Pop CLI for ink! v6 support
 
-Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag. Install it with:
+Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag.
 
+To install it from the experimental branch, run:
 ```
-cargo install --force --locked pop-cli --no-default-features -F polkavm-contracts,parachain
+cargo install --git https://github.com/r0gue-io/pop-cli.git --branch feat/polkavm-compatibility --no-default-features --locked -F polkavm-contracts,parachain,telemetry
 ```
 
 > **⚠️ Note:** Make sure you're using `Rust 1.85` or higher, older versions will fail to compile. You can check your version with rustc `--version`.
