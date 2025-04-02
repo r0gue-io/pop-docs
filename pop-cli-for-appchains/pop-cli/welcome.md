@@ -17,6 +17,7 @@ Also, check out the Guides on the left for more comprehensive documentation.
 * [build spec](https://learn.onpop.io/v/appchains/pop-cli/build#build-spec)
 * [up](up.md)
 * [clean](clean.md)
+* [test](test.md)
 
 You can also see all the available commands by running:
 
