@@ -119,7 +119,7 @@ If you want to skip parameter configuration, use the `--skip-parameters` flag:
 pop bench pallet --pallet=pallet_timestamp --extrinsic= --steps=50 --runtime=./target/release/runtime.wasm --genesis-builder=runtime --output=./weights.rs --skip-parameters
 ```
 
-The provided parameter values can be reused later by saving them to the `pop-bench.toml`, learn more [here](../guides/benchmarking-a-parachain/benchmarking-pallets-and-extrinsics.md). To reuse the saved parameter values, use the `-f` or `--bench-file` flag:
+The provided parameter values can be reused later by saving them to the `pop-bench.toml`, learn more [here](../guides/benchmarking/benchmarking-pallets-and-extrinsics.md). To reuse the saved parameter values, use the `-f` or `--bench-file` flag:
 
 ```bash
 pop bench pallet -f pop-bench.toml

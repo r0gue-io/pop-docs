@@ -13,7 +13,7 @@
   * [Create an Assets parachain](guides/create-a-new-parachain/create-an-assets-parachain.md)
   * [Create a Contracts parachain](guides/create-a-new-parachain/create-a-smart-contract-parachain.md)
   * [Create an EVM parachain](guides/create-a-new-parachain/create-an-evm-parachain.md)
-* [Benchmarking](guides/benchmarking/pallets-and-extrinsics.md)
+* [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
 * [Build your parachain](guides/build-your-parachain.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
 * [Call a chain](guides/call-a-chain.md)
