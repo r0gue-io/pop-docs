@@ -27,7 +27,7 @@ If you choose to run migrations on a local runtime binary, you will be prompted 
 
 If a runtime is not specified, the migration will be executed on the code currently running on the remote node of a live blockchain or the one stored in the provided snapshot file.
 
-### Test `on-runtime-upgrade live`
+### test on-runtime-upgrade live
 
 To run migrations against a live blockchain, use the `on-runtime-upgrade live` subcommand:
 
