@@ -312,6 +312,7 @@ pop up -p ./flipper --constructor new --args "false" --suri //Alice --url ws://1
 │
 └  Deployment complete
 ```
+> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will appear as a 20-byte hash.
 
 The contract has been deployed!
 

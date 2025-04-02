@@ -1,5 +1,7 @@
 # Build your contract
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+
 To build your ink! smart contract, make sure you are inside your ink! smart contract directory and run the following command:
 
 ```shell

@@ -1,5 +1,7 @@
 # Call your contract
 
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+
 Now that your contract is deployed, we can interact with it.
 
 ### Interactive Guidance (Recommended)
@@ -25,6 +27,8 @@ If you prefer not to use the interactive prompts, you can call your contract by 
 ```shell
 pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
 ```
+
+> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will appear as a 20-byte hash.
 
 ```
 ┌   Pop CLI : Calling a contract

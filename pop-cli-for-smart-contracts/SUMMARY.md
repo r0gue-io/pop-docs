@@ -20,6 +20,7 @@
 * [Running E2E tests](guides/running-e2e-tests.md)
 * [Deploy on Pop](guides/deploy-on-pop-testnet.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
+* [Getting Started with ink! v6](guides/migrating-to-inkv6.md)
 
 ## TUTORIALS
 
