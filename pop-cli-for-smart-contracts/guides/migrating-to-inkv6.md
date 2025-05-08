@@ -18,7 +18,7 @@ Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag.
 
 To install it from the experimental branch, run:
 ```
-cargo install --git https://github.com/r0gue-io/pop-cli.git --branch feat/polkavm-compatibility --no-default-features --locked -F polkavm-contracts,parachain,telemetry
+cargo install pop-cli --no-default-features --locked -F polkavm-contracts,parachain,telemetry
 ```
 
 > **⚠️ Note:** Make sure you're using `Rust 1.85` or higher, older versions will fail to compile. You can check your version with rustc `--version`.
