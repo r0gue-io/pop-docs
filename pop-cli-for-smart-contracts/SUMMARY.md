@@ -8,6 +8,9 @@
 
 ## GUIDES
 
+* [Installing Pop CLI](guides/installing-pop-cli.md)
+  * [macOS](guides/installing-pop-cli-macos.md)
+  * [Linux](guides/installing-pop-cli-linux.md)
 * [Get tokens on Pop (Testnet)](guides/bridge-tokens-to-pop-network.md)
 * [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new contract](guides/create-a-new-contract.md)
@@ -20,7 +23,7 @@
 * [Running E2E tests](guides/running-e2e-tests.md)
 * [Deploy on Pop](guides/deploy-on-pop-testnet.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
-* [Getting Started with ink! v6](guides/migrating-to-inkv6.md)
+* [Getting Started with ink! v6](guides/getting-started-with-inkv6.md)
 
 ## TUTORIALS
 

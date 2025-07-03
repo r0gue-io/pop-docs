@@ -25,8 +25,7 @@ cargo install pop-cli --no-default-features --locked -F polkavm-contracts,parach
 
 ### Getting started with ink! v6
 
-The workflow for developing smart contracts remains similar to ink! v5. To get started, see our guide:
-[Create a new contract](./create-a-new-contract.md).
+The workflow for developing smart contracts remains similar to ink! v5. To get started, see our guide: [Create a new contract](./create-a-new-contract.md).
 
 
 #### Migrating existing ink! smart contracts

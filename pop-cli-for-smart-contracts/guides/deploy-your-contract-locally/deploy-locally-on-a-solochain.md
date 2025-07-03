@@ -6,7 +6,7 @@ description: >-
 
 # Deploy your contract locally
 
-> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](../migrating-to-inkv6.md).
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](../getting-started-with-inkv6.md).
 
 Make sure your contract builds.
 

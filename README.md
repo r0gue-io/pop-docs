@@ -18,8 +18,8 @@ Pop CLI provides an on-ramp for development on Polkadot by providing a simple co
 
 Learn how to develop with Pop CLI:
 
-* [https://learn.onpop.io/v/contracts](https://learn.onpop.io/v/contracts)
-* [https://learn.onpop.io/v/appchains](https://learn.onpop.io/v/appchains)
+* [Smart Contracts](https://learn.onpop.io/v/contracts)
+* [Chains](https://learn.onpop.io/v/appchains)
 
 ## Pop Network
 

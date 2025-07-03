@@ -1,6 +1,6 @@
 # Call your contract
 
-> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./getting-started-with-inkv6.md).
 
 Now that your contract is deployed, we can interact with it.
 
