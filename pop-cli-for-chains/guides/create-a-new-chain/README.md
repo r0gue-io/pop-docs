@@ -1,18 +1,45 @@
-# Create an EVM parachain
+# Create a new chain
 
-Using Pop CLI you can easily create a parachain with the Ethereum Virtual Machine, supporting Solidity smart contracts:
+### Interactive Guidance (Recommended)
+
+Create a new chain **with** Pop CLI's interactive guidance by simply entering:
 
 ```shell
-pop new parachain my-evm-appchain pop --template evm
+pop new chain
 ```
 
-Keep in mind there are additional configuration flags you can provide.
+You will be prompted to select a template and depending on the options chosen, be prompted with additional customization options.
+
+<figure><img src="../../.gitbook/assets/001.gif" alt="pop new chain"><figcaption><p>pop new chain</p></figcaption></figure>
+
+### Manual (non-interactive)
+
+Create a new standard chain **without** Pop CLI's interactive guidance by specifying a name for your chain:
+
+```shell
+pop new chain my-chain
+```
 
 ```
-pop new parachain --help
+┌   Pop CLI : Generating "my-chain" using Standard from Pop!
+│
+◇  Generation complete
+│
+⚙  Version: polkadot-v1.9.0
+│  
+└  cd into "my-chain" and enjoy hacking! 🚀
+```
 
-Generate a new parachain
-Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
+You can specify different flags to configure your chain. To see a full list of configuration options:
+
+```shell
+pop new chain --help
+```
+
+```
+Generate a new chain
+
+Usage: pop new chain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
   [NAME]      Name of the project. If empty assistance in the process will be provided.
@@ -27,6 +54,8 @@ Options:
   -v, --verify                         Fetches the latest license, release, and commit SHA data from GitHub.
   -h, --help                           Print help
 ```
+
+
 
 #### Learning Resources
 

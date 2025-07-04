@@ -1,22 +1,13 @@
----
-description: Develop smart contracts on Pop - the Web3 development platform.
----
+# Build Polkadot Smart Contracts with Rust
 
-# Smart Contracts
+<img src=".gitbook/assets/image.png" alt="Smart Contracts" style="max-width: 400px;">
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+Polkadot’s native smart contract language, [ink!](https://use.ink/), makes it simple to create powerful decentralized solutions with Rust. Tap into Polkadot’s unmatched security, multichain composability, and seamless access to native chain features through precompiles.
+- Start building with the [ink! documentation](https://use.ink/docs/).
+- New to Polkadot? Explore the [Polkadot documentation](https://docs.polkadot.com/).
 
-With Pop, developers can develop smart contract solutions for Polkadot.
+> **🚀 New:** Pop CLI introduces experimental support for ink! v6 on [PolkaVM](https://github.com/paritytech/polkavm). See [Getting Started with ink! v6](./guides/getting-started-with-inkv6.md) to try it out.
 
-### Features include:
+**Get started with smart contracts on Polkadot**
 
-* Building a new smart contract
-* Testing your smart contract, including unit and end-to-end tests
-* Deploy your smart contract locally or to production
-
-> **🚀 New:** Pop CLI introduces experimental support for ink! v6 on [PolkaVM](https://github.com/paritytech/polkavm). See the [migration guide](./guides/migrating-to-inkv6.md) to get started.
-
-
-**Get started with smart contracts on Pop**
-
-* [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
+- [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)

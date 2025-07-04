@@ -1,19 +1,18 @@
-# Create an Assets parachain
+# Create an EVM chain
 
-With Pop CLI you can easily create a parachain supporting fungible, non-fungible, and fractionalized assets:
+Using Pop CLI you can easily create a chain with the Ethereum Virtual Machine, supporting Solidity smart contracts:
 
 ```shell
-pop new parachain my-assets-appchain pop --template assets
+pop new chain my-evm-chain pop --template evm
 ```
 
 Keep in mind there are additional configuration flags you can provide.
 
 ```
-pop new parachain --help
+pop new chain --help
 
-Generate a new parachain
-
-Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
+Generate a new chain
+Usage: pop new chain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
   [NAME]      Name of the project. If empty assistance in the process will be provided.
@@ -32,7 +31,7 @@ Options:
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Technical Support**

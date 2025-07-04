@@ -1,19 +1,19 @@
-# Create a Contracts parachain
+# Create a Contracts chain
 
-Using Pop CLI you can easily create a parachain supporting WebAssembly smart contracts:
+Using Pop CLI you can easily create a chain supporting WebAssembly smart contracts:
 
 ```shell
-pop new parachain my-contracts-appchain pop --template contracts
+pop new chain my-contracts-chain pop --template contracts
 ```
 
 Keep in mind there are additional configuration flags you can provide.
 
 ```
-pop new parachain --help
+pop new chain --help
 
-Generate a new parachain
+Generate a new chain
 
-Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
+Usage: pop new chain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
   [NAME]      Name of the project. If empty assistance in the process will be provided.
@@ -32,7 +32,7 @@ Options:
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Technical Support**

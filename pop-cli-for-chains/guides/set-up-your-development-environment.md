@@ -1,12 +1,12 @@
 ---
 description: >-
   This section will guide on how to use Pop CLI to set up your development
-  environment for Polkadot appchain development.
+  environment for Polkadot chain development.
 ---
 
 # Setting up your development environment
 
-In order to develop and build a Polkadot appchain we need to setup the proper environment.
+In order to develop and build a Polkadot chain we need to setup the proper environment.
 
 Luckily we can use Pop CLI for this. Pop CLI has the `pop install` command.
 
@@ -22,7 +22,7 @@ Options:
   -h, --help          Print help
 ```
 
-To install all the packages on your system that are needed for Polkadot appchain development, run the following command:
+To install all the packages on your system that are needed for Polkadot chain development, run the following command:
 
 ```bash
 pop install
