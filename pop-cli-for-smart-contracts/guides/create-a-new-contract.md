@@ -58,8 +58,6 @@ my_contract
   └─ .gitignore
 ```
 
-
-
 Several options are available when creating a smart contract manually.
 
 To see all the available options, run `pop new contract --help`

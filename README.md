@@ -14,12 +14,16 @@ GitHub: [https://github.com/r0gue-io/pop-cli](https://github.com/r0gue-io/pop-cl
 
 An all-in-one tool for Polkadot development.&#x20;
 
-Pop CLI provides an on-ramp for development on Polkadot by providing a simple command line interface for quickly creating, building, testing, and deploying a Polkadot solution - whether smart contract or complete Polkadot appchain (parachain).
+Pop CLI provides an on-ramp for development on Polkadot by providing a simple command line interface for quickly creating, building, testing, and deploying a Polkadot solution - whether smart contract or complete Polkadot chain (parachain).
 
 Learn how to develop with Pop CLI:
 
-* [Smart Contracts](https://learn.onpop.io/v/contracts)
-* [Chains](https://learn.onpop.io/v/appchains)
+* [Smart Contracts](pop-cli-for-smart-contracts/README.md)
+* [Chains](pop-cli-for-chains/README.md)
+
+### Installing Pop CLI
+
+See [Install Pop CLI](installing-pop-cli.md) for full instructions on installing Rust, Cargo, and Pop CLI for your platform.
 
 ## Pop Network
 
@@ -29,7 +33,7 @@ Pop Network is the answer to: "How do I deploy a smart contract on Polkadot?".
 
 Pop Network is a Polkadot smart contract platform. Developers can write smart contracts and use the DOT token to deploy their smart contracts to Pop Network.
 
-Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot appchain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.&#x20;
+Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot chain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.&#x20;
 
 ### Roadmap
 
@@ -39,9 +43,3 @@ If you want to discover our plans for enhancing Pop Network and empowering devel
 
 * Roadmap website: [https://onpop.io/network/roadmap/](https://onpop.io/network/roadmap/)
 * Or read the blog post for more details: [https://r0gue.io/blog/2025-pop-roadmap/](https://r0gue.io/blog/2025-pop-roadmap/)
-
-
-
-Start your Polkadot smart contract journey today and go live on Pop Network:\
-\- [https://learn.onpop.io/v/contracts](https://learn.onpop.io/v/contracts)
-

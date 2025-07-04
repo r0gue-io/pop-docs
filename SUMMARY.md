@@ -4,6 +4,6 @@
 
 * [Pop](README.md)
 * [Get tokens on Pop Network](pop-cli-for-smart-contracts/guides/bridge-tokens-to-pop-network.md)
-* [Smart Contracts on Polkadot](pop-cli-for-smart-contracts/README.md)
-* [Appchains on Polkadot](pop-cli-for-appchains/README.md)
-<!-- * [How to contribute](welcome/how-to-contribute.md) -->
+* [Install Pop CLI](installing-pop-cli.md)
+* [Build a Chain](pop-cli-for-chains/README.md)
+* [Build a Smart Contract](pop-cli-for-smart-contracts/README.md)

@@ -15,7 +15,7 @@ For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
 Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
 ```
-cd my-appchain
+cd my-chain
 touch network.toml
 ```
 

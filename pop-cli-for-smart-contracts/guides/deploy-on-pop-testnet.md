@@ -8,7 +8,7 @@ Once you have battle-tested your smart contract using unit and e2e tests, you ar
 
 Before you deploy, make sure you have bridged some tokens from the Polkadot Relay chain to your Pop account. To learn how to do this, go here:
 
-* [https://learn.onpop.io/contracts/guides/get-tokens-on-pop](https://learn.onpop.io/contracts/guides/get-tokens-on-pop)
+* [Get tokens on Pop (Testnet)](./bridge-tokens-to-pop-network.md)
 
 ### Deploy
 

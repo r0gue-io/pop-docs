@@ -1,7 +1,5 @@
 # Setting up your development environment
 
-> _If you haven't installed Pop CLI yet, see [Installing Pop CLI](./installing-pop-cli.md)._
-
 To develop and build smart contracts on Polkadot we need to setup the proper environment.
 
 Luckily we can use Pop CLI for this. Pop CLI has the `pop install` command.

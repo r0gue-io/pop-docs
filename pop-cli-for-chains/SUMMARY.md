@@ -2,9 +2,8 @@
 
 ## WELCOME
 
-* [Polkadot Appchains](README.md)
-* [Installing Pop CLI](https://learn.onpop.io/v/cli/installing-pop-cli)
-* [How to contribute](https://learn.onpop.io/welcome/how-to-contribute)
+* [Polkadot Chains](README.md)
+* [How to contribute](../../welcome/how-to-contribute.md)
 
 ## GUIDES
 
@@ -27,16 +26,3 @@
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
-
-## POP CLI
-
-* [welcome](pop-cli/welcome.md)
-* [install](pop-cli/install.md)
-* [new](pop-cli/new.md)
-* [bench](pop-cli/bench.md)
-* [build](pop-cli/build.md)
-* [build spec](https://learn.onpop.io/v/appchains/pop-cli/build#build-spec)
-* [call](pop-cli/call.md)
-* [up](pop-cli/up.md)
-* [clean](pop-cli/clean.md)
-* [test](pop-cli/test.md)

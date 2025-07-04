@@ -3,7 +3,7 @@
 Using Pop CLI you can easily create a parachain supporting WebAssembly smart contracts:
 
 ```shell
-pop new parachain my-contracts-appchain pop --template contracts
+pop new parachain my-contracts-chain pop --template contracts
 ```
 
 Keep in mind there are additional configuration flags you can provide.

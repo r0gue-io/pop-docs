@@ -8,7 +8,7 @@ description: >-
 
 Often there is a use case to run a command (or script) upon network initialization.
 
-Say you want to fund accounts on your appchain or run a command to check account balances, Pop CLI allows you to do this via the `--cmd` option that is included in the `pop up network` command:
+Say you want to fund accounts on your chain or run a command to check account balances, Pop CLI allows you to do this via the `--cmd` option that is included in the `pop up network` command:
 
 ```
 pop up network --help
