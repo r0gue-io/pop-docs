@@ -7,49 +7,17 @@
 * [Install Pop CLI](installing-pop-cli.md)
 
 ## Build a Chain
+
 * [Build a Chain](pop-cli-for-chains/README.md)
   * [Guides](pop-cli-for-chains/README.md)
-    * [Create a new chain](pop-cli-for-chains/guides/create-a-new-chain/README.md)
-    * [Set up your development environment](pop-cli-for-chains/guides/set-up-your-development-environment.md)
-    * [Build your chain](pop-cli-for-chains/guides/build-your-chain.md)
-    * [Call a chain](pop-cli-for-chains/guides/call-a-chain.md)
-    * [Benchmarking](pop-cli-for-chains/guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
-    * [Build your runtime deterministically](pop-cli-for-chains/guides/build-deterministic-runtime.md)
-    * [Running a post-startup command](pop-cli-for-chains/guides/running-a-post-startup-command.md)
-    * [Securely Sign Transactions from CLI](pop-cli-for-chains/guides/securely-sign-transactions-from-cli.md)
-    * [Test runtime upgrades](pop-cli-for-chains/guides/test-runtime-upgrades.md)
-    * [Launch a Chain](pop-cli-for-chains/guides/launch-a-chain/README.md)
-      * [Launch a Chain in Development](pop-cli-for-chains/guides/launch-a-chain/running-your-chain.md)
-      * [Launch a Chain to Paseo](pop-cli-for-chains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-        * [Launch Paseo](pop-cli-for-chains/guides/launch-a-chain/launch-paseo.md)
-        * [Set up keys](pop-cli-for-chains/guides/launch-a-chain/keys.md)
-        * [Acquire Coretime](pop-cli-for-chains/guides/launch-a-chain/coretime.md)
-      * [Deploy a chain with Polkadot Deployment Portal](pop-cli-for-chains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
 
 ## Build a Smart Contract
+
 * [Build a Smart Contract](pop-cli-for-smart-contracts/README.md)
   * [Guides](pop-cli-for-smart-contracts/README.md)
-    * [Getting Started with ink! v6](pop-cli-for-smart-contracts/guides/getting-started-with-inkv6.md)
-    * [Install Pop CLI](pop-cli-for-smart-contracts/guides/installing-pop-cli.md)
-    * [Run your unit tests](pop-cli-for-smart-contracts/guides/run-your-unit-tests.md)
-    * [Running E2E tests](pop-cli-for-smart-contracts/guides/running-e2e-tests.md)
-    * [Build your contract](pop-cli-for-smart-contracts/guides/build-your-contract.md)
-    * [Call your contract](pop-cli-for-smart-contracts/guides/call-your-contract.md)
-    * [Create a new contract](pop-cli-for-smart-contracts/guides/create-a-new-contract.md)
-    * [Deploy on Pop Testnet](pop-cli-for-smart-contracts/guides/deploy-on-pop-testnet.md)
-    * [Set up your development environment](pop-cli-for-smart-contracts/guides/set-up-your-development-environment.md)
-    * [Securely Sign Transactions from CLI](pop-cli-for-smart-contracts/guides/securely-sign-transactions-from-cli.md)
-    * [Bridge tokens to Pop Network](pop-cli-for-smart-contracts/guides/bridge-tokens-to-pop-network.md)
-    * [Deploy your contract locally](pop-cli-for-smart-contracts/guides/deploy-your-contract-locally/README.md)
-      * [Deploy locally on a Solochain](pop-cli-for-smart-contracts/guides/deploy-your-contract-locally/deploy-locally-on-a-solochain.md)
-      * [Deploy locally on Pop](pop-cli-for-smart-contracts/guides/deploy-your-contract-locally/deploy-locally-on-pop.md)
   * [Tutorials](pop-cli-for-smart-contracts/README.md)
-    * [Your first ink! smart contract](pop-cli-for-smart-contracts/tutorials/your-first-ink-smart-contract.md)
-    * [Mint a PSP22 token on Pop](pop-cli-for-smart-contracts/tutorials/mint-a-psp22-token-on-pop.md)
-    * [Mint a PSP34 token on Pop Network](pop-cli-for-smart-contracts/tutorials/mint-a-psp34-token-on-pop-network.md)
 
 ## Pop Network
+
 * [Pop Network](pop-network/README.md)
   * [Tutorials](pop-network/README.md)
-    * [Creating an NFT collection](pop-network/tutorials/creating-an-nft-collection.md)
-    * [Your first contract](pop-network/tutorials/your-first-contract.md)
