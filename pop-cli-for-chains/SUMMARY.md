@@ -3,17 +3,16 @@
 ## WELCOME
 
 * [Polkadot Chains](README.md)
-* [How to contribute](../../welcome/how-to-contribute.md)
+* [Install Pop CLI](../../installing-pop-cli.md)
 
 ## GUIDES
 
-* [Set up your development environment](guides/set-up-your-development-environment.md)
-* [Create a new parachain](guides/create-a-new-parachain/README.md)
-  * [Create an Assets parachain](guides/create-a-new-parachain/create-an-assets-parachain.md)
-  * [Create a Contracts parachain](guides/create-a-new-parachain/create-a-smart-contract-parachain.md)
-  * [Create an EVM parachain](guides/create-a-new-parachain/create-an-evm-parachain.md)
+* [Create a new chain](guides/create-a-new-chain/README.md)
+  * [Create an Assets chain](guides/create-a-new-chain/create-an-assets-chain.md)
+  * [Create a Contracts chain](guides/create-a-new-chain/create-a-smart-contract-chain.md)
+  * [Create an EVM chain](guides/create-a-new-chain/create-an-evm-chain.md)
 * [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
-* [Build your parachain](guides/build-your-parachain.md)
+* [Build your chain](guides/build-your-parachain.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
 * [Call a chain](guides/call-a-chain.md)
 * [Launch a Chain](guides/launch-a-chain/README.md)

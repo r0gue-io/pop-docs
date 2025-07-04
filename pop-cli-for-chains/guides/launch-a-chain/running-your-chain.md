@@ -1,6 +1,6 @@
-# Running your parachain
+# Running your chain
 
-To run your parachain, you will need to spin up a local network with your parachain configuration.
+To run your chain, you will need to spin up a local network with your chain configuration.
 
 The `pop up` command can help with this.
 
@@ -12,7 +12,7 @@ pop up network --help
 For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
 {% endhint %}
 
-Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
+Say we want to spin up a local network for your chain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
 ```
 cd my-chain
@@ -45,7 +45,7 @@ name = "collator-01"
 
 > This network configuration will launch a relay chain using a `paseo-local` instance of Polkadot with two validator nodes to run the network: `alice` and `bob`. It will also run `parachain-template-node` with one collator node named `collator-01`.
 
-Cool. Let's spin this up, ensuring that your parachain binary has been built using `pop build parachain`.
+Cool. Let's spin this up, ensuring that your chain binary has been built using `pop build parachain`.
 
 ```shell
 pop up network -f ./network.toml
@@ -73,7 +73,7 @@ Once all the binaries are sourced, you should have output similar to this.
 │
 ```
 
-Congrats! You have now spun up a network with your parachain running!
+Congrats! You have now spun up a network with your chain running!
 
 > Under-the-hood, Pop CLI uses zombienet to spin up the network.\
 > For more advanced network configurations and options consult the [zombienet repo](https://github.com/paritytech/zombienet)
@@ -88,4 +88,4 @@ Congrats! You have now spun up a network with your parachain running!
 
 * [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
   * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop_support)

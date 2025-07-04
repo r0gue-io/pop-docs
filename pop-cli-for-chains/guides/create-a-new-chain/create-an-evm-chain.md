@@ -1,45 +1,18 @@
-# Create a new parachain
+# Create an EVM chain
 
-### Interactive Guidance (Recommended)
-
-Create a new parachain **with** Pop CLI's interactive guidance by simply entering:
+Using Pop CLI you can easily create a chain with the Ethereum Virtual Machine, supporting Solidity smart contracts:
 
 ```shell
-pop new parachain
+pop new chain my-evm-chain pop --template evm
 ```
 
-You will be prompted to select a template and depending on the options chosen, be prompted with additional customization options.
-
-<figure><img src="../../.gitbook/assets/001.gif" alt="pop new parachain"><figcaption><p>pop new parachain</p></figcaption></figure>
-
-### Manual (non-interactive)
-
-Create a new standard parachain **without** Pop CLI's interactive guidance by specifying a name for your parachain:
-
-```shell
-pop new parachain my-chain
-```
+Keep in mind there are additional configuration flags you can provide.
 
 ```
-┌   Pop CLI : Generating "my-chain" using Standard from Pop!
-│
-◇  Generation complete
-│
-⚙  Version: polkadot-v1.9.0
-│  
-└  cd into "my-chain" and enjoy hacking! 🚀
-```
+pop new chain --help
 
-You can specify different flags to configure your parachain. To see a full list of configuration options:
-
-```shell
-pop new parachain --help
-```
-
-```
-Generate a new parachain
-
-Usage: pop new parachain [OPTIONS] [NAME] [PROVIDER]
+Generate a new chain
+Usage: pop new chain [OPTIONS] [NAME] [PROVIDER]
 
 Arguments:
   [NAME]      Name of the project. If empty assistance in the process will be provided.
@@ -55,12 +28,10 @@ Options:
   -h, --help                           Print help
 ```
 
-
-
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Technical Support**

@@ -3,12 +3,11 @@
 ## WELCOME
 
 * [Smart Contracts](README.md)
-* [How to contribute](../../welcome/how-to-contribute.md)
+* [Install Pop CLI](../../installing-pop-cli.md)
 
 ## GUIDES
 
 * [Get tokens on Pop (Testnet)](guides/bridge-tokens-to-pop-network.md)
-* [Set up your development environment](guides/set-up-your-development-environment.md)
 * [Create a new contract](guides/create-a-new-contract.md)
 * [Build your contract](guides/build-your-contract.md)
 * [Run your unit tests](guides/run-your-unit-tests.md)
