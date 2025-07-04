@@ -3,7 +3,7 @@
 ## WELCOME
 
 * [Smart Contracts](README.md)
-* [Install Pop CLI](../../installing-pop-cli.md)
+* [Install Pop CLI](../installing-pop-cli.md)
 
 ## GUIDES
 

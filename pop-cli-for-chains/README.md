@@ -1,28 +1,9 @@
----
-description: Build a chain on Polkadot using Pop - the Web3 development platform.
----
+# Build a Polkadot Chain
 
-# Polkadot Chains
+<img src=".gitbook/assets/image.png" alt="Polkadot Chains" style="max-width: 400px;">
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+Build custom blockchain that can operate as solo chains or connect to Polkadot for shared security and interoperability, using the [Polkadot SDK](https://docs.polkadot.com/).
 
-With Pop CLI, developers can build a chain on Polkadot.
+Start building with the [Polkadot documentation](https://docs.polkadot.com/).
 
-### Features include:
-
-* Start a new Polkadot chain (parachain) project using starter templates to hit the ground running.
-  * Polkadot chain templates include:  
-    * a standard parachain template,  
-    * an assets parachain template,  
-    * a smart contract parachain template,  
-    * and an EVM parachain template
-* Build logic into your parachain using the Polkadot SDK  
-* Deploy your parachain to a local Polkadot network
-* Spin up a Polkadot network with various parachains
-  * Useful for testing cross-chain interoperability
-* Benchmarking of nodes and runtimes  
-* Testing runtime upgrades  
-
-**Get started with your first Polkadot chain:**
-
-* [Create a new parachain](guides/create-a-new-parachain/)
+**Ready to build your first chain?** Start with [creating a new chain](guides/create-a-new-chain/).
