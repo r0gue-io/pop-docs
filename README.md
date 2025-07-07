@@ -4,9 +4,11 @@ description: Overview
 
 # Pop
 
-The Pop Platform (Pop) is a developer platform for Web3 solutions on Polkadot.
+Pop is the platform for building powerful Web3 solutions on Polkadot with Rust.
 
-Pop consists of two main products: Pop CLI and Pop Network.
+It transforms the complex landscape of Polkadot development into an effortless and powerful experience, whether you're developing a chain or smart contract. Pop is crafted to be the simplest, fastest, and most intuitive way to bring your ideas to life on Polkadot.
+
+Pop is made up of two essential components that work hand-in-hand:
 
 ## Pop CLI
 
@@ -14,7 +16,7 @@ GitHub: [https://github.com/r0gue-io/pop-cli](https://github.com/r0gue-io/pop-cl
 
 An all-in-one tool for Polkadot development.
 
-Pop CLI provides an on-ramp for development on Polkadot by providing a simple command line interface for quickly creating, building, testing, and deploying a Polkadot solution - whether smart contract or complete Polkadot appchain (parachain).
+Pop CLI provides an on-ramp for development on Polkadot by providing a simple command line interface for quickly creating, building, testing, and deploying a Polkadot solution; Polkadot chain or smart contract
 
 Install the Pop CLI and start building:
 
@@ -29,7 +31,7 @@ Pop Network is the answer to: "How do I deploy a smart contract on Polkadot?".
 
 Pop Network is a Polkadot smart contract platform. Developers can write smart contracts and use the DOT token to deploy their smart contracts to Pop Network.
 
-Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot appchain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.
+Furthermore, Pop Network has a bright roadmap full of features to take what were previously Polkadot chain-level features and hoist these features to the smart contract level so smart contract developers can harness the full-power of Polkadot in their smart contracts.
 
 ### Roadmap
 
