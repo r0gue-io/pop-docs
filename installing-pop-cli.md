@@ -10,6 +10,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## 2. Install Pop CLI
 
+> **Note:** If you want to install Pop CLI for ink! v6 support, see [Getting Started with ink! v6](pop-cli-for-smart-contracts/guides/getting-started-with-inkv6.md).
+
 ```bash
 cargo install --force --locked pop-cli
 ```
