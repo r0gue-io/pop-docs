@@ -4,7 +4,7 @@
 
 Now that we have developed our contract, tested it, we can now deploy it on a blockchain!
 
-#### Local Deployment (default)
+### Local Deployment (default)
 
 If no `--url` is provided, Pop CLI automatically launches a local [ink-node](https://github.com/use-ink/ink-node) in the background.
 
