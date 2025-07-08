@@ -3,7 +3,7 @@
 ## WELCOME
 
 * [Build Polkadot Smart Contracts with Rust](README.md)
-* [Installing Pop CLI](https://learn.onpop.io/v/cli/installing-pop-cli)
+* [Install Pop CLI](welcome/install-pop-cli.md)
 * [Getting Started with ink! v6](welcome/migrating-to-inkv6.md)
 
 ## GUIDES
