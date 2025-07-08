@@ -1,81 +1,23 @@
 # Create a new contract
 
-> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
 
+To view all available smart contract templates run:
 
-To create a smart contract with Pop CLI:
-
-```
-pop new contract
-```
-
-The above command will guide you through an interactive prompt to create a new smart contract:
-
-```
-┌   Pop CLI : Generate a contract
-│
-◆  Select a template type: 
-│  ● Examples (Contract examples for ink!. 4 available option(s))
-│  ○ ERC 
-│  ○ PSP 
-└  
+```bash
+pop new contract --template
 ```
 
-Notice that there are several templates available.&#x20;
+To start a new contract, e.g. ERC20, run:
 
-To get a full list of available templates run `pop new contract --help`
-
-You can also create a new smart contract manually (without interactivity):
-
-```shell
-pop new contract my_contract
+```bash
+pop new contract my_erc20 --contract-type erc --template erc20
 ```
 
-> Note: this will create a contract using the default template which is based on the [`flipper`](https://use.ink/basics/contract-template) contract example.
+Then open the generated `my_erc20` directory to start developing your contract!\
+\
+Any ideas or requests for contract templates? [Create an issue :)](https://github.com/r0gue-io/pop-cli/issues/new)
 
-You should get output like the following:
+**Need help?**
 
-```
-┌   Pop CLI : Generating new contract "my_contract"!
-│
-◇  Smart contract created! Located in the following directory "/my_contract"
-│
-└  cd into "my_contract" and enjoy hacking! 🚀
-```
-
-You can now `cd` into the folder and start hacking on your contract:
-
-```shell
-cd my_contract
-```
-
-You should see the directory structure of your ink! smart contract:
-
-```
-my_contract
-  └─ lib.rs
-  └─ Cargo.toml
-  └─ .gitignore
-```
-
-
-
-Several options are available when creating a smart contract manually.
-
-To see all the available options, run `pop new contract --help`
-
-For example:
-
-```
-pop new contract my_contract --contract-type erc --template erc721
-```
-
-**Further Reading Material**
-
-* [https://use.ink/basics/contract-template](https://use.ink/basics/contract-template)
-
-**Technical Support**
-
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

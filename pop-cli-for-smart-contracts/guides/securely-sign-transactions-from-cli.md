@@ -59,3 +59,7 @@ After the signed transaction is received, the portal will send the transaction p
 ● The contract address is "5F1P99TD63qZ9bnoxrK7kuzwMWuU7kKKVJJZoVKBYoVQtQeR"
 ● The contract code hash is "0x9e4bbfc311f58aaffb63d7570651567d40dd76f301f601a0f0a61f3204d49e5b"
 ```
+
+**Need help?**
+
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

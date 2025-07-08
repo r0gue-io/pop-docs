@@ -47,3 +47,7 @@ The token amount (minus the tx fee) will appear on Pop:
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Pop Network</p></figcaption></figure>
 
 Congrats! You have successfully bridged tokens from Paseo to Pop!
+
+**Need help?**
+
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

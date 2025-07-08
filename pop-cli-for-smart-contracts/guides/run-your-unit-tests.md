@@ -1,6 +1,6 @@
-# Run your unit tests
+# Test
 
-> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
 
 To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following command:
 
@@ -8,39 +8,20 @@ To run your ink! smart contract's unit tests, make sure you're in the directory 
 pop test contract
 ```
 
-You should get output like the following:
+To run end-to-end (e2e) tests, for which you need a blockchain running:
 
-```
-┌   Pop CLI : Building a contract
-│
- [==] Checking clippy linting rules
-   Compiling proc-macro2 v1.0.79
-   ....
-   Compiling flipper v0.1.0 (/Users/pop/src/pop-cli/flipper)
-    Finished test [unoptimized + debuginfo] target(s) in 8.06s
-     Running unittests lib.rs (target/debug/deps/flipper-ff1505839f6873de)
-
-running 2 tests
-test flipper::tests::it_works ... ok
-test flipper::tests::default_works ... ok
-
-test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-   Doc-tests flipper
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-└  Unit testing complete
+```bash
+ pop test contract --e2e
 ```
 
-**Further Reading Material**
+If you want to run you e2e tests on your own local chain specify the directory path using:
 
-* [https://use.ink/basics/contract-testing/off-chain#unit-tests](https://use.ink/basics/contract-testing/off-chain#unit-tests)
+```
+ pop test contract --e2e --node ../my-chain
+```
 
-**Technical Support**
+To explore how to test your ink! smart contract, from unit tests to e2e testing workflows, go checkout the [ink! testing documentation](https://use.ink/docs/v6/contract-testing/overview).
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+**Need help?**
+
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

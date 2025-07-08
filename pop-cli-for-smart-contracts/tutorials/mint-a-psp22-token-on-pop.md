@@ -68,8 +68,6 @@ pop up --constructor new --args 10000000, 'Some("AWESOME")', 'Some("AWE")', 10
 
 Awesome! The contract has been deployed. This means your token has been created!
 
-
-
 **Let's check by doing a few RPC calls.**
 
 Check the token name:
@@ -80,8 +78,6 @@ pop call contract --contract 5EmcjhRR4MznE9quijW4vvNZXzhgYNWVE4BiT2M5jTxjcfdt --
 
 The above call should return "AWESOME" as the token name.
 
-
-
 Check the total supply:
 
 ```
@@ -89,8 +85,6 @@ pop call contract --contract 5EmcjhRR4MznE9quijW4vvNZXzhgYNWVE4BiT2M5jTxjcfdt --
 ```
 
 The above should return a total supply of 10\_000\_000
-
-
 
 Let's transfer 1\_000 AWE tokens from the owner (Alice) to Bob:
 
@@ -104,6 +98,8 @@ Let's confirm that Bob now has 1\_000 AWE tokens:
 pop call contract --contract 5EmcjhRR4MznE9quijW4vvNZXzhgYNWVE4BiT2M5jTxjcfdt --message PSP22::balance_of --args 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 ```
 
-
-
 Congrats! You have successfully used a PSP22 contract to mint a token and call its transfer message.
+
+**Need help?**
+
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

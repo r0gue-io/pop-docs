@@ -1,6 +1,6 @@
-# Call your contract
+# Call
 
-> **⚠️ Note:** This guide supports ink! v5 by default. For experimenting with ink! v6, please refer to our [migration guide](./migrating-to-inkv6.md).
+> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
 
 Now that your contract is deployed, we can interact with it.
 
@@ -12,7 +12,7 @@ Interact with your deployed contract **with** Pop CLI's interactive guidance by 
 pop call contract
 ```
 
-Grab the contract address that was outputted from the [previous step](deploy-your-contract-locally/deploy-locally-on-a-solochain.md).
+Grab the contract address that was outputted from the [previous step](broken-reference).
 
 > If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
 
@@ -54,8 +54,6 @@ pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK
 > **Gas Estimate**
 >
 > Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on the network, and it will cost gas.
->
->
 >
 > Typically it is useful for you to estimate how much gas the call will cost. Fortunately you can do this with the `--dry-run` flag:
 >
@@ -111,8 +109,6 @@ The `value` is now `true`.
 Awesome, you now know how to make calls to your smart contract.
 
 \
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

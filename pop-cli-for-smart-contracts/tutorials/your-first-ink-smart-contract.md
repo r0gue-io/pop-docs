@@ -25,6 +25,8 @@ On completion of this tutorial, developers will be able to:
 
 Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this tutorial.
 
+🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
+
 ```
 cargo install --force --locked pop-cli
 ```
@@ -195,12 +197,6 @@ Congrats! Your contract is deployed!
 
 * [https://use.ink](https://use.ink)
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
-
-### Feedback <a href="#feedback" id="feedback"></a>
-
-> [Take a minute to give us feedback on this tutorial so we can improve it!](https://github.com/r0gue-io/pop-cli/discussions/categories/general)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
