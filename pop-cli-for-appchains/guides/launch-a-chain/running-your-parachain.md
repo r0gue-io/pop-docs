@@ -1,4 +1,4 @@
-# Running your parachain
+# Launch a Chain in Development
 
 To run your parachain, you will need to spin up a local network with your parachain configuration.
 
@@ -84,8 +84,6 @@ Congrats! You have now spun up a network with your parachain running!
   * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

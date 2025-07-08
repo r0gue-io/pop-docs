@@ -1,4 +1,4 @@
-# Call a chain
+# Call
 
 ### Interactive Guidance (Recommended)
 
@@ -65,8 +65,6 @@ pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
 └  Call complete.
 ```
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

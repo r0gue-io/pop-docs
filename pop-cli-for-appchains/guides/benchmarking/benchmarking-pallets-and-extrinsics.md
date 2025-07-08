@@ -1,12 +1,12 @@
-# Benchmarking Pallets and Extrinsics
+# Benchmarking
 
 [Benchmarking in the Polkadot SDK/Substrate](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) measures execution time and resource usage for pallets and extrinsics, ensuring accurate weight calculations and optimal performance.
 
-<figure><img src="../../.gitbook/assets/popbench.gif" alt="pop bench pallet"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/popbench.gif" alt="pop bench pallet"><figcaption></figcaption></figure>
 
 With Pop CLI, you can benchmark pallets and extrinsics interactively by managing parameters efficiently. Run the following command to start benchmarking:
 
-``` bash
+```bash
 pop bench pallet
 ```
 
@@ -17,7 +17,6 @@ Note that the command requires the `frame-omni-bencher` binary to be installed o
 **Provide a runtime to benchmark**
 
 The command requires a runtime built with the `runtime-benchmarks` feature. Pop CLI detects available runtimes in your project, allowing you to choose one if multiple exist.
-
 
 ```bash
 ◇  Choose the build profile of the binary that should be used:
@@ -54,8 +53,9 @@ pop bench pallet --no-build
 > Genesis builder policy defines the way to construct the [initial genesis state](https://docs.polkadot.com/develop/parachains/deployment/generate-chain-specs/).
 
 There are two options for the genesis builder policy:
-- `none`: Do not provide any genesis state.
-- `runtime`: Use the runtime's genesis preset.
+
+* `none`: Do not provide any genesis state.
+* `runtime`: Use the runtime's genesis preset.
 
 To configure the genesis builder manually, you can use the `--genesis-builder` flag. For example:
 
@@ -103,6 +103,7 @@ You'll be prompted to benchmark all pallets or select a specific one. Pop CLI li
 ```
 
 You can simply search for pallets by typing their name and selecting them from the list.
+
 ```bash
 ◆  🔎 Search for a pallet to benchmark
 │  pallet_time
@@ -250,12 +251,9 @@ pop bench --help
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
-
 * To learn about benchmarking, [Polkadot Docs - Benchmarking](https://docs.polkadot.com/develop/parachains/testing/benchmarking/) provides all the fundamentals.
 * More advanced breakdown of benchmarking is covered in [Polkadot SDK Docs - Frame Benchmarking Weight](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/frame_benchmarking_weight/index.html).
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

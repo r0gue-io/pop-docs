@@ -2,7 +2,7 @@
 description: The following guide shows how to acquire coretime.
 ---
 
-# Coretime
+# Acquire Coretime
 
 In order to get a chain's block validated and finalised by the Relay chain it needs to acquire [coretime](https://wiki.polkadot.network/docs/learn-agile-coretime).
 
@@ -11,6 +11,7 @@ Acquire coretime using the following command:
 ```bash
 pop call chain --url <relay_endpoint>
 ```
+
 ```bash
 ┌   Pop CLI : Call a chain
 │
@@ -40,22 +41,17 @@ pop call chain --url <relay_endpoint>
 
 If the event `OnDemandOrderPlaced` is returned it means that your block will be validated and finalised!
 
-> Note:
-In the example above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts.
-For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
-
+> Note: In the example above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts. For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
 
 ## Resources
 
 #### Learning Resources
 
-* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html)
+* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain_deployment.html)
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-    * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-    * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-    * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

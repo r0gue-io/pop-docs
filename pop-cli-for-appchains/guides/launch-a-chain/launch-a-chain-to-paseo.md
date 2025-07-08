@@ -1,6 +1,5 @@
 ---
-description: >-
-  This guide shows how launch a chain on Paseo (Local or Live)
+description: This guide shows how launch a chain on Paseo (Local or Live)
 ---
 
 # Launch a Chain to Paseo
@@ -9,7 +8,7 @@ description: >-
 
 #### Paseo Local
 
-If you want to test onboarding a chain on your local machine you need to [launch Paseo](./launch-paseo.md).
+If you want to test onboarding a chain on your local machine you need to [launch Paseo](launch-paseo.md).
 
 #### Paseo Live
 
@@ -26,12 +25,12 @@ See here how to [generate keys](keys.md).
 When running a parachain collator, you typically need **two** distinct key pairs:
 
 1. **Stash Account** – A “long-term savings” or bonded account used for staking or holding tokens on behalf of the collator. This account holds the majority of your funds but is kept protected from routine usage.
-
 2. **Session Key** – The account the collator uses to sign and produce blocks in the network. If compromised, an attacker only gains the ability to author blocks, not access the stash account’s large reserve of funds.
 
 > **Collator:** A collator is the parachain node responsible for producing blocks and maintaining the parachain’s state.
 
 ### Chain Manager Key
+
 This account pays for actions like para ID reservation, parachain registration, and acquiring coretime.
 
 ### Fund Chain Manager
@@ -43,6 +42,7 @@ Now that we have a Chain Manager account we need to fund this account with token
 ```bash
 pop call chain --pallet Balances --function transfer_allow_death --url ws://localhost:57731/ --suri //Alice
 ```
+
 ```bash
 ┌   Pop CLI : Call a chain
 │
@@ -58,7 +58,7 @@ pop call chain --pallet Balances --function transfer_allow_death --url ws://loca
 ...
 ```
 
-> Note: the `--url ws://localhost:57731` parameter should point to a [Paseo Local node](./launch-paseo.md#network-endpoints).
+> Note: the `--url ws://localhost:57731` parameter should point to a [Paseo Local node](launch-paseo.md#network-endpoints).
 
 #### Paseo Live
 
@@ -67,9 +67,11 @@ Request PAS tokens on [Paseo Faucet](https://faucet.polkadot.io/).
 ## Setting up the Chain
 
 For the sake of this exercise, let's create a new chain project:
+
 ```
 pop new parachain my-chain
 ```
+
 > The folder includes a `network.toml` file which can be ignored. This is to launch a network with the chain already onboarded.
 
 ### Generate the chain spec
@@ -78,13 +80,13 @@ The chain specification holds all the information the node requires to start or 
 
 Let's generate a chain spec:
 
-<figure><img src="../../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption></figcaption></figure>
 
 > For more advanced customization `pop build spec --help`
 
-Open the `chain-spec.json` file in your editor.&#x20;
+Open the `chain-spec.json` file in your editor.
 
-Make sure to edit your chain spec and:&#x20;
+Make sure to edit your chain spec and:
 
 * **add your account and session keys**
 * **specify the starting balance of specific accounts**
@@ -169,6 +171,7 @@ Since we have modified our chain spec, we will need to re-generate the raw chain
 ```bash
 pop build spec --chain chain-spec.json --disable-default-bootnode --genesis-state --genesis-code  
 ```
+
 ```bash
 ┌   Pop CLI : Generate your chain spec
 │
@@ -192,6 +195,7 @@ The chain spec file can be found in the output of `pop up network -f network --v
 cd my-chain
 cp /var/folders/vl/txnq6gdj22s9rn296z0md27w0000gn/T/zombie-ddb5d2aa-704b-4658-af64-3cf9e3be5573/alice/cfg/paseo-local.json paseo-local-raw.json
 ```
+
 > Note: Your Paseo chain spec path may differ from the example above.
 
 #### Paseo Live
@@ -260,6 +264,7 @@ http://localhost:8845
 ```
 
 Well done! Now look at the logs of your chain and you should see it being synced with Paseo!!!
+
 ```bash
 2024-12-10 09:06:05 [Relaychain] Warp sync is complete, continuing with state sync.    
 2024-12-10 09:06:06 [Relaychain] State sync is complete, continuing with block sync.    
@@ -271,16 +276,16 @@ Last step is to onboard the chain to Paseo.
 
 ### Onboard Chain to Paseo
 
-`pop up` simplifies the process of onboarding a chain to Paseo by automating both the reservation of an ID and its registration. Take the generated genesis state (`para-2000-genesis-state`) and genesis code (`para-2000.wasm`) and run: 
- 
+`pop up` simplifies the process of onboarding a chain to Paseo by automating both the reservation of an ID and its registration. Take the generated genesis state (`para-2000-genesis-state`) and genesis code (`para-2000.wasm`) and run:
+
 ```bash
 pop up --genesis-state ./para-2000-genesis-state --genesis-code para-2000.wasm 
 ```
 
 <figure><img src="../.gitbook/assets/register.gif" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
 
-
 #### Manual registration
+
 If you prefer, you can still execute the steps separately using `pop call chain`.
 
 We can reserve a para ID for the chain using pop cli:
@@ -288,7 +293,7 @@ We can reserve a para ID for the chain using pop cli:
 ```bash
 pop call chain --url ws://localhost:57731
 ```
- 
+
 ```bash
 ┌   Pop CLI : Call a chain
 │
@@ -356,23 +361,19 @@ Now we register the para ID with the generated genesis state (`para-2000-genesis
 
 Your chain is now registered on Paseo and should produce a block!
 
-In order to validate and get your block finalised by the Relay chain, see [here](./coretime.md) how to acquire core time.
+In order to validate and get your block finalised by the Relay chain, see [here](coretime.md) how to acquire core time.
 
-> Note:
-In the examples above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts.
-For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
+> Note: In the examples above, you are prompted to provide a `<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts. For production accounts and enhanced security, Pop CLI offers the `--use-wallet` option to securely sign transactions. Refer to the [Securely sign transactions from CLI guide](../securely-sign-transactions-from-cli.md) for detailed instructions.
 
 ## Resources
 
 #### Learning Resources
 
-* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html)
+* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain_deployment.html)
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
   * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

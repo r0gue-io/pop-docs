@@ -2,7 +2,7 @@
 description: The following guide shows how to test runtime upgrades.
 ---
 
-# Testing Runtime Upgrades
+# Test runtime upgrades
 
 A key feature of Substrate is its support for forkless upgrades. Testing the blockchain runtime upgrade process is essential to ensure a seamless network transition without disruptions.
 
@@ -34,14 +34,13 @@ By running the command `pop test on-runtime-upgrade`, you can test the [Runtime 
 
 Before running the migration, you will be prompted to confirm if you want to specify which runtime to run the migration on:
 
-- If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](../pop-cli/build.md).
+* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](broken-reference).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. Pop CLI will automatically build the runtime if not found.
 
-- If not, the migration will be run against the code that's currently running on the remote node or the one stored inside the snapshot file you provide.
+* If not, the migration will be run against the code that's currently running on the remote node or the one stored inside the snapshot file you provide.
 
 > Snapshot can be created with `pop test create-snapshot`.
-
 
 ### Test migrations against a live chain
 
@@ -70,7 +69,7 @@ pop test on-runtime-upgrade \
     --at=0x1234567890abcdef1234567890abcdef
 ```
 
-**_Note_**: The specified runtime and the remote node's runtime must have the same name and version. If not, the migration will fail. You can add the flag `--disable-spec-version-check` and `--disable-spec-name-check` to bypass the checks.
+_**Note**_: The specified runtime and the remote node's runtime must have the same name and version. If not, the migration will fail. You can add the flag `--disable-spec-version-check` and `--disable-spec-name-check` to bypass the checks.
 
 ```bash
 pop test on-runtime-upgrade \
@@ -147,11 +146,8 @@ pop test on-runtime-upgrade \
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
 * 🧑‍🔧 For technical introduction of the `try-runtime`, [here](https://paritytech.github.io/try-runtime-cli/try_runtime/).
-
 * Learn more about [Runtime Upgrades](https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/) and [Storage Migrations](https://docs.polkadot.com/develop/parachains/maintenance/storage-migrations).
 
-**Technical Support**
+**Need help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-  * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-  * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!

@@ -2,12 +2,12 @@
 description: The following guide shows how to generate keys.
 ---
 
-# Keys
+# Set up keys
 
 There are multiple ways to generate [keys](https://wiki.polkadot.network/docs/learn-accounts) (accounts) on Polkadot, such as:
 
-* [PolkadotJs Signer](https://polkadot.js.org/) or any other custodial&#x20;
-* [PolkaVault](https://wiki.polkadot.network/docs/polkadot-vault)&#x20;
+* [PolkadotJs Signer](https://polkadot.js.org/) or any other custodial
+* [PolkaVault](https://wiki.polkadot.network/docs/polkadot-vault)
 * [Subkey](https://paritytech.github.io/polkadot-sdk/master/subkey/index.html)
 
 > Account creation should be done securely, such as using an air-gapped computer.
@@ -50,18 +50,16 @@ Secret phrase:       innocent throw harsh wild example reflect sausage leopard l
 ```
 
 > This your key (Polkadot account). Save the secret phrase in a vault securely and never share it.
- 
+
 ## Resources
 
 #### Learning Resources
 
-* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html)
+* [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain_deployment.html)
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-    * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
-**Technical Support**
+**Technical SupportNeed help?**
 
-* [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
-    * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
-    * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop\_support)
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
