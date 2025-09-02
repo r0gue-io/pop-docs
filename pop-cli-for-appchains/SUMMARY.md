@@ -20,6 +20,7 @@
 * [Call](guides/call-a-chain.md)
 * [Deploy](guides/launch-a-chain/README.md)
   * [Launch a Chain in Development](guides/launch-a-chain/running-your-parachain.md)
+  * [Launch a Known Chain](guides/launch-a-chain/launch-a-known-chain.md)
   * [Launch a Chain to Paseo](guides/launch-a-chain/launch-a-chain-to-paseo.md)
     * [Launch Paseo](guides/launch-a-chain/launch-paseo.md)
     * [Set up keys](guides/launch-a-chain/keys.md)
