@@ -4,13 +4,14 @@ description: Hash data quickly for identifiers, integrity checks, and tooling wh
 
 # Hashing with Pop CLI
 
-When you're building on Polkadot, you'll often need hashes — to verify files, derive stable identifiers, or work with
-chain primitives. The `pop hash` command gives you a fast, convenient way to generate these hashes without juggling
-separate tools.
+When you're building on Polkadot, you'll often
+need [hashes](https://docs.polkadot.com/polkadot-protocol/parachain-basics/cryptography/#hash-functions) — to verify
+files, derive stable identifiers, or work with chain primitives. The `pop hash` command gives you a fast, convenient way
+to generate these hashes without juggling separate tools.
 
 ## What you can use it for
 
-- Verify integrity of artifacts (WASM, configs, datasets) before committing or deploying.
+- Verify the integrity of artifacts (WASM, configs, datasets) before committing or deploying.
 - Turn strings or hex into deterministic IDs for testing or scripting.
 - Hash raw transaction/storage bytes when inspecting or debugging.
 - Produce quick, non-cryptographic checksums during development loops.
