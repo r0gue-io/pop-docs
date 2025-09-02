@@ -52,7 +52,7 @@ name = "charlie"
 validator = true
 ```
 
-As you can see, the sudo account (admin of the chain) is overridden with `Alice` account. This allows us to make changes to Paseo Local if needed.
+> For more details on network configuration files, check the [Zombienet documentation](https://docs.polkadot.com/develop/toolkit/parachains/spawn-chains/zombienet/get-started/?utm_source=chatgpt.com#configure-zombienet)
 
 Run the network:
 
