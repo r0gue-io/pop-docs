@@ -4,6 +4,10 @@ description: This guide will teach how to bridge tokens from Paseo (Asset Hub) t
 
 # Get tokens on Pop Network
 
+## Important note
+
+Pop Network is deprioritised and will not be deployed to Polkadot. Testnet will be sunsetted Decemeber 31 2025. More information on this decision can be found [here](https://forum.polkadot.network/t/final-update-pop-network-treasury-proposal-683/14663).
+
 ## Introduction
 
 Pop uses the Polkadot Relay chain's native token: **DOT**.&#x20;
