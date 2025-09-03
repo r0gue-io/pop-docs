@@ -30,3 +30,4 @@
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
 * [Hash](guides/hashing.md)
+* [Conversions](guides/address-conversion.md)
