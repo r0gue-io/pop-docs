@@ -29,3 +29,4 @@
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
+* [Hash](guides/hashing.md)
