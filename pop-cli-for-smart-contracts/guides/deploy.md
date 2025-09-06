@@ -56,7 +56,7 @@ pop up -path ./my_contract \
   --suri <your-SURI-or-use-wallet> 
 ```
 
-Alternatively, use `--use-wallet` to [sign via browser wallet](call-your-contract/securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.
+Alternatively, use `--use-wallet` to [sign via browser wallet](securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.
 
 ### Gas
 

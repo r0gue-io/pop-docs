@@ -12,8 +12,8 @@
 * [Build](guides/build-your-contract.md)
 * [Test](guides/run-your-unit-tests.md)
 * [Deploy](guides/deploy.md)
-* [Call](guides/call-your-contract/README.md)
-  * [Securely Sign Transactions from CLI](guides/call-your-contract/securely-sign-transactions-from-cli.md)
+* [Call](guides/call-your-contract.md)
+* [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Get tokens on Pop (Testnet)](guides/bridge-tokens-to-pop-network.md)
 
 ## TUTORIALS

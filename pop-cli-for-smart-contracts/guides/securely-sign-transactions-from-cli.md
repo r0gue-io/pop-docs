@@ -4,7 +4,7 @@ Pop CLI provides an option to securely sign transactions from the CLI. It does t
 
 ## Example Usage: Deploying a Contract
 
-For a full guide on deploying a contract, see the [Deploy Your Contract Locally](../deploy-your-contract-locally.md) guide.
+For a full guide on deploying a contract, see the [Deploy Your Contract Locally](deploy-your-contract-locally.md) guide.
 
 Normally, you would provide `--suri=<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts. For production accounts and more secure signing, Pop CLI provides the `--use-wallet` option that you can use.
 
@@ -24,29 +24,29 @@ This will open a signing portal in your browser. Pop CLI will display the follow
 
 Your browser will open a new tab with the following screen at http://127.0.0.1:9090 (or similar if the port is already in use);
 
-<figure><img src="../../.gitbook/assets/use-wallet/unconnected-wallet.png" alt="" width="450"><figcaption><p>Signing Portal Initial Open</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/unconnected-wallet.png" alt="" width="450"><figcaption><p>Signing Portal Initial Open</p></figcaption></figure>
 
 Click on the `Connect Wallet` button to connect your browser extension wallet.
 
-<figure><img src="../../.gitbook/assets/use-wallet/connect-wallet.png" alt="" width="450"><figcaption><p>Connect Wallet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/connect-wallet.png" alt="" width="450"><figcaption><p>Connect Wallet</p></figcaption></figure>
 
 After connecting your wallet, you will have the option to choose your account and sign the transaction, and finally see the transaction details for signing. Note that for contract calls, the portal will perform a dry-run to alert you if the transaction will succeed, and also estimate the gas costs.
 
-<figure><img src="../../.gitbook/assets/use-wallet/connected-wallet.png" alt="" width="450"><figcaption><p>Transaction Details</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/connected-wallet.png" alt="" width="450"><figcaption><p>Transaction Details</p></figcaption></figure>
 
 If the transaction will fail, the dry-run alert will change:
 
-<figure><img src="../../.gitbook/assets/use-wallet/fail-dry-run.png" alt="" width="450"><figcaption><p>Failing Dry Run</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/fail-dry-run.png" alt="" width="450"><figcaption><p>Failing Dry Run</p></figcaption></figure>
 
 In this case, you can expand the dry-run alert to see the error details. This example shows an error of the account not having enough funds:
 
-<figure><img src="../../.gitbook/assets/use-wallet/expanded-dry-run-fail.png" alt="" width="450"><figcaption><p>Expanded Failing Dry Run</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/expanded-dry-run-fail.png" alt="" width="450"><figcaption><p>Expanded Failing Dry Run</p></figcaption></figure>
 
 Once ready to sign, pressing the `Submit` button will open your wallet for signature.
 
 > ⚠️ **It is important to verify transaction details in your wallet before signing.**
 
-<figure><img src="../../.gitbook/assets/use-wallet/talisman-signing.png" alt="" width="450"><figcaption><p>Opened Wallet for Signing</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/use-wallet/talisman-signing.png" alt="" width="450"><figcaption><p>Opened Wallet for Signing</p></figcaption></figure>
 
 Signing the transaction will show a success message in the portal. You may close the portal after signing.
 
