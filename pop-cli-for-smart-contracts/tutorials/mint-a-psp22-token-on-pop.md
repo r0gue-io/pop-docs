@@ -1,5 +1,6 @@
 ---
 description: This tutorial will teach you how to mint a PSP22 token on Pop
+hidden: true
 ---
 
 # Mint a PSP22 token on Pop
