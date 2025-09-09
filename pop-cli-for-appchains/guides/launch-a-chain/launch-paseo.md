@@ -36,7 +36,7 @@ As you can see, the sudo account (admin of the chain) is overridden with `Alice`
 Run the network:
 
 ```
-pop up network -f paseo-local.toml --verbose
+pop up network ./paseo-local.toml --verbose
 ```
 
 {% hint style="info" %}
@@ -45,7 +45,7 @@ For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
 
 > The `--verbose` flag provides us with extra information such as the location of the Paseo Local chain spec file.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up network -f paseo-local.toml --verbose</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up network ./paseo-local.toml --verbose</p></figcaption></figure>
 
 Paseo Local should now be running on your machine and producing blocks!
 

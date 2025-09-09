@@ -228,7 +228,7 @@ name = "pop"
 We can now use the configuration file to spin up the network.
 
 ```
-pop up network -f ./network.toml -p https://github.com/r0gue-io/pop-node
+pop up network ./network.toml -p https://github.com/r0gue-io/pop-node
 
 ┌   Pop CLI : Deploy a parachain
 │

@@ -276,7 +276,7 @@ This `network.toml` file will spin up a Relay chain (`rococo-local`) with two va
 So now let's use the `network.toml` configuration.
 
 ```
-pop up network -f network.toml -p https://github.com/r0gue-io/pop-node
+pop up network ./network.toml -p https://github.com/r0gue-io/pop-node
 ```
 
 > This command may take some time if it requires you to download the Polkadot binaries
@@ -445,4 +445,3 @@ In this tutorial we learned how to create an NFTs ink! smart contract using Pop 
 Try to implement a `mint` function using Pop API. Then re-build the contract (`pop build contract`), deploy the new contract, and test it by calling the contract.
 
 You can find the solution for minting an NFT [here](https://github.com/r0gue-io/pop-node/blob/bc4154028a22be2d8cf9b5a4aab897a184ceb230/pop-api/examples/nfts/lib.rs#L60-L96).
-
