@@ -48,7 +48,7 @@ name = "collator-01"
 Cool. Let's spin this up, ensuring that your parachain binary has been built using `pop build parachain`.
 
 ```shell
-pop up network -f ./network.toml
+pop up ./network.toml
 ```
 
 If this is the first time you are running the `pop up` command, it will prompt you to source the required Polkadot binaries. This will take some time, grab some coffee.

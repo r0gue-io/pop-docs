@@ -17,7 +17,7 @@ pop up network --help
 To run a command post-initialization of the network, you can use the `--cmd` flag:
 
 ```bash
-pop up network -f ./tests/networks/pop.toml --cmd path/to/command
+pop up ./tests/networks/pop.toml --cmd path/to/command
 ```
 
 Here is an example of a simple script to update account balances on the Polkadot Relay chain:
@@ -55,7 +55,7 @@ validator = true
 Spin up the Polkadot Relay chain with Pop CLI:
 
 ```
-pop up network -f network.toml -r v1.8.0 --cmd ./target/debug/set-balance
+pop up network ./network.toml -r v1.8.0 --cmd ./target/debug/set-balance
 ```
 
 ```

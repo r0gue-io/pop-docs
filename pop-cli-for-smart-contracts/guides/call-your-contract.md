@@ -9,7 +9,7 @@ Now that your contract is deployed, we can interact with it.
 Interact with your deployed contract **with** Pop CLI's interactive guidance by simply entering:
 
 ```shell
-pop call contract
+pop call
 ```
 
 Grab the contract address that was outputted from the [previous step](broken-reference).
