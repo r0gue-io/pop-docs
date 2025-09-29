@@ -20,7 +20,7 @@ Pop CLI supports ink! v6 through the `polkavm-contracts` feature flag.
 To install it from the experimental branch, run:
 
 ```
-cargo install --git https://github.com/r0gue-io/pop-cli.git --branch v6.0.0-alpha.3 --no-default-features --locked -F polkavm-contracts,chain,telemetry
+cargo install --git https://github.com/r0gue-io/pop-cli.git --branch v6.0.0-alpha.4 --locked
 ```
 
 > **⚠️ Note:** Make sure you're using `Rust 1.89` or higher, older versions will fail to compile. You can check your version with rustc `--version`.
@@ -35,10 +35,10 @@ If you already have an ink! smart contract, update your dependencies as follows:
 
 ```toml
 [dependencies]
-ink = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.3", default-features = false }
+ink = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.4", default-features = false }
 
 [dev-dependencies]
-ink_e2e = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.3" }
+ink_e2e = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.4" }
 ```
 
 For a complete example, check the [ink! flipper example](https://github.com/use-ink/ink-examples/tree/v6.x/flipper).
