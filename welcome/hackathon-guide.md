@@ -77,9 +77,12 @@ pop call chain # `pop call chain  --use-wallet`
 # 5) Register the rollup on Paseo or deploy using Polkadot Deployment Portal
 pop up
 # And follow the interactive guide:
+┌   Pop CLI : Deploy a rollup
+│
+◆  Select your deployment method:
+│  ● Polkadot Deployment Portal (https://staging.deploypolkadot.xyz)
+│  ○ Register
 ```
-<figure><img src="../.gitbook/assets/pdpflow.png" alt="pop up"><figcaption><p>pop up flow</p></figcaption></figure>
-
 
 ##### Handy Links
 - [Launch a Chain in Development](../pop-cli-for-appchains/guides/launch-a-chain/running-your-parachain.md)
@@ -120,15 +123,16 @@ pop call contract # `pop call contract  --use-wallet`
 
 
 ### Support & Contribute
+
+- Questions / help? Join our [Telegram](https://web.telegram.org/k/#@pop_support)
+
+- Follow updates on [X](https://x.com/onpopio)
+
+- Found a *bug* or have a *feature request*? [Open an issue](https://github.com/r0gue-io/pop-cli/issues)
+
+- *Want to contribute?* Check out open issues tagged [`good first issue`](https://github.com/r0gue-io/pop-cli/issues?q=is%3Aissue+state%3Aopen+label%3A%22good+first+issue%22)
+
 <figure>
   <img src="../.gitbook/assets/onpopio-hackathon.png" alt="Pop CLI" />
 </figure>
-- Questions / help? Join our Telegram: https://web.telegram.org/k/#@pop_support
-
-- Follow updates on X: https://x.com/onpopio
-
-- Found a *bug* or have a *feature request*? Open an issue: https://github.com/r0gue-io/pop-cli/issues
-
-- *Want to contribute?* Check out open issues tagged `good first issue`:
-https://github.com/r0gue-io/pop-cli/issues?q=is%3Aissue+state%3Aopen+label%3A%22good+first+issue%22
 
