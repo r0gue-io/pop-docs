@@ -30,7 +30,7 @@ Set up your development environment:
 To build Polkadot SDK–based chains, make sure your local toolchain is ready. The [Install Polkadot SDK Dependencies](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/) guide covers this step by step. 
 
 Or automate it with:
-```
+```bash
 pop install
 ```
 
