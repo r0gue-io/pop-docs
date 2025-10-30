@@ -2,7 +2,7 @@
 description: Generate a plain chain specification and optional artifacts for your chain.
 ---
 
-# Build a Chain Spec
+# Build you Chain Spec
 
 The chain specification ("chain spec") captures the initial state and configuration of your chain. Nodes use it to start
 a network or to join and sync with an existing one. With Pop CLI you can generate a plain chain spec interactively or
@@ -83,11 +83,10 @@ Notes about flags:
 - The --package flag is available to explicitly set the runtime package name when doing a deterministic build; if
   omitted, Pop CLI will infer it from the runtime directory.
 
-{% hint style="info" %}
-Omni-node-based chains: If your chain uses the community polkadot-omni-node host (ships only a runtime), you can still
+> [!TIP]
+> Omni-node-based chains: If your chain uses the community `polkadot-omni-node` host (ships only a runtime), you can still
 use `pop build spec` the same way. Deterministic builds are recommended; Pop can also auto-source the
 `polkadot-omni-node` binary when needed in related workflows.
-{% endhint %}
 
 ## Command reference
 
@@ -101,14 +100,17 @@ Options:
       --path <PATH>                          Directory path for your project [default: current directory] [default: ./]
   -o, --output <OUTPUT_FILE>                 File name for the resulting spec. If a path is given, the necessary directories will be created
       --profile <PROFILE>                    Build profile for the binary to generate the chain specification
-  -i, --id <ID>                              Parachain ID to be used when generating the chain spec files
+  -i, --para-id <PARA_ID>                    Parachain ID to be used when generating the chain spec files
   -b, --default-bootnode <DEFAULT_BOOTNODE>  Whether to keep localhost as a bootnode [possible values: true, false]
   -t, --type <CHAIN_TYPE>                    Type of the chain [possible values: development, local, live]
       --features <FEATURES>                  Comma-separated list of features to build the node or runtime with [default: ]
       --skip-build                           Whether to skip the build step or not. If artifacts are not found, the build will be performed regardless
   -c, --chain <CHAIN>                        Provide the chain specification to use (e.g. dev, local, custom or a path to an existing file)
+  -R, --is-relay                             Generate a relay chain specification
   -r, --relay <RELAY>                        Relay chain this parachain will connect to [possible values: paseo, paseo-local, westend, westend-local, kusama,
                                              kusama-local, polkadot, polkadot-local]
+  -n, --name <NAME>                          Name to be used in the specification
+      --id <ID>                              Id to be used in the specification
   -P, --protocol-id <PROTOCOL_ID>            Protocol-id to use in the specification
   -p, --properties <PROPERTIES>              The chain properties to use in the specification. For example, "tokenSymbol=UNIT,decimals=12"
   -S, --genesis-state <GENESIS_STATE>        Whether the genesis state file should be generated [possible values: true, false]
@@ -117,6 +119,7 @@ Options:
                                              values: true, false]
       --runtime <runtime>                    Define the directory path where the runtime is located
       --package <PACKAGE>                    Specify the runtime package name. If not specified, it will be automatically determined based on `runtime`
+      --raw                                  Generate a raw chain specification
   -h, --help                                 Print help
 ```
 
@@ -125,14 +128,10 @@ Options:
 Depending on the flags used you’ll get:
 
 - A plain chain spec JSON.
-- A raw chain spec JSON.
+- Optionally, a raw chain spec JSON.
 - Optionally, a genesis state file.
 - Optionally, a genesis wasm code file.
 
-## Next steps
-
-- Open your chain-spec.json and edit fields like accounts, balances, sudo, and session keys as needed.
-- Use the spec to launch locally with `pop up` or onboard to a relay chain (see Launch a Chain guides).
 
 #### Learning Resources
 

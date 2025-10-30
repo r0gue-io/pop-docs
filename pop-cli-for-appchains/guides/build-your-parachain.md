@@ -7,9 +7,8 @@ cd my-appchain
 pop build
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
-{% endhint %}
+> [!TIP]
+> For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
 
 ```
 ┌   Pop CLI : Building a parachain
@@ -27,9 +26,8 @@ If you are outside the project's directory, you can specify the path
 pop build -p ./my-appchain
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
-{% endhint %}
+> [!TIP]
+> For Pop CLI versions <`0.3.0` the `pop build` command is `pop build parachain`
 
 If you are building the parachain with the intent to onboard the parachain to a Polkadot Relay chain then you can run the following build command:
 

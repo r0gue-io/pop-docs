@@ -39,9 +39,8 @@ Run the network:
 pop up network ./paseo-local.toml --verbose
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
-{% endhint %}
+> [!TIP]
+> For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
 
 > The `--verbose` flag provides us with extra information such as the location of the Paseo Local chain spec file.
 

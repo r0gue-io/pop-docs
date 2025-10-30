@@ -16,6 +16,7 @@
   * [Create an EVM parachain](guides/create-a-new-parachain/create-an-evm-parachain.md)
 * [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
 * [Build](guides/build-your-parachain.md)
+  * [Build your chain specification](guides/build-spec.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
 * [Call](guides/call-a-chain.md)
 * [Deploy](guides/launch-a-chain/README.md)

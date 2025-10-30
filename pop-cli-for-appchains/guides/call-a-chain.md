@@ -48,6 +48,10 @@ If you prefer not to use interactive prompts, you can call the chain by specifyi
 
 You can execute an extrinsic by specifying the pallet and function (dispatchable function name) and any arguments.
 
+> [!TIP]
+> If you receive "Pallet not found" or "Function not found" errors, double-check the case of your pallet and function
+> names. Common examples: use "Balances" (not "balances"), "transfer_keep_alive" (not "transferKeepAlive").
+
 ```shell
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```

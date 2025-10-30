@@ -8,9 +8,8 @@ The `pop up` command can help with this.
 pop up network --help
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
-{% endhint %}
+> [!TIP]
+> For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
 
 Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
