@@ -148,48 +148,6 @@ This is particularly useful for scripting and automation.
 When prompted for a chain, you can select "Custom" to quickly type the chain URL manually, accelerating the process when
 you already know the endpoint.
 
-### Command Reference
-
-```
-$ pop call chain --help
-Call a chain
-
-Usage: pop call chain [OPTIONS]
-
-Options:
-  -p, --pallet <PALLET>
-          The pallet containing the dispatchable function to execute
-
-  -f, --function <FUNCTION>
-          The dispatchable function, storage item, or constant to execute/query within the specified pallet. It must match the exact name as in the source code
-
-  -a, --args [<ARGS>...]
-          The dispatchable function arguments, encoded as strings
-
-  -u, --url <URL>
-          Websocket endpoint of a node
-
-  -s, --suri <SURI>
-          Secret key URI for the account signing the extrinsic.
-
-          e.g. - for a dev account "//Alice" - with a password "//Alice///SECRET_PASSWORD"
-
-  -w, --use-wallet
-          Use a browser extension wallet to sign the extrinsic
-
-  -c, --call <call>
-          SCALE encoded bytes representing the call data of the extrinsic
-
-  -S, --sudo
-          Authenticates the sudo key and dispatches a function call with `Root` origin
-
-  -y, --skip-confirm
-          Automatically signs and submits the extrinsic without prompting for confirmation
-
-  -h, --help
-          Print help (see a summary with '-h')
-```
-
 ### Interactive Features
 
 When using the interactive mode, you'll experience:

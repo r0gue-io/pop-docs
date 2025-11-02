@@ -50,11 +50,11 @@ If you'd prefer not to be prompted interactively, you can specify everything up 
 
 ```
 # minimal deterministic build example
-$ pop build spec --deterministic --runtime ./runtime/mainnet
+pop build spec --deterministic --runtime ./runtime/mainnet
 
 # optionally, specify the runtime package name used by srtool (if your workspace layout differs)
 # note: --package is only applicable when --deterministic is set
-$ pop build spec --deterministic --runtime ./runtime/mainnet --package parachain-template-runtime
+pop build spec --deterministic --runtime ./runtime/mainnet --package parachain-template-runtime
 ```
 
 Notes about flags:
