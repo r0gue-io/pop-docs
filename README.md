@@ -20,3 +20,7 @@ Install the Pop CLI and start building:
 
 * [Chains](https://learn.onpop.io/v/appchains)
 * [Smart Contracts](https://learn.onpop.io/v/contracts)
+
+<figure>
+  <img src="../.gitbook/assets/onpopio-hackathon.png" alt="Pop CLI" />
+</figure>

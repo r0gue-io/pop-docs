@@ -17,7 +17,7 @@ Run the command without arguments to be guided through all choices:
 pop build spec
 ```
 
-This will prompt you for key values like output file name, parachain id, relay chain, chain type, protocol id,
+This will prompt you for key values like output file name, chain id, relay chain, chain type, protocol id,
 properties, whether to generate genesis files, and whether to build and inject a deterministic runtime.
 
 <figure><img src="../.gitbook/assets/build_spec.gif" alt="pop build spec"><figcaption></figcaption></figure>
@@ -27,7 +27,7 @@ properties, whether to generate genesis files, and whether to build and inject a
 ### What you’ll typically provide
 
 - Output file name/path for the plain spec (default: ./chain-spec.json)
-- Parachain ID (default: 2000)
+- Chain (Parachain) ID (default: 2000)
 - Chain type (Development / Local / Live)
 - Relay chain (paseo, westend, kusama, polkadot and their local variants)
 - Protocol ID and optional properties (token symbol/decimals/SS58)

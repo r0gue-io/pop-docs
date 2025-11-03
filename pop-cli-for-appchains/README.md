@@ -6,4 +6,4 @@ Build custom blockchain that can operate as solo chains or connect to Polkadot f
 
 Start building with the [Polkadot documentation](https://docs.polkadot.com/).
 
-**Ready to build your first chain?** [Start here!](guides/create-a-new-parachain/)
+**Ready to build your first chain?** [Start here!](guides/create-a-new-chain.md)

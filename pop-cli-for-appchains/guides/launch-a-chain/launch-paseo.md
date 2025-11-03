@@ -39,9 +39,6 @@ Run the network:
 pop up network ./paseo-local.toml --verbose
 ```
 
-> [!TIP]
-> For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
-
 > The `--verbose` flag provides us with extra information such as the location of the Paseo Local chain spec file.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-09-24 at 12.20.38 PM.png" alt=""><figcaption><p>pop up network ./paseo-local.toml --verbose</p></figcaption></figure>
@@ -62,7 +59,7 @@ These endpoints come in handy when you want to interact with the chain (e.g. `po
 
 ## Configure Paseo Local
 
-As of now, Paseo Local doesn't provide cores to validate parachain blocks on demand. We will have to make 2 calls to Paseo Local using `Alice` as admin account.
+As of now, Paseo Local doesn't provide cores to validate chain blocks on demand. We will have to make 2 calls to Paseo Local using `Alice` as admin account.
 
 First, configure Paseo Local to set coretime cores to `1`:
 
@@ -91,7 +88,7 @@ pop up network --help
 ### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about Polkadot chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Need help?**

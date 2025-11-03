@@ -6,7 +6,7 @@ description: One-page hackathon guide for building chains and contracts with Pop
 
 ## Introduction
 
-Pop CLI is an all-in-one tool for Polkadot development. It streamlines both parachain and smart contract workflows so you can go from idea → demo during a hackathon.
+Pop CLI is an all-in-one tool for Polkadot development. It streamlines both chain and smart contract workflows so you can go from idea → demo during a hackathon.
 
 Pop CLI simplifies development with:
 
@@ -14,7 +14,7 @@ Pop CLI simplifies development with:
 - Project scaffolding from predefined templates.
 - Easy launch and management of local development networks.
 
-> See also: [Quickstart Parachain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
+> See also: [Quickstart Chain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
 
 ### Prerequisites
 
@@ -48,8 +48,8 @@ pop call contract # `pop call contract  --use-wallet`
 - [Securely Sign Transactions from CLI](../pop-cli-for-smart-contracts/guides/securely-sign-transactions-from-cli.md)
 
 
-### Chain Development (Parachains) <a href="#chain-development" id="chain-development"></a>
-Build and run a local parachain quickly; deploy when ready.
+### Chain Development <a href="#chain-development" id="chain-development"></a>
+Build and run a local chain quickly; deploy when ready.
 
 #### TL;DR Flow
 
@@ -64,9 +64,9 @@ cd my-chain && pop build --release
 pop up network -f ./network.toml
 ```
 
-Congrats! You’ve spun up a network with your parachain running!
+Congrats! You’ve spun up a network with your chain running!
 ```
-┌   Pop CLI : Deploy a parachain
+┌   Pop CLI : Deploy a chain
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
 │  ⛓️ paseo-local
@@ -99,10 +99,10 @@ pop up
 ```
 
 ##### Handy Links
-- [Launch a Chain in Development](../pop-cli-for-appchains/guides/launch-a-chain/running-your-parachain.md)
-- [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-appchains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
-- [Securely Sign Transactions from CLI](../pop-cli-for-appchains/guides/securely-sign-transactions-from-cli.md)
+- [Launch a Chain in Development](../pop-cli-for-chains/guides/launch-a-chain/running-your-chain.md)
+- [Launch a Chain to Paseo](../pop-cli-for-chains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
+- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-chains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
+- [Securely Sign Transactions from CLI](../pop-cli-for-chains/guides/securely-sign-transactions-from-cli.md)
 
 
 ### Support & Contribute

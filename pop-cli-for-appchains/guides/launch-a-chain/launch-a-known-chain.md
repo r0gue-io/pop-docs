@@ -1,24 +1,24 @@
-# Launch a Known Chain
+# Launch a known Chain
 
-With Pop CLI you can quickly spin up supported parachains without needing to prepare network configuration files.
+With Pop CLI you can quickly spin up supported chain without needing to prepare network configuration files.
 
-A `supported parachain` currently refers to one of the system parachains or `pop`. Pop CLI automatically fetches the required binaries and chain-spec generators so you can launch in seconds. Support for additional parachains may be added in the future.
+A `supported chain` currently refers to one of the system chain. Pop CLI automatically fetches the required binaries and chain-spec generators so you can launch in seconds. Support for additional chains added in the future.
 
 ### Example Usage
 
-Spin up Paseo with the Asset Hub and Passet Hub parachains:
+Spin up Paseo with the Asset Hub and Passet Hub chains:
 
 ```shell
 pop up paseo -p asset-hub,passet-hub
 ```
 
-Run Kusama on port `8833` with Asset Hub parachain assigned to `9944`:
+Run Kusama on port `8833` with Asset Hub chain assigned to `9944`:
 
 ```shell
 pop up kusama --port 8833 --parachain asset-hub:9944 -r stable2412-4
 ```
 
-Launch Polkadot with two parachains, including a specific ParaId for Pop:
+Launch Polkadot with two chains, including a specific ParaId for Pop:
 
 ```shell
 pop up polkadot --port 8833 --parachain asset-hub:9977,pop#3395:9944 -r stable2412-4
@@ -63,7 +63,7 @@ pop up network ./paseo-local.toml --verbose
 #### Learning Resources
 
 * 🧑‍🏫 To learn about [System Chains](https://wiki.polkadot.com/learn/learn-system-chains/) website is a good starting point.
-  * ⭕ Learn more about PassetHub [here](https://forum.polkadot.network/t/testnets-paseo-officially-becomes-the-polkadot-testnet-temporary-passet-hub-chain-for-smart-contracts-testing/13209).
+  * ⭕ Learn more about AssetHub [here](https://forum.polkadot.network/t/testnets-paseo-officially-becomes-the-polkadot-testnet-temporary-passet-hub-chain-for-smart-contracts-testing/13209).
 * 🧑‍🔧 For technical documentation of Paseo Network, [here](https://github.com/paseo-network).
 
 **Need help?**
