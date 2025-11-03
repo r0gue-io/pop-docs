@@ -1,6 +1,6 @@
 # Launch a known Chain
 
-With Pop CLI you can quickly spin up supported chain without needing to prepare network configuration files.
+With Pop CLI you can quickly spin up a supported chain without needing to prepare network configuration files.
 
 A `supported chain` currently refers to one of the system chain. Pop CLI automatically fetches the required binaries and chain-spec generators so you can launch in seconds. Support for additional chains added in the future.
 
