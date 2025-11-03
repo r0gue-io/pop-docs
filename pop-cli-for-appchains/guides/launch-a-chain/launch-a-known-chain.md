@@ -63,7 +63,7 @@ pop up network ./paseo-local.toml --verbose
 #### Learning Resources
 
 * 🧑‍🏫 To learn about [System Chains](https://wiki.polkadot.com/learn/learn-system-chains/) website is a good starting point.
-  * ⭕ Learn more about AssetHub [here](https://forum.polkadot.network/t/testnets-paseo-officially-becomes-the-polkadot-testnet-temporary-passet-hub-chain-for-smart-contracts-testing/13209).
+  * ⭕ Learn more about PassetHub (the temporary AssetHub testnet) [here](https://forum.polkadot.network/t/testnets-paseo-officially-becomes-the-polkadot-testnet-temporary-passet-hub-chain-for-smart-contracts-testing/13209).
 * 🧑‍🔧 For technical documentation of Paseo Network, [here](https://github.com/paseo-network).
 
 **Need help?**
