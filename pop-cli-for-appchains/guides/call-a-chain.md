@@ -56,8 +56,6 @@ You can execute an extrinsic by specifying the pallet and function (dispatchable
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```
 
-<img src="../.gitbook/assets/callchain_extrinsic.gif" alt="pop call chain">
-
 #### Querying Storage
 
 You can query storage items by specifying the pallet and function (storage item name).
@@ -71,7 +69,6 @@ pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
 pop call chain --pallet System --function Account --args 0xb815821c5b300d1667d5fc081c06cc4b6addffb90464d68d871ee363b01a127c --url wss://pas-rpc.stakeworld.io -y
 ```
 
-<img src="../.gitbook/assets/callchain_state.gif" alt="pop call chain">
 
 #### Reading Constants
 

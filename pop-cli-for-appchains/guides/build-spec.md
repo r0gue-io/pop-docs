@@ -20,7 +20,6 @@ pop build spec
 This will prompt you for key values like output file name, chain id, relay chain, chain type, protocol id,
 properties, whether to generate genesis files, and whether to build and inject a deterministic runtime.
 
-<figure><img src="../.gitbook/assets/build_spec.gif" alt="pop build spec"><figcaption></figcaption></figure>
 
 > Tip: You can press Tab to accept defaults and type to filter list selections.
 

@@ -80,8 +80,6 @@ The chain specification holds all the information the node requires to start or 
 
 Let's generate a chain spec:
 
-<figure><img src="../../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption></figcaption></figure>
-
 > For more advanced customization `pop build spec --help`
 
 Open the `chain-spec.json` file in your editor.
@@ -282,7 +280,6 @@ Last step is to onboard the chain to Paseo.
 pop up --genesis-state ./para-2000-genesis-state --genesis-code para-2000.wasm 
 ```
 
-<figure><img src="../.gitbook/assets/register.gif" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
 
 #### Manual registration
 
