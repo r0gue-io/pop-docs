@@ -1,7 +1,5 @@
 # Call
 
-> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
-
 Now that your contract is deployed, we can interact with it.
 
 ### Interactive Guidance (Recommended)

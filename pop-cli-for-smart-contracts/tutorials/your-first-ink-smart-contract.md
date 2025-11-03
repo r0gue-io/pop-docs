@@ -25,8 +25,6 @@ On completion of this tutorial, developers will be able to:
 
 Let's install the powerful [Pop CLI](https://github.com/r0gue-io/pop-cli) tool which will be used throughout this tutorial.
 
-🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
-
 ```
 cargo install --force --locked pop-cli
 ```

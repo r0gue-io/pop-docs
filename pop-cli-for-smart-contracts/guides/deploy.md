@@ -1,7 +1,5 @@
 # Deploy
 
-> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
-
 Now that we have developed our contract, tested it, we can now deploy it on a blockchain!
 
 ### Local Deployment (default)

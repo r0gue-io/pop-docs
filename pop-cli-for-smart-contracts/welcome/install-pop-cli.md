@@ -6,23 +6,20 @@
 
 #### Install Homebrew (if not installed)
 
-- Run the official installer:
+Run the official installer (more info [here](https://brew.sh)):
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-More info: https://brew.sh
-
-- Add Homebrew to your PATH (if the installer didn’t do it for you):
-
-macOS (Apple Silicon):
+Add Homebrew to your PATH (if the installer didn’t do it for you):
+- macOS (Apple Silicon):
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$([ -x /opt/homebrew/bin/brew ] && /opt/homebrew/bin/brew shellenv)"
 ```
 
-Linux:
+- Linux:
 ```bash
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
 eval "$([ -x /home/linuxbrew/.linuxbrew/bin/brew ] && /home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -33,13 +30,12 @@ Verify:
 brew --version
 ```
 
-Now install Pop CLI with Homebrew:
+#### Install Pop CLI with Homebrew:
 
 ```bash
 brew install r0gue-io/pop-cli/pop
 ```
 
-> Homebrew is available on both macOS and Linux. If you prefer or are on another OS, you can build from source instead.
 
 ### 1.2 Build from source (any OS)
 
@@ -58,3 +54,14 @@ cargo install --force --locked pop-cli
 ```bash
 pop install
 ```
+
+
+> Pop CLI targets ink! v6 by default in the latest releases. If you need ink! v5 support, install version `0.10.0`:
+>
+> ```bash
+> cargo install --locked pop-cli --version 0.10.0
+> ```
+
+**Need help?**
+
+Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
