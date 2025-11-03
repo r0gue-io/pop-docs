@@ -22,5 +22,5 @@ Install the Pop CLI and start building:
 * [Smart Contracts](https://learn.onpop.io/v/contracts)
 
 <figure>
-  <img src="../.gitbook/assets/onpopio-hackathon.png" alt="Pop CLI" />
+  <img src=".gitbook/assets/onpopio-hackathon.png" alt="Pop CLI" />
 </figure>
