@@ -13,7 +13,3 @@
 * [Deploy](guides/deploy.md)
 * [Call](guides/call-your-contract.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
-
-## TUTORIALS
-
-* [Your first ink! smart contract](tutorials/your-first-ink-smart-contract.md)
