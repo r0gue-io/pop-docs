@@ -53,7 +53,7 @@ The `ParaRegistration` proxy is designed to limit permissions strictly to paraID
 
 _Why Use a Pure Proxy?_
 
-A pure proxy enhances security by keeping private keys hidden and delegating control to an any proxy. It simplifies multisig setups by allowing signatory changes without creating a new account. Highly recommended for parachain registration!
+A pure proxy enhances security by keeping private keys hidden and delegating control to an any proxy. It simplifies multisig setups by allowing signatory changes without creating a new account. Highly recommended for chain registration!
 
 To create a pure proxy run:
 
