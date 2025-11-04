@@ -48,10 +48,10 @@ An all-in-one tool for Polkadot development.
 Usage: pop <COMMAND>
 
 Commands:
-  new    Generate a new parachain, pallet or smart contract
-  build  Build a parachain or smart contract
+  new    Generate a new chain, pallet or smart contract
+  build  Build a chain or smart contract
   call   Call a smart contract
-  up     Deploy a parachain or smart contract
+  up     Deploy a chain or smart contract
   test   Test a smart contract
   help   Print this message or the help of the given subcommand(s)
 

@@ -69,7 +69,7 @@ Request PAS tokens on [Paseo Faucet](https://faucet.polkadot.io/).
 For the sake of this exercise, let's create a new chain project:
 
 ```
-pop new parachain my-chain
+pop new chain my-chain
 ```
 
 > The folder includes a `network.toml` file which can be ignored. This is to launch a network with the chain already onboarded.
@@ -79,8 +79,6 @@ pop new parachain my-chain
 The chain specification holds all the information the node requires to start or sync with the chain's network.
 
 Let's generate a chain spec:
-
-<figure><img src="../../.gitbook/assets/buildspec.gif" alt="pop build spec"><figcaption></figcaption></figure>
 
 > For more advanced customization `pop build spec --help`
 
@@ -282,7 +280,6 @@ Last step is to onboard the chain to Paseo.
 pop up --genesis-state ./para-2000-genesis-state --genesis-code para-2000.wasm 
 ```
 
-<figure><img src="../.gitbook/assets/register.gif" alt="pop up"><figcaption><p>pop up</p></figcaption></figure>
 
 #### Manual registration
 
@@ -371,7 +368,7 @@ In order to validate and get your block finalised by the Relay chain, see [here]
 
 * [https://paritytech.github.io/devops-guide/guides/parachain\_deployment.html](https://paritytech.github.io/devops-guide/guides/parachain_deployment.html)
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about Polkadot chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Need help?**

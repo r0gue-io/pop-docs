@@ -1,7 +1,5 @@
 # Build
 
-> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
-
 Before we compile your smart contract, make sure to take a look at what an ink! contract consists of in the [documentation](https://use.ink/docs/v6/getting-started/building-your-contract).&#x20;
 
 To build your ink! smart contract, make sure you are inside your ink! smart contract directory and run the following command:

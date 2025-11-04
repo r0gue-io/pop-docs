@@ -1,7 +1,5 @@
 # Test
 
-> 🚀 **Note:** For experimenting with ink! v6, make sure to check [getting-started-with-inkv6.](../welcome/migrating-to-inkv6.md)
-
 To learn how to test your ink! smart contract, from unit tests to e2e testing workflows, go checkout the [ink! testing documentation](https://use.ink/docs/v6/contract-testing/overview).
 
 To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following command:

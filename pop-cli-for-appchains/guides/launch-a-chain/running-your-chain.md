@@ -1,6 +1,6 @@
 # Launch a Chain in Development
 
-To run your parachain, you will need to spin up a local network with your parachain configuration.
+To run your chain, you will need to spin up a local network with your chain configuration.
 
 The `pop up` command can help with this.
 
@@ -8,14 +8,10 @@ The `pop up` command can help with this.
 pop up network --help
 ```
 
-{% hint style="info" %}
-For Pop CLI versions <`0.7.0` the `pop up network` command is `pop up parachain`
-{% endhint %}
-
-Say we want to spin up a local network for your parachain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
+Say we want to spin up a local network for your chain. First we need to define a [zombienet](https://github.com/paritytech/zombienet) network configuration file. You can do this in the root of your project.
 
 ```
-cd my-appchain
+cd my-chain
 touch network.toml
 ```
 
@@ -45,7 +41,7 @@ name = "collator-01"
 
 > This network configuration will launch a relay chain using a `paseo-local` instance of Polkadot with two validator nodes to run the network: `alice` and `bob`. It will also run `parachain-template-node` with one collator node named `collator-01`.
 
-Cool. Let's spin this up, ensuring that your parachain binary has been built using `pop build parachain`.
+Cool. Let's spin this up, ensuring that your chain binary has been built using `pop build`.
 
 ```shell
 pop up ./network.toml
@@ -56,7 +52,7 @@ If this is the first time you are running the `pop up` command, it will prompt y
 Once all the binaries are sourced, you should have output similar to this.
 
 ```
-┌   Pop CLI : Deploy a parachain
+┌   Pop CLI : Deploy a chain
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
 │  ⛓️ paseo-local
@@ -73,7 +69,7 @@ Once all the binaries are sourced, you should have output similar to this.
 │
 ```
 
-Congrats! You have now spun up a network with your parachain running!
+Congrats! You have now spun up a network with your chain running!
 
 > Under-the-hood, Pop CLI uses zombienet to spin up the network.\
 > For more advanced network configurations and options consult the [zombienet repo](https://github.com/paritytech/zombienet)
@@ -81,9 +77,10 @@ Congrats! You have now spun up a network with your parachain running!
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
-  * ⭕ Learn more about parachains [here](https://wiki.polkadot.network/docs/learn-parachains).
+  * ⭕ Learn more about Polkadot chains [here](https://wiki.polkadot.network/docs/learn-parachains).
 * 🧑‍🔧 For technical introduction, [here](https://github.com/paritytech/polkadot-sdk#-documentation) are the Polkadot SDK documentation resources.
 
 **Need help?**
 
 Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
+

@@ -6,7 +6,7 @@ description: One-page hackathon guide for building chains and contracts with Pop
 
 ## Introduction
 
-Pop CLI is an all-in-one tool for Polkadot development. It streamlines both parachain and smart contract workflows so you can go from idea → demo during a hackathon.
+Pop CLI is an all-in-one tool for Polkadot development. It streamlines both chain and smart contract workflows so you can go from idea → demo during a hackathon.
 
 Pop CLI simplifies development with:
 
@@ -14,28 +14,42 @@ Pop CLI simplifies development with:
 - Project scaffolding from predefined templates.
 - Easy launch and management of local development networks.
 
-> See also: [Quickstart Parachain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
+> See also: [Quickstart Chain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
 
 ### Prerequisites
 
-Install Pop CLI:
-```bash
-cargo install --force --locked pop-cli
-```
-Confirm the installation:
-```bash
-pop --help
-```
-Set up your development environment:
-To build Polkadot SDK–based chains, make sure your local toolchain is ready. The [Install Polkadot SDK Dependencies](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/) guide covers this step by step. 
+Follow the install guide to set up Pop CLI and your environment: [Install Pop CLI](./install-pop-cli.md).
 
-Or automate it with:
+To build Polkadot SDK–based chains, ensure your local toolchain is ready: [Install Polkadot SDK Dependencies](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/).
+
+### Contract Development (ink!) <a href="#contract-development" id="contract-development"></a>
+Pop CLI introduces experimental support for [ink! v6 smart contracts](https://use.ink/docs/v6) running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`.
+
+#### TL;DR Flow
+
 ```bash
-pop install
+# 1) Scaffold (choose provider/template interactively)
+pop new contract
+
+# 2) Build your contract
+cd my-contract && pop build --release
+
+# 3) Deploy (Pop CLI will run a local network by default; add `--url` to target a remote RPC)
+pop up # `pop up --url wss://passet-hub-paseo.dotters.network`
+
+# 4) Interact with your contract (You can secure signing via browser wallet).
+pop call contract # `pop call contract  --use-wallet`
 ```
 
-### Chain Development (Parachains) <a href="#chain-development" id="chain-development"></a>
-Build and run a local parachain quickly; deploy when ready.
+##### Handy Links
+- [ink! docs](https://use.ink/docs/v6)
+- [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
+- [Your first ink! smart contract](../pop-cli-for-smart-contracts/tutorials/your-first-ink-smart-contract.md)
+- [Securely Sign Transactions from CLI](../pop-cli-for-smart-contracts/guides/securely-sign-transactions-from-cli.md)
+
+
+### Chain Development <a href="#chain-development" id="chain-development"></a>
+Build and run a local chain quickly; deploy when ready.
 
 #### TL;DR Flow
 
@@ -50,9 +64,9 @@ cd my-chain && pop build --release
 pop up network -f ./network.toml
 ```
 
-Congrats! You’ve spun up a network with your parachain running!
+Congrats! You’ve spun up a network with your chain running!
 ```
-┌   Pop CLI : Deploy a parachain
+┌   Pop CLI : Deploy a chain
 │
 ◇  🚀 Network launched successfully - ctrl-c to terminate
 │  ⛓️ paseo-local
@@ -85,41 +99,10 @@ pop up
 ```
 
 ##### Handy Links
-- [Launch a Chain in Development](../pop-cli-for-appchains/guides/launch-a-chain/running-your-parachain.md)
-- [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-appchains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
-- [Securely Sign Transactions from CLI](../pop-cli-for-appchains/guides/securely-sign-transactions-from-cli.md)
-
-
-### Contract Development (ink!) <a href="#contract-development" id="contract-development"></a>
-Pop CLI introduces experimental support for [ink! v6 smart contracts](https://use.ink/docs/v6) running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`.
-
-> ⚠️ This path is alpha. If you want to try it during the hackathon, install Pop CLI from the `v6` branch:
-```bash
-cargo install --git https://github.com/r0gue-io/pop-cli.git --branch v6.0.0-alpha.4 --locked
-```
-
-#### TL;DR Flow
-
-```bash
-# 1) Scaffold (choose provider/template interactively)
-pop new contract
-
-# 2) Build your contract
-cd my-contract && pop build --release
-
-# 3) Deploy (Pop CLI will run a local network by default; add `--url` to target a remote RPC)
-pop up # `pop up --url wss://passet-hub-paseo.dotters.network`
-
-# 4) Interact with your contract (You can secure signing via browser wallet).
-pop call contract # `pop call contract  --use-wallet`
-```
-
-##### Handy Links
-- [ink! docs](https://use.ink/docs/v6)
-- [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Your first ink! smart contract](../pop-cli-for-smart-contracts/tutorials/your-first-ink-smart-contract.md)
-- [Securely Sign Transactions from CLI](../pop-cli-for-smart-contracts/guides/securely-sign-transactions-from-cli.md)
+- [Launch a Chain in Development](../pop-cli-for-chains/guides/launch-a-chain/running-your-chain.md)
+- [Launch a Chain to Paseo](../pop-cli-for-chains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
+- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-chains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
+- [Securely Sign Transactions from CLI](../pop-cli-for-chains/guides/securely-sign-transactions-from-cli.md)
 
 
 ### Support & Contribute
