@@ -6,10 +6,10 @@ A `supported chain` currently refers to one of the system chains. Pop CLI automa
 
 ### Example Usage
 
-Spin up Paseo with the Asset Hub and Passet Hub chains:
+Spin up Paseo with Asset Hub:
 
 ```shell
-pop up paseo -p asset-hub,passet-hub
+pop up paseo -p asset-hub
 ```
 
 Run Kusama on port `8833` with Asset Hub chain assigned to `9944`:
@@ -18,10 +18,10 @@ Run Kusama on port `8833` with Asset Hub chain assigned to `9944`:
 pop up kusama --port 8833 --parachain asset-hub:9944 -r stable2412-4
 ```
 
-Launch Polkadot with two chains, including a specific ParaId for Pop:
+Launch Polkadot with Asset Hub and a specific ParaId:
 
 ```shell
-pop up polkadot --port 8833 --parachain asset-hub:9977,pop#3395:9944 -r stable2412-4
+pop up polkadot --port 8833 --parachain asset-hub#3395:9977 -r stable2412-4
 ```
 
 ### Custom Network Configurations
