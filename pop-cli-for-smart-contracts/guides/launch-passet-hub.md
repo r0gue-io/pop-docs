@@ -7,7 +7,7 @@ Passet Hub is the temporary Asset Hub testnet for smart contract testing on Pase
 Launch Paseo with Passet Hub:
 
 ```shell
-pop up paseo -p asset-hub:9944
+pop up paseo -p passet-hub:9944
 ```
 
 This automatically fetches the required binaries and chain-spec generators, so you can start testing your contracts in seconds.
