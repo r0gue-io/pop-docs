@@ -1,110 +1,112 @@
-# Call
+# Call Your Contract
 
-Now that your contract is deployed, we can interact with it.
+The `pop call contract` command enables interaction with deployed ink! smart contracts.
+
+### What Can You Do?
+
+The `pop call contract` command supports three types of operations:
+
+#### 1. Execute Messages
+
+Submit transactions that modify contract state. These operations require signing, consume gas, and wait for on-chain finalization.
+
+#### 2. Query Messages
+
+Read contract state without making changes. These read-only calls require no signing, incur no gas costs, and return values instantly.
+
+#### 3. Read Storage
+
+Access contract storage fields directly using the storage layout. No signing required and no gas costs.
 
 ### Interactive Guidance (Recommended)
 
-Interact with your deployed contract **with** Pop CLI's interactive guidance by simply entering:
+Interact with your contract **using** Pop CLI's interactive guidance by simply entering:
 
 ```shell
-pop call
+pop call contract
 ```
 
-Grab the contract address that was outputted from the [previous step](broken-reference).
+First, you will be prompted to select or enter your contract project path. You can type to filter the list and quickly find your desired contract. After selecting your contract, you will be prompted to choose a chain from the list or enter a custom RPC endpoint. If you want to connect to a custom RPC endpoint, select the **"Custom"** option, which allows you to manually type the chain URL.
 
-> If you lost the address, you can always pull up [PolkadotJs Apps](https://polkadot.js.org/apps/) and check the chain state for the contract address.
+After selecting your chain, you will be prompted to specify the deployed contract address, then select a message or storage item to call:
 
-You will be prompted to select the path to your contract, choose which contract message to call, and provide the arguments for the message.
+- **Execute a message** (function that modifies state, e.g. flip, transfer)
+- **Query a message** (read-only function that returns state)
+- **Read storage** (direct storage access)
+
+After making your selection, you'll be guided through providing any required arguments and (for messages that modify state) the account to sign the transaction.
 
 ### Manual (non-interactive)
 
-If you prefer not to use the interactive prompts, you can call your contract by specifying all the required arguments directly.
+If you prefer not to use interactive prompts, you can call your contract by specifying all the required arguments directly:
+
+#### Executing a Message
+
+You can execute a message by specifying the contract path, contract address, message name, and any arguments.
 
 ```shell
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --suri //Alice --execute --url ws://localhost:9944/
 ```
-
-> **⚠️ Note:** If you're using ink! v6, the contract address displayed here will appear as a 20-byte hash.
-
-```
-┌   Pop CLI : Calling a contract
-│
-◐  Calling the contract...                                                                                                                   
-⚙  Result: Ok(false)
-│  
-▲  Your call has not been executed.
-│  
-▲  To submit the transaction and execute the call on chain, add -x/--execute flag to the command.
-│  
-└  Call completed successfully!
-```
-
-The result here is `false` meaning that `value` in the contract storage is set to `false`.
-
-Let's try _flipping_ it. Remember to update the contract address accordingly.
 
 ```shell
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice -x
+pop call contract --path ./my_token --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message transfer --args "0x1234..." "1000" --execute --url ws://localhost:9944/
 ```
 
-> **Gas Estimate**
->
-> Notice the `-x` flag at the end of the `pop call` command. This is needed because we are executing a transaction on the network, and it will cost gas.
->
-> Typically it is useful for you to estimate how much gas the call will cost. Fortunately you can do this with the `--dry-run` flag:
->
-> ```
-> pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message flip --suri //Alice -x --dry-run
-> ```
+#### Querying Messages
 
-```
-┌   Pop CLI : Calling a contract
-│
-◐  Doing a dry run to estimate the gas...                                                                                                    
-⚙  Gas limit Weight { ref_time: 382198493, proof_size: 18636 }
-│  
-◓  Calling the contract...                                                                                                                   
-⚙        Events
-│         Event Balances ➜ Withdraw
-│           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
-│           amount: 1.550397502mUNIT
-│         Event Contracts ➜ Called
-│           caller: Signed(5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY)
-│           contract: 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A
-│         Event TransactionPayment ➜ TransactionFeePaid
-│           who: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
-│           actual_fee: 1.550397502mUNIT
-│           tip: 0UNIT
-│         Event System ➜ ExtrinsicSuccess
-│           dispatch_info: DispatchInfo { weight: Weight { ref_time: 1302708493, proof_size: 9064 }, class: Normal, pays_fee: Yes }
-│  
-└  Call completed successfully!
-```
-
-Did it work? See if the value has been flipped by calling the contract again. Remember to update the contract address accordingly.
+You can query messages by specifying the contract path, contract address, and message name.
+Query messages return the current value immediately without requiring transaction signing.
 
 ```shell
-pop call contract -p ./flipper --contract 5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A --message get --suri //Alice
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message get --url ws://localhost:9944/
 ```
 
-```
-┌   Pop CLI : Calling a contract
-│
-◐  Calling the contract...                                                                                                          
-⚙  Result: Ok(true)
-│  
-▲  Your call has not been executed.
-│  
-▲  To submit the transaction and execute the call on chain, add -x/--execute flag to the command.
-│  
-└  Call completed successfully!
+#### Reading Storage
+
+Access contract storage fields directly using the storage layout.
+Storage queries return the current value immediately without requiring transaction signing.
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message value --url ws://localhost:9944/
 ```
 
-The `value` is now `true`.
+### Additional Options
 
-Awesome, you now know how to make calls to your smart contract.
+#### Gas Estimation
 
-\
+Use `--dry-run` to estimate gas consumption before execution without submitting the transaction:
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --dry-run --url ws://localhost:9944/
+```
+
+#### Using Wallet for Signing
+
+You can use a browser extension wallet to sign transactions instead of providing a secret URI:
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --use-wallet --url ws://localhost:9944/
+```
+
+Or use the shorthand `-w`:
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip -w --url ws://localhost:9944/
+```
+
+#### Developer Mode
+
+Use `--dev` for rapid testing during development. This skips gas prompts and confirmation dialogs:
+
+```shell
+pop call contract --dev --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --execute
+```
+
+### Note on Addresses
+
+If you're using ink! v6, contract addresses are displayed as 20-byte H160 hashes (for example, `0x48550a4bb374727186c55365b7c9c0a1a31bdafe`).
+
+
 **Need help?**
 
 Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
