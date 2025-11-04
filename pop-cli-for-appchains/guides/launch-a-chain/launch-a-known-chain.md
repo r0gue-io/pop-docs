@@ -18,7 +18,7 @@ Run Kusama on port `8833` with Asset Hub chain assigned to `9944`:
 pop up kusama --port 8833 --parachain asset-hub:9944 -r stable2412-4
 ```
 
-Launch Polkadot with two parachains, including a specific ParaId for Asset Hub:
+Launch Polkadot with Asset Hub and a specific ParaId:
 
 ```shell
 pop up polkadot --port 8833 --parachain asset-hub#3395:9977 -r stable2412-4
