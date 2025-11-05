@@ -99,10 +99,10 @@ pop up
 ```
 
 ##### Handy Links
-- [Launch a Chain in Development](../pop-cli-for-chains/guides/launch-a-chain/running-your-chain.md)
-- [Launch a Chain to Paseo](../pop-cli-for-chains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-chains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
-- [Securely Sign Transactions from CLI](../pop-cli-for-chains/guides/securely-sign-transactions-from-cli.md)
+- [Launch a Chain in Development](../pop-cli-for-appchains/guides/launch-a-chain/running-your-chain.md)
+- [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
+- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-appchains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
+- [Securely Sign Transactions from CLI](../pop-cli-for-appchains/guides/securely-sign-transactions-from-cli.md)
 
 
 ### Support & Contribute
