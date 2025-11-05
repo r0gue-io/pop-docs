@@ -42,7 +42,7 @@ If you prefer not to use interactive prompts, you can call your contract by spec
 
 #### Executing a Message
 
-You can execute a message by specifying the contract path, contract address, message name, and any arguments.
+You can execute a message by specifying the contract path (or the metadata file), contract address, message name, and any arguments.
 
 ```shell
 pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --suri //Alice --execute --url ws://localhost:9944/
