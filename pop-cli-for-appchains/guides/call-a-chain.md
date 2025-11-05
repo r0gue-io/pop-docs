@@ -1,26 +1,5 @@
 # Call
 
-### Interactive Guidance (Recommended)
-
-Interact with a chain **using** Pop CLI's interactive guidance by simply entering:
-
-```shell
-pop call chain
-```
-
-First, you will be prompted to select which chain you want to interact with from a list of available chains. You can *
-*type to filter** the list and quickly find your desired chain. If you want to connect to a custom RPC endpoint, select
-the **"Custom"** option, which allows you to manually type the chain URL.
-
-After selecting your chain, you will be prompted to select a pallet, then choose what you want to do with that pallet:
-
-- **Execute an extrinsic** (dispatchable function)
-- **Query storage** items
-- **Read constant** values
-
-After making your selection, you'll be guided through providing any required arguments and (for extrinsics) the account
-to sign the transaction.
-
 ### What Can You Do?
 
 The `pop call chain` command supports three types of operations:
@@ -39,6 +18,26 @@ Read storage items from the chain's state. Storage queries don't require signing
 #### 3. Read Constants
 
 Access constant values defined in the runtime metadata (e.g., System::Version, System::BlockHashCount).
+
+### Interactive Guidance (Recommended)
+
+Interact with a chain **using** Pop CLI's interactive guidance by simply entering:
+
+```shell
+pop call chain
+```
+
+First, you will be prompted to select which chain you want to interact with from a list of available chains. You can type to filter the list and quickly find your desired chain. If you want to connect to a custom RPC endpoint, select
+the **"Custom"** option, which allows you to manually type the chain URL.
+
+After selecting your chain, you will be prompted to select a pallet, then choose what you want to do with that pallet:
+
+- **Execute an extrinsic** (function that modifies state, e.g. balance transfer)
+- **Query storage**
+- **Read constants**
+
+After making your selection, you'll be guided through providing any required arguments and (for extrinsics) the account
+to sign the transaction.
 
 ### Manual (non-interactive)
 
@@ -144,17 +143,6 @@ This is particularly useful for scripting and automation.
 
 When prompted for a chain, you can select "Custom" to quickly type the chain URL manually, accelerating the process when
 you already know the endpoint.
-
-### Interactive Features
-
-When using the interactive mode, you'll experience:
-
-- **Predefined Actions**: Quick access to common operations like creating assets, transferring balances, etc.
-- **Filtered Selection**: Type to filter through pallets and functions for faster navigation
-- **Visual Indicators**: Clear labels showing whether an item is an `[EXTRINSIC]`, `[STORAGE]`, or `[CONSTANT]`
-- **Documentation**: Inline documentation for each pallet and function
-- **Repeat Calls**: After completing an operation, you'll be asked if you want to perform another call (unless
-  `--skip-confirm` is used)
 
 ### Examples
 
