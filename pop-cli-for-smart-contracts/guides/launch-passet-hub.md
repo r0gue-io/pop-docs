@@ -1,4 +1,4 @@
-# Launch Passet Hub
+# Launch Passet Hub Locally
 
 Passet Hub is the temporary Asset Hub testnet for smart contract testing on Paseo. With Pop CLI, you can quickly spin up Passet Hub locally without needing to prepare network configuration files.
 
