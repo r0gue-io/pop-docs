@@ -75,6 +75,20 @@ pop install
 > cargo install --locked pop-cli --version 0.10.0
 > ```
 
+### Installing frontend dependencies
+
+If you plan to use frontend templates with your chains or contracts, you can install the required frontend dependencies:
+
+```bash
+pop install -y --frontend
+```
+
+This will install:
+- Node.js (version 20 or later)
+- Bun (required for certain frontend templates like [inkathon](https://github.com/scio-labs/inkathon))
+
+These dependencies are automatically checked when you use the `--with-frontend` flag with `pop new chain` or `pop new contract`.
+
 **Need help?**
 
 Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
