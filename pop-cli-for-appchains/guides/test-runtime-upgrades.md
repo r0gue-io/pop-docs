@@ -34,7 +34,7 @@ By running the command `pop test on-runtime-upgrade`, you can test the [Runtime 
 
 Before running the migration, you will be prompted to confirm if you want to specify which runtime to run the migration on:
 
-* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](broken-reference).
+* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](/broken/pages/iluN68guT8MppWAl8pBK).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. Pop CLI will automatically build the runtime if not found.
 
