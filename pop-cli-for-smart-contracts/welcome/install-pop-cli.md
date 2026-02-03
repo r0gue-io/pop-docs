@@ -70,7 +70,7 @@ By default, `pop install` prompts you before installing OS packages and frontend
 
 ### OS packages and behavior
 
-If your OS/distro is unsupported, `pop install` prints a warning and skips OS packages. On Linux, it still installs Rust tooling (and frontend if you pass `--frontend`).
+If your OS/distro is unsupported, `pop install` prints a warning and exits without installing OS packages or tooling.
 
 | OS | Package manager | Packages installed |
 | --- | --- | --- |
