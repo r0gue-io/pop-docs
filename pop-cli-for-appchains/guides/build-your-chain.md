@@ -1,6 +1,13 @@
 # Build your chain
 
-To build your chain using Pop CLI
+Use `pop build` (alias: `pop b`) to build a parachain node or runtime. The command auto-detects the project type in this order:
+
+- ink! contract
+- parachain runtime
+- parachain (node/runtime workspace)
+- generic Rust package
+
+To build your chain using Pop CLI:
 
 ```shell
 cd my-chain
@@ -20,16 +27,52 @@ pop build
 If you are outside the project's directory, you can specify the path
 
 ```shell
-pop build -p ./my-chain
+pop build --path ./my-chain
 ```
 
-If you are building the chain with the intent to onboard to a Polkadot Relay chain then you can run the following build command:
+You can also pass the project directory positionally (the positional path wins if you also set `--path`).
+
+```shell
+pop build ../my-chain
+```
+
+## Build options
+
+| Flag | Description |
+| --- | --- |
+| `PATH` / `--path <path>` | Project directory (defaults to the current directory). |
+| `-p, --package <name>` | Build a specific workspace package. |
+| `-r, --release` | Build in release mode. Conflicts with `--profile`. |
+| `--profile <debug|release|production>` | Build profile (default: `debug`). |
+| `--features <list>` | Comma-separated feature list. |
+| `--benchmark` | Adds the `runtime-benchmarks` feature. |
+| `--try-runtime` | Adds the `try-runtime` feature. |
+| `--only-runtime` | Build only the runtime. |
+| `--deterministic` | Build the runtime deterministically (requires Docker/Podman). Implies `--only-runtime`. |
+| `--tag <image>` | Use a specific srtool image tag (requires `--deterministic`). |
+
+> [!NOTE]
+> If your workspace has multiple runtime crates, Pop CLI prompts you to choose one.
+
+## Examples
+
+Build the parachain node with extra runtime features:
 
 ```
-pop build -p ../my-chain --para_id 2000
+pop build --release --benchmark --try-runtime
 ```
 
-This command will build your chain and generate the chain spec, the WebAssembly runtime, and generate the chain genesis state needed for registering and onboarding onto the Relay chain.
+Build only the runtime deterministically:
+
+```
+pop build --deterministic --tag v1.0.0
+```
+
+If you need a chain spec and genesis artifacts for onboarding, use `pop build spec` instead:
+
+```
+pop build spec --para-id 2000 --relay paseo --genesis-state --genesis-code
+```
 
 #### Learning Resources
 
@@ -42,4 +85,3 @@ This command will build your chain and generate the chain spec, the WebAssembly 
 * [Polkadot Stack Exchange](https://polkadot.stackexchange.com/)
   * Create a question and tag it with "[`pop`](https://substrate.stackexchange.com/tags/pop/info)"
   * Share the StackExchange question in our [Pop Support Telegram channel](https://t.me/pop_support)
-
