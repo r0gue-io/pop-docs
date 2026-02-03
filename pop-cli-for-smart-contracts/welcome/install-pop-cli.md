@@ -1,13 +1,5 @@
 # Install Pop CLI
 
-> **Quick install (macOS/Linux with Homebrew)**
->
-> ```bash
-> brew install r0gue-io/pop-cli/pop
-> ```
->
-> Need Homebrew? Follow [Install Homebrew](#install-homebrew-if-not-installed).
-
 ## 1. Install Pop CLI
 
 ### 1.1 For macOS and Linux (Homebrew)
@@ -59,69 +51,16 @@ cargo install --force --locked pop-cli
 
 ## 2. Set up your environment
 
-> **Recommended next step:** Run `pop install` to set up OS packages, Rust tooling, and optional frontend dependencies.
->
 ```bash
 pop install
 ```
 
-> **Warning:** `pop install` may download and run external scripts when dependencies are missing, including the official installers for Homebrew, rustup, nvm, and Bun.
 
-### Install command flags
-
-| Flag | Description |
-| --- | --- |
-| `-y`, `--skip-confirm` | Skip confirmation prompts and install everything non-interactively. |
-| `-f`, `--frontend` | Install frontend dependencies (Node.js v20+ and Bun). |
-
-### Interactive prompts
-
-By default, `pop install` prompts you before installing OS packages and frontend dependencies. Use `-y` to skip all prompts.
-
-### Rust toolchain setup
-
-`pop install` installs or updates rustup, then:
-- Sets the default toolchain to `stable`
-- Updates Rust
-- Adds the `wasm32-unknown-unknown` target
-- Installs components: `cargo`, `clippy`, `rust-analyzer`, `rust-src`, `rust-std`, `rustc`, `rustfmt`
-
-
-> **Compatibility notes:** Pop CLI targets ink! v6 by default in the latest releases. If you need ink! v5 support, install version `0.10.0`:
+> Pop CLI targets ink! v6 by default in the latest releases. If you need ink! v5 support, install version `0.10.0`:
 >
 > ```bash
 > cargo install --locked pop-cli --version 0.10.0
 > ```
-
-### Installing frontend dependencies
-
-If you plan to use frontend templates, you can install the required frontend dependencies:
-
-```bash
-pop install -y --frontend
-```
-
-This will install:
-- Node.js (v20+) via `nvm` if your current `node --version` check fails or is too old
-- Bun (required for certain frontend templates like [inkathon](https://github.com/scio-labs/inkathon))
-
-If Bun installs successfully but is not on your PATH yet, Pop CLI checks the default location at `~/.bun/bin/bun`.
-
-## 3. Advanced details
-
-### OS packages and behavior
-
-If your OS/distro is unsupported, `pop install` prints a warning and exits without installing OS packages or tooling.
-
-| OS | Package manager | Packages installed |
-| --- | --- | --- |
-| macOS | Homebrew | `homebrew`, `protobuf`, `openssl`, `cmake`, `rustup` |
-| Arch (or compatible) | `pacman` | `curl`, `git`, `clang`, `make`, `protobuf`, `rustup` |
-| Ubuntu (or compatible) | `apt` | `git`, `clang`, `curl`, `libssl-dev`, `protobuf-compiler`, `lsof`, `pkg-config`, `rustup` |
-| Debian (or compatible) | `apt` | `git`, `clang`, `curl`, `libssl-dev`, `llvm`, `libudev-dev`, `make`, `protobuf-compiler`, `lsof`, `rustup` |
-| Red Hat (or compatible) | `yum` | `gcc`, `gcc-c++`, `make`, `cmake`, `pkgconf`, `pkgconf-pkg-config`, `clang`, `curl`, `git`, `openssl-devel`, `protobuf-compiler`, `lsof`, `rustup` |
-
-When you pass `--frontend`, `pop install` also installs `unzip` on Arch, Ubuntu, and Debian.
 
 **Need help?**
 
