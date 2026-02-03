@@ -19,7 +19,7 @@ Run the command without arguments to be guided through all choices:
 pop build spec
 ```
 
-This will prompt you for key values like output file name, parachain ID, relay chain, chain type, build profile, protocol
+This will prompt you for key values like output file name, chain ID, relay chain, chain type, build profile, protocol
 ID, properties, whether to generate genesis files, and whether to build and inject a deterministic runtime.
 
 
@@ -28,7 +28,7 @@ ID, properties, whether to generate genesis files, and whether to build and inje
 ### What you’ll typically provide
 
 - Output file name/path for the plain spec (default: `./chain-spec.json`)
-- Parachain ID (default: `2000`) or relay mode
+- Chain ID (default: `2000`) or relay mode
 - Relay chain (paseo, westend, kusama, polkadot and local variants)
 - Chain type (`Development`, `Local`, `Live`)
 - Build profile (`debug`, `release`, `production`)
@@ -97,7 +97,7 @@ Most common flags:
 | `--skip-build` | Skip the build step if artifacts exist. |
 | `-c, --chain <value>` | Chain spec input (dev, local, custom, or a path to an existing spec). |
 | `-R, --is-relay` | Generate a relay chain spec (conflicts with `--para-id` and `--relay`). |
-| `-r, --relay <paseo|westend|kusama|polkadot|...>` | Relay chain for parachain specs. |
+| `-r, --relay <paseo|westend|kusama|polkadot|...>` | Relay chain for chain specs. |
 | `-n, --name <name>` | Chain name to embed in the spec. |
 | `--id <id>` | Chain ID to embed in the spec. |
 | `-P, --protocol-id <id>` | Protocol ID to embed in the spec. |
@@ -135,7 +135,7 @@ Depending on the flags used you’ll get:
 
 #### Learning Resources
 
-- 🧑‍🏫 Background on Polkadot/Parachains: wiki.polkadot.network
+- 🧑‍🏫 Background on Polkadot chains: wiki.polkadot.network
 - 🧑‍🔧 srtool: https://github.com/paritytech/srtool
 
 **Need help?**

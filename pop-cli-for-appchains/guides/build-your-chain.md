@@ -2,10 +2,10 @@
 
 Use this when you want to build a chain binary or runtime (`pop build`); use `pop build spec` for chain specs and genesis artifacts.
 
-Use `pop build` (alias: `pop b`) to build a parachain node or runtime. The command auto-detects the project type in this order:
+Use `pop build` (alias: `pop b`) to build a chain node or runtime. The command auto-detects the project type in this order:
 
-- parachain runtime
-- parachain (node/runtime workspace)
+- chain runtime
+- chain (node/runtime workspace)
 - generic Rust package
 
 To build your chain using Pop CLI:
@@ -59,7 +59,7 @@ Most common flags:
 
 ## Examples
 
-Build the parachain node with extra runtime features:
+Build the chain node with extra runtime features:
 
 ```
 pop build --release --benchmark --try-runtime
