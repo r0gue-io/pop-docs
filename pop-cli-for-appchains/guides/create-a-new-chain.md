@@ -60,7 +60,7 @@ Token customization options (`--symbol`, `--decimals`, `--endowment`) are only s
 
 ### Release and license selection
 
-Pop CLI prints the template license before generation. It then offers the latest three releases that match the template's supported versions. If no matching releases are found, Pop CLI warns and uses the default branch.
+Pop CLI prints the template license before generation. It then offers the latest three releases that match the template's supported versions. If no matching releases are found and the template declares supported versions, Pop CLI exits with an error. If the template does not declare supported versions, Pop CLI warns and uses the default branch.
 
 ## Examples
 
