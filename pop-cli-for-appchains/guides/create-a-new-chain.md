@@ -92,7 +92,7 @@ The interactive prompt will ask you if you want to include a frontend template:
 pop new chain
 ```
 
-If you choose to add a frontend, Pop CLI auto-selects the chain template because only one exists. If you pass `--with-frontend` without a value, Pop CLI uses the same auto-selection behavior.
+If you choose to add a frontend, Pop CLI auto-selects the frontend template because only one exists. If you pass `--with-frontend` without a value, Pop CLI uses the same auto-selection behavior.
 
 ### CLI mode
 

@@ -6,7 +6,7 @@ Use the interactive prompt to scaffold a contract:
 pop new contract
 ```
 
-If you run `pop new` without a subcommand, Pop CLI prompts you to choose between chain, pallet, and contract. You can also use the top-level alias `pop n`.
+If you run `pop new` without a subcommand, Pop CLI prompts you to choose a project type. You can also use the top-level alias `pop n`.
 
 ## Command overview
 
@@ -21,15 +21,13 @@ pop new contract <NAME>
 ### Command map
 
 - `pop new` (alias: `pop n`)
-- `pop new chain` (aliases: `pop new C`, `pop new p`, `pop new parachain`)
-- `pop new pallet` (alias: `pop new P`)
 - `pop new contract` (alias: `pop new c`)
 
 ## Options
 
 | Flag | Type | Default | Description |
 | --- | --- | --- | --- |
-| `--template`, `-t` | string | template default | Contract template name. |
+| `--template`, `-t` | string | prompt | Contract template name. |
 | `--list`, `-l` | boolean | `false` | List templates and exit. |
 | `--with-frontend`, `-f[=<TEMPLATE>]` | string | none | Scaffold a frontend template. Use `=` when providing a value. |
 | `--package-manager` | string | auto | Package manager for frontend scaffolding. Requires `--with-frontend`. |
@@ -102,7 +100,7 @@ pop install -y --frontend
 
 ### Running the frontend
 
-After scaffolding your contract with a frontend, you can start the frontend development server from your generated chain folder with:
+After scaffolding your contract with a frontend, you can start the frontend development server from your generated contract folder with:
 
 ```bash
 pop up frontend
