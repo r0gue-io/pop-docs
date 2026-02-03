@@ -56,6 +56,59 @@ cargo install --force --locked pop-cli
 pop install
 ```
 
+`pop install` (alias `pop i`) installs OS packages, Rust tooling, and optional frontend dependencies.
+
+### Install command flags
+
+| Flag | Description |
+| --- | --- |
+| `-y`, `--skip-confirm` | Skip confirmation prompts and install everything non-interactively. |
+| `-f`, `--frontend` | Install frontend dependencies (Node.js v20+ and Bun). |
+
+### Interactive prompts
+
+By default, `pop install` prompts you before installing OS packages and frontend dependencies. Use `-y` to skip all prompts.
+
+### OS packages and behavior
+
+If your OS/distro is unsupported, `pop install` prints a warning and skips OS packages. On Linux, it still installs Rust tooling (and frontend if you pass `--frontend`).
+
+| OS | Package manager | Packages installed |
+| --- | --- | --- |
+| macOS | Homebrew | `homebrew`, `protobuf`, `openssl`, `cmake`, `rustup` |
+| Arch (or compatible) | `pacman` | `curl`, `git`, `clang`, `make`, `protobuf`, `rustup` |
+| Ubuntu (or compatible) | `apt` | `git`, `clang`, `curl`, `libssl-dev`, `protobuf-compiler`, `lsof`, `pkg-config`, `rustup` |
+| Debian (or compatible) | `apt` | `git`, `clang`, `curl`, `libssl-dev`, `llvm`, `libudev-dev`, `make`, `protobuf-compiler`, `lsof`, `rustup` |
+| Red Hat (or compatible) | `yum` | `gcc`, `gcc-c++`, `make`, `cmake`, `pkgconf`, `pkgconf-pkg-config`, `clang`, `curl`, `git`, `openssl-devel`, `protobuf-compiler`, `lsof`, `rustup` |
+
+When you pass `--frontend`, `pop install` also installs `unzip` on Arch, Ubuntu, and Debian.
+
+### Rust toolchain setup
+
+`pop install` installs or updates rustup, then:
+- Sets the default toolchain to `stable`
+- Updates Rust
+- Adds the `wasm32-unknown-unknown` target
+- Installs components: `cargo`, `clippy`, `rust-analyzer`, `rust-src`, `rust-std`, `rustc`, `rustfmt`
+
+### Installing frontend dependencies
+
+If you plan to use frontend templates, you can install the required frontend dependencies:
+
+```bash
+pop install -y --frontend
+```
+
+This will install:
+- Node.js (v20+) via `nvm` if your current `node --version` check fails or is too old
+- Bun (required for certain frontend templates like [inkathon](https://github.com/scio-labs/inkathon))
+
+If Bun installs successfully but is not on your PATH yet, Pop CLI checks the default location at `~/.bun/bin/bun`.
+
+### External scripts
+
+`pop install` may download and run external scripts when dependencies are missing, including the official installers for Homebrew, rustup, nvm, and Bun.
+
 **Need help?**
 
 Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
