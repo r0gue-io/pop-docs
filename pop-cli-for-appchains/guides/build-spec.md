@@ -4,6 +4,8 @@ description: Generate a plain chain specification and optional artifacts for you
 
 # Build your chain spec
 
+Use this when you need a chain specification or genesis artifacts (`pop build spec`); use `pop build` for the chain binary/runtime.
+
 The chain specification ("chain spec") captures the initial state and configuration of your chain. Nodes use it to start
 a network or to join and sync with an existing one. With Pop CLI you can generate a plain chain spec interactively or
 non‑interactively, and optionally produce extra artifacts such as genesis state and wasm code, and even inject a
@@ -80,6 +82,8 @@ pop build spec --deterministic --runtime ./runtime/mainnet --package parachain-t
 ```
 
 ## Flags
+
+Most common flags:
 
 | Flag | Description |
 | --- | --- |

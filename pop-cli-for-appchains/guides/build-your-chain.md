@@ -1,8 +1,9 @@
 # Build your chain
 
+Use this when you want to build a chain binary or runtime (`pop build`); use `pop build spec` for chain specs and genesis artifacts.
+
 Use `pop build` (alias: `pop b`) to build a parachain node or runtime. The command auto-detects the project type in this order:
 
-- ink! contract
 - parachain runtime
 - parachain (node/runtime workspace)
 - generic Rust package
@@ -37,6 +38,8 @@ pop build ../my-chain
 ```
 
 ## Build options
+
+Most common flags:
 
 | Flag | Description |
 | --- | --- |

@@ -1,4 +1,6 @@
-# Build
+# Build your contract
+
+Use this when you want to compile an ink! contract (`pop build`).
 
 Before we compile your smart contract, make sure to take a look at what an ink! contract consists of in the [documentation](https://use.ink/docs/v6/getting-started/building-your-contract).&#x20;
 
@@ -15,6 +17,8 @@ pop build --release
 ```
 
 ## Build options
+
+Most common flags:
 
 | Flag | Description |
 | --- | --- |
