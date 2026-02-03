@@ -11,6 +11,7 @@
 ## GUIDES
 
 * [Create a new chain](guides/create-a-new-chain.md)
+* [Create a new pallet](guides/create-a-new-pallet.md)
 * [Build](guides/build-your-chain.md)
   * [Build your chain specification](guides/build-spec.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
