@@ -34,7 +34,7 @@ By running the command `pop test on-runtime-upgrade`, you can test the [Runtime 
 
 Before running the migration, you will be prompted to confirm if you want to specify which runtime to run the migration on:
 
-* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](broken-reference).
+* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be built with the `--try-runtime` feature.
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. Pop CLI will automatically build the runtime if not found.
 
@@ -100,7 +100,7 @@ A second approach to test migrations is with a snapshot file. First, you need to
 pop test create-snapshot
 ```
 
-The interactive interface to prompts for the live URI and the path of the snapshot file. You need a remote node to create the snapshot, and no runtime binary is required:
+The interactive interface prompts you for the live URI and snapshot path. You need a remote node to create the snapshot, and no runtime binary is required:
 
 ```bash
 ┌   Pop CLI : Creating a snapshot file
