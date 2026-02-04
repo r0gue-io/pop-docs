@@ -1,4 +1,4 @@
-# pop up
+# Launch a Chain with pop up
 
 Use `pop up` to launch local networks, deploy a chain, deploy a smart contract, start a frontend dev server, or boot a local ink! node.
 
