@@ -9,6 +9,8 @@ need [hashes](https://docs.polkadot.com/polkadot-protocol/parachain-basics/crypt
 files, derive stable identifiers, or work with chain primitives. The `pop hash` command gives you a fast, convenient way
 to generate these hashes without juggling separate tools.
 
+You can also run the command as `pop h`.
+
 ## What you can use it for
 
 - Verify the integrity of artifacts (WASM, configs, datasets) before committing or deploying.
@@ -27,7 +29,37 @@ pop hash keccak 256 0x68656c6c6f776f726c64
 
 # Check a runtime you are about to deploy
 pop hash blake2 256 /path/to/your/file.wasm
+
+# Append the original bytes to the hash (BLAKE2 or TwoX only)
+pop hash blake2 256 --concat "hello world"
 ```
+
+## Supported algorithms and lengths
+
+| Subcommand | Alias | Lengths (bits) | `--concat` |
+| --- | --- | --- | --- |
+| `blake2` | `b2` | 64, 128, 256, 512 | Yes |
+| `keccak` | `kk` | 256, 512 | No |
+| `sha2` | `s2` | 256 | No |
+| `twox` | `xx` | 64, 128, 256 | Yes |
+
+## Input handling
+
+The positional `data` argument is inspected in this order:
+
+- If it matches an existing path, Pop reads the file contents. The file must be 3 MiB or smaller.
+- If it starts with `0x`, Pop parses it as hex bytes.
+- Otherwise, Pop hashes the raw string bytes.
+
+## Output
+
+Pop prints the hash as lowercase hex without a `0x` prefix. If you use `--concat`, the output is the hash bytes followed by the original input bytes, all hex-encoded.
+
+## Errors and constraints
+
+- Unsupported length: `unsupported length: <length>`
+- Path exists but is not a file: `specified path is not a file`
+- File too large: `file size exceeds maximum code size`
 
 ## Tips
 
