@@ -54,9 +54,15 @@ To deploy on a specific network, supply a `--url`:
 pop up --path ./my_contract \
   --url ws://<network-endpoint> \
   --constructor <name> \
-  --args <arg_1> <arg_2> \
-  --suri <your-SURI-or-use-wallet> \
-  --execute
+  --args <arg_1> <arg_2>
+
+# Option A: sign with a suri
+pop up --path ./my_contract --url ws://<network-endpoint> --constructor <name> \
+  --args <arg_1> <arg_2> --suri //Alice --execute
+
+# Option B: sign with a browser wallet
+pop up --path ./my_contract --url ws://<network-endpoint> --constructor <name> \
+  --args <arg_1> <arg_2> --use-wallet --execute
 ```
 
 Alternatively, use `--use-wallet` to [sign via browser wallet](securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.

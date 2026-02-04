@@ -17,6 +17,25 @@ pop up frontend [--path PATH]
 pop up ink-node [OPTIONS]
 ```
 
+## Quick Path
+
+Run these if you want the most common flows:
+
+1. `pop up network ./network.toml`
+2. `pop up paseo --parachain asset-hub`
+3. `pop up --path ./my-chain --id 2000 --skip-registration`
+4. `pop up --path ./my-contract --constructor new --args false --suri //Alice --execute`
+5. `pop up ink-node --detach`
+
+## Choose Your Flow
+
+1. Launch a local network from a config file: `pop up network <FILE>`
+2. Launch a known relay chain locally: `pop up paseo|kusama|polkadot|westend`
+3. Deploy a chain project: `pop up --path PATH`
+4. Deploy a contract project: `pop up --path PATH`
+5. Start a frontend dev server: `pop up frontend [--path PATH]`
+6. Start a local ink! node: `pop up ink-node [OPTIONS]`
+
 ## Argument Rules
 
 - `--path` and positional `PATH` conflict. Use one or the other.
