@@ -1,5 +1,7 @@
 # Call
 
+If you run `pop call` without a subcommand, Pop CLI uses `pop call chain` unless it detects a contract project in the current directory. If chain support is disabled and no contract project is detected, it returns an error.
+
 ### What Can You Do?
 
 The `pop call chain` command supports three types of operations:
@@ -59,6 +61,7 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 
 You can query storage items by specifying the pallet and function (storage item name).
 Storage queries return the current value immediately without requiring transaction signing.
+If the storage item is a map, provide a key with `--args`. In interactive mode, leave the key blank to query all entries.
 
 ```shell
 pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
@@ -83,6 +86,18 @@ pop call chain --pallet System --function BlockHashCount --url wss://pas-rpc.sta
 ```
 
 ### Additional Options
+
+#### View Metadata
+
+Use `--metadata` to inspect runtime metadata. If you omit `--pallet`, Pop CLI lists all pallets. If you include `--pallet`, it lists calls, storage, and constants for that pallet. This option conflicts with `--function`, `--args`, `--suri`, `--use-wallet`, `--call`, and `--sudo`.
+
+```shell
+pop call chain --metadata --url ws://localhost:9944/
+```
+
+```shell
+pop call chain --pallet System --metadata --url ws://localhost:9944/
+```
 
 #### Sudo Calls
 
@@ -115,6 +130,8 @@ If you already have the SCALE-encoded call data and want to directly submit the 
 pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
 ```
 
+`--call` conflicts with `--pallet`, `--function`, and `--args`.
+
 ```
 ┌   Pop CLI : Call a chain
 │
@@ -136,6 +153,8 @@ prevents the prompt to perform another call:
 ```shell
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ --suri //Alice -y
 ```
+
+If you use `--skip-confirm` with an extrinsic, you must provide a signer with `--suri` or `--use-wallet`.
 
 This is particularly useful for scripting and automation.
 

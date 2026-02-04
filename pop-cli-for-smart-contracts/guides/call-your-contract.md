@@ -1,6 +1,7 @@
 # Call Your Contract
 
 The `pop call contract` command enables interaction with deployed ink! smart contracts.
+If you run `pop call` without a subcommand, Pop CLI uses `pop call contract` when it detects a contract project in the current directory.
 
 ### What Can You Do?
 
@@ -72,13 +73,15 @@ pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1
 
 ### Additional Options
 
-#### Gas Estimation
+#### Execute vs Dry-Run
 
-Use `--dry-run` to estimate gas consumption before execution without submitting the transaction:
+If you omit `--execute`, Pop CLI performs a dry-run and returns the result without submitting a transaction. Use `--execute` to submit the call on-chain.
 
 ```shell
-pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --dry-run --url ws://localhost:9944/
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --url ws://localhost:9944/
 ```
+
+If you provide `--gas`, you must also provide `--proof-size`. If you do not provide them, Pop CLI estimates them during execution.
 
 #### Using Wallet for Signing
 
@@ -94,9 +97,23 @@ Or use the shorthand `-w`:
 pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip -w --url ws://localhost:9944/
 ```
 
+If you make a read-only call (query or storage), Pop CLI ignores `--use-wallet` and runs without a signer.
+
+#### Storage Mapping Keys
+
+If you read a storage map, use `--storage-mapping-key` to query a specific key. In interactive mode, leave the key blank to fetch all entries.
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message value --storage-mapping-key "0x..." --url ws://localhost:9944/
+```
+
+#### Skip Confirmation
+
+Use `--skip-confirm` or `-y` to submit an executable message without additional prompts.
+
 #### Developer Mode
 
-Use `--dev` for rapid testing during development. This skips gas prompts and confirmation dialogs:
+`--dev` is deprecated (since 0.12.0) and will be removed in 0.13.0. Use `--skip-confirm` instead.
 
 ```shell
 pop call contract --dev --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --execute
