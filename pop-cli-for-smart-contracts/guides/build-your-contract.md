@@ -1,4 +1,6 @@
-# Build
+# Build your contract
+
+Use this when you want to compile an ink! contract (`pop build`).
 
 Before we compile your smart contract, make sure to take a look at what an ink! contract consists of in the [documentation](https://use.ink/docs/v6/getting-started/building-your-contract).&#x20;
 
@@ -13,6 +15,23 @@ or
 ```
 pop build --release
 ```
+
+## Build options
+
+Most common flags:
+
+| Flag | Description |
+| --- | --- |
+| `PATH` / `--path <path>` | Project directory (defaults to the current directory). |
+| `-r, --release` | Build in release mode. Conflicts with `--profile`. |
+| `--profile <debug|release|production>` | Build profile (default: `debug`). |
+| `--features <list>` | Comma-separated feature list. |
+| `--metadata <spec>` | Choose the contract metadata spec (run `pop build --help` for supported values). |
+| `--verifiable` | Build a verifiable contract (deterministic release build). Conflicts with `--release` and `--profile`. |
+| `--image <image>` | Use a custom image for verifiable builds (requires `--verifiable`). |
+
+> [!NOTE]
+> Verifiable builds require Docker to be running.
 
 **Need help?**
 
