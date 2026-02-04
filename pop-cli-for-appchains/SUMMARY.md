@@ -16,6 +16,7 @@
   * [Build your chain specification](guides/build-spec.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
+* [Upgrade Polkadot SDK dependencies](guides/upgrade-polkadot-sdk.md)
 * [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
 * [Deploy](guides/launch-a-chain/README.md)
   * [Launch a Chain with pop up](guides/launch-a-chain/launch-a-chain-with-pop-up.md)
