@@ -1,4 +1,4 @@
-# Run your unit tests
+# Test
 
 To learn how to test your ink! smart contract, from unit tests to e2e testing workflows, go check out the [ink! testing documentation](https://use.ink/docs/v6/contract-testing/overview).
 
