@@ -18,6 +18,7 @@
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
 * [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
 * [Deploy](guides/launch-a-chain/README.md)
+  * [Launch a Chain with pop up](guides/launch-a-chain/launch-a-chain-with-pop-up.md)
   * [Launch a Chain in Development](guides/launch-a-chain/running-your-chain.md)
   * [Launch a Known Chain](guides/launch-a-chain/launch-a-known-chain.md)
   * [Launch a Chain to Paseo](guides/launch-a-chain/launch-a-chain-to-paseo.md)
