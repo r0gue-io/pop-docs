@@ -31,4 +31,5 @@
 * [Call](guides/call-a-chain.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Hash](guides/hashing.md)
+* [Clean](guides/cleaning.md)
 * [Conversions](guides/address-conversion.md)
