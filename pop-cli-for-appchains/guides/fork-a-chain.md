@@ -8,7 +8,7 @@ Use `pop fork` (alias: `pop f`) to fork a live chain locally and start an RPC se
 
 ## Prerequisites
 
-- Pop CLI (Command Line Interface) built with the `chain` feature.
+- Pop CLI (Command Line Interface) built with the `chain` feature. See [Install Pop CLI](../install-pop-cli.md) or run `cargo install --force --locked pop-cli --features chain`.
 
 ## Usage
 
@@ -23,7 +23,7 @@ pop fork -e <ENDPOINT>... [options]
 | `-e, --endpoint <ENDPOINT>...` | Yes | RPC endpoint URL(s) to fork. Repeat for multiple chains. Parsed as a URL. |
 | `-c, --cache <PATH>` | No | Path to a SQLite cache file. If omitted, Pop uses an in-memory cache. When you fork multiple endpoints, Pop appends `_{index}` before the file extension. |
 | `-p, --port <PORT>` | No | Starting port for RPC servers. When you fork multiple endpoints, Pop increments the port after each server starts. |
-| `--mock-all-signatures` | No | Accept all signatures as valid. Default is to accept only magic signatures (`0xdeadbeef`). |
+| `--mock-all-signatures` | No | Accept all signatures as valid for dev/testing. Default is to accept only magic signatures (`0xdeadbeef`). Do not use for production or security-sensitive scenarios. |
 | `--log-level <LOG_LEVEL>` | No | Log level for block building. Default: `info`. Values: `off`, `error`, `warn`, `info`, `debug`, `trace`. |
 
 ## Behavior notes
