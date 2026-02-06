@@ -4,14 +4,14 @@ Now that we have developed our contract, tested it, we can now deploy it on a bl
 
 ### Local Deployment (default)
 
-If you omit `--url`, Pop CLI prompts you to choose a chain endpoint and defaults to `ws://127.0.0.1:9944`. If that endpoint is not running, Pop CLI offers to start a local [ink-node](https://github.com/use-ink/ink-node) (and Ethereum RPC) in the background. Use `--skip-confirm` to auto-select the local endpoint and auto-start the node when needed.
+If no `--url` is provided, Pop CLI automatically launches a local [ink-node](https://github.com/use-ink/ink-node) in the background.
+If you omit `--url`, Pop CLI prompts you to choose a chain endpoint and defaults to `ws://127.0.0.1:9944`. If that endpoint is not running, Pop CLI offers to start a local ink-node (and Ethereum RPC) in the background. Use `--skip-confirm` to auto-select the local endpoint and auto-start the node when needed.
 
 ```bash
-pop up --path ./path-to-contract \
+pop up -p ./path-to-contract \
   --constructor <constructor_name> \
   --args <arg_1> <arg_2> ... \
   --suri //Alice \
-  --execute
 ```
 
 * `--path`: points to the contract directory
@@ -26,6 +26,12 @@ pop up --path ./path-to-contract \
 * `--gas` and `--proof-size`: override the dry-run estimate (must be provided together)
 * `--skip-build`: skip building (Pop CLI still builds if artifacts are missing)
 * `--skip-confirm`: skip prompts and auto-start a local ink-node if needed
+
+> If at anytime you need to stop the node you can do the following:
+>
+> 1. Find the process ID by running the following command: `lsof -i :9944`
+> 2. Kill the process by running the `kill` command and passing in the ID of the process:
+>    * `kill -9 3537`
 
 > Tip: Use `pop up ink-node --detach` to keep a local node running and follow the printed `kill -9` command to shut it down.
 
@@ -54,34 +60,29 @@ To deploy on a specific network, supply a `--url`:
 pop up --path ./my_contract \
   --url ws://<network-endpoint> \
   --constructor <name> \
-  --args <arg_1> <arg_2>
-
-# Option A: sign with a suri
-pop up --path ./my_contract --url ws://<network-endpoint> --constructor <name> \
-  --args <arg_1> <arg_2> --suri //Alice --execute
-
-# Option B: sign with a browser wallet
-pop up --path ./my_contract --url ws://<network-endpoint> --constructor <name> \
-  --args <arg_1> <arg_2> --use-wallet --execute
+  --args <arg_1> <arg_2> \
+  --suri <your-SURI-or-use-wallet> 
 ```
 
 Alternatively, use `--use-wallet` to [sign via browser wallet](securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.
 
 ### Gas
 
-Pop CLI performs a dry run to estimate [gas](https://use.ink/basics/gas) before deployment. If you do not pass `--execute`, Pop CLI keeps the dry run result and prompts you before deploying.
+Pop CLI performs a dry run to estimate [gas](https://use.ink/basics/gas) before deployment. If you do not pass `--execute`, Pop CLI keeps the dry run result and prompts you before deploying. To find an estimate of how much gas you will need, you can do a "dry-run" of the contract:
 
 ```
-pop up --path ./my_contract --constructor new --args false --suri //Alice
+pop up --constructor new --args false --suri //Alice --dry-run
 ```
 
-This performs a dry run via RPC and does not submit a transaction unless you confirm or pass `--execute`.
+This will perform a dry-run via an RPC call to estimate the gas usage. It does not submit a transaction unless you confirm or pass `--execute`.
 
 ```
 ┌   Pop CLI : Deploy a smart contract
 │
 ◇  Gas limit estimate: Weight { ref_time: 146346224, proof_size: 16689 }
 ```
+
+You can now see the estimate and make sure your account is properly funded with that amount.
 
 To override the estimate, provide both `--gas` and `--proof-size`:
 
@@ -90,7 +91,7 @@ pop up --path ./my_contract --constructor new --args false --suri //Alice \
   --gas 1000000 --proof-size 20000 --execute
 ```
 
-> You can also upload without instantiating by adding `--upload-only`. Use `--execute` to submit the upload. For more details, see the [ink! docs](https://use.ink/docs/v6/getting-started/deploy-your-contract).
+> It is also possible to **only** upload the contract and **not** instantiate by adding `--upload-only`. More on this check out the[ ink! docs](https://use.ink/docs/v6/getting-started/deploy-your-contract).
 
 **Need help?**
 
