@@ -12,4 +12,3 @@ Use these guides to launch a chain locally, onboard to Paseo, or deploy through 
 - [Launch a local development network](running-your-chain.md)
 - [Launch a known chain locally](launch-a-known-chain.md)
 - [Deploy a chain to Paseo](launch-a-chain-to-paseo.md)
-- [Deploy with Polkadot Deployment Portal](deploy-a-chain-polkadot-deployment-portal.md)

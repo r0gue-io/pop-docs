@@ -31,7 +31,6 @@ pop up [--path PATH | PATH] [OPTIONS]
 - Pop CLI detects a chain project from `PATH` and runs the chain deployment flow.
 - If you omit `--id`, Pop CLI reserves a new chain ID during registration.
 - If chain specs or genesis artifacts are missing, Pop CLI generates them.
-- If you select a deployment provider, Pop CLI requests an API key (reads `PDP_API_KEY` if set).
 
 ## Example
 
@@ -46,4 +45,3 @@ pop up --path ./my-chain --id 2000 --chain-spec ./chain-spec.json \
 - [Launch a local development network](running-your-chain.md)
 - [Launch a known chain locally](launch-a-known-chain.md)
 - [Deploy a chain to Paseo](launch-a-chain-to-paseo.md)
-- [Deploy with Polkadot Deployment Portal](deploy-a-chain-polkadot-deployment-portal.md)

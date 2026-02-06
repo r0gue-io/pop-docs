@@ -31,7 +31,6 @@
     * [Launch Paseo](guides/launch-a-chain/launch-paseo.md)
     * [Set up keys](guides/launch-a-chain/keys.md)
     * [Acquire Coretime](guides/launch-a-chain/coretime.md)
-  * [Deploy with Polkadot Deployment Portal](guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
 * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Call](guides/call-a-chain.md)
 * [Fork a chain](guides/fork-a-chain.md)

@@ -88,20 +88,20 @@ Congrats! You’ve spun up a network with your chain running!
 # 4) Interact with your chain (You can secure signing via browser wallet).
 pop call chain # `pop call chain  --use-wallet`
 
-# 5) Register the rollup on Paseo or deploy using Polkadot Deployment Portal
+# 5) Register the rollup on Paseo
 pop up
 # And follow the interactive guide:
 ┌   Pop CLI : Deploy a rollup
 │
 ◆  Select your deployment method:
-│  ● Polkadot Deployment Portal (https://staging.deploypolkadot.xyz)
+│  ● Paseo
 │  ○ Register
 ```
 
 ##### Handy Links
 - [Launch a Chain in Development](../pop-cli-for-appchains/guides/launch-a-chain/running-your-chain.md)
 - [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Deploy a chain with Polkadot Deployment Portal](../pop-cli-for-appchains/guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
+- [Deploy a chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
 - [Securely Sign Transactions from CLI](../pop-cli-for-appchains/guides/securely-sign-transactions-from-cli.md)
 
 
