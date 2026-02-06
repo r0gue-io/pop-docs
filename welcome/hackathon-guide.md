@@ -14,7 +14,7 @@ Pop CLI simplifies development with:
 - Project scaffolding from predefined templates.
 - Easy launch and management of local development networks.
 
-> See also: [Quickstart Chain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
+> Start here: [Quickstart Chain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ pop call contract # `pop call contract  --use-wallet`
 ##### Handy Links
 - [ink! docs](https://use.ink/docs/v6)
 - [Launch a Chain to Paseo](../pop-cli-for-appchains/guides/launch-a-chain/launch-a-chain-to-paseo.md)
-- [Your first ink! smart contract](../pop-cli-for-smart-contracts/tutorials/your-first-ink-smart-contract.md)
+- [Create a new contract](../pop-cli-for-smart-contracts/guides/create-a-new-contract.md)
 - [Securely Sign Transactions from CLI](../pop-cli-for-smart-contracts/guides/securely-sign-transactions-from-cli.md)
 
 
@@ -118,4 +118,3 @@ pop up
 <figure>
   <img src="../.gitbook/assets/onpopio-hackathon.png" alt="Pop CLI" />
 </figure>
-

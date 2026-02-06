@@ -8,6 +8,16 @@
 >
 > Need Homebrew? Follow [Install Homebrew](#install-homebrew-if-not-installed).
 
+> **After install:** Run `pop install` to set up OS packages, Rust tooling, and optional frontend dependencies.
+
+## Choose your install path
+
+| If you have... | Run |
+| --- | --- |
+| Homebrew installed | `brew install r0gue-io/pop-cli/pop` |
+| No Homebrew yet | Install Homebrew, then run `brew install r0gue-io/pop-cli/pop` |
+| No Homebrew desired | Build from source (see [Build from source](#12-build-from-source-any-os)) |
+
 ## 1. Install Pop CLI
 
 ### 1.1 For macOS and Linux (Homebrew)
@@ -64,7 +74,7 @@ cargo install --force --locked pop-cli
 pop install
 ```
 
-> **Warning:** `pop install` may download and run external scripts when dependencies are missing, including the official installers for Homebrew, rustup, nvm, and Bun.
+> **Warning:** `pop install` may download and run external scripts when dependencies are missing, including the official installers for Homebrew, rustup, nvm, and Bun. To opt out, skip `pop install` and install dependencies manually, or answer "No" to prompts.
 
 ### Install command flags
 

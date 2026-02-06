@@ -1,10 +1,15 @@
 # Deploy
 
-Now that we have developed our contract, tested it, we can now deploy it on a blockchain!
+Deploy an ink! smart contract with `pop up`.
 
-### Local Deployment (default)
+## Prerequisites
 
-If you omit `--url`, Pop CLI prompts you to choose a chain endpoint and defaults to `ws://127.0.0.1:9944`. If that endpoint is not running, Pop CLI offers to start a local [ink-node](https://github.com/use-ink/ink-node) (and Ethereum RPC) in the background. Use `--skip-confirm` to auto-select the local endpoint and auto-start the node when needed.
+- A contract project built with `pop build`.
+- Pop CLI (Command Line Interface) installed.
+
+## Local deployment (default)
+
+If you omit `--url`, Pop CLI targets `ws://127.0.0.1:9944`. If that endpoint is not running, Pop CLI can start a local [ink-node](https://github.com/use-ink/ink-node) (and Ethereum RPC) in the background. Use `--skip-confirm` to auto-start when needed.
 
 ```bash
 pop up --path ./path-to-contract \
@@ -13,6 +18,8 @@ pop up --path ./path-to-contract \
   --suri //Alice \
   --execute
 ```
+
+### Common options
 
 * `--path`: points to the contract directory
 * `--constructor`: method name (default: `new`)
@@ -29,26 +36,11 @@ pop up --path ./path-to-contract \
 
 > Tip: Use `pop up ink-node --detach` to keep a local node running and follow the printed `kill -9` command to shut it down.
 
-When you have successfully deployed your contract you will get the following output:
+When deployment succeeds, Pop CLI prints the contract address. Save it for calls and queries.
 
-```
-pop up -p ./flipper --constructor new --args false --suri //Alice --url ws://127.0.0.1:9944
+## Deploy to a custom or public network
 
-┌   Pop CLI : Deploy a smart contract
-│
-◐  Doing a dry run to estimate the gas...                                                                                                    
-●  Gas limit Weight { ref_time: 264725731, proof_size: 16689 }
-│  
-◇  Contract deployed and instantiated: The Contract Address is "5CLPm1CeUvJhZ8GCDZCR7nWZ2m3XXe4X5MtAQK69zEjut36A"
-│
-└  Deployment complete
-```
-
-Save the `Contract Address` which you will need to interact with the contract.
-
-### Deploy to Custom or Public Network
-
-To deploy on a specific network, supply a `--url`:
+Provide a WebSocket endpoint with `--url`:
 
 ```bash
 pop up --path ./my_contract \
@@ -65,22 +57,14 @@ pop up --path ./my_contract --url ws://<network-endpoint> --constructor <name> \
   --args <arg_1> <arg_2> --use-wallet --execute
 ```
 
-Alternatively, use `--use-wallet` to [sign via browser wallet](securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.
+To sign via a browser wallet, see [Securely sign transactions from CLI](securely-sign-transactions-from-cli.md).
 
-### Gas
+## Gas estimation
 
-Pop CLI performs a dry run to estimate [gas](https://use.ink/basics/gas) before deployment. If you do not pass `--execute`, Pop CLI keeps the dry run result and prompts you before deploying.
+Pop CLI performs a dry run to estimate [gas](https://use.ink/basics/gas). If you do not pass `--execute`, Pop CLI keeps the dry-run result and asks for confirmation before deploying.
 
-```
+```bash
 pop up --path ./my_contract --constructor new --args false --suri //Alice
-```
-
-This performs a dry run via RPC and does not submit a transaction unless you confirm or pass `--execute`.
-
-```
-┌   Pop CLI : Deploy a smart contract
-│
-◇  Gas limit estimate: Weight { ref_time: 146346224, proof_size: 16689 }
 ```
 
 To override the estimate, provide both `--gas` and `--proof-size`:

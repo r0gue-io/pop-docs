@@ -19,6 +19,11 @@ Commands:
   help  Print this message or the help of the given subcommand(s)
 ```
 
+## Related pop test commands
+
+- [Test execute-block](test-execute-block.md)
+- [Test fast-forward](test-fast-forward.md)
+
 ## Test migrations
 
 By running the command `pop test on-runtime-upgrade`, you can test the [Runtime Upgrades](https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/) and [Storage Migrations](https://docs.polkadot.com/develop/parachains/maintenance/storage-migrations/) in a simulated environment.

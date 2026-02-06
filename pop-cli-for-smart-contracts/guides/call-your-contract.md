@@ -115,6 +115,12 @@ pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1
 
 Use `--skip-confirm` or `-y` to submit an executable message without additional prompts.
 
+### Flags and notes
+
+| Flag | Note |
+| --- | --- |
+| `--dev` | Deprecated since 0.12.0 and will be removed in 0.13.0. Conflicts with `--skip-confirm`. |
+
 ### Developer Mode
 
 `--dev` is deprecated (since 0.12.0) and will be removed in 0.13.0. Use `--skip-confirm` instead.

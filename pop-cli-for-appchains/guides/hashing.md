@@ -27,6 +27,12 @@ pop hash keccak 256 0x68656c6c6f776f726c64
 
 # Check a runtime you are about to deploy
 pop hash blake2 256 /path/to/your/file.wasm
+
+# Append the original bytes to the hash (BLAKE2 or TwoX only)
+pop hash blake2 256 --concat "hello world"
+
+# Fast non-cryptographic hash for dev workflows
+pop hash twox 128 "hello world"
 ```
 
 ## Tips

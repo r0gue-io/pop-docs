@@ -1,10 +1,10 @@
-# Launch a known Chain
+# Launch a known chain locally
 
-With Pop CLI you can quickly spin up a supported chain without needing to prepare network configuration files.
+Use `pop up <relay>` to launch a supported relay chain and system chains without writing a network config.
 
-A `supported chain` currently refers to one of the system chains. Pop CLI automatically fetches the required binaries and chain-spec generators so you can launch in seconds. Support for additional chains will be added in the future.
+Supported relay chains: `paseo`, `kusama`, `polkadot`, `westend`.
 
-### Example Usage
+## Examples
 
 Spin up Paseo with Asset Hub:
 
@@ -12,52 +12,16 @@ Spin up Paseo with Asset Hub:
 pop up paseo -p asset-hub
 ```
 
-Run Kusama on port `8833` with Asset Hub chain assigned to `9944`:
+Run Kusama on port `8833` with Asset Hub on `9944`:
 
 ```shell
 pop up kusama --port 8833 --parachain asset-hub:9944 -r stable2412-4
 ```
 
-Launch Polkadot with Asset Hub and a specific ParaId:
+Launch Polkadot with Asset Hub and a specific para ID:
 
 ```shell
 pop up polkadot --port 8833 --parachain asset-hub#3395:9977 -r stable2412-4
-```
-
-### Custom Network Configurations
-You can still provide a full network configuration file if needed. The `pop up network` command now accepts a positional path argument, eliminating the need for `--file`/`-f`:
-
-```bash
-touch paseo-local.toml
-```
-
-```toml
-[relaychain]
-chain = "paseo-local"
-
-[relaychain.genesis_overrides.sudo]
-key = "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY" # Alice
-
-[[relaychain.nodes]]
-name = "alice"
-rpc_port = 57731
-validator = true
-
-[[relaychain.nodes]]
-name = "bob"
-validator = true
-
-[[relaychain.nodes]]
-name = "charlie"
-validator = true
-```
-
-> For more details on network configuration files, check the [Zombienet documentation](https://docs.polkadot.com/develop/toolkit/parachains/spawn-chains/zombienet/get-started/?utm_source=chatgpt.com#configure-zombienet)
-
-Run the network:
-
-```
-pop up network ./paseo-local.toml --verbose
 ```
 
 #### Learning Resources

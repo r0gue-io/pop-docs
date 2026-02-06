@@ -4,6 +4,6 @@
 
 * [Pop](README.md)
 * [Install Pop CLI](welcome/install-pop-cli.md)
-* [Build a Chain](https://learn.onpop.io/v/appchains)
-* [Build a Smart Contract](https://learn.onpop.io/v/contracts)
-* [Hackathon Guide](welcome/hackathon-guide.md)
+* [Build a Chain (External)](https://learn.onpop.io/v/appchains)
+* [Build a Smart Contract (External)](https://learn.onpop.io/v/contracts)
+* [Hackathon Guide (Quickstart)](welcome/hackathon-guide.md)
