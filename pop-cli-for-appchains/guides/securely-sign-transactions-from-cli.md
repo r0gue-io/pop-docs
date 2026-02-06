@@ -24,7 +24,11 @@ This will open a signing portal in your browser. Pop CLI will display the follow
 
 Your browser will open a new tab with the following screen at http://127.0.0.1:9090 (or similar if the port is already in use);
 
+<figure><img src="../.gitbook/assets/unconnected-wallet.png" alt="" width="450"><figcaption><p>Signing Portal Initial Open</p></figcaption></figure>
+
 Click on the `Connect Wallet` button to connect your browser extension wallet.
+
+<figure><img src="../.gitbook/assets/connect-wallet.png" alt="" width="450"><figcaption><p>Connect Wallet</p></figcaption></figure>
 
 After connecting your wallet, you will have the option to choose your account and sign the transaction, and finally see the transaction details for signing.
 
