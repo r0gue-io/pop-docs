@@ -29,7 +29,6 @@ pop fork -e <ENDPOINT>... [options]
 
 ## Behavior notes
 
-- Pop prints an intro, forks each endpoint, starts an RPC server, and prints a success message for each fork.
 - Pop waits for Ctrl+C. On shutdown, it stops all servers, clears local storage, and warns if cleanup fails.
 - When you use `--detach`, Pop starts a background process, writes output to a log file, and returns immediately. To stop it, run `pop clean node --pid <PID>` or `kill -9 <PID>`.
 - If you do not specify a fork point, Pop uses the latest finalized block from the remote RPC as the fork point.
