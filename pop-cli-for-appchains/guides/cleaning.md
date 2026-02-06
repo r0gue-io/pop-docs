@@ -60,13 +60,15 @@ If the cache directory does not exist or is empty, Pop prints a message and exit
 
 ## Node cleanup
 
-`pop clean node` looks for local `ink-node` and `eth-rpc` processes that are listening on `127.0.0.1`.
+`pop clean node` looks for local `ink-node`, `eth-rpc`, and detached `pop fork` processes.
 
 - With `--all`, Pop kills every detected process without confirmation.
 - With `--pid`, Pop validates every PID against the detected list. If any PID is invalid, Pop cancels and kills nothing.
 - Without `--all` or `--pid`, Pop prompts you to select processes and confirm.
 
 Pop uses `pgrep`, `lsof`, and `kill -9` for detection and shutdown.
+
+If you started a detached fork with `pop fork --detach`, you can stop it with `pop clean node --pid <PID>`.
 
 ## Network cleanup
 
