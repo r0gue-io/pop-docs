@@ -107,6 +107,71 @@ This will install:
 
 If Bun installs successfully but is not on your PATH yet, Pop CLI checks the default location at `~/.bun/bin/bun`.
 
+### Set up shell completion
+
+Use `pop completion` to generate shell completion scripts for Bash, Zsh, Fish, PowerShell, or Elvish.
+
+#### Usage
+
+```bash
+pop completion [SHELL] [--shell <SHELL>] [--output <PATH>]
+```
+
+#### Arguments and flags
+
+| Argument/flag | Description |
+| --- | --- |
+| `SHELL` | Optional positional shell (`bash`, `zsh`, `fish`, `powershell`, `elvish`). Mutually exclusive with `--shell`. |
+| `--shell <SHELL>` | Shell to generate completions for (same values as `SHELL`). |
+| `-o`, `--output <PATH>` | Write the completion script to a file instead of stdout. |
+
+#### Behavior and defaults
+
+- If you omit `--output`, Pop writes the completion script to stdout.
+- If you pass `--output`, Pop writes the file and prints post-install steps for the selected shell.
+- If you pass `--output` without a shell, Pop tries to detect the shell from `$SHELL`. If it detects one, it uses that shell and continues. If it cannot detect one and stdin is a TTY, it falls back to interactive setup. If stdin is not a TTY, it returns an error.
+- In interactive setup, Pop asks you to choose a shell, suggests a default output path, and confirms before writing the file.
+
+#### Default output paths (interactive)
+
+| Shell | Default path |
+| --- | --- |
+| `bash` | `~/.local/share/bash-completion/completions/pop` |
+| `zsh` | `~/.zsh/completions/_pop` |
+| `fish` | `~/.config/fish/completions/pop.fish` |
+| `powershell` | `~/.config/powershell/Completions/pop.ps1` |
+| `elvish` | `~/.config/elvish/lib/pop.elv` |
+
+#### Post-install steps by shell
+
+| Shell | Steps |
+| --- | --- |
+| `bash` | Source the file once, add `source <PATH>` to `~/.bashrc`, then restart your shell. |
+| `zsh` | Add the completion directory (the parent of the output file) to `fpath`, run `autoload -Uz compinit && compinit`, then restart your shell. |
+| `fish` | Restart your shell; Fish auto-loads completions from the standard completions directory. |
+| `powershell` | Ensure your PowerShell profile loads the completion file, then restart your shell. |
+| `elvish` | Ensure your Elvish config loads the completion file, then restart your shell. |
+
+#### Examples
+
+```bash
+pop completion zsh --output ~/.zsh/completions/_pop
+```
+
+```bash
+pop completion bash > ~/.local/share/bash-completion/completions/pop
+```
+
+```bash
+pop completion --shell fish --output ~/.config/fish/completions/pop.fish
+```
+
+#### Errors and constraints
+
+- `--output` requires a shell if `$SHELL` is not set and stdin is not a TTY.
+- The output path cannot be empty.
+- Interactive setup requires a resolved home directory.
+
 ## 3. Advanced details
 
 ### OS packages and behavior
