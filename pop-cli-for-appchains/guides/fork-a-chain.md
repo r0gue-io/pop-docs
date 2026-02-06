@@ -32,20 +32,75 @@ pop fork -e <ENDPOINT>... [options]
 - Pop prints an intro, forks each endpoint, starts an RPC server, and prints a success message for each fork.
 - Pop waits for Ctrl+C. On shutdown, it stops all servers, clears local storage, and warns if cleanup fails.
 - When you use `--detach`, Pop starts a background process, writes output to a log file, and returns immediately. To stop it, run `pop clean node --pid <PID>` or `kill -9 <PID>`.
+- If you do not specify a fork point, Pop uses the latest finalized block from the remote RPC as the fork point.
+- Storage is fetched lazily from the live chain and cached in SQLite. With `--cache`, the cache is persisted on disk. Without it, Pop uses an in-memory cache.
 
 ## Examples
 
 ```bash
-# Fork a single chain
+# Fork a live chain (uses latest finalized block)
 pop fork -e wss://rpc.polkadot.io
 ```
 
 ```bash
-# Fork multiple chains with cache and a starting port
-pop fork -e wss://rpc.polkadot.io -e wss://rpc.paseo.io -c /tmp/pop-fork.db -p 9000 --log-level debug
+# Fork at a specific port
+pop fork -e wss://rpc.polkadot.io --port 9944
+```
+
+```bash
+# Fork with persistent cache for fast restarts
+pop fork -e wss://rpc.polkadot.io --cache ./polkadot-fork.db
+```
+
+```bash
+# Fork with signature mocking (accept any signature)
+pop fork -e wss://rpc.polkadot.io --mock-all-signatures
+```
+
+```bash
+# Control log verbosity
+pop fork -e wss://rpc.polkadot.io --log-level info
+```
+
+```bash
+# Fork multiple chains
+pop fork -e wss://rpc.polkadot.io -e wss://asset-hub-polkadot-rpc.polkadot.io
 ```
 
 ```bash
 # Fork in the background and return immediately
 pop fork -e wss://rpc.polkadot.io --detach
+```
+
+## Example workflow
+
+1. Start the fork.
+
+```bash
+pop fork -e wss://westend-rpc.polkadot.io --port 9944
+```
+
+2. Connect a client to the local RPC endpoint in Polkadot.js Apps.
+
+```text
+ws://127.0.0.1:9944
+```
+
+3. Submit transactions and query state against the local RPC endpoint.
+
+## Supported RPC methods
+
+Use `rpc_methods` to list every supported method at runtime. The fork RPC server exposes these namespaces and methods:
+
+| Namespace | Methods |
+| --- | --- |
+| `chain` | `chain_getBlockHash`, `chain_getHeader`, `chain_getBlock`, `chain_getFinalizedHead`, `chain_subscribeNewHeads`, `chain_unsubscribeNewHeads`, `chain_subscribeFinalizedHeads`, `chain_unsubscribeFinalizedHeads`, `chain_subscribeAllHeads`, `chain_unsubscribeAllHeads` |
+| `state` | `state_getStorage`, `state_getMetadata`, `state_getRuntimeVersion`, `state_getKeysPaged`, `state_call`, `state_queryStorageAt`, `state_subscribeRuntimeVersion`, `state_unsubscribeRuntimeVersion`, `state_subscribeStorage`, `state_unsubscribeStorage` |
+| `system` | `system_chain`, `system_name`, `system_version`, `system_health`, `system_properties`, `system_localPeerId`, `system_nodeRoles`, `system_localListenAddresses`, `system_chainType`, `system_syncState`, `system_accountNextIndex` |
+| `author` | `author_submitExtrinsic`, `author_pendingExtrinsics` |
+| `dev` | `dev_newBlock` |
+
+Additional namespaces are available, including `archive`, `chainHead`, `chainSpec`, `payment`, and `transaction`. Use `rpc_methods` to see the full list.
+
+Polkadot.js compatibility aliases are also registered for `chain_subscribeNewHead` and `chain_unsubscribeNewHead`.
 ```
