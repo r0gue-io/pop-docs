@@ -2,26 +2,26 @@
 
 If you run `pop call` without a subcommand, Pop CLI uses `pop call chain` unless it detects a contract project in the current directory. If chain support is disabled and no contract project is detected, it returns an error.
 
-## What Can You Do?
+### What Can You Do?
 
 The `pop call chain` command supports three types of operations:
 
-### 1. Execute Extrinsics
+#### 1. Execute Extrinsics
 
 Submit transactions to the chain by calling dispatchable functions. These require signing and will modify chain state.
 
-### 2. Query Storage
+#### 2. Query Storage
 
 Read storage items from the chain's state. Storage queries don't require signing and can read:
 
 - **Plain storage values** (e.g., System::Number - the current block number)
 - **Storage maps** (e.g., System::Account - account information by address)
 
-### 3. Read Constants
+#### 3. Read Constants
 
 Access constant values defined in the runtime metadata (e.g., System::Version, System::BlockHashCount).
 
-## Interactive Guidance (Recommended)
+### Interactive Guidance (Recommended)
 
 Interact with a chain **using** Pop CLI's interactive guidance by simply entering:
 
@@ -41,11 +41,11 @@ After selecting your chain, you will be prompted to select a pallet, then choose
 After making your selection, you'll be guided through providing any required arguments and (for extrinsics) the account
 to sign the transaction.
 
-## Manual (non-interactive)
+### Manual (non-interactive)
 
 If you prefer not to use interactive prompts, you can call the chain by specifying all the required arguments directly:
 
-### Executing an Extrinsic
+#### Executing an Extrinsic
 
 You can execute an extrinsic by specifying the pallet and function (dispatchable function name) and any arguments.
 
@@ -57,47 +57,46 @@ You can execute an extrinsic by specifying the pallet and function (dispatchable
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```
 
-### Querying Storage
+#### Querying Storage
 
 You can query storage items by specifying the pallet and function (storage item name).
-Storage queries return the current value immediately without requiring transaction signing. You do not need `--skip-confirm` for read-only calls.
+Storage queries return the current value immediately without requiring transaction signing.
+You do not need `--skip-confirm` for read-only calls.
 If the storage item is a map, provide a key with `--args`. In interactive mode, leave the key blank to query all entries.
 
 ```shell
-pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io
+pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
 ```
 
 ```shell
-pop call chain --pallet System --function Account --args 0xb815821c5b300d1667d5fc081c06cc4b6addffb90464d68d871ee363b01a127c --url wss://pas-rpc.stakeworld.io
+pop call chain --pallet System --function Account --args 0xb815821c5b300d1667d5fc081c06cc4b6addffb90464d68d871ee363b01a127c --url wss://pas-rpc.stakeworld.io -y
 ```
 
 
-### Reading Constants
+#### Reading Constants
 
 Query constant values from the runtime.
 Constants are read directly from metadata and don't require signing or keys.
 
 ```shell
-pop call chain --pallet System --function Version --url wss://pas-rpc.stakeworld.io
+pop call chain --pallet System --function Version --url wss://pas-rpc.stakeworld.io -y
 ```
 
 ```shell
-pop call chain --pallet System --function BlockHashCount --url wss://pas-rpc.stakeworld.io
+pop call chain --pallet System --function BlockHashCount --url wss://pas-rpc.stakeworld.io -y
 ```
 
-## Additional Options
-
-### View Metadata
+### Additional Options
 
 **When do you need signing?**
 
 You need a signer for extrinsics only. Storage queries and constants never require signing.
 
-Use `--metadata` to inspect runtime metadata. If you omit `--pallet`, Pop CLI lists all pallets. If you include `--pallet`, it lists calls, storage, and constants for that pallet. This option conflicts with `--function`, `--args`, `--suri`, `--use-wallet`, `--call`, and `--sudo`.
+#### View Metadata
 
-**Conflicts (compact):**
+Use `--metadata` to inspect runtime metadata. If you omit `--pallet`, Pop CLI lists all pallets. If you include `--pallet`, it lists calls, storage, and constants for that pallet.
 
-- `--metadata`: conflicts with `--function`, `--args`, `--suri`, `--use-wallet`, `--call`, `--sudo`
+`--metadata` conflicts with `--function`, `--args`, `--suri`, `--use-wallet`, `--call`, and `--sudo`.
 
 ```shell
 pop call chain --metadata --url ws://localhost:9944/
@@ -107,7 +106,7 @@ pop call chain --metadata --url ws://localhost:9944/
 pop call chain --pallet System --metadata --url ws://localhost:9944/
 ```
 
-### Sudo Calls
+#### Sudo Calls
 
 To dispatch a call with Root origin when the chain's runtime includes `pallet-sudo`, you can wrap the call in a
 `sudo.sudo()` call by using the `--sudo` flag:
@@ -116,7 +115,7 @@ To dispatch a call with Root origin when the chain's runtime includes `pallet-su
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```
 
-### Using Wallet for Signing
+#### Using Wallet for Signing
 
 You can use a browser extension wallet to sign extrinsics instead of providing a secret URI:
 
@@ -130,7 +129,7 @@ Or use the shorthand `-w`:
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944/ -w
 ```
 
-### Direct Call Data Submission
+#### Direct Call Data Submission
 
 If you already have the SCALE-encoded call data and want to directly submit the extrinsic:
 
@@ -153,7 +152,7 @@ pop call chain --call 0x00000411 --url ws://localhost:9944/ --suri //Alice
 └  Call complete.
 ```
 
-### Skip Confirmation
+#### Skip Confirmation
 
 Use the `--skip-confirm` or `-y` flag to automatically submit extrinsics without prompting for confirmation. This also
 prevents the prompt to perform another call:
@@ -166,38 +165,38 @@ If you use `--skip-confirm` with an extrinsic, you must provide a signer with `-
 
 This is particularly useful for scripting and automation.
 
-### Quick URL Entry
+#### Quick URL Entry
 
 When prompted for a chain, you can select "Custom" to quickly type the chain URL manually, accelerating the process when
 you already know the endpoint.
 
-## Examples
+### Examples
 
-### Example 1: Query Current Block Number
+#### Example 1: Query Current Block Number
 
 ```shell
 pop call chain --pallet System --function Number --url ws://localhost:9944/
 ```
 
-### Example 2: Check an Account Balance
+#### Example 2: Check an Account Balance
 
 ```shell
 pop call chain --pallet System --function Account --args "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY" --url ws://localhost:9944/
 ```
 
-### Example 3: Read Runtime Version
+#### Example 3: Read Runtime Version
 
 ```shell
 pop call chain --pallet System --function Version --url ws://localhost:9944/
 ```
 
-### Example 4: Transfer with Wallet
+#### Example 4: Transfer with Wallet
 
 ```shell
 pop call chain --pallet Balances --function transfer_keep_alive --args "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty" "1000000000000" --url wss://rpc.polkadot.io --use-wallet
 ```
 
-### Example 5: Sudo Call with Auto-confirm
+#### Example 5: Sudo Call with Auto-confirm
 
 ```shell
 pop call chain --pallet System --function set_code --args "./runtime.wasm" --url ws://localhost:9944/ --suri //Alice --sudo -y

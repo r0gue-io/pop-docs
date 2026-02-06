@@ -1,14 +1,8 @@
 # Build your chain
 
-Use this when you want to build a chain binary or runtime (`pop build`); use `pop build spec` for chain specs and genesis artifacts.
+Use `pop build` (alias: `pop b`) to build a chain node or runtime. If you need a chain spec or genesis artifacts, use `pop build spec`.
 
-Use `pop build` (alias: `pop b`) to build a chain node or runtime. The command auto-detects the project type in this order:
-
-- chain runtime
-- chain (node/runtime workspace)
-- generic Rust package
-
-To build your chain using Pop CLI:
+To build your chain using Pop CLI
 
 ```shell
 cd my-chain
@@ -28,10 +22,10 @@ pop build
 If you are outside the project's directory, you can specify the path
 
 ```shell
-pop build --path ./my-chain
+pop build -p ./my-chain
 ```
 
-You can also pass the project directory positionally (the positional path wins if you also set `--path`).
+You can also pass the project directory positionally:
 
 ```shell
 pop build ../my-chain
@@ -57,23 +51,17 @@ Most common flags:
 > [!NOTE]
 > If your workspace has multiple runtime crates, Pop CLI prompts you to choose one.
 
-## Examples
-
-Build the chain node with extra runtime features:
+If you are building the chain with the intent to onboard to a Polkadot Relay chain then you can run the following build command:
 
 ```
-pop build --release --benchmark --try-runtime
+pop build -p ../my-chain --para_id 2000
 ```
 
-Build only the runtime deterministically:
+This command will build your chain and generate the chain spec, the WebAssembly runtime, and generate the chain genesis state needed for registering and onboarding onto the Relay chain.
 
-```
-pop build --deterministic --tag v1.0.0
-```
+If you need to generate chain specs and genesis artifacts directly, use `pop build spec`:
 
-If you need a chain spec and genesis artifacts for onboarding, use `pop build spec` instead:
-
-```
+```shell
 pop build spec --para-id 2000 --relay paseo --genesis-state --genesis-code
 ```
 

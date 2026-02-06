@@ -4,9 +4,9 @@ description: The following guide shows how to test runtime upgrades.
 
 # Test runtime upgrades
 
-A key feature of Substrate is its support for forkless upgrades. Testing the chain runtime upgrade process is essential to ensure a seamless network transition without disruptions.
+A key feature of Substrate is its support for forkless upgrades. Testing the blockchain runtime upgrade process is essential to ensure a seamless network transition without disruptions.
 
-To simulate and validate the process of upgrading a chain's runtime, the `on-runtime-upgrade` executes the [`OnRuntimeUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/trait.OnRuntimeUpgrade.html) hooks of a runtime against the state of a live chain or a snapshot.
+To simulate and validate the process of upgrading a blockchain's runtime, the `on-runtime-upgrade` executes the [`OnRuntimeUpgrade`](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/trait.OnRuntimeUpgrade.html) hooks of a runtime against the state of a live blockchain or a snapshot.
 
 Hence, there are two subcommands `live` and `snap` to specify the source of the runtime state.
 
@@ -34,7 +34,7 @@ By running the command `pop test on-runtime-upgrade`, you can test the [Runtime 
 
 Before running the migration, you will be prompted to confirm if you want to specify which runtime to run the migration on:
 
-* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be built with the `--try-runtime` feature.
+* If you choose to specify, you will be prompted to select the runtime to run the migration on. The feature requires your runtime to be [built with `--try-runtime` feature](/broken/pages/iluN68guT8MppWAl8pBK).
 
 > Pop CLI will automatically locate the runtime binary based on the provided `--profile`. Pop CLI will automatically build the runtime if not found.
 
@@ -94,13 +94,13 @@ After that, you can select the upgrade checks to perform:
 
 ### Test migrations with a snapshot file
 
-A second approach to test migrations is with a snapshot file. First, you need to create a snapshot file of a live chain. You can do this by running the following command:
+A second approach to test migrations is with a snapshot file. First, you need to create a snapshot file of a live network. You can do this by running the following command:
 
 ```bash
 pop test create-snapshot
 ```
 
-The interactive interface prompts you for the live URI and snapshot path. You need a remote node to create the snapshot, and no runtime binary is required:
+The interactive interface to prompts for the live URI and the path of the snapshot file:
 
 ```bash
 ┌   Pop CLI : Creating a snapshot file

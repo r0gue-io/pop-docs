@@ -56,6 +56,8 @@ And now build pop-cli from source and install it:
 cargo install --force --locked pop-cli
 ```
 
+> **Note:**  Pop CLI requires Rust 1.90 or later.
+
 ## 2. Set up your environment
 
 > **Recommended next step:** Run `pop install` to set up OS packages, Rust tooling, and optional frontend dependencies.
