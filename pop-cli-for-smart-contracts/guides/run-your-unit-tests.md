@@ -4,9 +4,17 @@ To learn how to test your ink! smart contract, from unit tests to e2e testing wo
 
 To run your ink! smart contract's unit tests, make sure you're in the directory of your contract and run the following command:
 
-```
+```bash
 pop test
 ```
+
+If you pass a single positional value and it isn't a directory, Pop treats it as a test filter and runs in the current directory:
+
+```bash
+pop test my_test_name
+```
+
+Pop checks for an `ink` dependency. If it finds one, it runs contract tests. If it doesn't, Pop runs `cargo test` for non-contract projects and then checks whether the project is a chain.
 
 To run end-to-end (e2e) tests, for which you need a blockchain running:
 

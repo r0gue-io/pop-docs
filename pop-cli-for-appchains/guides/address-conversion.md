@@ -8,6 +8,8 @@ When building applications that bridge Ethereum and Polkadot ecosystems, you'll 
 between formats. The `pop convert address` command provides a reliable way to transform Ethereum addresses to
 Substrate/Polkadot addresses and vice versa.
 
+You can also run the command as `pop cv address` or `pop convert a`.
+
 ## What you can use it for
 
 - Convert Ethereum addresses to Polkadot/Substrate format for cross-chain operations.
@@ -32,14 +34,33 @@ pop convert address 13dKz82CEiU7fKfhfQ5aLpdbXHApLfJH5Z6y2RTZpRwKiNhX
 pop convert address 5Eh2qnm8NwCeDnfBhm2aCfoSffBAeMk914NUs8UDGLuoY6qg
 ```
 
+## Input formats
+
+`<ADDRESS>` can be one of:
+
+- Ethereum address: `0x` + 40 hex characters.
+- Public key: `0x` + 64 hex characters.
+- Substrate address: SS58-encoded string.
+
 ## How it works
 
 The conversion uses a standardized mapping between Ethereum and Substrate address formats:
 
 - **Ethereum → Substrate**: Takes the 20-byte Ethereum address and extends it with 12 bytes of `0xEE` padding, then
   encodes it using SS58 format.
-- **Substrate → Ethereum**: Decodes the SS58 address, verifies the last 12 bytes are `0xEE` (indicating it originated
-  from an Ethereum address), and extracts the first 20 bytes as the Ethereum address.
+- **Substrate/Public key → Ethereum**:
+  - If the last 12 bytes are `0xEE`, Pop treats it as an Ethereum-derived address and returns the first 20 bytes.
+  - Otherwise, Pop computes `keccak256` of the 32-byte public key and returns the last 20 bytes.
+
+## Output
+
+Pop prints the converted address to stdout. Ethereum outputs are `0x`-prefixed lowercase hex.
+
+## Errors and constraints
+
+- Ethereum inputs must be `0x`-prefixed and exactly 40 hex characters.
+- Public keys must be `0x`-prefixed and exactly 64 hex characters.
+- Invalid SS58 strings fail validation.
 
 ## Tips
 
