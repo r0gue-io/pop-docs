@@ -6,25 +6,6 @@ Use the interactive prompt to scaffold a chain:
 pop new chain
 ```
 
-If you run `pop new` without a subcommand, Pop CLI prompts you to choose between chain, pallet, and contract. You can also use the top-level alias `pop n`.
-
-## Command overview
-
-```bash
-pop new --list
-pop new chain --list
-pop new chain <NAME>
-```
-
-`pop new --list` prints the available chain and contract templates (based on which features are enabled) and exits. `pop new chain --list` prints only chain templates and exits.
-
-### Command map
-
-- `pop new` (alias: `pop n`)
-- `pop new chain` (aliases: `pop new C`, `pop new p`, `pop new parachain`)
-- `pop new pallet` (alias: `pop new P`)
-- `pop new contract` (alias: `pop new c`)
-
 ## Templates
 
 Available templates:

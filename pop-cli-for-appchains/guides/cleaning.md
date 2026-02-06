@@ -11,7 +11,7 @@ You can also run the command as `pop C`.
 ## Subcommands
 
 - `cache` (alias: `c`): remove cached artifacts.
-- `node` (alias: `n`): stop local `ink-node` and `eth-rpc` processes.
+- `node` (alias: `n`): stop local forks, `ink-node`, and `eth-rpc` processes.
 - `network` (alias: `net`): stop local networks created by `pop up`.
 
 ## Usage
