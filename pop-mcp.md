@@ -29,7 +29,7 @@ If needed: [Install Pop CLI](welcome/install-pop-cli.md)
 
 ## Install
 
-### Option A: Build from source
+Build from source:
 
 ```bash
 git clone https://github.com/r0gue-io/pop-mcp.git
@@ -40,26 +40,11 @@ cargo build --release
 Server binary:
 `target/release/pop-mcp-server`
 
-### Option B: Download a prebuilt binary
-
-Get a release for your platform from GitHub Releases:
-`https://github.com/r0gue-io/pop-mcp/releases`
-
-## Run The Server
-
-Pop MCP runs over stdio. In practice, your MCP client launches the server process for you.
-
-If you run it directly, it will wait for MCP messages on stdin:
-
-```bash
-pop-mcp-server
-```
-
 ## Connect A Client
 
-Pop MCP uses `PRIVATE_KEY` for signing (only needed when you set `execute=true` on write calls).
+Pop MCP runs over stdio. You do not run the server manually. Your AI client launches it.
 
-Use dev keys like `//Alice` and `//Bob` for local networks only.
+Pop MCP can sign transactions via `PRIVATE_KEY`. Read-only calls work without it. Use dev keys like `//Alice` and `//Bob` for local networks only.
 
 ### Claude Code (CLI)
 
@@ -89,56 +74,29 @@ Verify:
 codex mcp list
 ```
 
-## Try It (Copy/Paste Workflows)
+## Try It (Prompt Workflows)
 
-### 1) Sanity check Pop CLI access
+Once Pop MCP is configured, ask your AI client to do real work. You should see it call tools like `create_contract`, `up_ink_node`, `deploy_contract`, and `call_contract` on your behalf.
 
-In your MCP client, call:
+### Example 1: Contract quickstart (local node)
 
-```text
-check_pop_installation
-```
+Ask:
 
-### 2) Local ink! node + deploy a flipper contract + read state
+> Create a new ink! contract project, start a local ink node, build and deploy the contract, then call a read method to show its initial state. After that, call a write method to change state and read it back.
 
-```text
-list_templates
-create_contract {"name":"mcp_flipper","template":"standard"}
-build_contract {"path":"./mcp_flipper","release":true}
-up_ink_node {}
-deploy_contract {"path":"./mcp_flipper"}
+### Example 2: Local network quickstart (relay + Asset Hub)
 
-# Copy the deployed contract address from deploy output, then:
-call_contract {"path":"./mcp_flipper","contract":"<CONTRACT_ADDRESS>","message":"get"}
-```
+Ask:
 
-To flip state (requires `PRIVATE_KEY` configured and `execute=true`):
+> Start a local Paseo network with Asset Hub, query a couple of storage values (like balances constants and system events), then submit a small balance transfer and show the resulting events.
 
-```text
-call_contract {"path":"./mcp_flipper","contract":"<CONTRACT_ADDRESS>","message":"flip","execute":true}
-```
+### Example 3: Clean shutdown
 
-### 3) Local Paseo + Asset Hub transfer + events
+Ask:
 
-```text
-up_network {"chain":"paseo","parachain":["asset-hub#1000:9944"]}
-call_chain {"url":"ws://localhost:9944","metadata":true}
-call_chain {"url":"ws://localhost:9944","pallet":"Balances","function":"ExistentialDeposit"}
-
-# Transfer (requires `PRIVATE_KEY` configured and execute=true)
-call_chain {"url":"ws://localhost:9944","pallet":"Balances","function":"transferKeepAlive","args":["<BOB_SS58>","1000000000000"],"execute":true}
-call_chain {"url":"ws://localhost:9944","pallet":"System","function":"Events"}
-```
-
-Clean up:
-
-```text
-clean_nodes {"pids":[<PID1>,<PID2>]}
-clean_network {"path":"<PATH_TO_ZOMBIE_JSON_OR_BASE_DIR>"}
-```
+> Clean up any nodes and networks you started.
 
 ## References
 
 - Pop MCP repo: `https://github.com/r0gue-io/pop-mcp`
 - MCP spec: `https://modelcontextprotocol.io`
-
