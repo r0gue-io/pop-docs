@@ -23,6 +23,44 @@ layout:
 >
 > Need Homebrew? Follow [Install Homebrew](#install-homebrew-if-not-installed).
 
+## Other install options
+
+**Using cargo-binstall** (cross-platform, downloads pre-built binaries when available):
+```bash
+# Install cargo-binstall if you don't have it
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+# Install pop-cli
+cargo binstall pop-cli --locked
+```
+
+**Using Ubuntu PPA:**
+```bash
+sudo add-apt-repository ppa:r0gue-io/pop
+sudo apt-get update
+sudo apt-get install pop-cli
+```
+> If `add-apt-repository` is not found, install it with `sudo apt-get install software-properties-common`.
+
+**Debian/Ubuntu** (using `.deb` package from GitHub Releases):
+```bash
+sudo dpkg -i pop-cli_*.deb
+```
+
+**Nix/NixOS:**
+```bash
+# Run directly without installing
+nix run github:r0gue-io/pop-cli
+
+# Or install to your profile
+nix profile install github:r0gue-io/pop-cli
+```
+
+**Arch Linux** (using `pacman` with a `.pkg.tar.zst` from GitHub Releases):
+```bash
+sudo pacman -U pop-cli-*.pkg.tar.zst
+```
+
 ## 1. Install Pop CLI
 
 ### 1.1 For macOS and Linux (Homebrew)
