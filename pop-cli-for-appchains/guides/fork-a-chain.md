@@ -13,37 +13,48 @@ Use `pop fork` (alias: `pop f`) to fork a live chain locally and start an RPC se
 ## Usage
 
 ```bash
-pop fork -e <ENDPOINT>... [options]
+pop fork [<CHAIN> | -e <ENDPOINT>...] [options]
 ```
 
 ## Flags and arguments
 
 | Flag or argument | Required | Description |
 | --- | --- | --- |
-| `-e, --endpoint <ENDPOINT>...` | Yes | RPC endpoint URL(s) to fork. Repeat for multiple chains. Parsed as a URL. |
+| `<CHAIN>` | No | Well-known chain to fork (for example: `paseo`, `polkadot`, `kusama`, `westend`). |
+| `-e, --endpoint <ENDPOINT>...` | No | RPC endpoint URL(s) to fork. Repeat for multiple chains. Parsed as a URL. |
 | `-c, --cache <PATH>` | No | Path to a SQLite cache file. If omitted, Pop uses an in-memory cache. When you fork multiple endpoints, Pop appends `_{index}` before the file extension. |
 | `-p, --port <PORT>` | No | Starting port for RPC servers. When you fork multiple endpoints, Pop increments the port after each server starts. |
 | `--mock-all-signatures` | No | Accept all signatures as valid for dev/testing. Default is to accept only magic signatures (`0xdeadbeef`). Do not use for production or security-sensitive scenarios. |
-| `--log-level <LOG_LEVEL>` | No | Log level for block building. Default: `info`. Values: `off`, `error`, `warn`, `info`, `debug`, `trace`. |
-| `-d, --detach` | No | Run the fork in the background and return immediately. Pop prints the process ID (PID) and a log file path. |
+| `--dev` | No | Fund well-known dev accounts (Alice, Bob, Charlie, Dave, Eve, Ferdie) and set Alice as sudo when supported by the chain. |
+| `--at <BLOCK_NUMBER>` | No | Fork at a specific block number. If omitted, Pop forks at the latest finalized block. |
+| `-d, --detach` | No | Run the fork in the background. Pop waits until the fork is ready, then prints endpoint info, PID, and log file path. |
 
 ## Behavior notes
 
+- If you do not pass `<CHAIN>` or `--endpoint`, Pop prompts you to pick a chain RPC endpoint.
+- When you pass a well-known `<CHAIN>`, Pop tries its known RPC endpoints and falls back to the next endpoint if one fails.
 - Pop waits for Ctrl+C. On shutdown, it stops all servers, clears local storage, and warns if cleanup fails.
-- When you use `--detach`, Pop starts a background process, writes output to a log file, and returns immediately. To stop it, run `pop clean node --pid <PID>` or `kill -9 <PID>`.
+- When you use `--detach`, Pop starts a background process and waits until the fork is ready before returning. To stop it, run `pop clean node --pid <PID>` or `kill -9 <PID>`.
 - If you do not specify a fork point, Pop uses the latest finalized block from the remote RPC as the fork point.
 - Storage is fetched lazily from the live chain and cached in SQLite. With `--cache`, the cache is persisted on disk. Without it, Pop uses an in-memory cache.
+- After forking, Pop prints explorer links for Polkadot.js Apps and PAPI for the local endpoint.
+- Use `RUST_LOG` to control logging (for example: `RUST_LOG=info,pop_fork=debug pop fork paseo`).
 
 ## Examples
 
 ```bash
 # Fork a live chain (uses latest finalized block)
+pop fork paseo
+```
+
+```bash
+# Fork from a specific RPC endpoint
 pop fork -e wss://rpc.polkadot.io
 ```
 
 ```bash
-# Fork at a specific port
-pop fork -e wss://rpc.polkadot.io --port 9944
+# Fork at a specific block
+pop fork polkadot --at 1234
 ```
 
 ```bash
@@ -57,18 +68,18 @@ pop fork -e wss://rpc.polkadot.io --mock-all-signatures
 ```
 
 ```bash
-# Control log verbosity
-pop fork -e wss://rpc.polkadot.io --log-level info
+# Fork and fund dev accounts
+pop fork paseo --dev
 ```
 
 ```bash
-# Fork multiple chains
+# Fork multiple chains from explicit endpoints
 pop fork -e wss://rpc.polkadot.io -e wss://asset-hub-polkadot-rpc.polkadot.io
 ```
 
 ```bash
-# Fork in the background and return immediately
-pop fork -e wss://rpc.polkadot.io --detach
+# Fork in the background and return once ready
+pop fork kusama --detach
 ```
 
 ## Example workflow
@@ -76,7 +87,7 @@ pop fork -e wss://rpc.polkadot.io --detach
 1. Start the fork.
 
 ```bash
-pop fork -e wss://westend-rpc.polkadot.io --port 9944
+pop fork westend --port 9944
 ```
 
 2. Connect a client to the local RPC endpoint in Polkadot.js Apps.
