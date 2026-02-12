@@ -7,12 +7,7 @@ description: Verify a smart contract by comparing a local build to a reference b
 Use `pop verify` to compare a locally built contract against either a local `.contract` bundle or a deployed contract on a chain.
 
 You can also run the command as `pop v`.
-
-## Prerequisites
-
-- A contract project with a `Cargo.toml`.
-- The contract feature enabled in Pop CLI (this command is not available in chain-only builds).
-- Network access if you are verifying against a deployed contract.
+Use this command in a contract project with a `Cargo.toml`. It requires the contract feature in Pop CLI (not available in chain-only builds), plus network access when verifying against a deployed contract.
 
 ## Usage
 
