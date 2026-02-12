@@ -5,15 +5,12 @@ description: Fork a live chain and run a local RPC server with pop fork.
 # Fork a chain with Pop CLI
 
 Use `pop fork` (alias: `pop f`) to fork a live chain locally and start an RPC server.
-
-## Prerequisites
-
-- Pop CLI (Command Line Interface) built with the `chain` feature. See [Install Pop CLI](../install-pop-cli.md) or run `cargo install --force --locked pop-cli --features chain`.
+This command requires a Pop CLI build with the `chain` feature enabled.
 
 ## Usage
 
 ```bash
-pop fork [<CHAIN> | -e <ENDPOINT>...] [options]
+pop fork [<CHAIN> | -e <ENDPOINT>] [options]
 ```
 
 ## Flags and arguments
@@ -21,9 +18,9 @@ pop fork [<CHAIN> | -e <ENDPOINT>...] [options]
 | Flag or argument | Required | Description |
 | --- | --- | --- |
 | `<CHAIN>` | No | Well-known chain to fork (for example: `paseo`, `polkadot`, `kusama`, `westend`). |
-| `-e, --endpoint <ENDPOINT>...` | No | RPC endpoint URL(s) to fork. Repeat for multiple chains. Parsed as a URL. |
-| `-c, --cache <PATH>` | No | Path to a SQLite cache file. If omitted, Pop uses an in-memory cache. When you fork multiple endpoints, Pop appends `_{index}` before the file extension. |
-| `-p, --port <PORT>` | No | Starting port for RPC servers. When you fork multiple endpoints, Pop increments the port after each server starts. |
+| `-e, --endpoint <ENDPOINT>` | No | RPC endpoint URL to fork. Parsed as a URL. If omitted, Pop starts an interactive chain/endpoint selection flow. |
+| `-c, --cache <PATH>` | No | Path to a SQLite cache file. If omitted, Pop uses an in-memory cache. |
+| `-p, --port <PORT>` | No | Port for the local RPC server. If omitted, Pop auto-selects an available port starting from `9944`. |
 | `--mock-all-signatures` | No | Accept all signatures as valid for dev/testing. Default is to accept only magic signatures (`0xdeadbeef`). Do not use for production or security-sensitive scenarios. |
 | `--dev` | No | Fund well-known dev accounts (Alice, Bob, Charlie, Dave, Eve, Ferdie) and set Alice as sudo when supported by the chain. |
 | `--at <BLOCK_NUMBER>` | No | Fork at a specific block number. If omitted, Pop forks at the latest finalized block. |
@@ -39,6 +36,15 @@ pop fork [<CHAIN> | -e <ENDPOINT>...] [options]
 - Storage is fetched lazily from the live chain and cached in SQLite. With `--cache`, the cache is persisted on disk. Without it, Pop uses an in-memory cache.
 - After forking, Pop prints explorer links for Polkadot.js Apps and PAPI for the local endpoint.
 - Use `RUST_LOG` to control logging (for example: `RUST_LOG=info,pop_fork=debug pop fork paseo`).
+
+## Interactive flow
+
+Use interactive mode when you don't want to pass source flags up front:
+
+1. Run `pop fork`.
+2. Select a chain source (for example Local, a known chain, or Custom URL).
+3. If needed, provide a custom RPC endpoint URL.
+4. Pop starts the fork and prints the local WebSocket RPC URL you can connect to.
 
 ## Examples
 
@@ -70,11 +76,6 @@ pop fork -e wss://rpc.polkadot.io --mock-all-signatures
 ```bash
 # Fork and fund dev accounts
 pop fork paseo --dev
-```
-
-```bash
-# Fork multiple chains from explicit endpoints
-pop fork -e wss://rpc.polkadot.io -e wss://asset-hub-polkadot-rpc.polkadot.io
 ```
 
 ```bash
