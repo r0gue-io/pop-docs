@@ -11,10 +11,12 @@
 ## GUIDES
 
 * [Create a new chain](guides/create-a-new-chain.md)
+* [Create a new pallet](guides/create-a-new-pallet.md)
 * [Build](guides/build-your-chain.md)
   * [Build your chain specification](guides/build-spec.md)
   * [Build your runtime deterministically](guides/build-deterministic-runtime.md)
 * [Test runtime upgrades](guides/test-runtime-upgrades.md)
+* [Upgrade Polkadot SDK dependencies](guides/upgrade-polkadot-sdk.md)
 * [Benchmarking](guides/benchmarking/benchmarking-pallets-and-extrinsics.md)
 * [Deploy](guides/launch-a-chain/README.md)
   * [Launch a Chain in Development](guides/launch-a-chain/running-your-chain.md)
@@ -26,6 +28,8 @@
   * [Deploy a chain with Polkadot Deployment Portal](guides/launch-a-chain/deploy-a-chain-polkadot-deployment-portal.md)
   * [Running a post-startup command](guides/running-a-post-startup-command.md)
 * [Call](guides/call-a-chain.md)
+* [Fork a chain](guides/fork-a-chain.md)
 * [Securely Sign Transactions from CLI](guides/securely-sign-transactions-from-cli.md)
 * [Hash](guides/hashing.md)
+* [Clean local resources](guides/cleaning.md)
 * [Conversions](guides/address-conversion.md)

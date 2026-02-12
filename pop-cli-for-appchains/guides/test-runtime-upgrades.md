@@ -69,7 +69,7 @@ pop test on-runtime-upgrade \
     --at=0x1234567890abcdef1234567890abcdef
 ```
 
-_**Note**_: The specified runtime and the remote node's runtime must have the same name and version. If not, the migration will fail. You can add the flag `--disable-spec-version-check` and `--disable-spec-name-check` to bypass the checks.
+_**Note**_: The specified runtime and the remote node's runtime must have the same name and version. If not, the migration will fail. You can add the flag `--disable-spec-version-check` and `--disable-spec-name-check` to bypass the checks. Pop may also prompt you to disable these checks if it detects a mismatch.
 
 ```bash
 pop test on-runtime-upgrade \

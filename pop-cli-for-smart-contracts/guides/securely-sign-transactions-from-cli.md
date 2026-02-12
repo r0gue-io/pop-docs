@@ -4,7 +4,7 @@ Pop CLI provides an option to securely sign transactions from the CLI. It does t
 
 ## Example Usage: Deploying a Contract
 
-For a full guide on deploying a contract, see the [Deploy Your Contract Locally](deploy-your-contract-locally.md) guide.
+For a full guide on deploying a contract, see [Deploy](deploy.md).
 
 Normally, you would provide `--suri=<private-key>` to interact with the chain. However, this implies a potentially insecure way of handling private keys and should only be used for development accounts. For production accounts and more secure signing, Pop CLI provides the `--use-wallet` option that you can use.
 

@@ -1,6 +1,7 @@
 # Call Your Contract
 
 The `pop call contract` command enables interaction with deployed ink! smart contracts.
+If you run `pop call` without a subcommand, Pop CLI uses `pop call contract` when it detects a contract project in the current directory.
 
 ### What Can You Do?
 
@@ -65,12 +66,23 @@ pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1
 
 Access contract storage fields directly using the storage layout.
 Storage queries return the current value immediately without requiring transaction signing.
+For direct storage access, pass the storage field name with `--message`.
 
 ```shell
 pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message value --url ws://localhost:9944/
 ```
 
 ### Additional Options
+
+#### Execute vs Dry-Run
+
+If you omit `--execute`, Pop CLI performs a dry run and returns the result without submitting a transaction. Use `--execute` to submit the call on-chain.
+
+If you provide `--gas`, you must also provide `--proof-size`. If you do not provide them, Pop CLI estimates them during execution.
+
+**When do you need signing?**
+
+You need a signer only for executable messages. Read-only queries and storage reads run without signing. If you make a read-only call, Pop CLI ignores `--use-wallet` and runs without a signer.
 
 #### Gas Estimation
 
@@ -94,6 +106,18 @@ Or use the shorthand `-w`:
 pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip -w --url ws://localhost:9944/
 ```
 
+#### Storage Mapping Keys
+
+If you read a storage map, use `--storage-mapping-key` to query a specific key. In interactive mode, leave the key blank to fetch all entries.
+
+```shell
+pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message value --storage-mapping-key "0x..." --url ws://localhost:9944/
+```
+
+#### Skip Confirmation
+
+Use `--skip-confirm` or `-y` to submit an executable message without additional prompts.
+
 #### Developer Mode
 
 Use `--dev` for rapid testing during development. This skips gas prompts and confirmation dialogs:
@@ -101,6 +125,8 @@ Use `--dev` for rapid testing during development. This skips gas prompts and con
 ```shell
 pop call contract --dev --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --execute
 ```
+
+`--dev` is deprecated (since 0.12.0) and will be removed in 0.13.0. Use `--skip-confirm` instead.
 
 ### Note on Addresses
 

@@ -82,6 +82,36 @@ Notes about flags:
 - The --package flag is available to explicitly set the runtime package name when doing a deterministic build; if
   omitted, Pop CLI will infer it from the runtime directory.
 
+## Common flags
+
+| Flag | Description |
+| --- | --- |
+| `-p, --path <path>` | Project directory (default: `./`). |
+| `-o, --output <path>` | Output path for the plain spec. If you pass a directory or a path without `.json`, Pop CLI writes `chain-spec.json` in that directory. |
+| `--profile <debug|release|production>` | Build profile for the node/runtime used to generate specs. |
+| `-i, --para-id <id>` | Parachain ID (ignored when `--is-relay` is set). |
+| `-t, --type <Development|Local|Live>` | Chain type. |
+| `-c, --chain <value>` | Chain spec input (dev, local, custom, or a path to an existing spec). |
+| `-R, --is-relay` | Generate a relay chain spec (conflicts with `--para-id` and `--relay`). |
+| `-r, --relay <paseo|westend|kusama|polkadot|...>` | Relay chain for chain specs. |
+| `--id <id>` | Chain ID to embed in the spec. |
+| `-P, --protocol-id <id>` | Protocol ID to embed in the spec. |
+| `--properties <kv>` | Chain properties string, for example `tokenSymbol=UNIT,decimals=12`. |
+| `-S, --genesis-state <true|false>` | Generate genesis state. |
+| `-C, --genesis-code <true|false>` | Generate genesis code (Wasm). |
+| `-d, --deterministic <true|false>` | Build the runtime deterministically (requires Docker/Podman). |
+| `--runtime <path>` | Runtime directory to use for builds and presets. |
+| `--package <name>` | Runtime package name (requires `--deterministic`). |
+| `--raw` | Generate a raw chain spec. |
+
+## Behavior notes
+
+- If `--chain` points to an existing spec file, Pop CLI uses that file as the output path and asks if you want to apply changes.
+- `--skip-build` is ignored when node/runtime artifacts are missing. Pop CLI warns and builds anyway.
+- `--deterministic` only runs when you enable it explicitly or choose it in the prompt. For `production` builds, the prompt defaults to deterministic.
+- `--raw` is generated automatically when you request genesis state or genesis code.
+- When you pass `--runtime`, Pop CLI treats the runtime directory as the build target and prompts you to pick a runtime preset if you did not pass `--chain`.
+
 > [!TIP]
 > Omni-node-based chains: If your chain uses the community `polkadot-omni-node` host (ships only a runtime), you can still
 use `pop build spec` the same way. Deterministic builds are recommended; Pop can also auto-source the
