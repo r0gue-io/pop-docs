@@ -16,10 +16,7 @@ layout:
 # Pop MCP
 
 Pop MCP is an MCP server that exposes Pop CLI as structured tools for AI clients (contract + chain workflows).
-
-## Prerequisites
-
-- Pop CLI installed and working:
+Pop CLI must be installed and working:
 
 ```bash
 pop --version

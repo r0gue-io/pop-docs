@@ -15,12 +15,8 @@ Pop CLI simplifies development with:
 - Easy launch and management of local development networks.
 
 > See also: [Quickstart Chain Development with Pop CLI (official Polkadot docs)](https://docs.polkadot.com/develop/toolkit/parachains/quickstart/pop-cli/)
-
-### Prerequisites
-
-Follow the install guide to set up Pop CLI and your environment: [Install Pop CLI](./install-pop-cli.md).
-
-To build Polkadot SDK–based chains, ensure your local toolchain is ready: [Install Polkadot SDK Dependencies](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/).
+>
+> For Polkadot SDK–based chains, ensure your local toolchain is ready: [Install Polkadot SDK Dependencies](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/).
 
 ### Contract Development (ink!) <a href="#contract-development" id="contract-development"></a>
 Pop CLI introduces experimental support for [ink! v6 smart contracts](https://use.ink/docs/v6) running on [PolkaVM (RISC-V)](https://github.com/paritytech/polkavm) via `pallet-revive`.

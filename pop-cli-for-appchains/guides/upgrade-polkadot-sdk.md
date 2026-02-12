@@ -7,11 +7,7 @@ description: Upgrade Polkadot SDK dependency versions in a chain project with Po
 Use `pop upgrade` to update Polkadot SDK dependency versions in a chain project. It rewrites entries in your `Cargo.toml` using a known version mapping.
 
 You can also run the command as `pop ug`.
-
-## Prerequisites
-
-- A chain project with a `Cargo.toml`.
-- Network access to fetch available Polkadot SDK versions.
+Use this command in a chain project that has a `Cargo.toml`. Network access is required to fetch available Polkadot SDK versions.
 
 ## Usage
 
