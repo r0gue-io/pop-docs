@@ -69,6 +69,7 @@ You can query storage items by specifying the pallet and function (storage item 
 Storage queries return the current value immediately without requiring transaction signing.
 You do not need `--skip-confirm` for read-only calls.
 If the storage item is a map, provide a key with `--args`. In interactive mode, leave the key blank to query all entries.
+For composite map keys, you can pass tuple-style arguments (for example `(ASSET_ID,ACCOUNT)`), or provide each key part in order.
 
 ```shell
 pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
@@ -76,6 +77,11 @@ pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
 
 ```shell
 pop call chain --pallet System --function Account --args 0xb815821c5b300d1667d5fc081c06cc4b6addffb90464d68d871ee363b01a127c --url wss://pas-rpc.stakeworld.io -y
+```
+
+```shell
+# Composite-key storage example (tuple-style key)
+pop call chain --pallet Assets --function Account --args '(1984,5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY)' --url ws://localhost:9944/
 ```
 
 
