@@ -45,21 +45,6 @@ to sign the transaction.
 
 If you prefer not to use interactive prompts, you can call the chain by specifying all the required arguments directly:
 
-### Upcoming: JSON mode (`#993`, pending merge)
-
-`pop call chain` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
-
-Planned usage:
-
-```shell
-pop --json call chain --pallet System --function remark --args 0x11 --url ws://localhost:9944 --suri //Alice --execute
-```
-
-Planned behavior:
-
-- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
-- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
-
 #### Executing an Extrinsic
 
 You can execute an extrinsic by specifying the pallet and function (dispatchable function name) and any arguments.
@@ -197,6 +182,21 @@ If you only want to skip the submit confirmation (but keep other interactive pro
 #### Exit Codes for Automation
 
 `pop call chain` exits with a non-zero code when a call fails (for example RPC errors, invalid pallet/function names, or failed submission). This makes shell scripting and CI checks reliable.
+
+### Upcoming: JSON mode (`#993`, pending merge)
+
+`pop call chain` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
+
+Planned usage:
+
+```shell
+pop --json call chain --pallet System --function remark --args 0x11 --url ws://localhost:9944 --suri //Alice --execute
+```
+
+Planned behavior:
+
+- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
+- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
 
 #### Quick URL Entry
 

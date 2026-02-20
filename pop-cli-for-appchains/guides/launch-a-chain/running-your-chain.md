@@ -90,7 +90,7 @@ pop --json up network ./network.toml --detach
 
 In JSON mode, `--detach` is required and `--cmd` is not supported.
 
-When detached mode starts, Pop CLI now:
+When detached mode starts, Pop CLI:
 
 - Prints the network base directory and `zombie.json` path.
 - Prints WebSocket URLs for relay and parachain nodes.

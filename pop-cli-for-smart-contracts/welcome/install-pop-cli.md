@@ -124,7 +124,7 @@ pop --json completion --shell zsh --output ~/.zsh/completions/_pop
 JSON mode notes:
 
 - `pop --json install` requires `-y/--skip-confirm`.
-- `pop --json completion` requires `--shell`.
+- `pop --json completion` requires a shell via positional `SHELL` or `--shell`.
 
 ### Interactive prompts
 
