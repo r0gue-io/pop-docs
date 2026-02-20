@@ -57,6 +57,12 @@ You can execute an extrinsic by specifying the pallet and function (dispatchable
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```
 
+To submit directly without the final "submit extrinsic?" prompt, add `--execute`:
+
+```shell
+pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --execute
+```
+
 #### Querying Storage
 
 You can query storage items by specifying the pallet and function (storage item name).
@@ -164,6 +170,8 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 If you use `--skip-confirm` with an extrinsic, you must provide a signer with `--suri` or `--use-wallet`.
 
 This is particularly useful for scripting and automation.
+
+If you only want to skip the submit confirmation (but keep other interactive prompts), use `--execute`.
 
 #### Quick URL Entry
 
