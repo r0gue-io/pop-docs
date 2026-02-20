@@ -118,6 +118,10 @@ pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1
 
 Use `--skip-confirm` or `-y` to submit an executable message without additional prompts.
 
+#### Exit Codes for Automation
+
+`pop call contract` exits with a non-zero code when a call fails (for example RPC failures, bad inputs, or execution errors). This makes it safe to use in scripts and CI pipelines.
+
 #### Developer Mode
 
 Use `--dev` for rapid testing during development. This skips gas prompts and confirmation dialogs:

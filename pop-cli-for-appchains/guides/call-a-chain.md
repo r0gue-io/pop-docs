@@ -179,6 +179,10 @@ This is particularly useful for scripting and automation.
 
 If you only want to skip the submit confirmation (but keep other interactive prompts), use `--execute`.
 
+#### Exit Codes for Automation
+
+`pop call chain` exits with a non-zero code when a call fails (for example RPC errors, invalid pallet/function names, or failed submission). This makes shell scripting and CI checks reliable.
+
 #### Quick URL Entry
 
 When prompted for a chain, you can select "Custom" to quickly type the chain URL manually, accelerating the process when
