@@ -15,6 +15,16 @@ Use this command in a chain project that has a `Cargo.toml`. Network access is r
 pop upgrade [--path <PATH>] [--version <VERSION>]
 ```
 
+### JSON mode
+
+Use global `--json` for structured output in automation:
+
+```bash
+pop --json upgrade --path /path/to/project --version polkadot-stable2509-1
+```
+
+In JSON mode, `--version` is required because interactive version selection is disabled.
+
 ## Examples
 
 ```bash

@@ -126,6 +126,20 @@ pop install
 | `-y`, `--skip-confirm` | Skip confirmation prompts and install everything non-interactively. |
 | `-f`, `--frontend` | Install frontend dependencies (Node.js v20+ and Bun). |
 
+### JSON mode
+
+Use global `--json` for structured automation output:
+
+```bash
+pop --json install --skip-confirm
+pop --json completion --shell zsh --output ~/.zsh/completions/_pop
+```
+
+JSON mode notes:
+
+- `pop --json install` requires `-y/--skip-confirm`.
+- `pop --json completion` requires `--shell`.
+
 ### Interactive prompts
 
 By default, `pop install` prompts you before installing OS packages and frontend dependencies. Use `-y` to skip all prompts.

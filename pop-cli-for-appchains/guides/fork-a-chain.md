@@ -13,6 +13,19 @@ This command requires a Pop CLI build with the `chain` feature enabled.
 pop fork [<CHAIN> | -e <ENDPOINT>] [options]
 ```
 
+### JSON mode
+
+Use global `--json` for structured detached-fork output:
+
+```bash
+pop --json fork paseo --detach
+```
+
+JSON mode requirements:
+
+- `--detach` is required.
+- You must pass either `<CHAIN>` or `--endpoint`.
+
 ## Flags and arguments
 
 | Flag or argument | Required | Description |

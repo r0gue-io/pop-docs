@@ -61,6 +61,28 @@ pop build spec -o ./chain-spec.json \
   --genesis-code
 ```
 
+### JSON mode
+
+Use global `--json` to return a structured response:
+
+```bash
+pop --json build spec \
+  --path ./ \
+  --output ./chain-spec.json \
+  --profile release \
+  --type Local \
+  --chain dev \
+  --protocol-id my-protocol \
+  --default-bootnode true \
+  --genesis-state true \
+  --genesis-code true \
+  --deterministic false \
+  --para-id 2000 \
+  --relay paseo
+```
+
+In JSON mode, interactive prompts are disabled. Missing required flags return an error.
+
 ### Deterministic runtime build and injection (optional)
 
 Pop CLI can build your runtime deterministically using srtool and inject the resulting wasm code into the chain spec

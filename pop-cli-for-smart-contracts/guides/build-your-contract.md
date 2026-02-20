@@ -28,6 +28,14 @@ Most common flags:
 | `--verifiable` | Build a verifiable contract (deterministic release build). Conflicts with `--release` and `--profile`. |
 | `--image <image>` | Use a custom image for verifiable builds (requires `--verifiable`). |
 
+### JSON output
+
+Use global `--json` for structured output in scripts:
+
+```shell
+pop --json build --path ./my_contract --profile release
+```
+
 > [!NOTE]
 > Verifiable builds require Docker to be running.
 

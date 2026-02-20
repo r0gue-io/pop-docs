@@ -82,6 +82,14 @@ Use detached mode to keep the network running in the background:
 pop up network ./network.toml --detach
 ```
 
+For structured output, use:
+
+```shell
+pop --json up network ./network.toml --detach
+```
+
+In JSON mode, `--detach` is required and `--cmd` is not supported.
+
 When detached mode starts, Pop CLI now:
 
 - Prints the network base directory and `zombie.json` path.

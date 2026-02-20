@@ -34,6 +34,20 @@ Pop CLI validates template compatibility. Deprecated templates still appear in t
 
 Token customization options (`--symbol`, `--decimals`, `--endowment`) are only supported for Pop templates and the Parity Generic template. If you pass these options for other templates, Pop CLI warns and proceeds with defaults.
 
+### JSON mode
+
+Use global `--json` for scripting:
+
+```bash
+pop --json new chain my-chain --template standard
+```
+
+JSON mode requirements:
+
+- Chain name positional argument is required.
+- `--with-frontend` must include a value (for example `--with-frontend=create-dot-app`).
+- Existing destination paths are not overwritten in JSON mode.
+
 ### Endowment validation
 
 `--endowment` accepts a plain integer (for example `1000000`) or a left-shift expression (`1u64 << 60`). If Pop CLI cannot parse the value, it warns and asks whether to fall back to the default endowment. If you decline, the command exits without generating a chain.

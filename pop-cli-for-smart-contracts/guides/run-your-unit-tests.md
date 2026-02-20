@@ -14,6 +14,16 @@ If you pass a single positional value and it isn't a directory, Pop treats it as
 pop test my_test_name
 ```
 
+### JSON mode
+
+Use global `--json` for structured test results:
+
+```bash
+pop --json test
+```
+
+`pop --json test --e2e` is not supported. Run E2E tests without `--json`.
+
 Pop checks for an `ink` dependency. If it finds one, it runs contract tests. If it doesn't, Pop runs `cargo test` for non-contract projects and then checks whether the project is a chain.
 
 To run end-to-end (e2e) tests, for which you need a blockchain running:

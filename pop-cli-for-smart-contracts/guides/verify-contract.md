@@ -16,6 +16,14 @@ pop verify [--path <PATH> | PATH] --contract-path <FILE>
 pop verify [--path <PATH> | PATH] --url <URL> --address <ADDRESS> --image <IMAGE>
 ```
 
+### JSON mode
+
+Use global `--json` for structured verification results:
+
+```bash
+pop --json verify --contract-path ./target/ink/my_contract.contract
+```
+
 ## Examples
 
 ```bash

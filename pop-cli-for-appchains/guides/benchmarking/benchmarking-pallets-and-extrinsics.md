@@ -9,6 +9,19 @@ With Pop CLI, you can benchmark pallets and extrinsics interactively by managing
 pop bench pallet
 ```
 
+For automation, use structured output:
+
+```bash
+pop --json bench pallet --runtime=target/release/pop-runtime-devnet.wasm --pallet pallet_balances --extrinsic transfer_keep_alive --skip-parameters
+```
+
+JSON mode requirements:
+
+- `bench pallet` is the only benchmark command that currently supports `--json`.
+- `--runtime` is required.
+- For non-`--list` runs, `--pallet`, `--extrinsic`, and `--skip-parameters` are required.
+- `--json` cannot be combined with `--json-file`.
+
 Note that the command requires the `frame-omni-bencher` binary to be installed on your local machine.
 
 > Pop CLI will automatically source the `frame-omni-bencher` binary if not found on your local machine.
