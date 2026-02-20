@@ -74,6 +74,22 @@ Congrats! You have now spun up a network with your chain running!
 > Under-the-hood, Pop CLI uses zombienet to spin up the network.\
 > For more advanced network configurations and options consult the [zombienet repo](https://github.com/paritytech/zombienet)
 
+### Detached mode
+
+Use detached mode to keep the network running in the background:
+
+```shell
+pop up network ./network.toml --detach
+```
+
+When detached mode starts, Pop CLI now:
+
+- Prints the network base directory and `zombie.json` path.
+- Prints WebSocket URLs for relay and parachain nodes.
+- Polls endpoints until nodes are responsive, then confirms readiness.
+
+To stop a detached network later, run `pop clean network <path-to-zombie.json>` or `pop clean network --all`.
+
 #### Learning Resources
 
 * 🧑‍🏫 To learn about Polkadot in general, [Polkadot.network](https://polkadot.network/) website is a good starting point.
@@ -83,4 +99,3 @@ Congrats! You have now spun up a network with your chain running!
 **Need help?**
 
 Ask on [Polkadot Stack Exchange](https://polkadot.stackexchange.com/) (tag it [`pop`](https://substrate.stackexchange.com/tags/pop/info)) or drop by [our Telegram](https://t.me/onpopio). We're here to help!
-
