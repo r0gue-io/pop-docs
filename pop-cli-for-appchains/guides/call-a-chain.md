@@ -45,6 +45,21 @@ to sign the transaction.
 
 If you prefer not to use interactive prompts, you can call the chain by specifying all the required arguments directly:
 
+### Upcoming: JSON mode (`#993`, pending merge)
+
+`pop call chain` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
+
+Planned usage:
+
+```shell
+pop --json call chain --pallet System --function remark --args 0x11 --url ws://localhost:9944 --suri //Alice --execute
+```
+
+Planned behavior:
+
+- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
+- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
+
 #### Executing an Extrinsic
 
 You can execute an extrinsic by specifying the pallet and function (dispatchable function name) and any arguments.

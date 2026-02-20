@@ -41,6 +41,21 @@ After making your selection, you'll be guided through providing any required arg
 
 If you prefer not to use interactive prompts, you can call your contract by specifying all the required arguments directly:
 
+### Upcoming: JSON mode (`#993`, pending merge)
+
+`pop call contract` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
+
+Planned usage:
+
+```shell
+pop --json call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --suri //Alice --execute --url ws://localhost:9944/
+```
+
+Planned behavior:
+
+- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
+- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
+
 #### Executing a Message
 
 You can execute a message by specifying the contract path (or the metadata file), contract address, message name, and any arguments.
