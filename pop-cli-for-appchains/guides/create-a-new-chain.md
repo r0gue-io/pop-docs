@@ -14,7 +14,7 @@ Available templates:
 - OpenZeppelin: Generic Runtime Template, EVM Template
 - Parity: Polkadot SDK's Parachain Template
 
-Pop CLI validates provider and template compatibility. If you choose a template that the provider does not support, the command exits with an error. Deprecated templates still appear in the prompt, but Pop CLI warns when you select them.
+Pop CLI validates template compatibility. Deprecated templates still appear in the prompt, but Pop CLI warns when you select them.
 
 > Note: Some upstream template names and binaries still say "parachain", this is a Polkadot Chain.
 
@@ -22,8 +22,7 @@ Pop CLI validates provider and template compatibility. If you choose a template 
 
 | Flag | Type | Default | Description |
 | --- | --- | --- | --- |
-| `--provider` | string | `pop` | Template provider (`pop`, `openzeppelin`, `parity`). |
-| `--template`, `-t` | string | provider default | Template name. |
+| `--template`, `-t` | string | interactive default | Template name. |
 | `--release-tag`, `-r` | string | latest | Release tag to use for the template. |
 | `--symbol`, `-s` | string | `UNIT` | Token symbol. |
 | `--decimals`, `-d` | number | `12` | Token decimals. |
@@ -34,6 +33,20 @@ Pop CLI validates provider and template compatibility. If you choose a template 
 | `--package-manager` | string | auto | Package manager for frontend scaffolding. Requires `--with-frontend`. |
 
 Token customization options (`--symbol`, `--decimals`, `--endowment`) are only supported for Pop templates and the Parity Generic template. If you pass these options for other templates, Pop CLI warns and proceeds with defaults.
+
+### JSON mode
+
+Use global `--json` for scripting:
+
+```bash
+pop --json new chain my-chain --template standard
+```
+
+JSON mode requirements:
+
+- Chain name positional argument is required.
+- `--with-frontend` must include a value (for example `--with-frontend=create-dot-app`).
+- Existing destination paths are not overwritten in JSON mode.
 
 ### Endowment validation
 
@@ -52,8 +65,8 @@ pop new chain
 # List chain templates
 pop new chain --list
 
-# Specify provider/template explicitly
-pop new chain my-chain --provider pop --template r0gue-io/base-parachain
+# Specify template explicitly
+pop new chain my-chain --template r0gue-io/base-parachain
 
 # Provide token customization in CLI mode
 pop new chain my-chain --symbol DOT --decimals 10 --endowment 1000000

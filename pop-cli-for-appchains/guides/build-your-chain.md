@@ -48,6 +48,16 @@ Most common flags:
 | `--deterministic` | Build the runtime deterministically (requires Docker/Podman). Implies `--only-runtime`. |
 | `--tag <image>` | Use a specific srtool image tag (requires `--deterministic`). |
 
+### JSON output
+
+Use global `--json` for structured output in scripts and CI:
+
+```shell
+pop --json build --path ../my-chain --profile release
+```
+
+For `build spec` in JSON mode, prompts are disabled. Provide all required flags explicitly (for example `--output`, `--profile`, `--type`, `--chain`, `--protocol-id`, `--genesis-state`, `--genesis-code`, `--deterministic`, plus relay/para-id options for parachains).
+
 > [!NOTE]
 > If your workspace has multiple runtime crates, Pop CLI prompts you to choose one.
 

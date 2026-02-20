@@ -24,6 +24,20 @@ pop new pallet advanced
 | `--authors`, `-a` | string | `Anonymous` | Author name(s) for the pallet metadata. |
 | `--description`, `-d` | string | `Frame Pallet` | Pallet description. |
 
+### JSON mode
+
+Use global `--json` for non-interactive generation:
+
+```bash
+pop --json new pallet my-pallet
+```
+
+JSON mode requirements:
+
+- Pallet name/path is required.
+- `advanced` mode must include one or more advanced flags (interactive advanced prompts are disabled).
+- Existing destination paths are not overwritten in JSON mode.
+
 ## Advanced mode
 
 Use `advanced` to unlock more customization:

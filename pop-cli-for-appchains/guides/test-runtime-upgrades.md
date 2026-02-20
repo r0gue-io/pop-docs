@@ -19,6 +19,16 @@ Commands:
   help  Print this message or the help of the given subcommand(s)
 ```
 
+### JSON mode
+
+Use global `--json` for structured output:
+
+```bash
+pop --json test on-runtime-upgrade --runtime ./target/release/my_runtime.wasm --checks all live --uri wss://rpc1.paseo.popnetwork.xyz
+```
+
+In JSON mode, interactive prompts are disabled. Provide all required runtime/source/check flags explicitly.
+
 ## Test migrations
 
 By running the command `pop test on-runtime-upgrade`, you can test the [Runtime Upgrades](https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/) and [Storage Migrations](https://docs.polkadot.com/develop/parachains/maintenance/storage-migrations/) in a simulated environment.

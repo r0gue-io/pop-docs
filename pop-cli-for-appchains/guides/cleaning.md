@@ -20,6 +20,22 @@ You can also run the command as `pop C`.
 pop clean <cache|node|network> [OPTIONS] [PATH]
 ```
 
+### JSON mode
+
+Use global `--json` for structured output:
+
+```bash
+pop --json clean cache --all
+pop --json clean node --all
+pop --json clean network --all
+```
+
+JSON mode requirements:
+
+- `clean cache`: requires `--all`
+- `clean node`: requires `--all` or `--pid`
+- `clean network`: requires `--all` or `PATH`
+
 ## Examples
 
 ```bash

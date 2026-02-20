@@ -32,6 +32,21 @@ pop new contract <NAME>
 | `--with-frontend`, `-f[=<TEMPLATE>]` | string | none | Scaffold a frontend template. Use `=` when providing a value. |
 | `--package-manager` | string | auto | Package manager for frontend scaffolding. Requires `--with-frontend`. |
 
+### JSON mode
+
+Use global `--json` for non-interactive contract generation:
+
+```bash
+pop --json new contract my_erc20 --template erc20
+```
+
+JSON mode requirements:
+
+- Contract name positional argument is required.
+- `--template` is required.
+- `--with-frontend` must include a value (for example `--with-frontend=typink`).
+- Existing destination paths are not overwritten in JSON mode.
+
 ## Examples
 
 ```bash

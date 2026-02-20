@@ -13,11 +13,24 @@ This command requires a Pop CLI build with the `chain` feature enabled.
 pop fork [<CHAIN> | -e <ENDPOINT>] [options]
 ```
 
+### JSON mode
+
+Use global `--json` for structured detached-fork output:
+
+```bash
+pop --json fork paseo --detach
+```
+
+JSON mode requirements:
+
+- `--detach` is required.
+- You must pass either `<CHAIN>` or `--endpoint`.
+
 ## Flags and arguments
 
 | Flag or argument | Required | Description |
 | --- | --- | --- |
-| `<CHAIN>` | No | Well-known chain to fork (for example: `paseo`, `polkadot`, `kusama`, `westend`). |
+| `<CHAIN>` | No | Well-known chain to fork (for example: `paseo`, `polkadot`, `kusama`, `westend`, `asset-hub`, `asset-hub-polkadot`). |
 | `-e, --endpoint <ENDPOINT>` | No | RPC endpoint URL to fork. Parsed as a URL. If omitted, Pop starts an interactive chain/endpoint selection flow. |
 | `-c, --cache <PATH>` | No | Path to a SQLite cache file. If omitted, Pop uses an in-memory cache. |
 | `-p, --port <PORT>` | No | Port for the local RPC server. If omitted, Pop auto-selects an available port starting from `9944`. |
@@ -81,6 +94,11 @@ pop fork paseo --dev
 ```bash
 # Fork in the background and return once ready
 pop fork kusama --detach
+```
+
+```bash
+# Fork Asset Hub (Polkadot)
+pop fork asset-hub-polkadot --detach
 ```
 
 ## Example workflow

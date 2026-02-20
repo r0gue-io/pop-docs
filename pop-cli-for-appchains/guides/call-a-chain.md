@@ -57,12 +57,19 @@ You can execute an extrinsic by specifying the pallet and function (dispatchable
 pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --sudo
 ```
 
+To submit directly without the final "submit extrinsic?" prompt, add `--execute`:
+
+```shell
+pop call chain --pallet System --function remark --args "0x11" --url ws://localhost:9944 --suri //Alice --execute
+```
+
 #### Querying Storage
 
 You can query storage items by specifying the pallet and function (storage item name).
 Storage queries return the current value immediately without requiring transaction signing.
 You do not need `--skip-confirm` for read-only calls.
 If the storage item is a map, provide a key with `--args`. In interactive mode, leave the key blank to query all entries.
+For composite map keys, you can pass tuple-style arguments (for example `(ASSET_ID,ACCOUNT)`), or provide each key part in order.
 
 ```shell
 pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
@@ -70,6 +77,11 @@ pop call chain --pallet Sudo --function Key --url wss://pas-rpc.stakeworld.io -y
 
 ```shell
 pop call chain --pallet System --function Account --args 0xb815821c5b300d1667d5fc081c06cc4b6addffb90464d68d871ee363b01a127c --url wss://pas-rpc.stakeworld.io -y
+```
+
+```shell
+# Composite-key storage example (tuple-style key)
+pop call chain --pallet Assets --function Account --args '(1984,5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY)' --url ws://localhost:9944/
 ```
 
 
@@ -164,6 +176,27 @@ pop call chain --pallet System --function remark --args "0x11" --url ws://localh
 If you use `--skip-confirm` with an extrinsic, you must provide a signer with `--suri` or `--use-wallet`.
 
 This is particularly useful for scripting and automation.
+
+If you only want to skip the submit confirmation (but keep other interactive prompts), use `--execute`.
+
+#### Exit Codes for Automation
+
+`pop call chain` exits with a non-zero code when a call fails (for example RPC errors, invalid pallet/function names, or failed submission). This makes shell scripting and CI checks reliable.
+
+### Upcoming: JSON mode (`#993`, pending merge)
+
+`pop call chain` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
+
+Planned usage:
+
+```shell
+pop --json call chain --pallet System --function remark --args 0x11 --url ws://localhost:9944 --suri //Alice --execute
+```
+
+Planned behavior:
+
+- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
+- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
 
 #### Quick URL Entry
 

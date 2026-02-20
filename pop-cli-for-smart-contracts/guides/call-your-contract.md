@@ -118,6 +118,25 @@ pop call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1
 
 Use `--skip-confirm` or `-y` to submit an executable message without additional prompts.
 
+#### Exit Codes for Automation
+
+`pop call contract` exits with a non-zero code when a call fails (for example RPC failures, bad inputs, or execution errors). This makes it safe to use in scripts and CI pipelines.
+
+### Upcoming: JSON mode (`#993`, pending merge)
+
+`pop call contract` is planned to support global `--json` with structured envelopes once [`#993`](https://github.com/r0gue-io/pop-cli/pull/993) merges.
+
+Planned usage:
+
+```shell
+pop --json call contract --path ./flipper --contract 0x48550a4bb374727186c55365b7c9c0a1a31bdafe --message flip --suri //Alice --execute --url ws://localhost:9944/
+```
+
+Planned behavior:
+
+- Interactive prompts are disabled in JSON mode; required inputs must be passed via flags.
+- Errors are returned with typed codes for automation (`INVALID_INPUT`, `PROMPT_REQUIRED`, `NETWORK_ERROR`, `INTERNAL`).
+
 #### Developer Mode
 
 Use `--dev` for rapid testing during development. This skips gas prompts and confirmation dialogs:

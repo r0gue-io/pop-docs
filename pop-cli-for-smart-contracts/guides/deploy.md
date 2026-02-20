@@ -66,6 +66,20 @@ pop up --path ./my_contract \
 
 Alternatively, use `--use-wallet` to [sign via browser wallet](securely-sign-transactions-from-cli.md) (PolkadotJS, Talisman, SubWallet) instead of exposing private keys.
 
+### JSON mode
+
+Use global `--json` for structured deployment output:
+
+```bash
+pop --json up --path ./my_contract --constructor new --args false --suri //Alice --execute
+```
+
+JSON mode constraints for contract deployment:
+
+- `--execute` is required.
+- `--use-wallet` is not supported (provide `--suri`).
+- `--upload-only` is not supported.
+
 ### Gas
 
 Pop CLI performs a dry run to estimate [gas](https://use.ink/basics/gas) before deployment. If you do not pass `--execute`, Pop CLI keeps the dry run result and prompts you before deploying. To find an estimate of how much gas you will need, you can do a "dry-run" of the contract:
